@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: 0ce915002c2ed120ead28b0e9df442f3a9443454530affc8ffb80141aeeb7746
+  source_sha256: ce728dcfb4b3266a536140dd2b120a802bcc0b5fc0a58157bc8b67608c722c8c
   source_commit: null
-  target_sha256: 369715e402cd784fe2b7e3d7226e541de65a7d6f565db57a0ed1fe33dfa1ca38
+  target_sha256: 8fc250e7a9d02d95b82ee6e403c4d3be0f9a8004e350e11d30a3f666fe3558fb
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -55,7 +55,7 @@ The application processes personal data. The declaration is always explicit (yes
 
 | Floor | Target | Grade | Required floor | Scope | Legal basis | Justification of non-applicability |
 |---|---|---|---|---|---|---|
-| CTX-RGPD-P01 | [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização) | — | mandatory | Article 28(3) contract mandatory at any level whenever a processor processes personal data. | Regulation (EU) 2016/679, Article 28(3): “Processing by a processor shall be governed by a contract” (RGPD-28-3) | admitted |
+| CTX-RGPD-P01 | [Policy 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28) | — | mandatory | Article 28(3) contract mandatory at any level whenever a processor processes personal data. | Regulation (EU) 2016/679, Article 28(3): “Processing by a processor shall be governed by a contract” (RGPD-28-3) | admitted |
 | CTX-RGPD-P02 | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | mandatory | Article 28(3) contract with the processors that receive personal data in prompts, at any level. | Regulation (EU) 2016/679, Article 28(3): “Processing by a processor shall be governed by a contract” (RGPD-28-3) | admitted |
 | CTX-RGPD-P03 | `OPS-016` | — | mandatory | Personal data included in the backups, with tested restore. | Regulation (EU) 2016/679, Article 32(1), point (c): “the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident” (RGPD-32-1-c) | not admitted |
 | CTX-RGPD-P04 | `PRI-004` | — | mandatory | Inventory of purposes and recipients at any level: without it, rectifications, erasures and restrictions do not reach the recipients. | Regulation (EU) 2016/679, Article 19: “to each recipient to whom the personal data have been disclosed” (RGPD-19) | not admitted |
@@ -381,8 +381,8 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 38 |
-| Partial | 10 |
+| Covers | 39 |
+| Partial | 9 |
 | Supports evidence | 17 |
 | Gap | 0 |
 | Out of scope | 49 |
@@ -391,7 +391,7 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 
 All the obligations of the matrix `_matriz/rgpd.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 6 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (55) {#cobre}
+### Covers (56) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
@@ -427,6 +427,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | RGPD-25-2 | Article 25(2) | Covers | `PRI-007`; `PRI-007`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `PRI-001`; `PRI-002`; `ACC-002` |
 | RGPD-28-1 | Article 28(1) | Supports evidence | [Policy 33 §3](/sbd-toe/assets/policies/policy-contratacao-segura#3-due-diligence-pré-contratual); `GOV-007` |
 | RGPD-28-2 | Article 28(2) | Supports evidence | [Policy 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3 | Article 28(3) | Covers | [Policy 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28); [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` |
 | RGPD-28-3-b | Article 28(3), point (b) | Supports evidence | [Policy 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding) |
 | RGPD-28-3-c | Article 28(3), point (c) | Covers | `CLA-003`; [Policy 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco); `ENC-002`; `ACC-001` |
 | RGPD-28-3-e | Article 28(3), point (e) | Covers | `PRI-003` |
@@ -453,7 +454,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | RGPD-35-11 | Article 35(11) | Supports evidence | [Policy 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); `ARC-009`; `CLA-006` |
 | RGPD-39-1 | Article 39(1) | Supports evidence | [The method](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Key Responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) |
 
-### Declared gap (10) {#lacuna}
+### Declared gap (9) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -463,7 +464,6 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | RGPD-15-1 | Article 15(1) | Partial | `PRI-003`; `PRI-004` | The copy of the data and the inventory of purposes and recipients are prescribed (PRI-003, PRI-004). The informational content of the reply (purposes, recipients, period, source, rights) belongs to the formal reply, to be declared out of scope. |
 | RGPD-20-2 | Article 20(2) | Partial | `PRI-003` | Export in a machine-readable format is prescribed (PRI-003); direct transmission between controllers, where technically feasible, is not. |
 | RGPD-24-2 | Article 24(2) | Partial | [Policy 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Policy 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | There is no data protection policy among the 39 policies; there is only the section on personal data in AI prompts (Policy 18 §10) and the prohibitions in logs (Policy 29 §5). |
-| RGPD-28-3 | Article 28(3) | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | Floor CTX-RGPD-P01 makes the Article 28(3) contract mandatory with any processor; in the master policy, the full contract is prescribed only in the AI-vendor slice (Policy 33 §10.7), and for the others Policy 33 §4 requires only security clauses. |
 | RGPD-34-2 | Article 34(2) | Partial | [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Requires honest communication, but not the minimum content (nature of the breach in clear language, DPO contact, consequences, measures). |
 | RGPD-35-2 | Article 35(2) | Partial | [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Key Responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Review by the DPO only at L3 and of the LINDDUN analysis, not of the DPIA. |
 | RGPD-38-1 | Article 38(1) | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | DPO involved in breaches (≤ 1 h) and in the L3 LINDDUN review; not involved in design, DPIA, choice of processors or exceptions. |

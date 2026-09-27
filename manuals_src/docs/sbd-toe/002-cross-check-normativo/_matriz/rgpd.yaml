@@ -1753,11 +1753,20 @@ itens:
     pt: Art. 28.º, n.º 3
     en: Article 28(3)
   classe: juridico-contratual
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-RGPD
     grau: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.4
+      en: Policy 33 §4.4
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 44-subcontratantes-de-dados-pessoais-rgpd-art-28
+    citacao:
+      pt: o tratamento é regulado por contrato, em qualquer nível
+      en: the processing is governed by a contract, at any level
   - tipo: politica
     rotulo:
       pt: Política 18 §10.3
@@ -1802,9 +1811,7 @@ itens:
     citacao:
       pt: incluem cláusulas de segurança proporcionais ao nível de risco
       en: include security clauses proportional to the risk level
-  falta:
-    pt: O piso CTX-RGPD-P01 torna o contrato do art. 28.º, n.º 3, obrigatório com qualquer subcontratante; na política master, o contrato completo só está prescrito na fatia dos fornecedores de IA (Política 33 §10.7), e para os demais a Política 33 §4 exige apenas cláusulas de segurança.
-    en: Floor CTX-RGPD-P01 makes the Article 28(3) contract mandatory with any processor; in the master policy, the full contract is prescribed only in the AI-vendor slice (Policy 33 §10.7), and for the others Policy 33 §4 requires only security clauses.
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:

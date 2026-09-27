@@ -113,7 +113,7 @@ itens:
     ancora: governação-e-gestão-de-risco-tic-artigos-56-dora
     citacao:
       pt: O SbD-ToE não fixa o nível hierárquico de aprovação
-      en: SbD-ToE does not fix the hierarchical level of approval
+      en: SbD-ToE does not set the hierarchical level of approval
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -149,7 +149,7 @@ itens:
     ancora: governação-e-gestão-de-risco-tic-artigos-56-dora
     citacao:
       pt: O SbD-ToE não fixa o nível hierárquico de aprovação
-      en: SbD-ToE does not fix the hierarchical level of approval
+      en: SbD-ToE does not set the hierarchical level of approval
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -3657,7 +3657,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -3847,7 +3847,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -4834,7 +4834,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -5305,7 +5305,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Risco de concentração de terceiros TIC — análise regulatória; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -5333,7 +5333,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: Idem 29-1.
@@ -5361,7 +5361,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: Idem 29-1 (subcontratação em país terceiro).
@@ -5427,7 +5427,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: Idem 29-1.
@@ -7009,7 +7009,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7037,7 +7037,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7065,7 +7065,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7093,7 +7093,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7121,7 +7121,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7149,7 +7149,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7177,7 +7177,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7205,7 +7205,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7233,7 +7233,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7261,7 +7261,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -7289,7 +7289,7 @@ itens:
     ancora: gestão-de-fornecedores-críticos-artigos-2830-dora
     citacao:
       pt: O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA
-      en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
+      en: SbD-ToE does not include ITS templates or DORA concentration analysis formulas
   falta: null
   razao_fora_de_ambito:
     pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
@@ -16900,7 +16900,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -16941,7 +16941,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -17017,7 +17017,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17045,7 +17045,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17073,7 +17073,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17101,7 +17101,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17239,7 +17239,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17267,7 +17267,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações.
@@ -17295,7 +17295,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17323,7 +17323,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17351,7 +17351,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17379,7 +17379,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17407,7 +17407,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17435,7 +17435,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17463,7 +17463,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17491,7 +17491,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17519,7 +17519,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17547,7 +17547,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17575,7 +17575,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17603,7 +17603,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17631,7 +17631,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17659,7 +17659,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17687,7 +17687,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17715,7 +17715,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).
@@ -17743,7 +17743,7 @@ itens:
     ancora: incidentes-classificação-e-reporte-artigos-1723-dora
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      en: but not DORA incident classification (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
   falta: null
   razao_fora_de_ambito:
     pt: Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Modelos, canais e procedimentos de comunicação (ITS 2025/302).

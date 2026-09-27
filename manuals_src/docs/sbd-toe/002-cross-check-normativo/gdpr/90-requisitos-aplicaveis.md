@@ -41,7 +41,7 @@ A aplicação trata dados pessoais. A declaração é sempre explícita (sim ou 
 
 | Piso | Alvo | Grau | Piso exigido | Âmbito | Base legal | Justificação de não aplicabilidade |
 |---|---|---|---|---|---|---|
-| CTX-RGPD-P01 | [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização) | — | obrigatório | Contrato do art. 28.º, n.º 3, obrigatório em qualquer nível sempre que um subcontratante trata dados pessoais. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
+| CTX-RGPD-P01 | [Política 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28) | — | obrigatório | Contrato do art. 28.º, n.º 3, obrigatório em qualquer nível sempre que um subcontratante trata dados pessoais. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
 | CTX-RGPD-P02 | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | obrigatório | Contrato do art. 28.º, n.º 3, com os subcontratantes que recebem dados pessoais em prompts, em qualquer nível. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
 | CTX-RGPD-P03 | `OPS-016` | — | obrigatório | Dados pessoais incluídos nas cópias, com restauro testado. | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c): «A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico» (RGPD-32-1-c) | não admitida |
 | CTX-RGPD-P04 | `PRI-004` | — | obrigatório | Inventário de finalidades e destinatários em qualquer nível: sem ele, as rectificações, os apagamentos e as limitações não chegam aos destinatários. | Reg. (UE) 2016/679, art. 19.º: «a cada destinatário a quem os dados pessoais tenham sido transmitidos» (RGPD-19) | não admitida |
@@ -367,8 +367,8 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 38 |
-| Parcial | 10 |
+| Cobre | 39 |
+| Parcial | 9 |
 | Apoia evidência | 17 |
 | Lacuna | 0 |
 | Fora de âmbito | 49 |
@@ -377,7 +377,7 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 
 Todas as obrigações da matriz `_matriz/rgpd.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 6 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
-### Cobre (55) {#cobre}
+### Cobre (56) {#cobre}
 
 Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
 
@@ -413,6 +413,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | RGPD-25-2 | Art. 25.º, n.º 2 | Cobre | `PRI-007`; `PRI-007`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `PRI-001`; `PRI-002`; `ACC-002` |
 | RGPD-28-1 | Art. 28.º, n.º 1 | Apoia evidência | [Política 33 §3](/sbd-toe/assets/policies/policy-contratacao-segura#3-due-diligence-pré-contratual); `GOV-007` |
 | RGPD-28-2 | Art. 28.º, n.º 2 | Apoia evidência | [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3 | Art. 28.º, n.º 3 | Cobre | [Política 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28); [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` |
 | RGPD-28-3-b | Art. 28.º, n.º 3, alínea b) | Apoia evidência | [Política 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding) |
 | RGPD-28-3-c | Art. 28.º, n.º 3, alínea c) | Cobre | `CLA-003`; [Política 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco); `ENC-002`; `ACC-001` |
 | RGPD-28-3-e | Art. 28.º, n.º 3, alínea e) | Cobre | `PRI-003` |
@@ -439,7 +440,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | RGPD-35-11 | Art. 35.º, n.º 11 | Apoia evidência | [Política 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); `ARC-009`; `CLA-006` |
 | RGPD-39-1 | Art. 39.º, n.º 1 | Apoia evidência | [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) |
 
-### Lacuna declarada (10) {#lacuna}
+### Lacuna declarada (9) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -449,7 +450,6 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | RGPD-15-1 | Art. 15.º, n.º 1 | Parcial | `PRI-003`; `PRI-004` | A cópia dos dados e o inventário de finalidades e destinatários estão prescritos (PRI-003, PRI-004). O conteúdo informativo da resposta (finalidades, destinatários, prazo, origem, direitos) é matéria da resposta formal, a declarar fora de âmbito. |
 | RGPD-20-2 | Art. 20.º, n.º 2 | Parcial | `PRI-003` | A exportação em formato de leitura automática está prescrita (PRI-003); a transmissão directa entre responsáveis, quando tecnicamente possível, não está. |
 | RGPD-24-2 | Art. 24.º, n.º 2 | Parcial | [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | Não existe política de proteção de dados entre as 39 políticas; há apenas a secção de dados pessoais em prompts de IA (Política 18 §10) e as proibições em logs (Política 29 §5). |
-| RGPD-28-3 | Art. 28.º, n.º 3 | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | O piso CTX-RGPD-P01 torna o contrato do art. 28.º, n.º 3, obrigatório com qualquer subcontratante; na política master, o contrato completo só está prescrito na fatia dos fornecedores de IA (Política 33 §10.7), e para os demais a Política 33 §4 exige apenas cláusulas de segurança. |
 | RGPD-34-2 | Art. 34.º, n.º 2 | Parcial | [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Exige comunicação honesta, mas não o conteúdo mínimo (natureza da violação em linguagem clara, contacto do EPD, consequências, medidas). |
 | RGPD-35-2 | Art. 35.º, n.º 2 | Parcial | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Revisão pelo DPO só em L3 e sobre a análise LINDDUN, não sobre a AIPD. |
 | RGPD-38-1 | Art. 38.º, n.º 1 | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | EPD envolvido em violações (≤ 1 h) e na revisão LINDDUN L3; não é envolvido em design, AIPD, escolha de subcontratantes ou exceções. |

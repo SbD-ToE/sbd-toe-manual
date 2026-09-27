@@ -898,7 +898,7 @@ contextos:
         en: The application processes personal data. The declaration is always explicit (yes or no) and is never inferred from the data sensitivity classification.
     pisos:
       - id: CTX-RGPD-P01
-        alvo: {tipo: politica, ficheiro: 020-assets/policies/33_policy-contratacao-segura.md, ancora: 107-operacionalização, rotulo: {pt: Política 33 §10.7, en: Policy 33 §10.7}}
+        alvo: {tipo: politica, ficheiro: 020-assets/policies/33_policy-contratacao-segura.md, ancora: 44-subcontratantes-de-dados-pessoais-rgpd-art-28, rotulo: {pt: Política 33 §4.4, en: Policy 33 §4.4}}
         grau: null
         niveis: null
         operador: elevar

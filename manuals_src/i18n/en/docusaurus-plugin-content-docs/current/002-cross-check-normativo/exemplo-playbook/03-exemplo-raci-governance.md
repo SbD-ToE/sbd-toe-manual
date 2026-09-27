@@ -6,15 +6,16 @@ tags: [exemplos, raci, governanca, responsabilidades, organizacao]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/03-exemplo-raci-governance.md
-  source_sha256: 34812f2926b416c68ed0d0dbe99c97d60f18fa1109a83e607204b98501873148
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 78fd0df96c379e3000b30f3e7e722f8ad1cf2daa161dbc15a96f8bbe2eb8587c
+  source_sha256: 2974770ca9e3d2b1ed5b0d9043163f638be498ba040a6c7a52501c5af1eeeb1d
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 73542cc0b9252902a9fccf5a637f027fbc1e266363a75ca8aa7808b4d684b309
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [chapter_role, maturity, papel_suporte, role_tech_lead, sbdtoe_sbd]
   glossary_sha256: 3df7edba29d2791e2985ce72eb1907a60b6cfac5d858765719ae3865fb90e43c
-  translated_at: 2026-09-26T18:12:00Z
+  translated_at: 2026-09-27T07:29:57Z
+  stamped_at: 2026-09-27T07:29:57Z
   reviewed_by: null
 ---
 
@@ -165,7 +166,7 @@ CEO
 | Incident detection | - | **R** | I | - | C | - | - | - |
 | **Incidents & Response** | | | | | | | | |
 | Incident classification | - | A | - | - | C | C | - | - |
-| P0/P1 response | C | **A** | C | - | R | I | I | I |
+| P1/P2 response | C | **A** | C | - | R | I | I | I |
 | DORA incident reporting | - | C | - | - | - | **R** | A | A |
 | **Compliance & Audit** | | | | | | | | |
 | Internal audit (SbD) | I | C | I | - | - | **R** | I | A |
@@ -254,7 +255,7 @@ CEO (Lisboa)
 **Reports to:** CRO or CEO (depends on governance)
 
 **Typical escalations:**
-- P0 incident (within 30 min)
+- P1 incident (within 30 min)
 - Unresolved critical vuln (within 48h)
 - DORA compliance at risk (weekly)
 
@@ -406,7 +407,7 @@ Each organisation must document:
 - [ ] **Organisation chart defined** - Clear roles, reporting lines
 - [ ] **RACI documented** - Approved and communicated
 - [ ] **Meetings scheduled** - Calendar confirmed
-- [ ] **Clear escalation paths** - Documented (e.g. P0 → CISO → CTO → CEO)
+- [ ] **Clear escalation paths** - Documented (e.g. P1 → CISO → CTO → CEO)
 - [ ] **Approvals signed** - Board signature on policies
 - [ ] **Training** - Everyone knows their role
 - [ ] **Audit trail active** - Logs of who decided what, and when

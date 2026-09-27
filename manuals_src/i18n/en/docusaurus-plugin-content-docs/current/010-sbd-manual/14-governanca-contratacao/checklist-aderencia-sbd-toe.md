@@ -7,16 +7,16 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: b1f1624d4bbe41f3d9f494b164d2847c1b9d6e4ee40ff5d3d31d8ddca0a3c3f0
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 61b6813324f3d6e204d03e522cefbed767f6b190c64cce77efd5db7b70f15a68
+  source_sha256: b2657a548206b3f3f74aac8c2ec6e800edea2d375728df73715b7e58f3f94960
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 0ed070da3a888ab5536782d398ff89edd12123763f90a71eeedee3fbc4c11c71
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, instrument, mcp_reading_programa, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 37f557ce13821d2b85f46a16d57c7cd7ee69bb8f0ed5949502db9436324ffa72
-  translated_at: 2026-09-27T07:06:09Z
-  stamped_at: 2026-09-27T07:06:09Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, instrument, mcp_reading_programa, nis2_early_warning, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b01001ad8668dd55ed6980a2bf52c61db449dfa29d725b9323bb7d978033cf65
+  translated_at: 2026-09-27T07:30:08Z
+  stamped_at: 2026-09-27T07:30:08Z
   reviewed_by: null
 ---
 
@@ -119,7 +119,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 3.05 | SBOM is generated automatically per release, includes transitive dependencies and is associated with the artefact with a reference to the commit SHA | **L2+** | pol-11 |
 | 3.06 | SBOM is archived for the mandatory minimum period (L2: 1 year; L3: 2 years) | **L2+** | pol-11 |
 | 3.07 | CVE exceptions have an explicit type (not affected / fix not available / fix deferred / risk accepted), a compensating control and a TTL according to level | **S** | pol-12 |
-| 3.08 | The CVE triage SLA is respected: Critical ≤ 24h, High ≤ 48h | **S** | pol-12 |
+| 3.08 | The CVE triage SLA is met: Critical ≤ 24h, High ≤ 48h; with an indication of active exploitation ≤ 4h | **S** | pol-12 |
 | 3.09 | An automatic dependency update process (Renovate, Dependabot or equivalent) is active and configured | **L2+** | pol-13 |
 | 3.10 | SBOM is digitally signed, with signature verification at deploy | **L3** | pol-11 |
 | 3.11 | Complete provenance is recorded (SLSA attestation or equivalent) | **L3** | pol-11 |
@@ -228,7 +228,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 8.12 | There is an Incident Response Plan with activation criteria, structured phases and playbooks | **L2+** | pol-32 |
 | 8.13 | Security incidents have a post-mortem carried out in less than 5 working days | **L2+** | pol-32 |
 | 8.14 | Automatic rollback is configured for all artefact types with RTO ≤ 15 minutes | **L3** | pol-27 |
-| 8.15 | Regulatory notifications (GDPR ≤ 72h, DORA ≤ 4h initial alert, NIS2 ≤ 24h) are made within the legal deadlines | **L3** | pol-32 |
+| 8.15 | Applicable regulatory notifications met within the legal time limits (Policy 32 §6): GDPR ≤ 72h (Article 33); NIS2 early warning ≤ 24h and notification ≤ 72h; DORA initial notification within the time limits of Delegated Regulation (EU) 2025/301; CRA early warning notification ≤ 24h; AI Act ≤ 15 days (Article 73) | **S** | pol-32 |
 
 ---
 

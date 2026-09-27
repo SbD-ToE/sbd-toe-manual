@@ -6,16 +6,16 @@ tags: [exemplos, incidentes, reporte, dora, template]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md
-  source_sha256: e4db47cdcc511e16d451f07e67b5e4c74d5a3add8a1ffbe8aa18a24bfd8e8fb7
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: fb7bec3ed45d8ba6da062848c24b9709227d0c4999992656182cabbe6a773799
+  source_sha256: 7b19f8923b81a08d497150d27877757ca72028c99ff063bfcc76a1145050351f
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 5c715847f7ae7f851f1bad1a47115d7e37f48a7fee691da08848cda60eb5290c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, practitioner_manual, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 8beef8d4e289efc0b7ab05a8003354655d7164bea81529fd7f6bda7fc261f24b
-  translated_at: 2026-09-27T07:05:57Z
-  stamped_at: 2026-09-27T07:05:57Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, eu_ai_widespread_infringement, nis2_early_warning, practitioner_manual, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 1eda95aea0f848e9bac5052aaa958ea477e39afd495fcd13f4038e7fc75987ae
+  translated_at: 2026-09-27T07:29:57Z
+  stamped_at: 2026-09-27T07:29:57Z
   reviewed_by: null
 ---
 
@@ -60,10 +60,12 @@ Reporter: Security Team
 
 ```
 Severity (SbD-ToE):
-├─ Critical (P0): Impacto imediato em apps L3 / dados sensíveis
-├─ High (P1): Impacto em apps L2 / comprometimento significativo
-├─ Medium (P2): Impacto limitado / dados não-sensíveis
-└─ Low (P3): Informativo
+├─ Critical (P1): Impacto imediato em produção / dados sensíveis
+├─ High (P2): Comprometimento significativo
+├─ Medium (P3): Impacto limitado / dados não-sensíveis
+└─ Low (P4): Informativo
+(A severidade não depende do nível L. Trilho regulatório: qualquer
+ severidade, qualquer nível; sobe no mínimo a P2 - Política 32 §4.1)
 
 Categorization:
 ├─ Malware/Ransomware
@@ -140,7 +142,7 @@ What went well:
 What could improve:
 - Should have had rate limiting from start (code review gap)
 - CAPTCHA should be standard (not opt-in)
-- Post-incident review should happen faster (within 24h)
+- Post-incident review should happen faster (within 24h, well inside the 5 working days of Policy 32)
 
 Action Items:
 1. Add rate limiting to security checklist (Dev team)
@@ -176,7 +178,7 @@ This template structures incident ticketing systems:
 | Description | Text | Yes | Detailed description of the incident |
 | Detection Date | DateTime | Yes | UTC date/time of detection |
 | Reporter | Dropdown (staff) | Yes | Who reported it |
-| Severity | Dropdown (P0-P3) | Yes | SbD-ToE classification |
+| Severity | Dropdown (P1-P4) | Yes | SbD-ToE classification |
 | Category | Dropdown | Yes | Incident type |
 | Affected Systems | Multi-select | Yes | Impacted apps/infra |
 | Root Cause | Text | Conditional (post-investigation) | Identified cause |
@@ -185,7 +187,7 @@ This template structures incident ticketing systems:
 | Status | Dropdown (Open/Investigating/Remediated/Closed) | Yes | Current status |
 | Resolution Date | DateTime | Conditional (post-resolution) | When it was resolved |
 | Retest Date | DateTime | Conditional | When it will be tested |
-| DORA Reportable | Dropdown (Yes/No/Unknown) | Conditional (post-investigation) | Notification required? |
+| Regulatory Track | Multi-select (GDPR/NIS2/DORA/CRA/AI Act/None/Under assessment) | Yes (at triage; decision ≤ 4 h) | Which notifications apply and when does the time limit start? |
 | Related Incidents | Multi-link | No | Related incidents |
 | Attachments | Files | No | Logs, screenshots, etc. |
 | Audit Trail | Read-only log | Yes | Who did what, and when |
@@ -198,8 +200,11 @@ This template structures incident ticketing systems:
 - [ ] Detect and confirm
 - [ ] Create a ticket
 - [ ] Notify on-call
+- [ ] Indication of a regulatory track? Escalate to GRC/Compliance + DPO (≤ 1 h) and record the moment of awareness
 
 ### Short term (< 24 hours) {#curto-prazo--24-horas}
+- [ ] Notifiability decision (≤ 4 h)
+- [ ] NIS2 early warning / CRA early warning notification (≤ 24 h after becoming aware); DORA initial notification within the time limits of Delegated Regulation (EU) 2025/301
 - [ ] Investigation complete
 - [ ] Root cause identified
 - [ ] Remediation in progress
@@ -209,9 +214,13 @@ This template structures incident ticketing systems:
 - [ ] Tests validated the fix
 - [ ] Lessons learned documented
 
-### Compliance (as per DORA) {#compliance-conforme-dora}
-- [ ] DORA analysis (reportable?)
-- [ ] Notification to the competent authority (if applicable)
+### Compliance (regulatory clocks) {#compliance-conforme-dora}
+- [ ] GDPR: supervisory authority ≤ 72 h after becoming aware (Article 33); data subjects without undue delay where there is a high risk (Article 34)
+- [ ] NIS2: incident notification ≤ 72 h; final report ≤ 1 month after the notification
+- [ ] DORA: intermediate and final reports within the time limits of Delegated Regulation (EU) 2025/301, Art. 5
+- [ ] CRA: notification ≤ 72 h; final report ≤ 14 days after the corrective measure (vulnerability) or ≤ 1 month after the notification (severe incident)
+- [ ] AI Act: serious incident ≤ 15 days (10 in the event of death; 2 in the event of a widespread infringement) - Article 73
+- [ ] Post-mortem ≤ 5 working days after resolution (Policy 32 §4.6)
 - [ ] Archived in line with Policy 06 §10 (1 year at L1/L2, 3 years at L3; audit trail)
 
 ---

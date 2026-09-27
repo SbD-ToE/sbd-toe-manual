@@ -8,16 +8,16 @@ sidebar_position: 32
 translation:
   source_locale: pt
   source_path: 020-assets/policies/32_policy-irp.md
-  source_sha256: ffc9b81815eb20220dde858bd2379536bad9364497d305bfcd0c7aaaf772e417
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 3570203660ec7522532e75a1a11f5990e6a98019688707673e2bb476855263e4
+  source_sha256: 24859690b1c619dcbf710f6becf2de839ae8a284f13ba03a89e66a841a61b4d6
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: ff1a6cd2395fa62580bbadde0fdac87369010b1f29b98524c466c5ff22da4a27
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, cra_actively_exploited_vulnerability, cra_pde, dora_financial_entity, dora_major_ict_incident, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, practitioner_manual, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: d9abfec78bcb9748e988fc9118bcb59dce4eeeab98fc115399af26dcdba978fb
-  translated_at: 2026-09-27T07:06:20Z
-  stamped_at: 2026-09-27T07:06:20Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [audit_trail, avaliacao, cra_actively_exploited_vulnerability, cra_pde, dora_financial_entity, dora_major_ict_incident, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, eu_ai_widespread_infringement, eu_market_surveillance_authority, gdpr_controller, gdpr_personal_data_breach, lifecycle_phase, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, practitioner_manual, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 51762324e9da4de40feec67aca4a49a37ce465c3aa656ca7fbe1bcd904688021
+  translated_at: 2026-09-27T07:30:12Z
+  stamped_at: 2026-09-27T07:30:12Z
   reviewed_by: null
 ---
 
@@ -46,7 +46,9 @@ The objective of this policy is to ensure that:
 |---|---|
 | L1 | Recommended; documented response process; escalation contacts defined |
 | L2 | Mandatory; playbooks defined; integration with the incident management system; post-mortem |
-| L3 | Mandatory; automated playbooks (SOAR); regulatory notification; half-yearly tests; war room |
+| L3 | Mandatory; automated playbooks (SOAR); half-yearly tests; war room |
+
+Regulatory notification (section 6) is mandatory whenever applicable, at any level: it depends on the incident and the entity, not on the L level.
 
 ---
 
@@ -72,8 +74,9 @@ An unconfirmed alert does not formally activate the IRP - it activates the triag
 ### 4.1 Triage (T0 - ≤ 15 minutes from detection) {#41-triagem-t0----15-minutos-de-detecção}
 
 - [ ] Alert classified: true positive or false positive
-- [ ] Severity assigned (P1/P2/P3)
+- [ ] Severity assigned (P1–P4; P1 is the top of the scale)
 - [ ] Person responsible for the incident designated (Incident Commander)
+- [ ] Notifiability assessment: if there is an indication of a personal data breach, a significant incident (NIS2), a major ICT-related incident (DORA), an actively exploited vulnerability or severe incident (CRA) or a serious incident (AI Act), the incident follows the **regulatory track**, at any severity and at any level, and is raised to at least P2: GRC/Compliance and the DPO informed ≤ 1 h after confirmation; the moment of awareness recorded in the ticket; notifiability decision ≤ 4 h (the Manual's choice; see section 6)
 - [ ] Incident communication channel opened (war room if P1)
 
 ### 4.2 Containment (T1 - immediate start after confirmation) {#42-contenção-t1---início-imediato-após-confirmação}
@@ -135,13 +138,18 @@ Some incidents require notification to regulatory authorities within defined dea
 
 | Regulation | Type of incident | Deadline |
 |---|---|---|
-| GDPR - Art. 33 | Personal data breach | ≤ 72 hours after becoming aware |
+| GDPR - Art. 33(1) | Personal data breach (unless it is unlikely to result in a risk to the rights and freedoms of natural persons) | To the supervisory authority (in Portugal, the CNPD): without undue delay and, where feasible, not later than 72 hours after having become aware of it; after 72 h, accompanied by the reasons for the delay; may be provided in phases (paragraph 4) |
+| GDPR - Art. 33(2) | Breach of which the processor becomes aware | To the controller, without undue delay (the contract may set a time limit in hours) |
+| GDPR - Art. 34 | Breach likely to result in a high risk to the rights and freedoms of natural persons | To the data subjects, without undue delay (exceptions in paragraph 3) |
 | DORA - Art. 19 + Delegated Regulation (EU) 2025/301, Art. 5 | Major ICT-related incident (financial entity) | Initial notification ≤ 4 h after classification as major and ≤ 24 h after becoming aware; intermediate report ≤ 72 h after the initial notification; final report ≤ 1 month after the latest intermediate report |
-| NIS2 - Art. 23 | Significant incident in an essential/important entity | ≤ 24 hours (early warning) + 72 hours (notification) |
+| DORA - Art. 19(3) | Major ICT-related incident with an impact on the clients' financial interests | To clients, without undue delay as soon as the entity becomes aware of it |
+| NIS2 - Art. 23(4) (as transposed nationally) | Significant incident in an essential/important entity | To the CSIRT or, where applicable, the competent authority: early warning ≤ 24 h; incident notification ≤ 72 h (trust service providers: ≤ 24 h); intermediate report upon request; final report ≤ 1 month after the incident notification (if the incident is ongoing: an intermediate report at that time and a final report ≤ 1 month after it has been handled) |
 | CRA - Art. 14 (applicable since 11.9.2026) | Actively exploited vulnerability or severe incident in a product with digital elements placed on the market by the organisation | To the CSIRT designated as coordinator and to ENISA, via the single reporting platform: early warning ≤ 24 h; notification ≤ 72 h; final report ≤ 14 days after the corrective measure (vulnerability) or ≤ 1 month after the notification (severe incident) |
+| CRA - Art. 14(8) | Actively exploited vulnerability or severe incident | To the impacted users (and, where appropriate, all users), with the risk mitigation and corrective measures they can take |
+| AI Act - Art. 73 | Serious incident involving a high-risk AI system | To the market surveillance authority of the Member State where it occurred: immediately after establishing the causal link (or its reasonable likelihood) and, at the latest, 15 days after the provider or the deployer becomes aware; 10 days in the event of death; 2 days in the event of a widespread infringement or of a serious incident under Article 3, point (49)(b); an incomplete initial report is allowed (paragraph 5) |
 
 :::warning
-The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable. The time limit starts to run from the moment the organisation becomes aware of the incident - not when the root cause is identified. Under DORA, the 4 h time limit runs from the classification of the incident as major (with a limit of 24 h from awareness) and the 72 h time limit runs from the initial notification (Delegated Regulation (EU) 2025/301, Art. 5).
+The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable. Time limits run from awareness of the incident or breach - not from identification of the root cause -, except for the steps that the law anchors to another moment: the NIS2 final report runs from the incident notification; the CRA final report for a vulnerability runs from the availability of the corrective or mitigating measure. Under DORA, the 4 h time limit runs from the classification of the incident as major (with a limit of 24 h from awareness) and the 72 h time limit runs from the initial notification (Delegated Regulation (EU) 2025/301, Art. 5).
 :::
 
 **Retention of incident records.** The timeline, the post-mortem and the notifications sent are kept for 1 year at L1 and L2 and for 3 years at L3 (the Manual's choice; see [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos)). Under DORA, the period is defined by the entity (Delegated Regulation (EU) 2024/1774, Art. 22, point (d)).

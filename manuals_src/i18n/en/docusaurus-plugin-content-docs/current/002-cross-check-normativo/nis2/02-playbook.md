@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: b388cf2516e2c7516c98cce868d32646012c59811bd3ef42515a4bf8a01eaa16
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 44aad6e5787577cecd415291ea0612191154bdba1688d5f2cce868003d0d6aeb
+  source_sha256: 4bde13af14987325cf4ad25462c4e744fcb25ee2b8d5509b9da85e4706fb6884
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: b031a13c7cd02c026e8a185f2ea9337d41442bcf67b129e6739bc32127be7df1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: d480c6d2f38233898900d6964c9907b7ec514f07432e1433856da5000ace74a7
-  translated_at: 2026-09-26T23:27:23Z
-  stamped_at: 2026-09-26T23:27:23Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: 914582ffaf8812b31229ca5a0f97367099d874a098bb96818fee212816bd6fbd
+  translated_at: 2026-09-27T07:30:00Z
+  stamped_at: 2026-09-27T07:30:00Z
   reviewed_by: null
 ---
 
@@ -186,11 +186,12 @@ Where necessary, the text explicitly distinguishes:
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 #### 5.3 Reporting of Significant Incidents {#53-reporte-de-incidentes-significativos}
-- **What:** Submit incidents to the competent authority
+- **What:** Submit significant incidents to the CSIRT or, where applicable, the competent authority (Article 23(4))
 - **Deadlines:**
-  - **Early warning:** 24h after becoming aware
-  - **Incident notification:** 72h with an initial assessment
-  - **Final report:** 1 month (intermediate updates may also be required)
+  - **Early warning:** ≤ 24h after becoming aware
+  - **Incident notification:** ≤ 72h after becoming aware, with an initial assessment
+  - **Intermediate report:** at the request of the CSIRT or the competent authority
+  - **Final report:** ≤ 1 month after the incident notification (if the incident is ongoing: an intermediate report at that time and a final report ≤ 1 month after it has been handled)
 - **Schema:** Parameterise fields according to Art. 23 and ENISA guides
 - **How:** SIEM/ITSM exporters → files ready for submission
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)

@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 020-assets/policies/12_policy-excecoes-cve.md
-  source_sha256: a6098419fa73f0f4b71e8009c137b9a34e215e903bb040f4a723532051c9dc54
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: a8c3c22dee1ac892e0bc01e2c750e1f5bbd19c3d0b79a1cdf97973889fda09a1
+  source_sha256: 82cc7a35a15542a61db5b560c7aaffae2a92f68e461a3c06839f9d07e61e2709
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 7aebd9192e663936f45e78a11125026fd8f10a163302dada0bcb85543a55061a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [alcada, avaliacao, framework_source_corpus, layer, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
-  glossary_sha256: 7564a010faf668f12fad0ec13ece3cafe4df63a971e2b77baa01cecc85c67a79
-  translated_at: 2026-09-27T07:06:15Z
-  stamped_at: 2026-09-27T07:06:15Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [alcada, avaliacao, cra_pde, framework_source_corpus, layer, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
+  glossary_sha256: d08b98b471eb30727a46f86ffaccdaa8a76183dd5cfbcd23195832b870d197fc
+  translated_at: 2026-09-27T07:30:11Z
+  stamped_at: 2026-09-27T07:30:11Z
   reviewed_by: null
 ---
 
@@ -118,6 +118,8 @@ Each exception must be recorded in `excecoes.yaml` (or equivalent, e.g. `vex.yam
 ---
 
 ## 6. Maximum periods and reassessment {#6-prazos-máximos-e-reavaliação}
+
+**Triage.** Every CVE affecting a deployed component is triaged (affected / not affected / decision) within ≤ 24 h if Critical and ≤ 48 h if High, at any level; with an indication of active exploitation (for example, presence in the KEV), within ≤ 4 h. If the component is part of a product with digital elements that the organisation places on the market, confirmed active exploitation triggers the CRA Article 14 track (Policy 32 §6). These time limits are the Manual's choice.
 
 ### 6.1 TTL by severity and type {#61-ttl-por-severidade-e-tipo}
 

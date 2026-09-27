@@ -7,16 +7,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/01-intro.md
-  source_sha256: e8d9db41d2e3bbab245bdbc5a8202392aa6ac166524795b8c9d98995c0e64e3e
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: d212fd15e78a67f0d737fe0acabcd1f14235936a447d144b74f7543872da5cdf
+  source_sha256: c9dfe05bd0670310d7d185d485956d2d1e2eeb85ba37a7a8ef8a5ed9650ebc8b
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: f2daad69669394a61092ac883daf83cea6fefe68dec14df38d3cc2826bf4c1ed
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, dora_ict_rmf, dora_ict_tpp, dora_major_ict_incident, dora_register_of_information, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
   glossary_sha256: ff9e9c7c0e48c0bfc306a7cdfc46074c67f972a6fafd399ec6fc1eaa64ef69d0
-  translated_at: 2026-09-26T23:27:15Z
-  stamped_at: 2026-09-26T23:27:15Z
+  translated_at: 2026-09-27T07:29:54Z
+  stamped_at: 2026-09-27T07:29:54Z
   reviewed_by: null
 ---
 
@@ -101,7 +101,7 @@ It requires an end-to-end process: detection, recording, classification, formal 
 - **[Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Incident detection and response processes
 - **[Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Reporting and escalation responsibilities
 
-**Intentional gap:** SbD-ToE does not define a priority taxonomy (P0–P3) or DORA-specific templates, preserving universality. Compliance requires configuring incident fields according to the DORA RTS/ITS and integrating with automated reporting systems (e.g. SIEM).
+**Intentional gap:** SbD-ToE defines an internal severity scale (P1–P4, Policy 31), but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates, preserving universality. Compliance requires configuring incident fields according to the DORA RTS/ITS and integrating with automated reporting systems (e.g. SIEM).
 
 ---
 
@@ -267,7 +267,7 @@ DORA Art. 5 establishes that **digital resilience is the ultimate responsibility
 |---------|---------|------|
 | "Not implementing MFA because it is complex" | Technically acceptable with TTL at L1 | ❌ **May run counter to minimum strong authentication and ICT risk management measures under DORA** |
 | "SQLi in a legacy endpoint, stays as is" | Acceptable with compensation (e.g. WAF) at L1/L2 | ❌ **May breach DORA** (SQLi is never acceptable at any L) |
-| "P0 CVE at runtime, with no fix plan" | Acceptable if compensated at L1 | ❌ **May run counter to remediation, validation and continuous oversight duties under DORA** |
+| "Critical CVE in runtime, with no fix plan" | Acceptable if compensated at L1 | ❌ **May run counter to remediation, validation and continuous oversight duties under DORA** |
 
 **How it manifests:** The organisation formally records the exception in SbD-ToE; the regulator rejects it: "this exception is not admissible under DORA" → lost time, forced review.
 

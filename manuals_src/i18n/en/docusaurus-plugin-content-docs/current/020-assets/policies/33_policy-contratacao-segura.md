@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: f83e1b29721211e4db16eec7436fd6ac586be79f0ad8a409b27225a49599ca1d
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: e3f038b4933ea7731b8b40aa94790f380f478f590afe27b4cbc33de2ce037043
+  source_sha256: 8658afec7ee5cb9e6696d36257c78f61c48237d1c5054fbd6e148a8cbc59ae7f
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 8a4a3e640e47d58d1cd6a0ad01806d6753b84f9d8cb2b72f34225dd4a805c2ad
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 22ff3b5b5d71ad18aa105d9d275a156caffe5cf8e5bae336bb9a65530f5117b6
-  translated_at: 2026-09-26T23:27:33Z
-  stamped_at: 2026-09-26T23:27:33Z
+  translated_at: 2026-09-27T07:30:13Z
+  stamped_at: 2026-09-27T07:30:13Z
   reviewed_by: null
 ---
 
@@ -91,7 +91,7 @@ All contracts that involve technical access must include security clauses propor
 | Clause | Description |
 |---|---|
 | Confidentiality | Obligation of confidentiality regarding data, credentials and architecture |
-| Incident notification | Deadline for notifying security incidents to the organisation (recommended: ≤ 24 hours from awareness) |
+| Incident notification | Time limit for notifying the organisation of security incidents (without undue delay and ≤ 24 hours after becoming aware) |
 | Acceptable use | Prohibition of access beyond what is strictly necessary for the contractual scope |
 | Subcontracting | Prohibition or conditioning of subcontracting with access to data or systems |
 | Termination for breach | Clause for immediate termination in the event of a serious security breach |

@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
-  source_sha256: 01f8ab4191e8d2cf75b145f17734e90539c5592c8f60af25e170bc4f7c1017d9
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: cc2c5739117c57dc70e1c4449cc481f0e515b1b5e81e684f57116e7ddfba8119
+  source_sha256: 6f3c3f7dff86f3e15c5ff419ca48cb6755a03eaab3b786724e8a9450f9b66821
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 334df86dff4b6eded85915f727bad72e122766a1ec2bf82a89b7741709f467f1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 410e2f7f722940e5914aa42cf99df37d8ecb03914d9a4e9362e539d5458c0ac1
-  translated_at: 2026-09-26T17:23:51Z
-  stamped_at: 2026-09-26T18:35:31Z
+  translated_at: 2026-09-27T07:30:03Z
+  stamped_at: 2026-09-27T07:30:03Z
   reviewed_by: null
 ---
 
@@ -220,7 +220,7 @@ As a **DevOps/SRE**, I want **to have fast and periodically tested *rollback***,
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Production | Incident or failure | DevOps/SRE | ≤ 1h |
+| Production | Incident or failure | DevOps/SRE | Rollback RTO in line with Policy 27 §6 (≤ 30 min at L2, ≤ 15 min at L3) |
 
 **Useful links.** [Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
@@ -575,7 +575,7 @@ As a **DevOps/SRE**, I want **to document and test *rollback* for each type of c
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Incident | Failure in production | DevOps/SRE | ≤ 15 min |
+| Incident | Failure in production | DevOps/SRE | Rollback RTO in line with Policy 27 §6 (≤ 30 min at L2, ≤ 15 min at L3) |
 
 **Useful links.** [Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 

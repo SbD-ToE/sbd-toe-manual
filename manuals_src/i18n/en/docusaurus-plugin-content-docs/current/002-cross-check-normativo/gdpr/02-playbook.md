@@ -7,16 +7,16 @@ sidebar_position: 8
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/02-playbook.md
-  source_sha256: 683069414e39aa942cae6d9a168b7c6f7633a7808f8d3ad19c66fb1b68e606e0
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 86060f65c891645ccd0d341c8f51d58313d1fb955defe273fc3357b7977621f6
+  source_sha256: a64323e829e828a09b5819f1cb3ae1b86375b0fa518d92be1ad8414cb11c26b1
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 540d4bfaeb8404e5b122e295f0aee017e1e16ce3d727f9584525cf7a82fa473a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [chapter_role, gdpr_controller, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, mapping, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
   glossary_sha256: 3a70647e9644dba9550555d7fdd37d5a84d84482350594c2ef9ebf8e8c0200fe
-  translated_at: 2026-09-26T23:27:22Z
-  stamped_at: 2026-09-26T23:27:22Z
+  translated_at: 2026-09-27T07:29:58Z
+  stamped_at: 2026-09-27T07:29:58Z
   reviewed_by: null
 ---
 
@@ -40,7 +40,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 | 25 | Privacy by design/default | [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Ch. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)–[Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Ch. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Secure default configurations |
 | 30 | ROPA | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Apps/data inventory + GRC record |
 | 32 | Security of processing | [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Encryption, IAM, testing, resilience |
-| 33/34 | Personal data breach | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | 72h runbook + communication |
+| 33/34 | Personal data breach | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Runbook: supervisory authority ≤ 72h (Article 33); data subjects without undue delay where there is a high risk (Article 34) |
 | 35 | DPIA | [Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro) | TM + technical annexes in the DPIA |
 
 ---
@@ -86,7 +86,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 **Evidence:** Checklist; contracts; review reports
 
 ### Phase 7 (M4–M5): Incidents and 72h Notification (Art. 33/34) {#fase-7-m4m5-incidentes-e-notificação-72h-art-3334}
-1. Runbook with a 72h timer and minimum fields (what, when, data, measures)  
+1. Runbook with a 72h timer for notification to the supervisory authority (Article 33) and minimum fields (what, when, data, measures); decision, without undue delay, on communication to data subjects where there is a high risk (Article 34)  
 2. Risk criteria for communication to data subjects  
 3. Annual simulation exercise  
 **Evidence:** Runbook; exercise records; post-action report
@@ -122,7 +122,8 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 
 ### 72h Incidents {#incidentes-72h}
 - [ ] Runbook with GDPR fields
-- [ ] 72h timer visible
+- [ ] 72h timer visible (Article 33, counted from awareness)
+- [ ] High-risk criterion and communication to data subjects without undue delay (Article 34)
 - [ ] Annual exercise completed
 - [ ] Communication templates ready
 
@@ -142,7 +143,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 | Metric | Definition | Target |
 |---------|-----------|---------|
 | % apps with Art. 32 complete | Apps with encryption+IAM+testing | ≥95% |
-| Mean time to notification | Event → submission to the authority | ≤60h |
+| Notifications within the legal time limit | Awareness → submission to the authority | 100% ≤ 72h (internal target ≤ 48h) |
 | % DPIA on time | DPIAs completed within the SLA | ≥90% |
 | Retention compliance | Job execution vs. plan | ≥95% |
 

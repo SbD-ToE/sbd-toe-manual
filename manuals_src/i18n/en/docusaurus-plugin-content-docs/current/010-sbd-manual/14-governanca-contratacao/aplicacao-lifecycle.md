@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: 8a8d1349840a0d8aa0fd392bf4527561e885b7554904d0bc7fee855ce0cf6503
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 2ea978674b78d6e299f07701de913b45e630a0834ed1d638111792eadcfa0ede
+  source_sha256: df61dd6181bc8f29d8a3649ab83510cc7602ee2cf4e7332444830c5f8a32a9e3
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: ee8e571bd658aa0bb5d3865533ed875482cca6633ea0013fbd8130d69912022a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 2e4a5bba3484a556d9ed76f10c8294d7380fb5e850534e00cf8152858029678c
-  translated_at: 2026-09-27T07:06:08Z
-  stamped_at: 2026-09-27T07:06:08Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 6ad151d9bc2278156099eb5faf6f457f411a758d7babc3b1edfcee003ea5133c
+  translated_at: 2026-09-27T07:30:07Z
+  stamped_at: 2026-09-27T07:30:07Z
   reviewed_by: null
 ---
 
@@ -779,9 +779,10 @@ As **AppSec Engineer + Operations (Ops)**, I want **to continuously monitor the 
     - SLA not met (e.g. uptime `<`99.5% for L3, `<`99% for L2)  
     - Change of ownership, location, or subcontracting  
 - [ ] Automatic escalation with priority:  
-    - **P0 (exploited critical CVE):** Immediate → AppSec Engineer + Procurement Officer + CISO  
-    - **P1 (critical CVE, serious incident):** 1h → AppSec Engineer + Procurement Officer  
-    - **P2 (high CVE, moderate incident):** 4h → AppSec Engineer  
+    - **P1 (exploited critical CVE, serious incident):** immediate → AppSec Engineer + Procurement Officer + CISO  
+    - **P2 (critical CVE with no known exploitation, significant incident):** ≤ 1h → AppSec Engineer + Procurement Officer  
+    - **P3 (high CVE, moderate incident):** ≤ 4h → AppSec Engineer  
+    - **Regulatory track (any severity):** GRC/Compliance + DPO ≤ 1h after confirmation ([Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção))  
 - [ ] Automatic trigger of a special out-of-cycle review (US-14) if there is a critical gap  
 - [ ] Record of alert, escalation, and action documented in GRC (audit trail)  
 - [ ] Real-time dashboard with the status of critical suppliers and active alerts (visible to the board)  
@@ -798,7 +799,7 @@ As **AppSec Engineer + Operations (Ops)**, I want **to continuously monitor the 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Operation | Incident, critical CVE, SLA breach, contractual change | AppSec Engineer (initial setup) + Operations (Ops) (24x7 operation) | Alert within **`<`1h** of detection, escalation within `<`15 min |
+| Operation | Incident, critical CVE, SLA breach, contractual change | AppSec Engineer (initial setup) + Operations (Ops) (24x7 operation) | Triage ≤ 15 min after the alert; escalation by severity (P1 immediate; P2 ≤ 1h); GRC/Compliance + DPO ≤ 1h if there is a regulatory track |
 
 **Useful links.**  
 - [Supplier Reassessment - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  

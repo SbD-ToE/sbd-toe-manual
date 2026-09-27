@@ -7,16 +7,16 @@ tags: [kpi, metricas, governanca, transversal, dashboard, executivo, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/kpis-governanca.md
-  source_sha256: 9d46390461c1edd4646e2e328456c05a4690f96db8ee4764f07b905c98bf6ab0
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3e42b9a5d2310f52ed16d3a703749a29eb70d27a62f56e9be001bee54a6c2fc2
+  source_sha256: 6c98e6292a505c80ef002dd6484c95f627214dc3563ef3762fb3584906ede3cb
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 2eebec27ef3dfd22ac335269d3fc232bde9f40fb64b3d10b38807721c499d607
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [atomic_composite, avaliacao, chapter_role, cycle_iteration, layer, maturity, mcp_reading_programa, programme_line, risk_level, role_procurement, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: e85b50d4956bf3aa0ed8b11f98f9be00bf1310af09331fcd01a2d5873713cc27
-  translated_at: 2026-09-26T12:00:26Z
-  stamped_at: 2026-09-26T18:36:28Z
+  translated_at: 2026-09-27T07:30:09Z
+  stamped_at: 2026-09-27T07:30:09Z
   reviewed_by: null
 ---
 
@@ -172,7 +172,7 @@ Each layer of the funnel is the denominator of the next layer. The difference be
 | SAST (critical severity) | 30 days | 14 days | 7 days |
 | Containers (CVE ≥ 9.0 in image) | 14 days | 7 days | 3 days |
 | Pipeline (detection → mitigation) | 14 days | 7 days | 3 days |
-| Operations (alert → mitigation) | - | 4h | 1h |
+| Operations (alert → mitigation, OPS-K04) | 8h | 4h | 1h |
 
 **Domain indicators that feed T-03:**
 

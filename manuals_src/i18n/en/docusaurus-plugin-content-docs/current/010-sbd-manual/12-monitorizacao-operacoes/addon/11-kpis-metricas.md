@@ -7,16 +7,16 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/11-kpis-metricas.md
-  source_sha256: d8f67cb2c8862b505a831f45b2cca7417604be9a8d05429668a972976469d6c8
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: bb0a0b3241a49151ba70a2c99cb595fc54c16d6ae0b0bd47b70aa33f59eba5ea
+  source_sha256: 48cf994cd273d8e8e92fa683b4a783a816642115c9c1133a84366b576eb4bf70
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: cafa92aecbe54330b2c4c057558d93db2572b6f4c890959682ac32428a7a1599
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, dora_ict_risk, eu_critical_infrastructure, framework_source_corpus, mapping, mcp_reading_programa, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: 84987d97f96872162f36a42eaf05563a2797e791d6bf50d8f4d1ba30b5d284e2
-  translated_at: 2026-09-26T23:27:26Z
-  stamped_at: 2026-09-26T23:27:26Z
+  translated_at: 2026-09-27T07:30:04Z
+  stamped_at: 2026-09-27T07:30:04Z
   reviewed_by: null
 ---
 
@@ -71,7 +71,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | OPS-K01 | % of production applications with security event logging centralised in a SIEM or equivalent | Q% | ≥ 60% | ≥ 90% | 100% | T-03 | Monthly |
 | OPS-K02 | % of security alerts with a defined, tested and documented threshold (no default or uncalibrated alerts) | Q% | ≥ 50% | ≥ 80% | ≥ 95% | T-03 | Quarterly |
 | OPS-K03 | MTTD - mean time from the occurrence of a security event to the generation of an alert | Qt | ≤ 24h | ≤ 4h | ≤ 30min | T-03 | Monthly |
-| OPS-K04 | MTTR - mean time from the generation of an alert to the start of a mitigation action | Qt | ≤ 48h | ≤ 4h | ≤ 1h | T-03 | Monthly |
+| OPS-K04 | MTTR - mean time from the generation of an alert to the start of a mitigation action | Qt | ≤ 8h | ≤ 4h | ≤ 1h | T-03 | Monthly |
 | OPS-K05 | % of triggered alerts that result in a false positive (noise rate) | Q% ↓ | ≤ 50% | ≤ 30% | ≤ 15% | T-03 | Monthly |
 | OPS-K06 | % of critical security events with correlation coverage across at least two distinct sources | Q% | - | ≥ 70% | ≥ 95% | T-03 | Quarterly |
 | OPS-K07 | % of security incidents with a formal response process (IRP) activated and traceable | Q% | ≥ 80% | 100% | 100% | T-03 | Per incident |
@@ -87,7 +87,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 **OPS-K03 - MTTD (Mean Time to Detect):** measured as `timestamp_alerta − timestamp_evento`. For events that do not generate an immediate alert (detection by correlation or periodic analysis), the detection timestamp is the moment at which an analyst becomes aware of the event. Events without a recorded occurrence timestamp cannot be included in the calculation - their absence is in itself an indicator of a logging gap.
 
-**OPS-K04 - MTTR (Mean Time to Respond):** measured as `timestamp_primeira_acção − timestamp_alerta`. The first action includes: isolation, blocking, formal escalation, or activation of a runbook. Analysis time before the first action counts towards the MTTR.
+**OPS-K04 - MTTR (Mean Time to Respond):** measured as `timestamp_primeira_acção − timestamp_alerta`. The first action includes: isolation, blocking, formal escalation, or runbook activation. Analysis time before the first action counts towards MTTR. When the incident follows the regulatory track, escalation to GRC/Compliance and the DPO takes place within ≤ 1 h of confirmation, at any level (Policy 32 §4.1).
 
 **OPS-K05 - Noise rate:** a false positive is an alert that, after formal triage by an analyst, is classified as irrelevant to the security context. A high noise rate has two effects: (a) it consumes response capacity; (b) it creates desensitisation to alerts, increasing the risk of ignoring true positives. Alert calibration is the control mechanism.
 
@@ -104,7 +104,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | Metric | L1 | L2 | L3 |
 |---------|:--:|:--:|:--:|
 | MTTD (detection) | ≤ 24h | ≤ 4h | ≤ 30min |
-| MTTR (response) | ≤ 48h | ≤ 4h | ≤ 1h |
+| MTTR (response) | ≤ 8h | ≤ 4h | ≤ 1h |
 
 These thresholds apply to security events of high/critical severity. For events of medium severity, the thresholds may be 3× higher. Regulated sectors (financial, health, critical infrastructure) may have more demanding requirements under sectoral rules.
 

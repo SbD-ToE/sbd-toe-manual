@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-  source_sha256: 9cce0d87837cebf90c48e3946832200af945e58d885a98b5ddab1e009a60f4ed
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 1ae8af5bbb51e35c38391553838612e1857d186eab348377cc7bc3d4bbbb5367
+  source_sha256: db2d929faaaba648b9d0bd65fc69d5bd2890b7aa086c21e983b4b834ad4b0df4
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: c27722d90d322f6116b36174710680530b3de4a968a269af76727b88c846e693
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 554488124abc29c0a074ab0f564738d25c3197109db2ea24fbb3cc6f965ed64c
-  translated_at: 2026-09-27T07:06:03Z
-  stamped_at: 2026-09-27T07:06:03Z
+  translated_at: 2026-09-27T07:30:05Z
+  stamped_at: 2026-09-27T07:30:05Z
   reviewed_by: null
 ---
 
@@ -211,7 +211,7 @@ As **Ops**, I want **to integrate alerts with incident response playbooks**, so 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Operations | Confirmed alert | Operations (Ops) | ≤ 30 min |
+| Operations | Confirmed alert | Operations (Ops) | By severity, in line with Policies 31 and 32 (P1: first response ≤ 5 min, triage ≤ 15 min) |
 
 **Useful links.** [Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 

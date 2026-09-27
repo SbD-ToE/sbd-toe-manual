@@ -8,16 +8,16 @@ sidebar_position: 35
 translation:
   source_locale: pt
   source_path: 020-assets/policies/35_policy-kpis-governacao.md
-  source_sha256: d132e7b71ce25e2521faf545e44a02c37e245751c91b1550d5b982a8db5c6017
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: bd7a168e39981e5268365bbf505988bd426556bfcefaef62202b77cf7247983f
+  source_sha256: 8f802355f74be928cfdb591f64178137c3f3da75b448f3d22974b7c20280f869
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 5a4e061892b3347aff346d626c07ec9c0068b0916bb2f0a6b2351a1884c62d89
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, maturity, mcp_reading_programa, programme_line, risk_level, role_procurement, role_tech_lead, sbdtoe_sbd, traceability, trilho_formativo]
   glossary_sha256: 639410b3fc031123bcb00e29436061550d3fbf8c70c46e03b9ed66b38b339fcf
-  translated_at: 2026-09-26T14:11:04Z
-  stamped_at: 2026-09-26T18:37:06Z
+  translated_at: 2026-09-27T07:30:14Z
+  stamped_at: 2026-09-27T07:30:14Z
   reviewed_by: null
 ---
 
@@ -80,7 +80,7 @@ Security governance KPIs must cover the following categories:
 | True positive rate (P1/P2 alerts) | % of P1/P2 alerts that correspond to real incidents | > 70% |
 | Number of security incidents per period | Trend of occurrences | Downward or stable trend |
 | Mean time to detect (MTTD) | Time between the start of the incident and its detection | Internal reference by type |
-| Mean time to resolve (incident MTTR) | Time between detection and resolution of incidents | Internal reference by severity |
+| Mean time to respond to incidents (MTTR, OPS-K04) | Time between the alert and the start of the mitigation action | ≤ 8 h (L1), ≤ 4 h (L2), ≤ 1 h (L3) |
 | % of incidents with a post-mortem held within the deadline | Post-mortems completed ≤ 5 working days after resolution | 100% for P1; > 80% for P2 |
 
 ### 3.4 Pipeline and development {#34-pipeline-e-desenvolvimento}

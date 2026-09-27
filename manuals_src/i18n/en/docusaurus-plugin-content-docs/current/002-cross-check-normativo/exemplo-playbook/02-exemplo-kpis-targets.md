@@ -6,16 +6,16 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/02-exemplo-kpis-targets.md
-  source_sha256: c01be6cf9d6545eec27a2d9ae9dc3d018da58f4bf5549205d476d5c30fde97db
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: cd0bc5a1927384fa3f2c9541081ced164cceeb02520c7fbedf231d205b41e258
+  source_sha256: 218e9ce778fa01b8980d2068a528acde988cdd9dac186d97757f2fa9e6a68acc
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: e3c5c95ca1d5039269361ab0bf3b585160227c3c8bf0a4b54d1d5bf78e0f0b9e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, cycle_iteration, gdpr_dpo, maturity, practitioner_manual, requirement_runtime, sbdtoe_sbd]
   glossary_sha256: 07b8d257fffe6e0515d8b110f8bb5a96d4a5740a2a4c82f729fcde517572c2f2
-  translated_at: 2026-09-26T23:27:17Z
-  stamped_at: 2026-09-26T23:27:17Z
+  translated_at: 2026-09-27T07:29:56Z
+  stamped_at: 2026-09-27T07:29:56Z
   reviewed_by: null
 ---
 
@@ -65,8 +65,8 @@ For each dimension, example targets are presented.
 | **Development** | Test coverage | ≥80% | M6 | Progressive: start with critical functions |
 | | High SAST findings | 0 | Permanent | CI/CD gate |
 | | High SCA findings | 0 | Permanent | CI/CD gate |
-| **Operations** | MTTR P0 (Critical) | `<`2h | Permanent | Payments: direct impact |
-| | MTTR P1 (High) | `<`8h | Permanent | Business impact |
+| **Operations** | MTTR P1 (Critical) | `<`2h | Permanent | Payments: direct impact |
+| | MTTR P2 (High) | `<`8h | Permanent | Business impact |
 | | Incidents detected/month | `<`5 | M12 | Reduce with maturity |
 | **Supply Chain** | Suppliers in the inventory | 100% | M2 | DORA Art. 28(3) (templates: Implementing Regulation (EU) 2024/2956) |
 | | % with complete onboarding | 100% | M3 | Before access |
@@ -96,8 +96,8 @@ graph TB
         end
         
         subgraph OPS["OPERAÇÕES"]
-            O1["MTTR P0: 1.5h<br/>🟢 OK"]
-            O2["MTTR P1: 6h<br/>🟢 OK"]
+            O1["MTTR P1: 1.5h<br/>🟢 OK"]
+            O2["MTTR P2: 6h<br/>🟢 OK"]
             O3["Incidents/month: 3<br/>target: `<5` | 🟢 OK"]
         end
         
@@ -160,10 +160,10 @@ graph TB
 | | High SAST findings | 0 | Permanent | Zero tolerance |
 | | High SCA findings | 0 | Permanent | Zero tolerance |
 | | Code review rate | 100% | Permanent | Segregation of duties |
-| **Operations** | MTTR P0 (Critical) | `<`1h | Permanent | Systemic impact |
-| | MTTR P1 (High) | `<`4h | Permanent | Operational impact |
+| **Operations** | MTTR P1 (Critical) | `<`1h | Permanent | Systemic impact |
+| | MTTR P2 (High) | `<`4h | Permanent | Operational impact |
 | | Core app availability | ≥99.95% | Permanent | Regulatory SLA |
-| | P0 incidents resolved `<`24h | 100% | Permanent | Mandatory DORA reporting |
+| | P1 incidents resolved `<`24h | 100% | Permanent | Internal objective; DORA notification runs in parallel, within the RTS time limits (Policy 32 §6) |
 | **Supply Chain** | Suppliers in the inventory | 100% | M1 | DORA Art. 26 |
 | | % audited (risk assessment) | 100% | M3 | Required by DORA |
 | | % with an updated contract | 100% | M6 | Technical clauses |
@@ -225,8 +225,8 @@ gantt
 | **Development** | Test coverage | ≥75% | M6 | Pragmatic for an SME |
 | | High SAST findings | 0 | Permanent | CI/CD gate |
 | | High SCA findings | 0 | Permanent | CI/CD gate |
-| **Operations** | MTTR P0 | `<`4h | Permanent | Insurance: operational impact |
-| | MTTR P1 | `<`24h | Permanent | Less critical than a bank |
+| **Operations** | MTTR P1 | `<`4h | Permanent | Insurance: operational impact |
+| | MTTR P2 | `<`24h | Permanent | Less critical than a bank |
 | | Availability | ≥99.5% | Permanent | Commercial SLA |
 | **Supply Chain** | Suppliers in the inventory | 100% | M2 | Required by DORA |
 | | % with onboarding | 100% | M3 | Before access |

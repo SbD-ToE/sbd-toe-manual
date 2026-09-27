@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: 8637270fd27e49331147b87abe0eb15d61683d7b5504879d351662fa6f6264e1
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 0adb028ba39309bd76f771d3db5c472dd0be4e29339c5e7b2c34ab8bdc8a3a41
+  source_sha256: a425d5454bf8014fee6159e450c05393a0b40e730bfd6205825ed018be951030
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 796402018e8f472384dfa62825fdb69502cff46a763fa4ddd6bfd9c9a548bb5a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: d81225acb75d022285fd2019e7aa0962a0a56ccb488efbd856c6f933359908f0
-  translated_at: 2026-09-27T07:12:41Z
-  stamped_at: 2026-09-27T07:14:32Z
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: efb47b08f14879bd8b6756fe84574e79fc96c690ddc045b01835fcb4b7d3751d
+  translated_at: 2026-09-27T07:29:50Z
+  stamped_at: 2026-09-27T07:29:50Z
   reviewed_by: null
 ---
 
@@ -507,7 +507,7 @@ It is suggested to formalise a post-market monitoring plan based on the observab
 
 **Normative content**
 
-Art. 73 requires providers to report **serious incidents** to the market surveillance authorities, within defined deadlines — as a rule **not later than 15 days** after becoming aware; **not later than 10 days** in the event of the death of a person; and **not later than 2 days** in the event of a widespread infringement or of a serious and irreversible disruption of critical infrastructure (Article 3, point (49)(b)) — and to take corrective action.
+Art. 73 requires providers to report **serious incidents** to the market surveillance authorities of the Member States where they occurred, **immediately** after establishing a causal link between the AI system and the incident (or the reasonable likelihood of such a link) and, in any event, **not later than 15 days** after the provider or, where applicable, the deployer becomes aware of it; **within 10 days** in the event of the death of a person; and **within 2 days** in the event of a widespread infringement or of a serious incident as defined in Article 3, point (49)(b). An initial report that is incomplete may be submitted, followed by a complete report (paragraph 5). Investigation and corrective action follow (paragraph 6).
 
 **SbD-ToE coverage**
 
@@ -529,7 +529,7 @@ Art. 73 requires providers to report **serious incidents** to the market surveil
 
 **Intentional gaps**
 
-SbD-ToE does not set the AI Act **regulatory definition of "serious incident"**, nor the deadlines (15 days / 10 days / 2 days depending on severity), submission templates or the circuit to the competent authority. As with NIS2 and DORA, these fields are left configurable.
+SbD-ToE does not reproduce the AI Act **definition of "serious incident"** (Article 3, point (49)), nor submission templates or the circuit to the market surveillance authority; as with NIS2 and DORA, these fields are left configurable. The time limits, by contrast, are not configurable: they are those of Article 73 (15 days / 10 days / 2 days, counted from awareness).
 
 **How to comply**
 

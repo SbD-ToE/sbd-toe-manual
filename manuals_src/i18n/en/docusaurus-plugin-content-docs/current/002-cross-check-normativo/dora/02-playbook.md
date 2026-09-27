@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/02-playbook.md
-  source_sha256: fd3254d0ef6de2b50dc1aea70435707e662571817ae7962d6a45924b585d7798
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: f2daa391479e3597e3e23bc774a522c1265d6430a43fdd070e187c5cdda9ffd3
+  source_sha256: ee415332403f3b8b0daf94b1c2b6a0f2abea05310e09db9d329f4eec1c3941c1
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 0297307236880bc1bd8346c860f87b69bff5a985bab4709905a1e9beb7bf39ed
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, dora_ict_risk, eu_management_body, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: 5af0b23362097214c240525fdc5b4472d031b232a8c13a8622c5cdc863004bc0
-  translated_at: 2026-09-26T23:27:16Z
-  stamped_at: 2026-09-26T23:27:16Z
+  translated_at: 2026-09-27T07:29:55Z
+  stamped_at: 2026-09-27T07:29:55Z
   reviewed_by: null
 ---
 
@@ -141,7 +141,7 @@ This playbook maps **DORA requirements (Regulation (EU) 2022/2554) to practical 
 - 📄 **Template:** [Incident Report](../exemplo-playbook/exemplo-relatorio-incidentes)
 
 #### 4.3 Parameterisation of external reporting {#43-parametrização-de-reporte-externo}
-- **What:** translate the internal process into `initial`, `intermediate` and `final report`
+- **What:** translate the internal process into `initial`, `intermediate` and `final report`, within the time limits set by the RTS (Delegated Regulation (EU) 2025/301, Art. 5: initial notification ≤ 4 h after classification as major and ≤ 24 h after becoming aware; intermediate report ≤ 72 h after the initial notification; final report ≤ 1 month after the latest intermediate report) and inform the affected clients without undue delay (Article 19(3))
 - **How:** parameterise fields, templates and exporters according to the RTS/ITS and the competent authority
 - **Boundary:** this part no longer sits entirely in the base Manual; it requires complementary regulatory material
 - **References:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14 - Governance and Contracting](/sbd-toe/sbd-manual/governanca-contratacao/intro)

@@ -8,16 +8,16 @@ sidebar_position: 31
 translation:
   source_locale: pt
   source_path: 020-assets/policies/31_policy-gestao-alertas.md
-  source_sha256: 32211e5a22176118c52bc37d2cc925eb551635ecca6a9a29b7bb64bba3a69b7f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 460512b58a77be7d50b4715feb012ab49173a7818ec899a2c9fa0577ad7f2c03
+  source_sha256: 6d7cd6f1e10a26358a6d9af4c2eb568f952b12a98e97d2380699922bc97d348f
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 35bc9cf544f5c538088b02ad346baa33da10708e63868c23229ff3e4f6ae6af2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [candidate, cycle_iteration, lifecycle_phase, role_tech_lead, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: 2a1aec2b8df0d113d9b78d4d74cfeadd3d3ce4d2e261f34113410568d18bca8e
-  translated_at: 2026-09-26T14:11:02Z
-  stamped_at: 2026-09-26T18:37:02Z
+  translated_at: 2026-09-27T07:30:12Z
+  stamped_at: 2026-09-27T07:30:12Z
   reviewed_by: null
 ---
 
@@ -83,6 +83,7 @@ When the first-response SLA is exceeded without any recorded action, the alert m
 |---|---|---|---|
 | Automatic escalation on SLA exceeded | Not applicable | Mandatory (to Tech Lead) | Mandatory (to Tech Lead + AppSec/GRC) |
 | Notification to a manager when a P1 persists > 30 minutes | Not applicable | Recommended | Mandatory |
+| Escalation to GRC/Compliance and the DPO when there is an indication of a regulatory track ([Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção)) | Mandatory (≤ 1 h) | Mandatory (≤ 1 h) | Mandatory (≤ 1 h) |
 
 The escalation chain must be documented and tested periodically (at least once every six months).
 

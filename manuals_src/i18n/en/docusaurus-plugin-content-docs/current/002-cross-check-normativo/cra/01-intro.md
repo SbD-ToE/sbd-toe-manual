@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/01-intro.md
-  source_sha256: cbb98c621106fe72c86896007cb500590481c6a1248c7260c0bdc193441c2036
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 008565d9bf5509d9c53fe8285cd1ec8c1f74be6d28d3f5f2e41589f673482959
+  source_sha256: 8d0c32cbad309af68bac91fe63c28c95c38b78af640965e06e5f07c86af323b0
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 9659fee7f0dc1da30e466bd2dcdfb77e902a950e2506528134e69a4803765dae
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cra_support_period, csa_certification_scheme, cycle_iteration, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: 65e3761ca8f3fcf186a68a382295b6910c3a06b27e92e479ad1fc272b84f8f61
-  translated_at: 2026-09-27T07:05:54Z
-  stamped_at: 2026-09-27T07:14:33Z
+  translated_at: 2026-09-27T07:29:52Z
+  stamped_at: 2026-09-27T07:29:52Z
   reviewed_by: null
 ---
 
@@ -93,7 +93,7 @@ SbD-ToE covers the technical "how", but **does not replace**:
 | Secure Lifecycle Management | Security requirements applicable throughout the entire cycle (design → development → distribution → maintenance) | Ch. 02 (requirements), Ch. 06 (development), Ch. 07 (CI/CD), Ch. 11 (pre-deploy) | Does not clearly distinguish manufacturer/importer/distributor roles, nor the formal determination of the support period | Map SbD-ToE roles → CRA roles and record a support period policy |
 | Vulnerability Identification and Management | Processes to receive, assess, prioritise and remediate vulnerabilities | Ch. 05 (SBOM/SCA), Ch. 10 (testing), Ch. 12 (monitoring), exception addons | Formal mechanism for external receipt (coordinated disclosure portal) | Implement a public channel + a coordinated vulnerability disclosure policy (Annex I, Part II, point (5)) |
 | SBOM / Transparency | Provision of information on critical components and dependencies | Ch. 05 (continuous SBOM) | Exact format for external provision (e.g. public CycloneDX export) | Create a sanitised SBOM export routine for stakeholders |
-| Rapid Fixes and Patches | Apply security fixes without undue delay | Ch. 05 (CVE management), Ch. 07 (CI/CD automation), Ch. 12 (exploitation detection) | The CRA does not set numerical remediation deadlines (it requires remediation «without delay») | Define an internal patch SLA (e.g. Critical ≤15d, High ≤30d, Medium ≤90d) as the operationalisation of «without delay» |
+| Rapid Fixes and Patches | Apply security fixes without undue delay | Ch. 05 (CVE management), Ch. 07 (CI/CD automation), Ch. 12 (exploitation detection) | The CRA requires vulnerabilities to be addressed and remediated «without delay» (Annex I, Part II, point (2)), without setting a number of days | Apply the Manual's single internal remediation ladder ([Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle)) as the operationalisation of «without delay» — the Manual's choice, not a CRA time limit |
 | Reporting of actively exploited vulnerabilities | Notify the CSIRT designated as coordinator and ENISA, via the single reporting platform, of actively exploited vulnerabilities and severe incidents: early warning ≤24 h, notification ≤72 h and final report (Art. 14; applicable since 11.9.2026) | Ch. 12 (detection, exploitation metrics), Ch. 14 (governance) | Does not sufficiently separate mandatory reporting, communication to users and the official platform/regime | Add a technical runbook + a formal notification and communication interface |
 | Vulnerability Prevention Measures | Quality control and security testing before release | Ch. 10 (SAST/DAST/fuzzing), Ch. 11 (release gate) | Formal rejection/release criteria by criticality | Add a matrix: criticality level → automatic release block |
 | Security Documentation | Security instructions and information for users/admins | Ch. 04 (architecture), Ch. 11 (secure deploy) | The manual does not on its own generate the entire `Annex II` surface (support period, contact point, end-of-support wording) | Create a "Product Security Guide" artefact + a support period and contact point table |
@@ -132,6 +132,8 @@ Define a CRA SLA differentiated by severity and product criticality. Integrate i
 
 ### 5. Exploited Vulnerability Reporting {#5-reporte-de-vulnerabilidade-explorada}
 When exploitation is confirmed (telemetry, IOC, proof), generate a minimum report: vulnerability ID, component, affected version, impact, temporary mitigation, patch deadline.
+
+Time limits of Article 14 (applicable since 11.9.2026), to the CSIRT designated as coordinator and to ENISA, via the single reporting platform: early warning notification ≤ 24 h and vulnerability notification ≤ 72 h after becoming aware; final report ≤ 14 days after the corrective or mitigating measure is available. For severe incidents: 24 h, 72 h and final report ≤ 1 month after the notification. The manufacturer also informs the impacted users (Article 14(8)).
 
 This must be read as a technical basis for meeting the reporting obligation, not as a substitute for the full regulatory surface of `Articles 14-16`, which includes formal notification, institutional coordination and communication to users where applicable.
 

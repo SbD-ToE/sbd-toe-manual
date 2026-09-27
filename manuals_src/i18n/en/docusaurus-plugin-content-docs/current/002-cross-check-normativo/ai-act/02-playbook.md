@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/02-playbook.md
-  source_sha256: 6fe6e535fced5d464a16018d4f54da135423b8acfde851e725cfc579476c0d95
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 86a482196db34380c054625f9a248a71e32e3f919b606947c1f6e11cf363edab
+  source_sha256: f32c6561d4e61f573c4775c96a98d88ae0d16a22bf7e40fdc74f4832b242a92f
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: d8f5e2a0901ffea549d1cb2bb95379555604cd5753ce9d8e3db96ca3a568dd0f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: c0f4e2d904dadb56c660ddd5b460d1a61794d1de4ab21b47e09a9df0337c3776
-  translated_at: 2026-09-27T07:05:53Z
-  stamped_at: 2026-09-27T07:05:53Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 6d0ed3784841aaa45d5b727fba1ad3652846456d2fafe68171907b0e7626f1f3
+  translated_at: 2026-09-27T07:29:51Z
+  stamped_at: 2026-09-27T07:29:51Z
   reviewed_by: null
 ---
 
@@ -175,7 +175,7 @@ Before any technical action, the legal framing must be established - **complianc
 ### Phase 6: Serious incidents (M10–M12) {#fase-6-incidentes-graves-m10m12}
 **AI Act Art. 73**
 
-- **What:** Parameterise the *runbook* and the incident schema with the typology and deadlines of Art. 73 (≤15 days as a rule; ≤10 days in the event of death; ≤2 days in the event of a widespread infringement or a serious and irreversible disruption of critical infrastructure). **Agentic-specific incident classes** (Policy 16 §11.4): *off-policy action*, *intent-action divergence*, successful *prompt injection*, *kill-switch* failure, *credential exposure*. ***Upstream* incidents** (Policy 39 §7): *rug pull*, *dataset poisoning*, *MCP tool poisoning*, *provider outage*.
+- **What:** Parameterise the *runbook* and the incident schema with the typology and time limits of Art. 73 (immediately after establishing the causal link and, at the latest, ≤15 days as a rule; ≤10 days in the event of death; ≤2 days in the event of a widespread infringement or of a serious incident under Article 3, point (49)(b); time limits counted from awareness by the provider or the deployer; an incomplete initial report is allowed). **Agentic-specific incident classes** (Policy 16 §11.4): *off-policy action*, *intent-action divergence*, successful *prompt injection*, *kill-switch* failure, *credential exposure*. ***Upstream* incidents** (Policy 39 §7): *rug pull*, *dataset poisoning*, *MCP tool poisoning*, *provider outage*.
 - **How:** SIEM/ITSM exporters → notification ready for the market surveillance authority. [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) feeds the IR flow (Ch. 12 US-04).
 - **Reference:** [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro), [Policy 16 §11.4](/sbd-toe/assets/policies/policy-uso-ferramentas-apoio), [Policy 30 §9.3](/sbd-toe/assets/policies/policy-monitorizacao-seguranca), [Policy 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
 - 📄 **Template:** [Incident Report](../exemplo-playbook/exemplo-relatorio-incidentes)

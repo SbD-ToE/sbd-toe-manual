@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/01-intro.md
-  source_sha256: b7964853f07fbefbf55a546e3dd0f6f005d25939ca890be3a3bb6c18a13139f7
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 2b34dd886f0de443c88e15765d92faa532e829c064a0cb4ebeb1b1b19200ca39
+  source_sha256: cb414e2076574b10836632500526baee9c75f25c5bdf31fd67b1a2e7bfc53129
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: a2a23fc92fcb79fbadac22f05d7c118513c16845e8cada6b38e44e2dd276d3bf
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 726faae316dcc38b914507bcd27d9e29f0c3bf98174408bbd75c75b2f2ed9af7
-  translated_at: 2026-09-26T23:27:22Z
-  stamped_at: 2026-09-26T23:27:22Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 764cf9d1501abafbe67affc33a2ba7827210289ef006b10bbbf86fa9300b5785
+  translated_at: 2026-09-27T07:32:31Z
+  stamped_at: 2026-09-27T07:32:31Z
   reviewed_by: null
 ---
 
@@ -117,8 +117,8 @@ It is suggested to use the Ch. 02 catalogue as the basis of a technical SoA, com
 
 NIS2 defines a reporting track for significant incidents:
 
-- **Early warning** ("early warning") within 24h of becoming aware.
-- **Incident notification** with an initial assessment within 72h.
+- **Early warning**, to the CSIRT or, where applicable, the competent authority, without undue delay and within 24 h of becoming aware of the significant incident.
+- **Incident notification**, with an initial assessment, within 72 h of becoming aware.
 - **Final report** within 1 month of the incident notification (72h), with intermediate reports at the request of the CSIRT/authority.
 
 **SbD-ToE coverage**
@@ -137,7 +137,7 @@ NIS2 defines a reporting track for significant incidents:
 
 **Intentional gaps**
 
-SbD-ToE does not fix a canonical data model for incidents, nor an "official" P0–P3 taxonomy, nor the submission templates. This is intentional: DORA, NIS2 and HIPAA require different sets of fields and formats. The manual says "record the incident with mandatory fields", and the final set of fields comes from the applicable normative framework (in the case of NIS2, from national guidance and Article 23).
+SbD-ToE does not set a canonical data model for incidents, nor an "official" severity taxonomy (the P1–P4 scale of Policy 31 is internal), nor the submission templates. This is intentional: DORA, NIS2 and HIPAA ask for different sets of fields and formats. The manual says "record the incident with mandatory fields", and the final set of fields comes from the applicable normative framework (in the case of NIS2, from national guidance and Article 23).
 
 **How to comply**
 

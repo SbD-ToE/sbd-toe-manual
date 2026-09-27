@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/02-playbook.md
-  source_sha256: e3647a8e7582e415ebec5d4502785e28dffcc0799786173d261291632161c18c
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: ee332f74ba5496cff1d560e92c9d063b5e26c821a260f0a6e4462a60b0650704
+  source_sha256: e5da6a955c8171c13588988c7fbdd1b9381fede67b201703d4dbfc575fc8dfb8
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 4382be780609c15dfec1f5159b64f8ace99bd4c88736ca4143733ff8ff89a5a6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cra_support_period, cycle_iteration, eu_placing_on_market, lifecycle_phase, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: add33d9a5f390ac71a175848cc9b05861423da22abdbf4138f3f3c577e2d1732
-  translated_at: 2026-09-27T07:05:55Z
-  stamped_at: 2026-09-27T07:14:34Z
+  translated_at: 2026-09-27T07:29:53Z
+  stamped_at: 2026-09-27T07:29:53Z
   reviewed_by: null
 ---
 
@@ -161,6 +161,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 - [ ] "Actively exploited" criteria defined
 - [ ] JSON export script ready
 - [ ] Article 14 notification runbook (24 h / 72 h / final report)
+- [ ] Fast track: triage ≤ 4 h where there is an indication of active exploitation (the Manual's choice); early warning notification ≤ 24 h after becoming aware
 - [ ] User communication matrix
 - [ ] Simulation completed
 - [ ] Test evidence archived

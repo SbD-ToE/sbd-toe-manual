@@ -7,16 +7,16 @@ tags: [kri, executivo, ciso, board, dashboard, risco, governacao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/kpis-kri-executivo.md
-  source_sha256: 03407345a715efd962af50e6e06169438b85c924fb8f497e049394d70b0135e7
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 6ddd053f27e2eae3b89579e6d64fb1a25a5eac326b01c500611ff40a96ab9629
+  source_sha256: b9e29652f0ebd4eacb994720af0a4d3bf610be8505364db592d1b8794b032410
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 645c8affcb9ae88ce9461671da42602756a91b94815e4e584241712ad0c4b08c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, mcp_reading_programa, papel_suporte, programme_line, risk_level, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: 1373fc8c0608265b333d70ac68786a865da562a6d991b47855c3616e84b703bd
-  translated_at: 2026-09-26T12:00:27Z
-  stamped_at: 2026-09-26T18:36:29Z
+  translated_at: 2026-09-27T07:30:10Z
+  stamped_at: 2026-09-27T07:30:10Z
   reviewed_by: null
 ---
 
@@ -45,7 +45,7 @@ The eight indicators are a **curated subset** of the technical indicators - they
 | 3 | How many applications in production are free of known critical flaws? | ≥ 70% | ≥ 90% | 100% | Monthly |
 | 4 | Are there exposed credentials or expired risk authorisations? | = 0 | = 0 | = 0 | Weekly |
 | 5 | How long does it take to detect a security incident? | ≤ 24h | ≤ 4h | ≤ 30 min | Monthly |
-| 6 | How long does it take to react after detecting the incident? | ≤ 48h | ≤ 4h | ≤ 1h | Monthly |
+| 6 | How long does it take to react after detecting the incident? | ≤ 8h | ≤ 4h | ≤ 1h | Monthly |
 | 7 | Do the teams have up-to-date security training? | ≥ 80% | ≥ 90% | 100% | Quarterly |
 | 8 | Have the critical applications been tested by an independent entity? | - | ≥ 80% | 100% | Half-yearly |
 

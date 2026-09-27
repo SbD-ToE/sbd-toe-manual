@@ -8,16 +8,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md
-  source_sha256: d835006eaf8a4de5de9b792814bfee407e4f861842fe65f26aa305b5f971f80d
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 343d4e8685cfab6f210d0ca9f1034cf9ee27b83e061dbe10f2924c38c94e21e9
+  source_sha256: 6792dac4856de73edefb1a601b300b1a67da7424be52c8129c2a25c521049a73
+  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
+  target_sha256: 1fdc37bbc2a9afc659291ebedea3ca948f8f5aa1f34d4cbad89a3aadfe3e428e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [chapter_role, framework_source_corpus, nis2_early_warning, nis2_significant_incident, role_secops, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: b6f19b5bb65f51bdb8650163da2e5f7a8e8b7c6ce1535b540aa811a8b4d96299
-  translated_at: 2026-09-26T23:27:25Z
-  stamped_at: 2026-09-26T23:27:25Z
+  translated_at: 2026-09-27T07:30:01Z
+  stamped_at: 2026-09-27T07:30:01Z
   reviewed_by: null
 ---
 
@@ -37,7 +37,7 @@ Responsible for **continuous security monitoring**, alert configuration and exec
 - Ensure incident notification within the regulatory deadlines
 
 ### Organisational Context {#contexto-organizacional}
-SecOps is the **front line in complying with NIS2** (incident response, notification within 24h) and **DORA** (operational continuity and management of critical events).
+SecOps is the **front line in NIS2 compliance** (incident response; early warning within 24 h, incident notification within 72 h and final report 1 month after the notification, for significant incidents) and **DORA** (operational continuity and management of critical events).
 
 ## Regulatory Framework {#enquadramento-regulatório}
 

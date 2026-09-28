@@ -5,6 +5,17 @@ description: Catálogo canónico de requisitos de segurança aplicacional do SbD
 requirement_class: aplicacional
 tags: [tipo:catalogo, classe:aplicacional, requisitos, segurança-aplicacional, rastreabilidade, L1, L2, L3, aceitacao, auditoria, ASVS, NIST-SSDF]
 sidebar_position: 2
+# Âncoras no substrato externo por requisito (ids do ExternalSourcesInventory); o KG lê-as daqui, o leitor vê as «Fontes.».
+sbdtoe_sources:
+  FIL-001: [UNIT-V5.2.1, UNIT-V5.1.1]
+  FIL-002: [UNIT-V5.2.2, UNIT-V5.1.1]
+  FIL-003: [UNIT-V5.2.3, UNIT-V5.2.5, UNIT-V5.3.3]
+  FIL-004: [UNIT-V5.2.4]
+  FIL-005: [UNIT-V5.3.1, UNIT-V5.3.2]
+  FIL-006: [UNIT-V5.4.1, UNIT-V5.4.2]
+  FIL-007: [UNIT-V5.4.3]
+  FIL-008: [UNIT-V5.2.6]
+  PRI-005: [UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9]
 ---
 
 # Catálogo Base de Requisitos de Segurança

@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Applicable requirements — Processing of personal data (GDPR)"
-description: "Generated view: the Manual's requirements that apply under context CTX-RGPD, by level and grade, with each floor that the regime elevates and its legal basis."
+description: "The Manual's requirements that apply under context CTX-RGPD, by level and grade, with each floor that the regime elevates and its legal basis."
 sidebar_position: 90
-tags: [cross-check, gdpr, requisitos, overlay, gerado]
+tags: [cross-check, gdpr, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,9 +27,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: ce728dcfb4b3266a536140dd2b120a802bcc0b5fc0a58157bc8b67608c722c8c
+  source_sha256: 2b6e5b1dff383906499a93ce9702629a53b3db8981aadbffd2a2c095525edf4c
   source_commit: null
-  target_sha256: 8fc250e7a9d02d95b82ee6e403c4d3be0f9a8004e350e11d30a3f666fe3558fb
+  target_sha256: c3b7835df0a45ce7a1e5b626bceec994cd47c24ef65f0b4703d15294cd65af9f
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -40,8 +41,6 @@ translation:
 ---
 
 # Applicable requirements: Processing of personal data (GDPR)
-
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.
 
 For context **CTX-RGPD**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.
 
@@ -377,7 +376,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
+Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -389,7 +388,7 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/rgpd.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 6 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 6 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (56) {#cobre}
 

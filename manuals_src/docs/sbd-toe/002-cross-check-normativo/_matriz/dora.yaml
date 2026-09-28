@@ -8713,8 +8713,8 @@ itens:
       en: Alerts configured when a published CVE affects a component present in the runtime inventory
   falta: null
   razao_fora_de_ambito:
-    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
-    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8749,8 +8749,8 @@ itens:
       en: A central inventory or GRC exists with a record of each application
   falta: null
   razao_fora_de_ambito:
-    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
-    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8792,8 +8792,8 @@ itens:
       en: SBOM present and accessible for each build
   falta: null
   razao_fora_de_ambito:
-    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
-    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -8820,8 +8820,8 @@ itens:
       en: '**Identify and classify the legacy asset** (using the criteria of Ch. 1)'
   falta: null
   razao_fora_de_ambito:
-    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
-    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -15366,8 +15366,8 @@ itens:
       en: A central inventory or GRC exists with a record of each application
   falta: null
   razao_fora_de_ambito:
-    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
-    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media

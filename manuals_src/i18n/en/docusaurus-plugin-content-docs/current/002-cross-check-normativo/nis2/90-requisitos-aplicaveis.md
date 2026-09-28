@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Applicable requirements — Essential entity or important entity (NIS2)"
-description: "Generated view: the Manual's requirements that apply under context CTX-NIS2, by level and grade, with each floor that the regime elevates and its legal basis."
+description: "The Manual's requirements that apply under context CTX-NIS2, by level and grade, with each floor that the regime elevates and its legal basis."
 sidebar_position: 90
-tags: [cross-check, nis2, requisitos, overlay, gerado]
+tags: [cross-check, nis2, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,9 +27,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: b738ea335d8a8aeb94bbaa8bf00abb097c212e5a80e6e47952348229c4fbe984
+  source_sha256: a0eda58c2af29f44afdc39419803fc844a75f06366ccbdfa69b73deb70b15056
   source_commit: null
-  target_sha256: 8dcd3a423f697485177a4286fd0b6238c4b83a924d5398a935c8347ae5478e83
+  target_sha256: 93a2c6d6cab93ce83007e3be8a2d7f0c564ed7c58b4614544c067df6389bda94
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -40,8 +41,6 @@ translation:
 ---
 
 # Applicable requirements: Essential entity or important entity (NIS2)
-
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.
 
 For context **CTX-NIS2**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.
 
@@ -681,7 +680,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
+Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -693,7 +692,7 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/nis2.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 8 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 8 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (110) {#cobre}
 
@@ -864,7 +863,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | NIS2-IR2690-6.3.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.3.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `IAC-003`; [Policy 21 §3](/sbd-toe/assets/policies/policy-iac-seguro#3-princípios-de-iac-seguro); `IAC-012`; `CFG-007` | Secure configurations enforced on new systems via the pipeline; on systems in operation, drift detection is mandatory only at L2/L3 (IaC) and L3 (application). |
 | NIS2-IR2690-6.3.3 | Implementing Regulation (EU) 2024/2690, Annex, point 6.3.3 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); `IAC-013`; `CNT-010` | Review of configurations after a significant incident prescribed; the formal review of modules remains L3 only. |
 | NIS2-IR2690-6.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DPL-001`; `DPL-003`; `DPL-007`; `IAC-007`; [Policy 26 §2](/sbd-toe/assets/policies/policy-aprovacao-release#2-âmbito-e-obrigatoriedade) | Approval and gates before production at all levels (DPL-001/003); validation in staging and approved plan only at L2/L3; impact assessment not explicit. |
-| NIS2-IR2690-6.6.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.6.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DEP-007`; `DEP-003`; `DEP-005`; `CNT-010`; [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Patching of dependencies and images with SLA, verified integrity and compensating controls is prescribed; patch management of the entity's operating systems and equipment is out of scope by the lead's decision (entity-wide security). |
+| NIS2-IR2690-6.6.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.6.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DEP-007`; `DEP-003`; `DEP-005`; `CNT-010`; [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Patching of dependencies and images with SLA, verified integrity and compensating controls is prescribed; patch management of the entity's operating systems and equipment is out of scope of the Manual (entity-wide security). |
 | NIS2-IR2690-6.7.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.7.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `ARC-001`; `ARC-002`; `ARC-006`; `ARC-008`; `INT-004`; `INT-006` | Zones, exposure, isolation and secure protocols covered; missing: only authorised devices on the network, provider connections authorised and time-limited, restriction of security management systems, transition plans for next-generation protocols, email security standards, and DNS and routing good practices. |
 | NIS2-IR2690-6.8.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.8.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `ARC-006`; `CFG-002`; `IAC-002`; `ARC-011`; `CNT-012`; [📝 Description](/sbd-toe/sbd-manual/arquitetura-segura/addon/diagramas-referencia#-descrição-2) | Separation of production/development and domain isolation exist; DMZ only in an L3 reference diagram; network segregation between environments only at L3 (ARC-011); separating the administration network and channels from operational traffic, and production backups, is missing. |
 | NIS2-IR2690-6.9.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.9.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `FIL-007`; `IDE-001`; `CNT-001`; `CNT-009`; `DEP-005` | Controls unauthorised software in the chain (images, libraries, tools) and file scanning (L2/L3); does not cover anti-malware protection of systems in operation. |
@@ -918,14 +917,14 @@ Obligations that the Manual declares out of scope, with the reason.
 | NIS2-IR2690-10.2.3 | Implementing Regulation (EU) 2024/2690, Annex, point 10.2.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-10.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 10.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-10.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 10.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
-| NIS2-IR2690-12.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| NIS2-IR2690-12.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | NIS2-IR2690-12.3.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
 | NIS2-IR2690-12.3.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
 | NIS2-IR2690-12.3.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
-| NIS2-IR2690-12.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| NIS2-IR2690-12.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| NIS2-IR2690-12.4.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.4.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | NIS2-IR2690-13.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.1 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-13.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.2 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-13.1.3 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.3 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |

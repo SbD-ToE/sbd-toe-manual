@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Requisitos aplicáveis — Produto com elementos digitais colocado no mercado (CRA)"
-description: "Vista gerada: requisitos do Manual que se aplicam sob o contexto CTX-CRA, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
+description: "Requisitos do Manual que se aplicam sob o contexto CTX-CRA, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
 sidebar_position: 90
-tags: [cross-check, cra, requisitos, overlay, gerado]
+tags: [cross-check, cra, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,8 +27,6 @@ derived_from:
 ---
 
 # Requisitos aplicáveis: Produto com elementos digitais colocado no mercado (CRA)
-
-> **Página gerada** por `scripts/gen_reg_views.py` a partir dos catálogos de requisitos e de `002-cross-check-normativo/_contextos-regulatorios.yaml`. Não se edita à mão: o catálogo de cada requisito é a fonte canónica, e esta página é uma vista do overlay regulatório.
 
 Esta página junta, para o contexto **CTX-CRA**, a selecção base do Manual por nível e os **pisos** que o regime eleva, cada um com a obrigação que o fundamenta. Um contexto nunca baixa um mínimo do Manual.
 
@@ -360,7 +359,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 
 ## Mapa de evidência da documentação técnica {#mapa-evidencia}
 
-Obrigações documentais do regime (anexo VII do CRA) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/cra.yaml`.
+Obrigações documentais do regime (anexo VII do CRA) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. A lista vem da matriz de cobertura do Manual.
 
 | Obrigação | Referência | Força | Como o Manual responde | Nota |
 |---|---|---|---|---|
@@ -377,7 +376,7 @@ Obrigações documentais do regime (anexo VII do CRA) ligadas aos artefactos do 
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
+Contagem das obrigações do regime na matriz de cobertura (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -389,7 +388,7 @@ Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas 
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
-Todas as obrigações da matriz `_matriz/cra.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 46 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+Todas as obrigações do regime, na matriz de cobertura do Manual, em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Nenhuma obrigação fica em silêncio. As 46 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
 ### Cobre (67) {#cobre}
 

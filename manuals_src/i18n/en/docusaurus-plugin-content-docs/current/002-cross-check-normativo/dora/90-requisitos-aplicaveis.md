@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Applicable requirements — Financial entity (DORA)"
-description: "Generated view: the Manual's requirements that apply under context CTX-DORA, by level and grade, with each floor that the regime elevates and its legal basis."
+description: "The Manual's requirements that apply under context CTX-DORA, by level and grade, with each floor that the regime elevates and its legal basis."
 sidebar_position: 90
-tags: [cross-check, dora, requisitos, overlay, gerado]
+tags: [cross-check, dora, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,9 +27,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: 61b01f3e352f440b137982aaf493715bf8f36b3801ce45c4a9e367053c6def91
+  source_sha256: 70ae951576f0d3edf85bb3789d4c1a2da2062d673c5e06faba88b3d6a645ea95
   source_commit: null
-  target_sha256: 6e5a8f3c663ed0028a6d1b4476b2d47257158d0a03f486a00a6be603686ec5e4
+  target_sha256: dfe9c5512cd1e045c9dc4c5f799474eaa1150180596cd414c323bee238e6b5f1
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -40,8 +41,6 @@ translation:
 ---
 
 # Applicable requirements: Financial entity (DORA)
-
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.
 
 For context **CTX-DORA**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.
 
@@ -680,7 +679,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
+Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -692,7 +691,7 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/dora.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 13 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 13 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (289) {#cobre}
 
@@ -1230,10 +1229,10 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS532-5-4 | Article 5(4) | DORA-specific contractual/legal content with no prescriptive counterpart in the Manual. Clauses on subcontractors. |
 | DORA-RTS1774-2-2-e | Article 2(2), point (e) | Disciplinary consequences of non-compliance — HR/compliance regime. |
 | DORA-RTS1774-2-2-g | Article 2(2), point (g) | Duty of the management body / internal governance structure; the Manual does not set corporate bodies or delegated authority levels. Segregation of duties between lines of defence. |
-| DORA-RTS1774-4-1 | Article 4(1) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| DORA-RTS1774-4-2-a | Article 4(2), point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| DORA-RTS1774-4-2-b | Article 4(2), point (b) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
-| DORA-RTS1774-4-2-c | Article 4(2), point (c) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-1 | Article 4(1) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-a | Article 4(2), point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-b | Article 4(2), point (b) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-c | Article 4(2), point (c) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | DORA-RTS1774-8-2-b-ii | Article 8(2), point (b)(ii) | Processing scheduling with interdependencies — IT operations. |
 | DORA-RTS1774-9-2 | Article 9(2) | Systems with long procurement lead times or that are resource-intensive — IT procurement planning. |
 | DORA-RTS1774-11-2-e | Article 11(2), point (e) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
@@ -1260,7 +1259,7 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS1774-28-3 | Article 28(3) | Legal responsibility retained when outsourcing verification. |
 | DORA-RTS1774-28-4 | Article 28(4) | Duty of the management body / internal governance structure; the Manual does not set corporate bodies or corporate authority levels. Segregation between control and internal audit. |
 | DORA-RTS1774-32 | Article 32(1) to (3) | Physical and environmental security of premises — outside the scope of a software engineering manual. |
-| DORA-RTS1774-34-a | Article 34, point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-34-a | Article 34, point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | DORA-RTS1774-35-f | Article 35, point (f) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
 | DORA-RTS1774-35-g | Article 35, point (g) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
 | DORA-RTS1774-39-2-a | Article 39(2), points (a) to (c) | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. |

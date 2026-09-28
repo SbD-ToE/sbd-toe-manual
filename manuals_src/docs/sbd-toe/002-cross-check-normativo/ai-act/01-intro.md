@@ -89,7 +89,7 @@ Lacuna declarada pendente da ronda AISVS/SAIF do AppSec Core: exatidão e solide
 
 ## Matriz de Cross-Check (resumo) {#matriz-de-cross-check-resumo}
 
-> ✏️ **Revisão 2026-09-27.** Esta tabela resume a matriz de cobertura do AI Act (`_matriz/aiact.yaml`), que incorpora o *release agentic* (Cap. 02 §A0–A4, Cap. 03 playbook agentic, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39) e os pisos e requisitos do contexto CTX-AIA-RE. A coluna «Lacuna residual» só regista lacunas declaradas; o que fica fora de âmbito é assinalado como tal. A resposta obrigação a obrigação está em [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
+> ✏️ **Revisão 2026-09-27.** Esta tabela resume a matriz de cobertura do AI Act, que incorpora o *release agentic* (Cap. 02 §A0–A4, Cap. 03 playbook agentic, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39) e os pisos e requisitos do contexto CTX-AIA-RE. A coluna «Lacuna residual» só regista lacunas declaradas; o que fica fora de âmbito é assinalado como tal. A resposta obrigação a obrigação está em [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
 
 | Domínio AI Act | Referência (artigo) | Cobertura SbD-ToE | Lacuna residual | Ação de adaptação |
 |---|---|---|---|---|

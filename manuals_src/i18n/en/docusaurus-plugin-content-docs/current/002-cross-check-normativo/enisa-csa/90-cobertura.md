@@ -1,18 +1,19 @@
 ---
 id: cobertura
 title: "Coverage — Cybersecurity Act (CSA)"
-description: "Generated view: what the Manual covers, the declared gaps and what stays out of scope, from the coverage matrix of the Cybersecurity Act (CSA)."
+description: "What the Manual covers, the declared gaps and what stays out of scope, from the coverage matrix of the Cybersecurity Act (CSA)."
 sidebar_position: 90
-tags: [cross-check, enisa-csa, cobertura, gerado]
+tags: [cross-check, enisa-csa, cobertura]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 002-cross-check-normativo/_matriz/csa.yaml
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/enisa-csa/90-cobertura.md
-  source_sha256: 1db817fb7a5ecbdd86c2bba3ab00ca933e4c4105bc59eb4003d95327a4fa29fc
+  source_sha256: 00239a8fc689df4043b0414135a25cf684421730f1921a40f92c90701d8145fa
   source_commit: null
-  target_sha256: 8dcbfb3583f0c5d3f7c67cfac83505c4dc4c1ede468e7a74a3b17c36f522667e
+  target_sha256: 55a5624f68b6e512498cad2772b40a8fc9e823ec7c99c7658fb173061da8c539
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -25,11 +26,11 @@ translation:
 
 # Coverage: Cybersecurity Act (CSA)
 
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the matrix `002-cross-check-normativo/_matriz/csa.yaml`. It is not edited by hand. This regime has no context in the regulatory overlay (it neither elevates nor adds requirements); it answers only in the three categories.
+This regime has no context in the regulatory overlay (it neither elevates nor adds requirements); it answers only in the three categories.
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/csa.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 19 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 19 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (35) {#cobre}
 

@@ -40,6 +40,7 @@ vocabulario:
     - {id: politica, nome: {pt: Política, en: Policy}, chave: ficheiro+ancora}
     - {id: pagina, nome: {pt: Secção do Manual, en: Manual section}, chave: ficheiro+ancora}
     - {id: acrescento, nome: {pt: Requisito acrescentado pelo regime, en: Requirement added by the regime}, chave: alvo}
+    - {id: contexto, nome: {pt: Contexto regulatório, en: Regulatory context}, chave: alvo}  # alvo = id CTX-*, resolvido contra o overlay
   operador:
     - {id: selecionar, nome: {pt: Selecionar, en: Select}, descricao: {pt: "Ids do master que se aplicam em cada nível (selecção base).", en: "Master ids that apply at each level (base selection)."}}
     - {id: elevar, nome: {pt: Elevar, en: Elevate}, descricao: {pt: "Torna obrigatório ou fixa um parâmetro num id do master; nunca baixa um mínimo.", en: "Makes a master id mandatory or fixes a parameter on it; never lowers a minimum."}}

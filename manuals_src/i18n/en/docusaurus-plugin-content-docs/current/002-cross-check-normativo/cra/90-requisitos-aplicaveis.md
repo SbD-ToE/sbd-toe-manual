@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Applicable requirements — Product with digital elements placed on the market (CRA)"
-description: "Generated view: the Manual's requirements that apply under context CTX-CRA, by level and grade, with each floor that the regime elevates and its legal basis."
+description: "The Manual's requirements that apply under context CTX-CRA, by level and grade, with each floor that the regime elevates and its legal basis."
 sidebar_position: 90
-tags: [cross-check, cra, requisitos, overlay, gerado]
+tags: [cross-check, cra, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,9 +27,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: e59888167c0e3084d36f09c6029059aef54632e32577c43588de43a6488a3cf8
+  source_sha256: 5c81208b0612b596bc9540dcaa74c10f3d63e00d707088872477b8ced1037e6b
   source_commit: null
-  target_sha256: 6cfd0e5eef39dbc35bf4e3acfce2f706f984db360d87679edbf53fd8381ed092
+  target_sha256: 959ed04467be70fc534be01a8fd77f935a30154463fff4f0e8643ecb11d3801f
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -40,8 +41,6 @@ translation:
 ---
 
 # Applicable requirements: Product with digital elements placed on the market (CRA)
-
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.
 
 For context **CTX-CRA**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.
 
@@ -374,7 +373,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Evidence map for the technical documentation {#mapa-evidencia}
 
-Documentary obligations of the regime (CRA Annex VII) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/cra.yaml`.
+Documentary obligations of the regime (CRA Annex VII) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. The list comes from the Manual's coverage matrix.
 
 | Obligation | Reference | Strength | How the Manual responds | Note |
 |---|---|---|---|---|
@@ -391,7 +390,7 @@ Documentary obligations of the regime (CRA Annex VII) linked to the Manual artef
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
+Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -403,7 +402,7 @@ Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addre
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/cra.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 46 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 46 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (67) {#cobre}
 

@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Requisitos aplicáveis — Sistema de IA de risco elevado (AI Act)"
-description: "Vista gerada: requisitos do Manual que se aplicam sob o contexto CTX-AIA-RE, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
+description: "Requisitos do Manual que se aplicam sob o contexto CTX-AIA-RE, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
 sidebar_position: 90
-tags: [cross-check, ai-act, requisitos, overlay, gerado]
+tags: [cross-check, ai-act, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,8 +27,6 @@ derived_from:
 ---
 
 # Requisitos aplicáveis: Sistema de IA de risco elevado (AI Act)
-
-> **Página gerada** por `scripts/gen_reg_views.py` a partir dos catálogos de requisitos e de `002-cross-check-normativo/_contextos-regulatorios.yaml`. Não se edita à mão: o catálogo de cada requisito é a fonte canónica, e esta página é uma vista do overlay regulatório.
 
 Esta página junta, para o contexto **CTX-AIA-RE**, a selecção base do Manual por nível e os **pisos** que o regime eleva, cada um com a obrigação que o fundamenta. Um contexto nunca baixa um mínimo do Manual.
 
@@ -660,7 +659,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 
 ## Mapa de evidência da documentação técnica {#mapa-evidencia}
 
-Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/aiact.yaml`.
+Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. A lista vem da matriz de cobertura do Manual.
 
 | Obrigação | Referência | Força | Como o Manual responde | Nota |
 |---|---|---|---|---|
@@ -670,14 +669,14 @@ Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act)
 | AIA-AnxIV-2-a | Anexo IV, ponto 2, alínea a | Apoia evidência | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | A metodologia de treino fica fora de âmbito (governação de dados, art. 10.º). |
 | AIA-AnxIV-2-b | Anexo IV, ponto 2, alínea b | Apoia evidência | `ARC-004` | Lacuna declarada: lógica geral, algoritmos e o que o sistema optimiza. Os pressupostos sobre grupos de pessoas ficam fora de âmbito (enviesamento). |
 | AIA-AnxIV-2-c | Anexo IV, ponto 2, alínea c | Apoia evidência | `ARC-001`; `ARC-010`; `ARC-014` | Lacuna declarada: recursos computacionais de desenvolvimento, treino, teste e validação. |
-| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Fora de âmbito | — | Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental. |
+| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Fora de âmbito | — | Governação de dados de treino (art. 10.º) fora de âmbito do Manual; DEP-011 e a Política 39 §4 dão só evidência incidental. |
 | AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Apoia evidência | `ARC-014`; `REQ-AGN-003` | Avaliação das medidas de supervisão apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08). |
 | AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Cobre | `ARC-009`; `DEP-013` | — |
 | AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Apoia evidência | `TST-004`; `DPL-010`; `CIC-007` | **Ronda AISVS/SAIF do AppSec Core.** Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento). |
 | AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Cobre | `REQ-001`; `THR-008`; `ARC-014` | — |
 | AIA-AnxIV-3 | Anexo IV, ponto 3 | Apoia evidência | `OPS-011`; `ARC-014`; `THR-008` | Lacuna declarada: capacidades e limitações de desempenho e especificações dos dados de entrada. A exactidão por grupos de pessoas fica fora de âmbito (enviesamento). |
 | AIA-AnxIV-4 | Anexo IV, ponto 4 | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core. |
-| AIA-AnxIV-5 | Anexo IV, ponto 5 | Fora de âmbito | — | Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead. |
+| AIA-AnxIV-5 | Anexo IV, ponto 5 | Fora de âmbito | — | Sistema de gestão de riscos do art. 9.º fora de âmbito do Manual. |
 | AIA-AnxIV-6 | Anexo IV, ponto 6 | Cobre | `THR-006`; `ARC-010`; `CIC-005` | — |
 | AIA-AnxIV-7 | Anexo IV, ponto 7 | Fora de âmbito | — | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
 | AIA-AnxIV-8 | Anexo IV, ponto 8 | Fora de âmbito | — | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
@@ -691,7 +690,7 @@ Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act)
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
+Contagem das obrigações do regime na matriz de cobertura (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -703,7 +702,7 @@ Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigida
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
-Todas as obrigações da matriz `_matriz/aiact.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 15 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+Todas as obrigações do regime, na matriz de cobertura do Manual, em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Nenhuma obrigação fica em silêncio. As 15 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
 ### Cobre (87) {#cobre}
 
@@ -718,8 +717,8 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | AIA-5-1-b-B | Art. 5.º, n.º 1, primeiro parágrafo, alínea b-B) | Cobre | `THR-008`; `ARC-014` |
 | AIA-5-1-e | Art. 5.º, n.º 1, primeiro parágrafo, alínea e) | Apoia evidência | [Cap. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais); `DEP-011` |
 | AIA-5-1A | Art. 5.º, n.º 1-A | Cobre | `THR-008`; `ARC-014`; [C5 - Eval suites contínuas para agentes em desenvolvimento e produção](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) |
-| AIA-6-1 | Art. 6.º, n.os 1, 1-A, 1-B, 1-C | Cobre | [Quando se aplica (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
-| AIA-6-2-3 | Art. 6.º, n.os 2 e 3 | Cobre | [Quando se aplica (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
+| AIA-6-1 | Art. 6.º, n.os 1, 1-A, 1-B, 1-C | Cobre | `CTX-AIA-RE` |
+| AIA-6-2-3 | Art. 6.º, n.os 2 e 3 | Cobre | `CTX-AIA-RE` |
 | AIA-6-4 | Art. 6.º, n.º 4 | Apoia evidência | `CLA-001`; `GOV-009` |
 | AIA-11-1-a | Art. 11.º, n.º 1, primeiro parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
 | AIA-11-1-b | Art. 11.º, n.º 1, segundo parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
@@ -848,42 +847,42 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | AIA-5-1-h | Art. 5.º, n.º 1, primeiro parágrafo, alínea h) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
 | AIA-5-1B | Art. 5.º, n.º 1-B | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
 | AIA-8-2 | Art. 8.º, n.º 2 | Conformidade integrada com legislação setorial do anexo I; plano da conformidade de produto. |
-| AIA-9-1 | Art. 9.º, n.º 1 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental. |
-| AIA-9-2 | Art. 9.º, n.º 2 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental. |
-| AIA-9-4 | Art. 9.º, n.º 4 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental. |
-| AIA-9-5 | Art. 9.º, n.º 5 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental. |
-| AIA-9-6 | Art. 9.º, n.os 6-7 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead. |
-| AIA-9-8 | Art. 9.º, n.º 8 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead. |
-| AIA-9-9 | Art. 9.º, n.º 9 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental. |
+| AIA-9-1 | Art. 9.º, n.º 1 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental. |
+| AIA-9-2 | Art. 9.º, n.º 2 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental. |
+| AIA-9-4 | Art. 9.º, n.º 4 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental. |
+| AIA-9-5 | Art. 9.º, n.º 5 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental. |
+| AIA-9-6 | Art. 9.º, n.os 6-7 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual. |
+| AIA-9-8 | Art. 9.º, n.º 8 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual. |
+| AIA-9-9 | Art. 9.º, n.º 9 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental. |
 | AIA-9-10 | Art. 9.º, n.º 10 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
-| AIA-10-1 | Art. 10.º, n.º 1 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
-| AIA-10-2 | Art. 10.º, n.º 2 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
-| AIA-10-3 | Art. 10.º, n.º 3 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
-| AIA-10-4 | Art. 10.º, n.º 4 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
-| AIA-10-6 | Art. 10.º, n.º 6 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
+| AIA-10-1 | Art. 10.º, n.º 1 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
+| AIA-10-2 | Art. 10.º, n.º 2 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
+| AIA-10-3 | Art. 10.º, n.º 3 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
+| AIA-10-4 | Art. 10.º, n.º 4 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
+| AIA-10-6 | Art. 10.º, n.º 6 | A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental. |
 | AIA-11-2 | Art. 11.º, n.º 2 | Documentação técnica única com legislação setorial do anexo I; organização documental da conformidade. |
-| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental. |
-| AIA-AnxIV-5 | Anexo IV, ponto 5 | Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead. |
+| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Governação de dados de treino (art. 10.º) fora de âmbito do Manual; DEP-011 e a Política 39 §4 dão só evidência incidental. |
+| AIA-AnxIV-5 | Anexo IV, ponto 5 | Sistema de gestão de riscos do art. 9.º fora de âmbito do Manual. |
 | AIA-AnxIV-7 | Anexo IV, ponto 7 | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
 | AIA-AnxIV-8 | Anexo IV, ponto 8 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
-| AIA-12-3 | Art. 12.º, n.º 3 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
-| AIA-14-5 | Art. 14.º, n.º 5 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
+| AIA-12-3 | Art. 12.º, n.º 3 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito do Manual; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
+| AIA-14-5 | Art. 14.º, n.º 5 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito do Manual; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
 | AIA-16-b | Art. 16.º, alínea b) | Identificação do prestador no sistema/embalagem: rotulagem de produto, plano da conformidade. |
-| AIA-16-c | Art. 16.º, alínea c) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead; ver AIA-17-1-* para a evidência que o Manual fornece. |
+| AIA-16-c | Art. 16.º, alínea c) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual; ver AIA-17-1-* para a evidência que o Manual fornece. |
 | AIA-16-f | Art. 16.º, alínea f) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-g | Art. 16.º, alínea g) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-h | Art. 16.º, alínea h) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-i | Art. 16.º, alínea i) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-k | Art. 16.º, alínea k) | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
 | AIA-16-l | Art. 16.º, alínea l) | Requisitos de acessibilidade (Diretivas 2016/2102 e 2019/882): qualidade de produto, fora de um manual de engenharia de segurança. |
-| AIA-17-1-a | Art. 17.º, n.º 1, alínea a) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-d | Art. 17.º, n.º 1, alínea d) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-e | Art. 17.º, n.º 1, alínea e) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-f | Art. 17.º, n.º 1, alínea f) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-g | Art. 17.º, n.º 1, alínea g) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-h | Art. 17.º, n.º 1, alínea h) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. O plano do art. 72.º está em CTX-AIA-RE-R04. |
-| AIA-17-1-j | Art. 17.º, n.º 1, alínea j) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
-| AIA-17-1-l | Art. 17.º, n.º 1, alínea l) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
+| AIA-17-1-a | Art. 17.º, n.º 1, alínea a) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-d | Art. 17.º, n.º 1, alínea d) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-e | Art. 17.º, n.º 1, alínea e) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-f | Art. 17.º, n.º 1, alínea f) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-g | Art. 17.º, n.º 1, alínea g) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-h | Art. 17.º, n.º 1, alínea h) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. O plano do art. 72.º está em CTX-AIA-RE-R04. |
+| AIA-17-1-j | Art. 17.º, n.º 1, alínea j) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
+| AIA-17-1-l | Art. 17.º, n.º 1, alínea l) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. |
 | AIA-17-3-4 | Art. 17.º, n.os 3 e 4 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
 | AIA-21-1 | Art. 21.º, n.º 1 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
 | AIA-22-1 | Art. 22.º, n.os 1-2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |

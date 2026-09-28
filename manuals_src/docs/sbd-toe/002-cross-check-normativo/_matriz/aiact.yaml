@@ -688,15 +688,8 @@ itens:
   forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
-    rotulo:
-      pt: Quando se aplica (CTX-AIA-RE)
-      en: When it applies (CTX-AIA-RE)
-    ficheiro: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-    ancora: quando-se-aplica
-    citacao:
-      pt: O sistema de IA é de risco elevado nos termos do art. 6.º
-      en: The AI system is high-risk under Article 6
+  - tipo: contexto
+    alvo: CTX-AIA-RE
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -714,15 +707,8 @@ itens:
   forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
-    rotulo:
-      pt: Quando se aplica (CTX-AIA-RE)
-      en: When it applies (CTX-AIA-RE)
-    ficheiro: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-    ancora: quando-se-aplica
-    citacao:
-      pt: O sistema de IA é de risco elevado nos termos do art. 6.º
-      en: The AI system is high-risk under Article 6
+  - tipo: contexto
+    alvo: CTX-AIA-RE
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -867,8 +853,8 @@ itens:
       en: Adversarial threats catalogued by canonical ID (ATLAS `AML.T*` / NIST AI 100-2 / OWASP LLM/ML Top 10)
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
-    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -912,8 +898,8 @@ itens:
       en: recording of behaviour drift and accuracy degradation
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
-    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -931,8 +917,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
-    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -966,8 +952,8 @@ itens:
       en: every non-application of a control is recorded with justification, compensation, approver and deadline
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
-    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1002,8 +988,8 @@ itens:
       en: 'For each AI agent at level A1+ in the project:'
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead.
-    en: Article 9 (risk management system) is out of scope by the lead's decision.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual.
+    en: Article 9 (risk management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1040,8 +1026,8 @@ itens:
       en: Eval suite versioned in VCS, run in CI before merging prompt/skill/model (C5)
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead.
-    en: Article 9 (risk management system) is out of scope by the lead's decision.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual.
+    en: Article 9 (risk management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1069,8 +1055,8 @@ itens:
       en: When the system processes personal data, the privacy analysis must complement the security analysis.
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
-    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito do Manual; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1124,8 +1110,8 @@ itens:
       en: Includes `dataset_id`, `version`, `source`, `hash`, `curation_process`
   falta: null
   razao_fora_de_ambito:
-    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1170,8 +1156,8 @@ itens:
       en: Includes `dataset_id`, `version`, `source`, `hash`, `curation_process`
   falta: null
   razao_fora_de_ambito:
-    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1189,8 +1175,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1208,8 +1194,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1227,8 +1213,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito do Manual; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1571,8 +1557,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental.
-    en: Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence.
+    pt: Governação de dados de treino (art. 10.º) fora de âmbito do Manual; DEP-011 e a Política 39 §4 dão só evidência incidental.
+    en: Governance of training data (Article 10) is out of scope of the Manual; DEP-011 and Policy 39 §4 give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1812,8 +1798,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead.
-    en: The risk management system of Article 9 is out of scope by the lead's decision.
+    pt: Sistema de gestão de riscos do art. 9.º fora de âmbito do Manual.
+    en: The risk management system of Article 9 is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -2020,8 +2006,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
-    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead''s decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
+    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito do Manual; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
+    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope of the Manual; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -2437,8 +2423,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
-    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead''s decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
+    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito do Manual; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
+    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope of the Manual; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -2702,8 +2688,8 @@ itens:
       en: Strategy document with test types, frequency, owners and acceptance criteria by risk level
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead; ver AIA-17-1-* para a evidência que o Manual fornece.
-    en: Article 17 (quality management system) is out of scope by the lead's decision; see AIA-17-1-* for the evidence the Manual provides.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual; ver AIA-17-1-* para a evidência que o Manual fornece.
+    en: Article 17 (quality management system) is out of scope of the Manual; see AIA-17-1-* for the evidence the Manual provides.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -2968,8 +2954,8 @@ itens:
       en: The threat model is under explicit version control
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3092,8 +3078,8 @@ itens:
       en: 'For each AI agent at level A1+ in the project:'
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -3127,8 +3113,8 @@ itens:
       en: Guidelines per language/stack published in a versioned repository
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3162,8 +3148,8 @@ itens:
       en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3197,8 +3183,8 @@ itens:
       en: have an extended threat model covering specific adversarial threats
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3224,8 +3210,8 @@ itens:
       en: recording of behaviour drift and accuracy degradation
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. O plano do art. 72.º está em CTX-AIA-RE-R04.
-    en: Article 17 (quality management system) is out of scope by the lead's decision. The Article 72 plan is in CTX-AIA-RE-R04.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual. O plano do art. 72.º está em CTX-AIA-RE-R04.
+    en: Article 17 (quality management system) is out of scope of the Manual. The Article 72 plan is in CTX-AIA-RE-R04.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -3289,8 +3275,8 @@ itens:
       en: or a serious incident (AI Act), the incident follows the **regulatory track**
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -3371,8 +3357,8 @@ itens:
       en: Suppliers with access to data, code or pipelines are validated with a questionnaire or checklist before onboarding
   falta: null
   razao_fora_de_ambito:
-    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
-    en: Article 17 (quality management system) is out of scope by the lead's decision.
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito do Manual.
+    en: Article 17 (quality management system) is out of scope of the Manual.
   conflito: false
   explicacao_conflito: null
   confianca: alta

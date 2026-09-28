@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Applicable requirements — High-risk AI system (AI Act)"
-description: "Generated view: the Manual's requirements that apply under context CTX-AIA-RE, by level and grade, with each floor that the regime elevates and its legal basis."
+description: "The Manual's requirements that apply under context CTX-AIA-RE, by level and grade, with each floor that the regime elevates and its legal basis."
 sidebar_position: 90
-tags: [cross-check, ai-act, requisitos, overlay, gerado]
+tags: [cross-check, ai-act, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,9 +27,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: ad5c3f697df70cd9035d25429213a2a7fa6ec4400ded265e2be37e89457634aa
+  source_sha256: c492d8eaca9baebbdad27c840105f2fdcea66a8c5130d8a9039632530979cf5c
   source_commit: null
-  target_sha256: 4da9f620a3cc93d290dcebe721948fb5d68c92973290f65679a37d7def0357e3
+  target_sha256: 51d4b7e5cbf31b4249cdb5db69e9da640c82c669a29561bdf359153810159e1e
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -40,8 +41,6 @@ translation:
 ---
 
 # Applicable requirements: High-risk AI system (AI Act)
-
-> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.
 
 For context **CTX-AIA-RE**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.
 
@@ -674,7 +673,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Evidence map for the technical documentation {#mapa-evidencia}
 
-Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 13) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/aiact.yaml`.
+Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 13) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. The list comes from the Manual's coverage matrix.
 
 | Obligation | Reference | Strength | How the Manual responds | Note |
 |---|---|---|---|---|
@@ -684,14 +683,14 @@ Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 1
 | AIA-AnxIV-2-a | Annex IV, point 2(a) | Supports evidence | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | The training methodology is out of scope (data governance, Article 10). |
 | AIA-AnxIV-2-b | Annex IV, point 2(b) | Supports evidence | `ARC-004` | Declared gap: general logic, algorithms and what the system optimises. Assumptions about groups of persons are out of scope (bias). |
 | AIA-AnxIV-2-c | Annex IV, point 2(c) | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014` | Declared gap: computational resources for development, training, testing and validation. |
-| AIA-AnxIV-2-d | Annex IV, point 2(d) | Out of scope | — | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
+| AIA-AnxIV-2-d | Annex IV, point 2(d) | Out of scope | — | Governance of training data (Article 10) is out of scope of the Manual; DEP-011 and Policy 39 §4 give only incidental evidence. |
 | AIA-AnxIV-2-e | Annex IV, point 2(e) | Supports evidence | `ARC-014`; `REQ-AGN-003` | Assessment of the oversight measures supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
 | AIA-AnxIV-2-f | Annex IV, point 2(f) | Covers | `ARC-009`; `DEP-013` | — |
 | AIA-AnxIV-2-g | Annex IV, point 2(g) | Supports evidence | `TST-004`; `DPL-010`; `CIC-007` | **AppSec Core AISVS/SAIF round.** Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias). |
 | AIA-AnxIV-2-h | Annex IV, point 2(h) | Covers | `REQ-001`; `THR-008`; `ARC-014` | — |
 | AIA-AnxIV-3 | Annex IV, point 3 | Supports evidence | `OPS-011`; `ARC-014`; `THR-008` | Declared gap: performance capabilities and limitations and input data specifications. Accuracy by groups of persons is out of scope (bias). |
 | AIA-AnxIV-4 | Annex IV, point 4 | Gap | — | **AppSec Core AISVS/SAIF round.** Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round. |
-| AIA-AnxIV-5 | Annex IV, point 5 | Out of scope | — | The risk management system of Article 9 is out of scope by the lead's decision. |
+| AIA-AnxIV-5 | Annex IV, point 5 | Out of scope | — | The risk management system of Article 9 is out of scope of the Manual. |
 | AIA-AnxIV-6 | Annex IV, point 6 | Covers | `THR-006`; `ARC-010`; `CIC-005` | — |
 | AIA-AnxIV-7 | Annex IV, point 7 | Out of scope | — | List of harmonised standards/common specifications applied: conformity level. |
 | AIA-AnxIV-8 | Annex IV, point 8 | Out of scope | — | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
@@ -705,7 +704,7 @@ Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 1
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
+Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -717,7 +716,7 @@ Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those add
 
 ## What this Manual covers and what stays out {#cobertura}
 
-All the obligations of the matrix `_matriz/aiact.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 15 obligations addressed to the authorities create no duty for the organisation and are not listed.
+All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The 15 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
 ### Covers (87) {#cobre}
 
@@ -732,8 +731,8 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | AIA-5-1-b-B | Article 5(1), first subparagraph, point (b-B) | Covers | `THR-008`; `ARC-014` |
 | AIA-5-1-e | Article 5(1), first subparagraph, point (e) | Supports evidence | [Ch. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais); `DEP-011` |
 | AIA-5-1A | Article 5(1a) | Covers | `THR-008`; `ARC-014`; [C5 - Continuous eval suites for agents in development and production](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) |
-| AIA-6-1 | Article 6(1), (1a), (1b) and (1c) | Covers | [When it applies (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
-| AIA-6-2-3 | Article 6(2) and (3) | Covers | [When it applies (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
+| AIA-6-1 | Article 6(1), (1a), (1b) and (1c) | Covers | `CTX-AIA-RE` |
+| AIA-6-2-3 | Article 6(2) and (3) | Covers | `CTX-AIA-RE` |
 | AIA-6-4 | Article 6(4) | Supports evidence | `CLA-001`; `GOV-009` |
 | AIA-11-1-a | Article 11(1), first subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
 | AIA-11-1-b | Article 11(1), second subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
@@ -862,42 +861,42 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-5-1-h | Article 5(1), first subparagraph, point (h) | Judgement on the admissibility of the purpose (prohibited practice) — legal and product qualification; the Manual declares it out of scope. Generic hook: Ch. 02 US-17 (legal obligations mapped to requirements). |
 | AIA-5-1B | Article 5(1b) | Provision delimiting scope, a definition or a legal qualification; it does not create an engineering duty. |
 | AIA-8-2 | Article 8(2) | Integrated conformity with the Annex I sectoral legislation; product-conformity plane. |
-| AIA-9-1 | Article 9(1) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
-| AIA-9-2 | Article 9(2) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
-| AIA-9-4 | Article 9(4) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
-| AIA-9-5 | Article 9(5) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
-| AIA-9-6 | Article 9(6) to (7) | Article 9 (risk management system) is out of scope by the lead's decision. |
-| AIA-9-8 | Article 9(8) | Article 9 (risk management system) is out of scope by the lead's decision. |
-| AIA-9-9 | Article 9(9) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-1 | Article 9(1) | Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-2 | Article 9(2) | Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-4 | Article 9(4) | Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-5 | Article 9(5) | Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-6 | Article 9(6) to (7) | Article 9 (risk management system) is out of scope of the Manual. |
+| AIA-9-8 | Article 9(8) | Article 9 (risk management system) is out of scope of the Manual. |
+| AIA-9-9 | Article 9(9) | Article 9 (risk management system) is out of scope of the Manual; the Manual's classification and threat model give only incidental evidence. |
 | AIA-9-10 | Article 9(10) | Option/presumption (does not create an autonomous duty); compliance-strategy plane. |
-| AIA-10-1 | Article 10(1) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-2 | Article 10(2) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-3 | Article 10(3) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-4 | Article 10(4) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-6 | Article 10(6) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-1 | Article 10(1) | Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-2 | Article 10(2) | Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-3 | Article 10(3) | Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-4 | Article 10(4) | Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-6 | Article 10(6) | Governance of training data and statistical bias assessment (Article 10) are out of scope of the Manual; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
 | AIA-11-2 | Article 11(2) | Single technical documentation with the Annex I sectoral legislation; documentary organisation of compliance. |
-| AIA-AnxIV-2-d | Annex IV, point 2(d) | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
-| AIA-AnxIV-5 | Annex IV, point 5 | The risk management system of Article 9 is out of scope by the lead's decision. |
+| AIA-AnxIV-2-d | Annex IV, point 2(d) | Governance of training data (Article 10) is out of scope of the Manual; DEP-011 and Policy 39 §4 give only incidental evidence. |
+| AIA-AnxIV-5 | Annex IV, point 5 | The risk management system of Article 9 is out of scope of the Manual. |
 | AIA-AnxIV-7 | Annex IV, point 7 | List of harmonised standards/common specifications applied: conformity level. |
 | AIA-AnxIV-8 | Annex IV, point 8 | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
-| AIA-12-3 | Article 12(3) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead's decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
-| AIA-14-5 | Article 14(5) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead's decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
+| AIA-12-3 | Article 12(3) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope of the Manual; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
+| AIA-14-5 | Article 14(5) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope of the Manual; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
 | AIA-16-b | Article 16, point (b) | Identification of the provider on the system/packaging: product labelling, compliance plane. |
-| AIA-16-c | Article 16, point (c) | Article 17 (quality management system) is out of scope by the lead's decision; see AIA-17-1-* for the evidence the Manual provides. |
+| AIA-16-c | Article 16, point (c) | Article 17 (quality management system) is out of scope of the Manual; see AIA-17-1-* for the evidence the Manual provides. |
 | AIA-16-f | Article 16, point (f) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-g | Article 16, point (g) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-h | Article 16, point (h) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-i | Article 16, point (i) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-k | Article 16, point (k) | Relationship with authorities / penalty regime; legal plane, not engineering. |
 | AIA-16-l | Article 16, point (l) | Accessibility requirements (Directives 2016/2102 and 2019/882): product quality, outside a security engineering manual. |
-| AIA-17-1-a | Article 17(1), point (a) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-d | Article 17(1), point (d) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-e | Article 17(1), point (e) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-f | Article 17(1), point (f) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-g | Article 17(1), point (g) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-h | Article 17(1), point (h) | Article 17 (quality management system) is out of scope by the lead's decision. The Article 72 plan is in CTX-AIA-RE-R04. |
-| AIA-17-1-j | Article 17(1), point (j) | Article 17 (quality management system) is out of scope by the lead's decision. |
-| AIA-17-1-l | Article 17(1), point (l) | Article 17 (quality management system) is out of scope by the lead's decision. |
+| AIA-17-1-a | Article 17(1), point (a) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-d | Article 17(1), point (d) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-e | Article 17(1), point (e) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-f | Article 17(1), point (f) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-g | Article 17(1), point (g) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-h | Article 17(1), point (h) | Article 17 (quality management system) is out of scope of the Manual. The Article 72 plan is in CTX-AIA-RE-R04. |
+| AIA-17-1-j | Article 17(1), point (j) | Article 17 (quality management system) is out of scope of the Manual. |
+| AIA-17-1-l | Article 17(1), point (l) | Article 17 (quality management system) is out of scope of the Manual. |
 | AIA-17-3-4 | Article 17(3) and (4) | Option/presumption (does not create an autonomous duty); compliance-strategy plane. |
 | AIA-21-1 | Article 21(1) | Relationship with authorities / penalty regime; legal plane, not engineering. |
 | AIA-22-1 | Article 22(1) to (2) | Duty of another economic operator (importer/distributor/authorised representative), not of the engineering process of the provider or the deployer. |

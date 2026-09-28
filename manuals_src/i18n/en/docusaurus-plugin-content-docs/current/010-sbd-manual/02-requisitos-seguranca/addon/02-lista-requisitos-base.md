@@ -5,30 +5,43 @@ description: Canonical catalogue of SbD-ToE application security requirements, o
 requirement_class: aplicacional
 tags: [tipo:catalogo, classe:aplicacional, requisitos, segurança-aplicacional, rastreabilidade, L1, L2, L3, aceitacao, auditoria, ASVS, NIST-SSDF]
 sidebar_position: 2
-# Âncoras no substrato externo por requisito (ids do ExternalSourcesInventory); o KG lê-as daqui, o leitor vê as «Fontes.».
+# Fontes de cada requisito como dado (o leitor vê as linhas «Fontes.»; o KG lê este mapa).
+# Valores: UNIT-… (id do substrato no ExternalSourcesInventory, DSOMM incluído), CWE-NNN, ou um marcador declarado abaixo.
+sbdtoe_sources_marcadores:
+  AUTORIA-SBDTOE: sem fonte externa; prescrição do SbD-ToE
 sbdtoe_sources:
   FIL-001: [UNIT-V5.2.1, UNIT-V5.1.1]
-  FIL-002: [UNIT-V5.2.2, UNIT-V5.1.1]
+  FIL-002: [UNIT-V5.2.2, UNIT-V5.1.1, CWE-434]
   FIL-003: [UNIT-V5.2.3, UNIT-V5.2.5, UNIT-V5.3.3]
   FIL-004: [UNIT-V5.2.4]
-  FIL-005: [UNIT-V5.3.1, UNIT-V5.3.2]
+  FIL-005: [UNIT-V5.3.1, UNIT-V5.3.2, CWE-434]
   FIL-006: [UNIT-V5.4.1, UNIT-V5.4.2]
   FIL-007: [UNIT-V5.4.3]
   FIL-008: [UNIT-V5.2.6]
-  PRI-005: [UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9]
+  PRI-001: [AUTORIA-SBDTOE, CWE-359]
+  PRI-002: [AUTORIA-SBDTOE, CWE-359]
+  PRI-003: [AUTORIA-SBDTOE, CWE-359]
+  PRI-004: [AUTORIA-SBDTOE, CWE-359]
+  PRI-005: [UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9, CWE-359]
+  PRI-006: [AUTORIA-SBDTOE, CWE-359]
+  PRI-007: [AUTORIA-SBDTOE, CWE-359]
+  INT-009: [AUTORIA-SBDTOE]
+  INT-010: [AUTORIA-SBDTOE]
+  INT-011: [AUTORIA-SBDTOE]
+  INT-012: [AUTORIA-SBDTOE]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 7ee2f3c5e35e459eafc63038df2bc4de9eab6d1d4c8360fcc5f2aeda6bc1dfa0
-  source_commit: 0bb38830bcf192e07f7ec207e5b178cec70aa69b
-  target_sha256: fbb447796b2aadc49e66c9518d61763952e1b97867be407d7e50d4c196126e63
+  source_sha256: 0eddbc83d11db2c4a82498272df924e7800dad4537520f79f34983fb9f50af9f
+  source_commit: 337f35907d0d875da1c2e319bcc2b25824af3410
+  target_sha256: 4089f0281eabad287205b5666714a2b1e0904ae1ef6ca543d9ffab2d3a52682e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-28T10:03:41Z
-  stamped_at: 2026-09-28T10:03:41Z
+  translated_at: 2026-09-28T10:46:23Z
+  stamped_at: 2026-09-28T10:46:23Z
   reviewed_by: null
 ---
 

@@ -410,19 +410,24 @@ def check_lists(ctx_doc: dict) -> None:
 
 
 def check_sources(master: dict) -> None:
-    """sbdtoe_sources (front matter): requisito do próprio catálogo → lista não vazia de ids do substrato (UNIT-…)."""
+    """sbdtoe_sources (front matter): requisito do próprio catálogo → lista não vazia de UNIT-…, CWE-NNN ou marcador declarado em sbdtoe_sources_marcadores."""
     for path in sorted(L.DOCS.rglob("*.md")):
         text = path.read_text(encoding="utf-8")
         if "sbdtoe_sources:" not in text or not text.startswith("---"):
             continue
         rel = L.rel_docs(path)
         fm = yaml.safe_load(text.split("---", 2)[1]) or {}
+        markers = fm.get("sbdtoe_sources_marcadores") or {}
+        for m, desc in markers.items():
+            if not re.fullmatch(r"[A-Z][A-Z0-9-]+", str(m)) or not isinstance(desc, str) or not desc.strip():
+                fail(f"{rel} sbdtoe_sources_marcadores {m}", "marcador sem nome válido ou sem descrição")
         for rid, ids in (fm.get("sbdtoe_sources") or {}).items():
             w = f"{rel} sbdtoe_sources {rid}"
             if rid not in master or master[rid]["ficheiro"] != rel:
                 fail(w, "requisito não definido neste catálogo")
-            if not ids or not all(isinstance(i, str) and re.fullmatch(r"UNIT-[A-Z0-9.-]+", i) for i in ids):
-                fail(w, f"ids do substrato inválidos: {ids!r}")
+            ok = lambda i: isinstance(i, str) and (re.fullmatch(r"UNIT-[A-Z0-9.-]+|CWE-\d+", i) or i in markers)
+            if not ids or not all(ok(i) for i in ids) or len(set(ids)) != len(ids):
+                fail(w, f"valores inválidos (UNIT-…, CWE-NNN ou marcador declarado, sem repetições): {ids!r}")
 
 
 def check_views() -> None:

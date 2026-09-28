@@ -5,17 +5,30 @@ description: Catálogo canónico de requisitos de segurança aplicacional do SbD
 requirement_class: aplicacional
 tags: [tipo:catalogo, classe:aplicacional, requisitos, segurança-aplicacional, rastreabilidade, L1, L2, L3, aceitacao, auditoria, ASVS, NIST-SSDF]
 sidebar_position: 2
-# Âncoras no substrato externo por requisito (ids do ExternalSourcesInventory); o KG lê-as daqui, o leitor vê as «Fontes.».
+# Fontes de cada requisito como dado (o leitor vê as linhas «Fontes.»; o KG lê este mapa).
+# Valores: UNIT-… (id do substrato no ExternalSourcesInventory, DSOMM incluído), CWE-NNN, ou um marcador declarado abaixo.
+sbdtoe_sources_marcadores:
+  AUTORIA-SBDTOE: sem fonte externa; prescrição do SbD-ToE
 sbdtoe_sources:
   FIL-001: [UNIT-V5.2.1, UNIT-V5.1.1]
-  FIL-002: [UNIT-V5.2.2, UNIT-V5.1.1]
+  FIL-002: [UNIT-V5.2.2, UNIT-V5.1.1, CWE-434]
   FIL-003: [UNIT-V5.2.3, UNIT-V5.2.5, UNIT-V5.3.3]
   FIL-004: [UNIT-V5.2.4]
-  FIL-005: [UNIT-V5.3.1, UNIT-V5.3.2]
+  FIL-005: [UNIT-V5.3.1, UNIT-V5.3.2, CWE-434]
   FIL-006: [UNIT-V5.4.1, UNIT-V5.4.2]
   FIL-007: [UNIT-V5.4.3]
   FIL-008: [UNIT-V5.2.6]
-  PRI-005: [UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9]
+  PRI-001: [AUTORIA-SBDTOE, CWE-359]
+  PRI-002: [AUTORIA-SBDTOE, CWE-359]
+  PRI-003: [AUTORIA-SBDTOE, CWE-359]
+  PRI-004: [AUTORIA-SBDTOE, CWE-359]
+  PRI-005: [UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9, CWE-359]
+  PRI-006: [AUTORIA-SBDTOE, CWE-359]
+  PRI-007: [AUTORIA-SBDTOE, CWE-359]
+  INT-009: [AUTORIA-SBDTOE]
+  INT-010: [AUTORIA-SBDTOE]
+  INT-011: [AUTORIA-SBDTOE]
+  INT-012: [AUTORIA-SBDTOE]
 ---
 
 # Catálogo Base de Requisitos de Segurança

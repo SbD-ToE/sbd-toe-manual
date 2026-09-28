@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T09:13:26Z",
+  "generated_at": "2026-09-28T10:03:50Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -756,12 +756,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md": {
       "state": "synced",
-      "source_sha256": "556383f8f0775e0f8e3ac73dec934f21becd19070eecfd82ea3658079b96a3e9",
-      "translated_source_sha256": "556383f8f0775e0f8e3ac73dec934f21becd19070eecfd82ea3658079b96a3e9",
-      "target_sha256": "c0440d4171f13247309112f2a15a6bd75578e9b9b81c7356fad87d0dc7610692",
+      "source_sha256": "7ee2f3c5e35e459eafc63038df2bc4de9eab6d1d4c8360fcc5f2aeda6bc1dfa0",
+      "translated_source_sha256": "7ee2f3c5e35e459eafc63038df2bc4de9eab6d1d4c8360fcc5f2aeda6bc1dfa0",
+      "target_sha256": "fbb447796b2aadc49e66c9518d61763952e1b97867be407d7e50d4c196126e63",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a",
-      "translated_at": "2026-09-28T09:12:59Z",
+      "translated_at": "2026-09-28T10:03:41Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/03-taxonomia-rastreabilidade.md": {

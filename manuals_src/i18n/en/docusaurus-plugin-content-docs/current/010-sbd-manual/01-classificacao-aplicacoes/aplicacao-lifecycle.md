@@ -6,16 +6,16 @@ tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md
-  source_sha256: 5f5f9d7f804d8fe98fd78238d166c468813d636cc60e5da3fdf19362b51f11bc
-  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
-  target_sha256: 127b292acd94f4c63497db41d2e8175a82718f4c4997e5ec06597e6342f311a6
-  engine: claude-fable-5-1
+  source_sha256: 6324aca0e881470ed0351d53d64c618456fd256eaafeb33c9bc5be0b9848d21b
+  source_commit: fae8897094a36c3dd4296383ae5b0d690cc5b9c1
+  target_sha256: 9b17a0f06cc3511327e66712f6bb58e432cbf0757258fb16e5d6df035318db9a
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
-  glossary_sha256: 174b8415b4b1d2e9821f36a9dca0e6a5bbb87a1cf45d928e23040a4a940c3d5a
-  translated_at: 2026-09-27T15:09:27Z
-  stamped_at: 2026-09-27T15:09:27Z
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: ba561f30790196bb6454ed4823515072070bfb043edeb53454004080977f2d72
+  translated_at: 2026-09-28T09:12:58Z
+  stamped_at: 2026-09-28T09:12:58Z
   reviewed_by: null
 ---
 
@@ -426,6 +426,15 @@ As an **AppSec Engineer**, I want **to review the classification at a fixed cade
 **Context.**  
 When the residual risk level is acceptable but with a **limited Time-To-Live (TTL)**, the risk may expire. Without automatic revalidation, exceptions "sleep" indefinitely.
 
+There are five distinct concepts:
+- **Risk acceptance:** a decision to live with an assessed residual risk (US-04), with an owner, a TTL and revalidation.
+- **Control exception:** a deviation from a requirement or control that the level demands, with the approval authority and TTL of [Policy 05](/sbd-toe/assets/policies/policy-gestao-excecoes#7-prazos-máximos-de-validade-ttl).
+- **Non-applicability:** the requirement does not apply because the component or flow does not exist; the justification is recorded, with no TTL, and reviewed when the application changes.
+- **Expiry:** at the end of the TTL, the acceptance or exception ceases to be valid without explicit re-approval.
+- **Review:** reassessment at expiry (alert 15 days before) or when the context changes.
+
+The TTL is mandatory at every level, with the deadlines of Policy 05 §7 (the master). In L1 the record is simplified, but it always exists.
+
 :::userstory
 **Story.**  
 As a **GRC/Compliance** role, I want to record acceptances with an **explicit TTL and a re-approval alert**, so that exceptions do not become permanent through oversight.
@@ -456,7 +465,7 @@ As a **GRC/Compliance** role, I want to record acceptances with an **explicit TT
 **Proportionality (TTL per level).**
 | Level | TTL | Revalidation | Mandatory? |
 |---|---|---|---|
-| L1 | Policy 05 §7 (90 days) | At expiry | Recommended |
+| L1 | Policy 05 §7 (90 days; Critical 7 days with a plan) | At expiry | Mandatory (simplified record) |
 | L2 | Policy 05 §7 (60 days; High 30 days) | At expiry | Mandatory |
 | L3 | Policy 05 §7 (30 days; High 14 days) | At expiry | **Mandatory + Executive Management** |
 

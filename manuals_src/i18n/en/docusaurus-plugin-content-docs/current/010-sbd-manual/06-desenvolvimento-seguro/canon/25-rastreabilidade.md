@@ -1,18 +1,32 @@
 ---
-id: rastreabilidade
+# Proveniência da geração: não se mostra ao leitor (extraída do corpo na v1.17.1).
+sbdtoe_provenance:
+  ontology_v2: 'sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml (meta.version: ''2.0'')'
+  kg_state: sbd-toe-knowledge-graph master @ 5550a743bb9de205676c503da5e81863ed62ab54 (2026-05-11; commit de governação imediatamente a seguir à tag kg-v1-cycle-b-iter-3-aligned-2026-05-11 @ 482ece916cc254126894019432ebd113695365d9)
+  substrate: v7 (SUPPLIER sha256 596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04)
+  v1_index: ontology-v1.1-fair-baseline @ 84fe8bf6f5de1443d778f9b2f0555b722540bbff em sbd-toe-ontology
+  source_map: data/p8_inputs/per_entity_source_map.json @ ESI commit aa3c13cd39db8277a7066755d692eb37ee5b7ecd
+  gap_analysis: phase2_3_per_entity_classification.json @ ESI commit b8cd4016f8876721046953363eee2995bc62a3f0
+  generated_by: Manual Agent Run 1 (Iter 4 baseline @ 16dfa5ae1f6aabd811e34dd8f7299453f4f9b786 + Manual ontology V2 vocab layer injection)
+  cycle: Cycle B Run 1 (post Iter 4)
+  notes:
+  - 'Format: 5-section (Manual V2 entities + Core-mapped + Manual-only + Out-of-AppSec + Future-work) per dispatch vision 2026-05-11'
+  - '§26 methodology labels: per 00-fundamentos/canon/26-metodologia-validacao-claims.md (post Run 1 Step 0 refresh)'
+  - Five-section routing per Run 1 amendment 2026-05-11 (P8 pipeline primitive demonstration)
+  - 'ACM-IVF-004: authoring pending — Phase 2/3 confirmed_content_gap; programme-lead 2026-05-11 ratified defer'
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md
-  source_sha256: d0091d24510789e73b41b3f967acaf6eaedbff7a2d1832d82412dd9580e9e48a
-  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
-  target_sha256: 43608962a396bdd030cd4df0bc18904e6421cceda4b40ab7ac75eff7ab2bdff1
-  engine: claude-fable-5-1
+  source_sha256: dd9e75c2fba956eb808aad23dfd569873ba9fba6ad4218683461b7bab076c58e
+  source_commit: b1ef4e10cdccc51fc470937a9a2504a7d2f12142
+  target_sha256: e06c49f02dd6b5a04d74b477f53df010474a7c19b7780ba81d58e1d3df67170e
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [appsec_core, chapter_role, llm, practitioner_manual, provenance, risk_level, sbdtoe_sbd, slice, traceability, v1_entity_ivf_centralized_error_governance, v1_entity_ivf_centralized_error_handling, v1_entity_ivf_centralized_error_translation, validation_evaluation]
-  glossary_sha256: 0b4253d57a83ef7294c397c429f153f4d99e252a8cb7574a40b10dfad6a96f30
-  translated_at: 2026-09-26T13:37:01Z
-  stamped_at: 2026-09-26T18:34:09Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [appsec_core, chapter_role, gap_family, llm, practitioner_manual, provenance, risk_level, slice, traceability, v1_entity_ivf_centralized_error_governance, v1_entity_ivf_centralized_error_handling, v1_entity_ivf_centralized_error_translation, validation_evaluation]
+  glossary_sha256: e8c788f26ca7651781599ec06a49d9ecdfbbe20a34ff260416b3881bcacb5f10
+  translated_at: 2026-09-28T09:12:05Z
+  stamped_at: 2026-09-28T09:12:05Z
   reviewed_by: null
 ---
 
@@ -22,7 +36,7 @@ translation:
 
 This chapter is the **primary anchor** of the AppSec Core V1 slices: `ACO-IVF` (Input validation, safe parsing and controlled error handling), `ACO-SPC` (Secrets management, protected configuration and operational identities).
 
-V1 entity-level coverage: **37 primary entities**. The structure below exposes the **five-section routing** (per Run 1 amendment 2026-05-11; P8 pipeline primitive demonstration):
+V1 entity-level coverage: **37 primary entities**. The structure below exposes the **five-section routing**:
 
 - **§ Manual ontology V2 entities** — canonical Manual ontology V2 entities mapped to this chapter (KG canonical data)
 - **§ Core-mapped coverage** — V1 entity → Manual ontology V2 anchor → Manual section anchor → §26 methodology label → ES grounding
@@ -34,7 +48,7 @@ V1 entity-level coverage: **37 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **59 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **59 entities** of Manual ontology V2 mapped to this chapter.
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -81,7 +95,7 @@ Total: **59 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Threat | `MT-109` | Absence of a security baseline | normative | heuristic | bounded |
 | Threat | `MT-110` | Weak accountability for code security | normative | heuristic | bounded |
 
-> Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
+> Authority class / source mode / confidence model: as defined by the Manual ontology (v2).
 
 ---
 
@@ -168,19 +182,4 @@ Content gaps registered for future-cycle authoring; honest documentation per P8 
 
 | V1 entity / topic | Status |
 |---|---|
-| `ACM-IVF-004` — Centralized Error Translation And Redaction | Authoring pending — Phase 2/3 confirmed_content_gap; programme-lead 2026-05-11 ratified defer. Topic partially covered by Ch. 02 VAL-006/ERR family + Iter 2 §11 LLM input handling. |
-
----
-
-## Generation provenance {#generation-provenance}
-
-- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
-- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)
-- **Substrate version:** v7 (SUPPLIER sha256 `596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04`)
-- **V1 entity index:** `ontology-v1.1-fair-baseline` @ `84fe8bf` in sbd-toe-ontology
-- **Per-entity source map:** `data/p8_inputs/per_entity_source_map.json` @ ESI commit `aa3c13c`
-- **Phase 2/3 gap analysis:** `phase2_3_per_entity_classification.json` @ ESI commit `b8cd401`
-- **Generated by:** Manual Agent Run 1 (Iter 4 baseline @ `16dfa5ae` + Manual ontology V2 vocab layer injection)
-- **Format:** 5-section (Manual V2 entities + Core-mapped + Manual-only + Out-of-AppSec + Future-work) per dispatch vision 2026-05-11
-- **§26 methodology labels:** per `00-fundamentos/canon/26-metodologia-validacao-claims.md` (post Run 1 Step 0 refresh)
-- **Cycle:** Cycle B Run 1 (post Iter 4)
+| `ACM-IVF-004` — Centralized Error Translation And Redaction | Declared gap, not yet authored. The topic is partially covered in Ch. 02 (VAL-006 and the ERR family) and in the [defence against prompt injection in LLM applications](/sbd-toe/sbd-manual/desenvolvimento-seguro/recomendacoes-avancadas#11--defesa-contra-prompt-injection-em-aplicações-llm) of Ch. 06. |

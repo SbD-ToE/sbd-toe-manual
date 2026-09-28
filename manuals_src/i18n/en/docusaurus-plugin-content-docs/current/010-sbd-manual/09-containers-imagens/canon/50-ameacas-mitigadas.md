@@ -1,18 +1,32 @@
 ---
-id: ameacas-mitigadas
+# Proveniência da geração: não se mostra ao leitor (extraída do corpo na v1.17.1).
+sbdtoe_provenance:
+  ontology_v2: 'sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml (meta.version: ''2.0'')'
+  kg_state: sbd-toe-knowledge-graph master @ 5550a743bb9de205676c503da5e81863ed62ab54 (2026-05-11; commit de governação imediatamente a seguir à tag kg-v1-cycle-b-iter-3-aligned-2026-05-11 @ 482ece916cc254126894019432ebd113695365d9)
+  generated_by: Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+  cycle: Cycle B Run 2 — last content work pre frozen ceremony
+  notes:
+  - 'Threats canonical: data/entities/mitigated_threats.json (233 items)'
+  - 'AntiPatterns canonical: data/publish/semantic/antipatterns.jsonl (26 items)'
+  - 'Signals canonical: data/publish/semantic/signals.jsonl (23 items)'
+  - 'AntiPattern→Threat relations: data/publish/semantic/antipattern_threat_links.jsonl'
+  - '§26 methodology layer: 00-fundamentos/canon/26-metodologia-validacao-claims.md (Run 1 state @ a9e70c98937d41587e86712199fab46854a8d6aa)'
+  - '§26 §4 discipline applied: Manual + CAPEC primary; CWE supporting only'
+  - 'Mitigation strength rule: deterministic per associated_controls count + cross_chapter flag + confidence'
+  - V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extraídas neste estado do KG; deferred a Codex post-Run-2 delta evaluation; mitigation pathway inferable from Iter 4 + Run 1 layered output
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md
-  source_sha256: 58cf1bb4cee267ee739c0d193bfaefd138678df14af63bba44805d5705f9ecdb
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: ba380c4cf24f14a35b679d043dd3042218f1d0bc049f0ee5e9205e8874c97ea2
-  engine: claude-fable-5-1
+  source_sha256: 2f037805df49c5f8f6f9578a19092b27d99405f52ab019cc502b65463248356c
+  source_commit: b1ef4e10cdccc51fc470937a9a2504a7d2f12142
+  target_sha256: fed42428a4218d72703793302d94993c078258cfeaa082c9af683ecccdc197c8
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [appsec_core, audit_trail, chapter_role, practitioner_manual, provenance, sbdtoe_sbd, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: f310158274357c110ad6f7842d722b140bc47817a30035048a05cf3d02877f51
-  translated_at: 2026-09-26T09:58:23Z
-  stamped_at: 2026-09-26T18:34:59Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [appsec_core, audit_trail, chapter_role, practitioner_manual, provenance, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 3ca0b795496dc73def092ef360b0b4a9480128ced36d2e14ed042b5e5a836bad
+  translated_at: 2026-09-28T09:12:14Z
+  stamped_at: 2026-09-28T09:12:14Z
   reviewed_by: null
 ---
 
@@ -107,26 +121,10 @@ CWE references per §26 §4: **CWE only as limited support, NOT as a substitute 
 
 V1 controls/mechanisms anchored to this chapter that mitigate the threats listed above. The V1 overlay keeps the three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
-_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations not fully extracted in this KG state; deferred to Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+_(The relations between anti-patterns, threats and controls are not yet complete in this version. Each entity's grounding in external sources is in the chapter's [Traceability](/sbd-toe/sbd-manual/containers-imagens/canon/rastreabilidade) page.)_
 
 ---
 
 ## § Future-work register (threat gaps) {#-future-work-register-threat-gaps}
 
 _(No threat in gap state for this chapter.)_
-
----
-
-## Generation provenance {#generation-provenance}
-
-- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
-- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
-- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
-- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
-- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
-- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
-- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
-- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
-- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
-- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
-- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

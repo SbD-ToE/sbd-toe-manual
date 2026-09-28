@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 1f6a74921007dd188f5396eb0b6b5b462a3393dbdb8b48944bb592c13a26024b
-  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
-  target_sha256: 697b6d6195711473680825fc4816018e7b57d400db6c02db05e620dbe461d5b9
-  engine: claude-fable-5-1
+  source_sha256: 556383f8f0775e0f8e3ac73dec934f21becd19070eecfd82ea3658079b96a3e9
+  source_commit: 45a73cea738c88707d07cd50686f305df9d7ee97
+  target_sha256: c0440d4171f13247309112f2a15a6bd75578e9b9b81c7356fad87d0dc7610692
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-27T21:30:09Z
-  stamped_at: 2026-09-27T21:30:09Z
+  translated_at: 2026-09-28T09:12:59Z
+  stamped_at: 2026-09-28T09:12:59Z
   reviewed_by: null
 ---
 
@@ -202,9 +202,9 @@ A file is input — what differs is how it is validated: beyond the value, what 
 | FIL-007 | Anti-malware scanning of files of untrusted origin | - | ✔ | ✔ | Files received from untrusted sources go through anti-malware scanning before being made available; a detection blocks availability and generates a log entry. |
 | FIL-008 | Image dimension limit (pixel flood) | - | ✔ | ✔ | Images with pixel dimensions above the defined maximum are rejected wherever the application processes images. |
 
-> **Proportionality of FIL-002 at L1** (from the derivation source, ASVS v5 `UNIT-V5.2.2`): "For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted." — at L1, content validation may be limited to the files that underpin business or security decisions; at L2+ it applies to all accepted files.
+> **Proportionality of FIL-002 in L1** (from the derivation source, ASVS 5.0 V5.2.2): "For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted." — in L1, content validation may be limited to the files that support business or security decisions; in L2+ it applies to all accepted files.
 
-**Sources.** Derivation per line: FIL-001 — `UNIT-V5.2.1`, `UNIT-V5.1.1`; FIL-002 — `UNIT-V5.2.2`, `UNIT-V5.1.1`, CWE-434; FIL-003 — `UNIT-V5.2.3`, `UNIT-V5.2.5`, `UNIT-V5.3.3`; FIL-004 — `UNIT-V5.2.4`; FIL-005 — `UNIT-V5.3.1`, `UNIT-V5.3.2`, CWE-434; FIL-006 — `UNIT-V5.4.1`, `UNIT-V5.4.2` (the clause on content not interpretable on the application's domain is an editorial prescription of SbD-ToE); FIL-007 — `UNIT-V5.4.3` (the clause "and generates a log entry" is an editorial prescription); FIL-008 — `UNIT-V5.2.6`. The sources anchor the derivation; the prescription, the wording and the L1–L3 scaling are editorial choices of SbD-ToE.
+**Sources.** Derivation per row: FIL-001 — ASVS 5.0 V5.2.1, ASVS 5.0 V5.1.1; FIL-002 — ASVS 5.0 V5.2.2, ASVS 5.0 V5.1.1, CWE-434; FIL-003 — ASVS 5.0 V5.2.3, ASVS 5.0 V5.2.5, ASVS 5.0 V5.3.3; FIL-004 — ASVS 5.0 V5.2.4; FIL-005 — ASVS 5.0 V5.3.1, ASVS 5.0 V5.3.2, CWE-434; FIL-006 — ASVS 5.0 V5.4.1, ASVS 5.0 V5.4.2 (the clause on content that cannot be interpreted in the application's domain is an editorial prescription of SbD-ToE); FIL-007 — ASVS 5.0 V5.4.3 (the clause "and generates a log record" is an editorial prescription); FIL-008 — ASVS 5.0 V5.2.6. The sources anchor the derivation; the prescription, wording and L1–L3 scaling are editorial choices of SbD-ToE.
 
 ---
 
@@ -276,7 +276,7 @@ An application with personal data can be L1 (personal data score D=2, and E1+D2+
 
 The existing neighbours keep their object: `ENC-005` forbids sensitive data in clear text in logs, outputs and API responses; `ERR-007` requires pseudonymised context in error logs (L2+); `LOG-005` sets the **minimum** retention of logs. `PRI-002` sets the **maximum** retention of business personal data, and `PRI-005` adds what none of them prescribes: the documented and verified concept — it does not repeat the prohibition, it requires the concept.
 
-**Sources.** PRI-001…004, PRI-006 and PRI-007 — [authorship] SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
+**Sources.** PRI-001…004, PRI-006 and PRI-007 — prescription of SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" ("A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
 
 ---
 
@@ -315,7 +315,7 @@ Requirements that ensure security in communications between systems, preventing 
 | INT-011 | Protection against message replay | - | ✔ | ✔ | Messages carry a unique identifier and a validity window; re-injection outside the window, or duplicated, is rejected and logged. |
 | INT-012 | Processing order where semantically required | - | - | ✔ | Where business semantics require ordering, processing guarantees it (partition key, sequencing) and a violation is detectable. |
 
-**Sources (INT-009…012).** [authorship] SbD-ToE — message lifecycle (idempotence, DLQ, replay, ordering); no external anchor in the corpus to date. `INT-011` deals with **message** replay, an object distinct from token replay (`SES-008`).
+**Sources (INT-009…012).** Prescription of SbD-ToE — message lifecycle (idempotency, DLQ, replay, ordering); no external source anchors it. `INT-011` deals with replay of **messages**, a different object from token replay (`SES-008`).
 
 ---
 

@@ -1,18 +1,31 @@
 ---
-id: rastreabilidade
+# Proveniência da geração: não se mostra ao leitor (extraída do corpo na v1.17.1).
+sbdtoe_provenance:
+  ontology_v2: 'sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml (meta.version: ''2.0'')'
+  kg_state: sbd-toe-knowledge-graph master @ 5550a743bb9de205676c503da5e81863ed62ab54 (2026-05-11; commit de governação imediatamente a seguir à tag kg-v1-cycle-b-iter-3-aligned-2026-05-11 @ 482ece916cc254126894019432ebd113695365d9)
+  substrate: v7 (SUPPLIER sha256 596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04)
+  v1_index: ontology-v1.1-fair-baseline @ 84fe8bf6f5de1443d778f9b2f0555b722540bbff em sbd-toe-ontology
+  source_map: data/p8_inputs/per_entity_source_map.json @ ESI commit aa3c13cd39db8277a7066755d692eb37ee5b7ecd
+  gap_analysis: phase2_3_per_entity_classification.json @ ESI commit b8cd4016f8876721046953363eee2995bc62a3f0
+  generated_by: Manual Agent Run 1 (Iter 4 baseline @ 16dfa5ae1f6aabd811e34dd8f7299453f4f9b786 + Manual ontology V2 vocab layer injection)
+  cycle: Cycle B Run 1 (post Iter 4)
+  notes:
+  - 'Format: 5-section (Manual V2 entities + Core-mapped + Manual-only + Out-of-AppSec + Future-work) per dispatch vision 2026-05-11'
+  - '§26 methodology labels: per 00-fundamentos/canon/26-metodologia-validacao-claims.md (post Run 1 Step 0 refresh)'
+  - Five-section routing per Run 1 amendment 2026-05-11 (P8 pipeline primitive demonstration)
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md
-  source_sha256: 77789469fd4e799140b39080c65ceedc9064175081abf36e646f6ae9601e2cfe
-  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
-  target_sha256: 47971c08eddfc8dea45da7b9920081417145a631da581a6f24797555d8ed23ae
-  engine: claude-fable-5-1
+  source_sha256: e48045884227018fc75da9acc4982030f6f55251c4d82e2c060fc3cebeac8b66
+  source_commit: b1ef4e10cdccc51fc470937a9a2504a7d2f12142
+  target_sha256: 3ad413edf1e206b01e7465a5ba4dd669bd8f0c3cfaf565135781cf62cb15f766
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [appsec_core, audit_trail, avaliacao, chapter_role, practitioner_manual, risk_level, sbdtoe_sbd, slice, traceability, v1_entity_tsv_specialized_depth, v1_entity_tsv_specialized_testing, validation_evaluation]
-  glossary_sha256: 133d873de9e78e4b5abcd7c3c8f6c25a6b0659fc11cb8ca66bbda9971c358e53
-  translated_at: 2026-09-26T13:37:07Z
-  stamped_at: 2026-09-26T18:35:19Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [appsec_core, audit_trail, avaliacao, chapter_role, practitioner_manual, risk_level, slice, traceability, v1_entity_tsv_specialized_depth, v1_entity_tsv_specialized_testing, validation_evaluation]
+  glossary_sha256: cccac4816d1e88b7aa6965ffb1340990ab86a58a08b83f13eaab5c47eb768e70
+  translated_at: 2026-09-28T09:12:15Z
+  stamped_at: 2026-09-28T09:12:15Z
   reviewed_by: null
 ---
 
@@ -22,7 +35,7 @@ translation:
 
 This chapter is the **primary anchor** of the AppSec Core V1 slices: `ACO-TSV` (Security testing and empirical validation).
 
-V1 entity-level coverage: **19 primary entities**. The structure below exposes the **five-section routing** (per Run 1 amendment 2026-05-11; P8 pipeline primitive demonstration):
+V1 entity-level coverage: **19 primary entities**. The structure below exposes the **five-section routing**:
 
 - **§ Manual ontology V2 entities** — canonical Manual ontology V2 entities mapped to this chapter (KG canonical data)
 - **§ Core-mapped coverage** — V1 entity → Manual ontology V2 anchor → Manual section anchor → §26 methodology label → ES grounding
@@ -34,7 +47,7 @@ V1 entity-level coverage: **19 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **57 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **57 entities** of Manual ontology V2 mapped to this chapter.
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -82,7 +95,7 @@ Total: **57 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Threat | `MT-180` | Superficial tests without technical context | normative | heuristic | bounded |
 | Threat | `MT-181` | Tools not calibrated by context | normative | heuristic | bounded |
 
-> Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
+> Authority class / source mode / confidence model: as defined by the Manual ontology (v2).
 
 ---
 
@@ -142,18 +155,3 @@ Manual sections that are pure editorial content (worked examples, narratives, il
 ## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(No entries in the future-work register for this chapter.)_
-
----
-
-## Generation provenance {#generation-provenance}
-
-- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
-- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)
-- **Substrate version:** v7 (SUPPLIER sha256 `596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04`)
-- **V1 entity index:** `ontology-v1.1-fair-baseline` @ `84fe8bf` in sbd-toe-ontology
-- **Per-entity source map:** `data/p8_inputs/per_entity_source_map.json` @ ESI commit `aa3c13c`
-- **Phase 2/3 gap analysis:** `phase2_3_per_entity_classification.json` @ ESI commit `b8cd401`
-- **Generated by:** Manual Agent Run 1 (Iter 4 baseline @ `16dfa5ae` + Manual ontology V2 vocab layer injection)
-- **Format:** 5-section (Manual V2 entities + Core-mapped + Manual-only + Out-of-AppSec + Future-work) per dispatch vision 2026-05-11
-- **§26 methodology labels:** per `00-fundamentos/canon/26-metodologia-validacao-claims.md` (post Run 1 Step 0 refresh)
-- **Cycle:** Cycle B Run 1 (post Iter 4)

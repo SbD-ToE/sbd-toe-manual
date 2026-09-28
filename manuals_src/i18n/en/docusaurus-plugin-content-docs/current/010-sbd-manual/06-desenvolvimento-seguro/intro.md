@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/intro.md
-  source_sha256: c0fa9ddd5a6d7f3e8e089482d8213daf4bef0926f13b3de1c836dec4ecc9482c
-  source_commit: 810e8083697d2705d15e9913f01ca8634db01cd4
-  target_sha256: 00ff0b67dc9be58ff58876c9242d5870f934cddb360345956d299294560e4d7b
-  engine: claude-fable-5-1
+  source_sha256: 1f24379c1875491670670b37689aec0e75cecad3c043a3b71a1cc0280d46c1fd
+  source_commit: 3304bc0c6ed548bdef2781539de13f2fe44ec1c2
+  target_sha256: 3c8fa29cfb11ac368f64d0b76abba60f209bdf06f8a6679283cc89451791e8b4
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, eu_startups, lifecycle_phase, maturity, papel_suporte, practitioner_manual, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: cc7ae20ee1323f31c0acaa6686340e4cd2f40e49c0f5840db246134553b5ddb7
-  translated_at: 2026-09-27T15:08:20Z
-  stamped_at: 2026-09-27T15:08:20Z
+  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, eu_startups, lifecycle_phase, maturity, papel_suporte, practitioner_manual, provenance, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: dd5a296f52324ddf49289f0d463f71da2ebfd3c7a5aa8437410a35b83edf3ff1
+  translated_at: 2026-09-28T09:12:07Z
+  stamped_at: 2026-09-28T09:12:07Z
   reviewed_by: null
 ---
 
@@ -45,7 +45,7 @@ Through systematic and auditable practices - such as clear guidelines, automated
 
 Within this scope, the chapter also covers the discipline of **secrets, sensitive parameters, cryptographic material and protected configuration** whenever these elements are introduced, reviewed or validated in code, PRs, pipelines and build artefacts. This authority remains **bounded to what is decided and evidenced in development** and does not replace the chapters on architecture, IaC, deploy, monitoring or governance.
 
-In a context of growing use of advanced development support tools, this chapter explicitly assumes that **the origin of the code - human or automated - is irrelevant from the point of view of risk**, and adequate technical validation, verifiable evidence and clear accountability for incorporation decisions are always required.
+As advanced development-support tools are used more and more, this chapter applies **the same acceptance criteria to code, whatever its origin - human or automated**: adequate technical validation, verifiable evidence and clear accountability for the decision to incorporate it. The origin neither waives nor tightens those criteria, but the production process brings its own risks, which are handled separately: the provenance of incorporated code, the information sent to the tools, the dependencies they propose and the execution permissions they are given (`DEV-006`, `DEV-007`). The Manual does not presume that AI-generated code is worse than code written by people.
 
 The objective of this chapter is not to add bureaucracy but to **establish an environment where every development decision leaves objective evidence of applied security**, proportional to risk and traceable over time.
 

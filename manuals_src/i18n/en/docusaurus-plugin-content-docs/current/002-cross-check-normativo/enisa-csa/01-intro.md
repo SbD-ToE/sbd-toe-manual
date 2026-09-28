@@ -7,16 +7,16 @@ sidebar_position: 9
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/enisa-csa/01-intro.md
-  source_sha256: 92209b9a40a522f6372b2b3d16b8a77c720736f05e84c2fe9bbc8a95d833a4e5
-  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
-  target_sha256: ad46eeb6a82ce6ed9f367469ff762deaafb25034476b3a11aa268d7183e355d2
+  source_sha256: e87ee80628558a5049be0848a0829acc76d2037a17b0483c55ca39769851062d
+  source_commit: e36462f7473256b7e66033011a59ffd3d1223f83
+  target_sha256: 0a96b01b10b90d530d6daebd1b27c4e054a46e2feb121d7fea24aaa278727d8d
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, cra_pde, cra_support_period, csa_assurance_level, csa_certification_scheme, esquema_regime, eu_ce_marking, gap_family, layer, mapping, maturity, mcp_reading_programa, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, role_juridico, role_procurement, sbdtoe_sbd, schema, traceability]
   glossary_sha256: da0f05606e22222963e4fb95d6645c47b050f8cadb465ef395ad38c164edfe47
-  translated_at: 2026-09-27T23:03:32Z
-  stamped_at: 2026-09-27T23:03:32Z
+  translated_at: 2026-09-28T09:11:49Z
+  stamped_at: 2026-09-28T09:11:49Z
   reviewed_by: null
 ---
 
@@ -37,7 +37,7 @@ The **Cybersecurity Act** is **Regulation (EU) 2019/881** (CELEX: [32019R0881](h
 
 The framework provides for several **European cybersecurity certification schemes** (“schemes”, in common usage), including:
 
-- **EUCC** - for ICT products (the evolutionary European successor to the Common Criteria);
+- **EUCC** - for ICT products; it applies the Common Criteria (ISO/IEC 15408) and the Common Evaluation Methodology (ISO/IEC 18045), which it does not replace (Implementing Regulation (EU) 2024/482, Arts. 2 and 3);
 - **EUCS** - for cloud computing services;
 - **EU5G** - for 5G networks and services.
 

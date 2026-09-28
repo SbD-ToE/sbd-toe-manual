@@ -79,8 +79,8 @@ O Manual é centrado na aplicação: requisitos, arquitetura, código, dependên
 O **SbD-ToE não é uma norma**, mas foi desenhado para **dialogar com todas as normas**.  
 Isto acontece porque:  
 
-- **Normas e regulamentos são, por definição, subset requirements**: focam-se em dimensões específicas (governação, risco, reporte, proteção de dados, etc.).  
-- O SbD-ToE, ao contrário, prescreve práticas **abrangentes e integradas**, que respondem a muitos desses requisitos.  
+- **Normas e regulamentos focam-se em dimensões específicas** (governação, risco, reporte, proteção de dados, etc.), e o SbD-ToE prescreve práticas **abrangentes e integradas** do lado da aplicação.  
+- A relação entre os dois não se presume pela abrangência: demonstra-se obrigação a obrigação, e pode ser sobreposição, contribuição, cobertura parcial, satisfação condicionada, lacuna ou fora de âmbito. As matrizes de cobertura registam-na nas três categorias (cobre, lacuna declarada, fora de âmbito).  
 - A conformidade continua a ser juízo da organização. O Manual fornece a evidência técnica e diz com clareza o que fica por fazer e o que não lhe cabe, sem um esforço paralelo ou burocrático para cada regulamento.  
 
 Esta visão **mitiga a fragmentação regulatória** e oferece às organizações um **modelo unificado de aplicação prática**, onde segurança, risco e conformidade convergem.

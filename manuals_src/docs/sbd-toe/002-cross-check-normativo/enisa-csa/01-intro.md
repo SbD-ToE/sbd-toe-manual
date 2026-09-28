@@ -23,7 +23,7 @@ O **Cybersecurity Act** é o **Regulamento (UE) 2019/881** (CELEX: [32019R0881](
 
 O quadro prevê vários **sistemas europeus de certificação da cibersegurança** («esquemas», na designação corrente), entre eles:
 
-- **EUCC** - para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
+- **EUCC** - para produtos de TIC; aplica os Critérios Comuns (ISO/IEC 15408) e a Metodologia Comum de Avaliação (ISO/IEC 18045), que não substitui (Reg. de Execução (UE) 2024/482, arts. 2.º e 3.º);
 - **EUCS** - para serviços de computação em nuvem;
 - **EU5G** - para redes e serviços 5G.
 

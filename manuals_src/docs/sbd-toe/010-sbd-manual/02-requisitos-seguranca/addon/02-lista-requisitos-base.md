@@ -188,9 +188,9 @@ Um ficheiro é input — a forma de o validar é que difere: além do valor, con
 | FIL-007 | Rastreio anti-malware de ficheiros de origem não confiável | - | ✔ | ✔ | Ficheiros recebidos de fontes não confiáveis passam por rastreio anti-malware antes de serem disponibilizados; detecção bloqueia a disponibilização e gera registo. |
 | FIL-008 | Limite de dimensão de imagens (pixel flood) | - | ✔ | ✔ | Imagens com dimensão em píxeis acima do máximo definido são rejeitadas onde a aplicação processa imagens. |
 
-> **Proporcionalidade de FIL-002 em L1** (da fonte de derivação, ASVS v5 `UNIT-V5.2.2`): "For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted." — em L1 a validação de conteúdo pode limitar-se aos ficheiros que sustentam decisões de negócio ou segurança; em L2+ aplica-se a todos os ficheiros aceites.
+> **Proporcionalidade de FIL-002 em L1** (da fonte de derivação, ASVS 5.0 V5.2.2): "For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted." — em L1 a validação de conteúdo pode limitar-se aos ficheiros que sustentam decisões de negócio ou segurança; em L2+ aplica-se a todos os ficheiros aceites.
 
-**Fontes.** Derivação por linha: FIL-001 — `UNIT-V5.2.1`, `UNIT-V5.1.1`; FIL-002 — `UNIT-V5.2.2`, `UNIT-V5.1.1`, CWE-434; FIL-003 — `UNIT-V5.2.3`, `UNIT-V5.2.5`, `UNIT-V5.3.3`; FIL-004 — `UNIT-V5.2.4`; FIL-005 — `UNIT-V5.3.1`, `UNIT-V5.3.2`, CWE-434; FIL-006 — `UNIT-V5.4.1`, `UNIT-V5.4.2` (a cláusula de conteúdo não interpretável no domínio da aplicação é prescrição editorial do SbD-ToE); FIL-007 — `UNIT-V5.4.3` (a cláusula "e gera registo" é prescrição editorial); FIL-008 — `UNIT-V5.2.6`. As fontes ancoram a derivação; a prescrição, a redação e o escalamento L1–L3 são editoriais do SbD-ToE.
+**Fontes.** Derivação por linha: FIL-001 — ASVS 5.0 V5.2.1, ASVS 5.0 V5.1.1; FIL-002 — ASVS 5.0 V5.2.2, ASVS 5.0 V5.1.1, CWE-434; FIL-003 — ASVS 5.0 V5.2.3, ASVS 5.0 V5.2.5, ASVS 5.0 V5.3.3; FIL-004 — ASVS 5.0 V5.2.4; FIL-005 — ASVS 5.0 V5.3.1, ASVS 5.0 V5.3.2, CWE-434; FIL-006 — ASVS 5.0 V5.4.1, ASVS 5.0 V5.4.2 (a cláusula de conteúdo não interpretável no domínio da aplicação é prescrição editorial do SbD-ToE); FIL-007 — ASVS 5.0 V5.4.3 (a cláusula "e gera registo" é prescrição editorial); FIL-008 — ASVS 5.0 V5.2.6. As fontes ancoram a derivação; a prescrição, a redação e o escalamento L1–L3 são editoriais do SbD-ToE.
 
 ---
 
@@ -262,7 +262,7 @@ Uma aplicação com dados pessoais pode ser L1 (dados pessoais valem D=2, e E1+D
 
 Os vizinhos existentes mantêm o seu objecto: `ENC-005` proíbe dados sensíveis em claro em logs, outputs e respostas API; `ERR-007` exige contexto pseudonimizado nos logs de erro (L2+); `LOG-005` fixa a retenção **mínima** dos logs. `PRI-002` fixa a retenção **máxima** dos dados pessoais de negócio, e `PRI-005` acrescenta o que nenhum deles prescreve: o conceito documentado e verificado — não repete a proibição, exige o conceito.
 
-**Fontes.** PRI-001…004, PRI-006 e PRI-007 — [autoria] SbD-ToE (ameaça de referência: CWE-359); PRI-005 — actividade DSOMM "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") e CWE-359. As fontes ancoram a derivação; a prescrição é editorial do SbD-ToE.
+**Fontes.** PRI-001…004, PRI-006 e PRI-007 — prescrição do SbD-ToE (ameaça de referência: CWE-359); PRI-005 — actividade DSOMM "PII logging concept" ("A concept how to log PII is documented and applied") e CWE-359. As fontes ancoram a derivação; a prescrição é editorial do SbD-ToE.
 
 ---
 
@@ -301,7 +301,7 @@ Requisitos que asseguram a segurança nas comunicações entre sistemas, preveni
 | INT-011 | Protecção contra replay de mensagens | - | ✔ | ✔ | Mensagens têm identificador único e janela de validade; a reinjeção fora da janela ou duplicada é rejeitada com registo. |
 | INT-012 | Ordem de processamento onde semanticamente exigida | - | - | ✔ | Onde a semântica do negócio exige ordem, o processamento garante-a (chave de partição, sequenciação) e a violação é detectável. |
 
-**Fontes (INT-009…012).** [autoria] SbD-ToE — ciclo de vida de mensagens (idempotência, DLQ, replay, ordem); sem âncora externa no corpus à data. `INT-011` trata replay de **mensagens**, objecto distinto do replay de tokens (`SES-008`).
+**Fontes (INT-009…012).** prescrição do SbD-ToE — ciclo de vida de mensagens (idempotência, DLQ, replay, ordem); sem fonte externa que a ancore. `INT-011` trata replay de **mensagens**, objecto distinto do replay de tokens (`SES-008`).
 
 ---
 

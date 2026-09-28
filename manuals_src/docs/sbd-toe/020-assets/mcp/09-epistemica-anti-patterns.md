@@ -13,7 +13,7 @@ tags:
 
 # Disciplina epistémica e anti-patterns
 
-O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir deles**. A junção dos dois cria uma tentação: apresentar *inferências do LLM* como se fossem *factos do manual*. Para que o output mereça a confiança dos auditores, *legal counsel*, *security champions* — toda afirmação deve ser **rotulável**.
+O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir deles**. A junção dos dois cria uma tentação: apresentar *inferências do LLM* como se fossem *factos do manual*. Para que o output mereça a confiança dos auditores, *legal counsel*, *security champions* — toda afirmação deve ser **rotulável**. E um rótulo `manual-grounded` diz de onde vem o requisito, não que o código o cumpre: a verificação da implementação exige testes e revisão.
 
 ## Os 4 rótulos epistémicos {#os-4-rótulos-epistémicos}
 

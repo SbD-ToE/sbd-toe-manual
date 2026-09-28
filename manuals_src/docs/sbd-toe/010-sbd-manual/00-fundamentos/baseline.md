@@ -133,25 +133,23 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 A definição destas obrigações mínimas baseia-se em:
 
 ### **Estudos de Incidentes Reais** {#estudos-de-incidentes-reais}
-- **Verizon DBIR** (Data Breach Investigations Report): A maioria dos breaches decorre de falhas básicas - credenciais fracas, patches não aplicadas, falta de logging.
-- **ENISA Threat Landscape**: Vulnerabilidades conhecidas (ex.: CVEs) são exploradas rotineiramente porque básicos não estão em lugar.
+Os relatórios de incidentes publicados, como o Verizon DBIR e o ENISA Threat Landscape, descrevem de forma recorrente incidentes com origem em falhas básicas: credenciais comprometidas, vulnerabilidades conhecidas por corrigir, falta de registo. São contexto para a escolha destas obrigações, não prova da sua eficácia; os números de cada edição aplicam-se à população e ao período que essa edição estuda.
 
 ### **OWASP Top 10** {#owasp-top-10}
-As 10 vulnerabilidades mais comuns poderiam ser impedidas por:
-- **A01 Broken Access Control** → Requisitos claros (2)
-- **A02 Cryptographic Failures** → Guidelines de código (4)
-- **A03 Injection** → SAST + validação (4, 6)
-- **A04 Insecure Design** → Threat modeling (3)
-- **A05 Security Misconfiguration** → IaC + guidelines (4, 8)
-- **A06 Vulnerable Components** → Dependency management (5)
-- **A07 Authentication Failures** → Requisitos (2)
-- **A08 Data Integrity Failures** → CI/CD gates (7)
-- **A09 Logging & Monitoring Failures** → Logging obrigatório (12)
-- **A10 SSRF** → Threat modeling (3)
+As obrigações mínimas endereçam as categorias do OWASP Top 10 (edição de 2021), sem garantir que as previnem:
+- **A01 Broken Access Control** → Requisitos claros (obrigação 2)
+- **A02 Cryptographic Failures** → Requisitos e guidelines de código (2, 4)
+- **A03 Injection** → Guidelines de código e SAST no pipeline (4, 5)
+- **A04 Insecure Design** → Requisitos e classificação de risco (1, 2); o threat modeling (Cap. 03) aprofunda
+- **A05 Security Misconfiguration** → Guidelines e verificações no pipeline (4, 5)
+- **A06 Vulnerable and Outdated Components** → Gestão de dependências (3)
+- **A07 Identification and Authentication Failures** → Requisitos (2)
+- **A08 Software and Data Integrity Failures** → Verificações no pipeline (5)
+- **A09 Security Logging and Monitoring Failures** → Registo e monitorização (6)
+- **A10 SSRF** → Requisitos e guidelines (2, 4); o threat modeling (Cap. 03) aprofunda
 
 ### **Modelos de Maturidade** {#modelos-de-maturidade}
-Organizações avaliadas com OWASP SAMM mostram que **todas as maduras** partilham estas 8 práticas como base.  
-Ausência de qualquer uma cria gaps significativos.
+As práticas destas obrigações correspondem a práticas de base dos modelos de maturidade usados como referência (OWASP SAMM, BSIMM). É uma correspondência de conteúdo, não uma medição: o Manual não afirma que todas as organizações maduras as partilham.
 
 ---
 
@@ -188,8 +186,8 @@ Um aspeto essencial é a eficiência: em muitos casos, aplicar **determinadas pr
 ### Exemplos Práticos {#exemplos-práticos}
 
 **SAST em todos os repositórios**  
-→ Mesmo com cost zero (ferramentas open source), elimina triviais.  
-→ Menos falsos positivos do que SCA desconexo.
+→ Há ferramentas open source sem custo de licença; o custo operacional (configuração, triagem de resultados, manutenção) existe sempre.  
+→ Detecta cedo uma parte dos defeitos triviais; a taxa de falsos positivos depende da ferramenta, da configuração e do código.
 
 **Dependency scanning automático em pipelines**  
 → Um job padrão em todos os projetos simplifica política.  
@@ -197,7 +195,7 @@ Um aspeto essencial é a eficiência: em muitos casos, aplicar **determinadas pr
 
 **Logging e monitorização por defeito**  
 → Ativar collectors em todos os serviços facilita auditorias.  
-→ Detecta incidentes mais rapidamente.
+→ Dá a base para detectar incidentes; a rapidez da detecção depende da monitorização e da resposta.
 
 **Templates contratuais mínimos**  
 → Aplicar cláusulas iguais a todos os fornecedores reduz negociação.  
@@ -225,38 +223,37 @@ Para cada aplicação, validar:
 
 ## 🔗 Alinhamento Regulatório {#-alinhamento-regulatório}
 
+As 8 obrigações **contribuem** para vários regimes; não equivalem a conformidade com nenhum deles. A cobertura obrigação a obrigação, com o que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, está nas páginas do [cross-check normativo](/sbd-toe/cross-check-normativo/intro).
+
 ### **NIS2 (Directive on Network and Information Security)** {#nis2-directive-on-network-and-information-security}
-- ✅ Cobre: Medidas técnicas, logging, monitorização, avaliação de risco
-- ✅ Todas as 8 obrigações contribuem para compliance NIS2
+- Contribuem para as medidas técnicas do art. 21.º (registo, monitorização, gestão de vulnerabilidades, avaliação de risco). Ver o [cross-check NIS2](/sbd-toe/cross-check-normativo/nis2/intro).
 
 ### **DORA (Digital Operational Resilience Act)** {#dora-digital-operational-resilience-act}
-- ✅ Cobre: Testes periódicos, gestão de fornecedores, resiliência
-- ✅ Obrigações 5, 6, 7, 8 são essenciais para DORA
+- Contribuem sobretudo as obrigações 5 a 8 (pipeline, registo, formação, fornecedores). Ver o [cross-check DORA](/sbd-toe/cross-check-normativo/dora/intro).
 
 ### **GDPR (General Data Protection Regulation)** {#gdpr-general-data-protection-regulation}
-- ✅ Cobre: Privacy by design, security by design, logging
-- ✅ Obrigações 2, 4, 6 são críticas para GDPR
+- Contribuem sobretudo as obrigações 2, 4 e 6 para a proteção de dados desde a conceção e a segurança do tratamento. Ver o [cross-check RGPD](/sbd-toe/cross-check-normativo/gdpr/intro).
 
 ### **PCI-DSS (Payment Card Industry)** {#pci-dss-payment-card-industry}
-- ✅ Todas as 8 obrigações cobrem PCI-DSS mínimos
+- Referência usada, sem cross-check publicado nem mapeamento requisito a requisito. Há sobreposição temática com vários requisitos da norma; isso não é conformidade.
 
 ### **ISO/IEC 27001** {#isoiec-27001}
-- ✅ Mapeamento direto: cada obrigação corresponde a controlos ISO
+- Referência usada, sem cross-check publicado. Várias obrigações correspondem a controlos do anexo A; a correspondência não está mapeada controlo a controlo.
 
 ---
 
 ## 📈 Impacto Esperado {#-impacto-esperado}
 
-Com as 8 obrigações implementadas:
+Com as 8 obrigações implementadas, esperam-se efeitos nesta direcção. São **hipóteses**, sem eficácia demonstrada pelo Manual: dependem do contexto, do ponto de partida e da qualidade da implementação, e cada organização mede-as com os KPIs dos capítulos.
 
-| Métrica | Impacto |
+| Área | Efeito esperado (hipótese) |
 |---------|---------|
-| **Vulnerabilidades Triviais** | ↓ 70-80% (SAST + guidelines) |
-| **Incidentes por Dependências** | ↓ 60% (SCA + inventory) |
-| **Tempo de Detecção (MTTD)** | ↓ 50% (logging + monitoring) |
-| **Tempo de Resposta (MTTR)** | ↓ 40% (logs centralizados) |
-| **Compliance Readiness** | ↑ 80%+ (rastreabilidade) |
-| **Custo de Remediação** | ↓ 30% (early detection) |
+| **Vulnerabilidades triviais** | Menos, por guidelines e SAST |
+| **Incidentes por dependências** | Menos, por SCA e inventário |
+| **Tempo de detecção (MTTD)** | Menor, por registo e monitorização |
+| **Tempo de resposta (MTTR)** | Menor, por registos centralizados |
+| **Preparação para auditoria** | Maior, por rastreabilidade |
+| **Custo de remediação** | Menor, por detecção mais cedo |
 
 ---
 
@@ -265,7 +262,7 @@ Com as 8 obrigações implementadas:
 1. **Audita o estado atual**: Qual destas 8 obrigações estão já implementadas?
 2. **Prioriza gaps**: Qual é mais urgente? (Recomendação: começar com 1, 2, 5, 7)
 3. **Aloca recursos**: Cada obrigação tem um "dono" - Define responsabilidades
-4. **Define timeline**: Qual é o prazo para 100% compliance?
+4. **Define timeline**: Qual é o prazo para implementar as 8 obrigações?
 5. **Mede**: Estabelece KPIs para cada obrigação
 
 ---

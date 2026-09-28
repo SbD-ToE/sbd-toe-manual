@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: 79042ac9d0b7b8f5c033ec071f5594b9abd99271efd179cc1e04946ea811f76d
-  source_commit: 138535837a74162b603e54ac55284c3abb65bb34
-  target_sha256: 95b52cf732dc3e9ad7276bbbe8dead2faf9862ffb5265e93a6d40205c3a5dfbf
+  source_sha256: 4064ab9435c67d5b74af8fa2e163a5d4e5af359b37734b855b7d7a1ba859ea34
+  source_commit: cd59ce0074d2e282eb290ceeaea128a60266b266
+  target_sha256: e256b700da06912e0fcffa39cb8fcced643b4beaf5cc3e7c5a33f53727f60cfe
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, appsec_core, audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_risk_management_system, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, eu_startups, framework_source_corpus, gap_family, gdpr_pseudonymisation, layer, lifecycle_phase, llm, mcp, mcp_reading_programa, normative_empirical, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 687f80aa0544aa71e211cfe59e5efb5638ebf1d29fb833664cd4d8142c656575
-  translated_at: 2026-09-27T23:08:55Z
-  stamped_at: 2026-09-27T23:08:55Z
+  translated_at: 2026-09-28T09:11:46Z
+  stamped_at: 2026-09-28T09:11:46Z
   reviewed_by: null
 ---
 
@@ -103,7 +103,7 @@ Declared gap pending the AISVS/SAIF round of AppSec Core: accuracy and robustnes
 
 ## Cross-Check Matrix (summary) {#matriz-de-cross-check-resumo}
 
-> ✏️ **Refresh 2026-09-27.** This table summarises the AI Act coverage matrix (`_matriz/aiact.yaml`), which incorporates the *agentic release* (Ch. 02 §A0–A4, Ch. 03 agentic playbook, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39) and the floor entries and requirements of context CTX-AIA-RE. The “Residual gap” column records only declared gaps; what is out of scope is marked as such. The obligation-by-obligation answer is in [Applicable requirements](./requisitos-aplicaveis#cobertura).
+> ✏️ **Refresh 2026-09-27.** This table summarises the AI Act coverage matrix, which incorporates the *agentic release* (Ch. 02 §A0–A4, Ch. 03 agentic playbook, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39) and the floor entries and requirements of context CTX-AIA-RE. The «Residual gap» column records only declared gaps; what is out of scope is marked as such. The obligation-by-obligation answer is in [Applicable requirements](./requisitos-aplicaveis#cobertura).
 
 | AI Act domain | Reference (article) | SbD-ToE coverage | Residual gap | Adaptation action |
 |---|---|---|---|---|

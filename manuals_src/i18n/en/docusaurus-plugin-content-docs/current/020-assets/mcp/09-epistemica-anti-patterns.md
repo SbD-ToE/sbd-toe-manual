@@ -12,22 +12,22 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/09-epistemica-anti-patterns.md
-  source_sha256: 000fe2edbb0518e606b6a01c215919ad3ca70e43fe1ec2577ae41f293c29d361
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: be28be7d64a9793d38081c0e8aed18b56a981579cc4251f2532747fbf6e506b0
+  source_sha256: e552de686a0d7a021cf8bcabc9fab9c71e2957244e38284fb621b5d206967fda
+  source_commit: d394b0928bbec912dd0391bedb6cc4f403b46015
+  target_sha256: e0065c0ec741833b7c4abfca628b09fcb83e320488b1dd555ee1ddfc8894532e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, discipline, framework_source_corpus, llm, mcp, normative_empirical, practitioner_manual, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: 5876defbf5549e56ab64154fbe4657986df08e4d94ee62bf69c39d9dd7ce00f3
-  translated_at: 2026-09-26T14:55:22Z
-  stamped_at: 2026-09-26T18:36:42Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, discipline, framework_source_corpus, llm, mcp, normative_empirical, practitioner_manual, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 7cd59149aa2c668ab6b174d3e9bbcbd7ad935549c5f2ebd27ac762592cd83220
+  translated_at: 2026-09-28T09:12:27Z
+  stamped_at: 2026-09-28T09:12:27Z
   reviewed_by: null
 ---
 
 # Epistemic discipline and anti-patterns
 
-The MCP server returns **structured data**; the LLM **generates content from it**. Joining the two creates a temptation: presenting *LLM inferences* as if they were *facts from the manual*. For the output to earn the trust of auditors, *legal counsel* and *security champions*, every statement must be **labellable**.
+The MCP server returns **structured data**; the LLM **generates content from it**. Putting the two together creates a temptation: presenting *LLM inferences* as if they were *manual facts*. For the output to earn the trust of auditors, *legal counsel* and *security champions*, every statement must be **labellable**. And a `manual-grounded` label says where the requirement comes from, not that the code meets it: verifying the implementation requires tests and review.
 
 ## The 4 epistemic labels {#os-4-rótulos-epistémicos}
 

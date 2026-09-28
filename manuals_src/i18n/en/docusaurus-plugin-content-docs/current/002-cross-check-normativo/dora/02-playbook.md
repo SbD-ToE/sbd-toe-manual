@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/02-playbook.md
-  source_sha256: 3f40f06f0e48872b2f5f9a555b56de369bc0e8dfa54b91f3dce85081f8e2076d
-  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
-  target_sha256: ee28e6abe6e406f4567cd3acd19927ad6509fef92fc5418508e9481dc63c9672
+  source_sha256: 63f95450da89cc2132f50c5244cacc2f0fc57d63bd655b21dff234687270c4e2
+  source_commit: cd59ce0074d2e282eb290ceeaea128a60266b266
+  target_sha256: 76ea7e6f70e9ba5e5f6fefb8957cca3e64b516c3a4003e2b8da982a6ea996f25
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, avaliacao, capacitacao, chapter_role, cycle_iteration, dora_ict_risk, dora_register_of_information, eu_management_body, eu_startups, framework_source_corpus, gap_family, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, piso_limiar, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: c51c2f1a1ecc39532b3a2fe0f02b7ce3acac2e29e4e5c248aacf415764c4e9e3
-  translated_at: 2026-09-27T23:03:28Z
-  stamped_at: 2026-09-27T23:03:28Z
+  translated_at: 2026-09-28T09:11:48Z
+  stamped_at: 2026-09-28T09:11:48Z
   reviewed_by: null
 ---
 
@@ -34,7 +34,7 @@ What the Manual covers, the gaps it declares and what stays out of scope, obliga
 - The DORA requirement or normative block
 - The applicable SbD-ToE chapter/addon
 - What to do
-- Which part stays within the Manual (including the floor and the requirements added by the DORA context, in `_contextos-regulatorios.yaml`) and which part stays out of scope
+- Which part falls within the Manual (including the floor entries and the requirements added by the DORA context, on the [Applicable requirements](./requisitos-aplicaveis) page) and which part is out of scope
 
 > 📚 **Supporting Resources:** For practical templates and implementation examples, see the [Example Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options), with reusable toolchains, KPIs, RACI and incident reports for DORA and other frameworks.
 

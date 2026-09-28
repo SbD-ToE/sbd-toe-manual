@@ -13,9 +13,13 @@ tags:
 
 # MCP Server (SbD-ToE)
 
-Quando se pede a um agente que escreva código seguro, ele tem duas opções: ou recorre ao que reteve do treino — uma aproximação plausível, mas sem âncora nem fonte —, ou consulta o manual numa fonte que devolve requisitos e controlos com identificadores citáveis. O **`@shiftleftpt/sbd-toe-mcp`** existe para tornar a segunda opção trivial.
+Quando se pede a um agente que escreva código seguro, ele pode apoiar-se só no que reteve do treino — uma aproximação plausível, mas sem âncora nem fonte — ou consultar o manual numa fonte que devolve requisitos e controlos com identificadores citáveis. O **`@shiftleftpt/sbd-toe-mcp`** torna a consulta simples. Não substitui o modelo, que continua a gerar o código: dá-lhe a fonte.
 
-É o servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) oficial do SbD-ToE. Expõe o manual (capítulos 00–14), a ontologia *AppSec Core v1* e os cross-checks normativos publicados através de **tools, resources e prompts MCP** — para que o Claude, o GitHub Copilot, o Cursor, o Windsurf, o Zed (ou qualquer outro cliente MCP) deixem de responder a partir do que treinaram e passem a perguntar à fonte, no momento em que escrevem, com IDs reais. Em prática: cada requisito, controlo, ameaça ou artefacto que o agente refere passa a ser verificável.
+É o servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) oficial do SbD-ToE. Expõe o manual (capítulos 00–14), a ontologia *AppSec Core v1* e os cross-checks normativos publicados através de **tools, resources e prompts MCP** — para que o Claude, o GitHub Copilot, o Cursor, o Windsurf, o Zed (ou qualquer outro cliente MCP) possam perguntar à fonte no momento em que escrevem, com IDs reais, em vez de dependerem só do que treinaram. Em prática: cada requisito, controlo, ameaça ou artefacto que o agente refere passa a poder ser verificado.
+
+:::note O que o servidor garante e o que depende do cliente
+O servidor garante a **recuperação**: para a mesma pergunta e o mesmo *snapshot*, devolve os mesmos requisitos e controlos, com identificadores reais, e seleciona-os de forma determinística a partir do que o agente declara. O resto depende do cliente e do modelo: a **seleção do contexto** que o agente passa ao modelo; a **geração** do código (a recuperação é determinística, a geração não); a **verificação das citações** (que o agente cita o que recebeu); e a **verificação da implementação** (que o código cumpre o requisito, com os testes, a revisão e as validações dos capítulos). Uma citação válida não torna o código seguro.
+:::
 
 | Atributo | Valor |
 |---|---|
@@ -128,13 +132,13 @@ Os *prompts* são um mecanismo MCP próprio: clientes sem suporte de *prompts* (
 
 O servidor expõe valores **fechados** para parâmetros — usar fora destes valores não devolve resultados.
 
-**Risk levels:**
+**Risk levels:** `L1`, `L2` e `L3`, os níveis do [modelo de classificação do Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), que os calcula pelos eixos exposição, dados e impacto (E+D+I). O nível não se deduz só do tipo de dados nem do regime aplicável: uma aplicação interna com dados pessoais e impacto baixo pode ser `L1`, e o contexto regulatório (p. ex. RGPD, DORA) declara-se à parte, no overlay regulatório. Os exemplos são ilustrativos, nem necessários nem suficientes:
 
-| Nível | Âmbito |
+| Nível | Exemplo típico (ilustrativo) |
 |---|---|
-| `L1` | Baixo risco — interno, sem dados sensíveis |
-| `L2` | Médio risco — APIs públicas, dados de utilizador |
-| `L3` | Alto risco — PII, sistemas regulados |
+| `L1` | Baixo risco — p. ex. aplicação interna de impacto baixo |
+| `L2` | Médio risco — p. ex. APIs públicas com dados de utilizador |
+| `L3` | Alto risco — p. ex. exposição pública, dados sensíveis e impacto elevado |
 
 Nenhum capítulo se desbloqueia por nível: todos se aplicam a todos os níveis, e o que escala de `L1` para `L3` é a exigência (matriz do cap. 01).
 

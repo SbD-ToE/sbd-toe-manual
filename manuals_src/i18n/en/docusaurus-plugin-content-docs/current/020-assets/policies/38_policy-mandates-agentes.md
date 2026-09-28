@@ -8,16 +8,16 @@ sidebar_position: 38
 translation:
   source_locale: pt
   source_path: 020-assets/policies/38_policy-mandates-agentes.md
-  source_sha256: 9e71f1c393a5b4a99b945fc1d210e09ef05a0f5dd028f582476913295ca79fbb
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 04214cca965ceef23813273f717ffeabd3409cd67da8cd16b89730f0acacd1c5
+  source_sha256: 1e2b5f79982747ee8719585f368e9a32c6935a843ab6f78b40f05df9ecc83c2b
+  source_commit: fae8897094a36c3dd4296383ae5b0d690cc5b9c1
+  target_sha256: 12745c2822b11760f6fc13d7a712a01e902d346f3b51efe6bd9106d4e99820ab
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, avaliacao, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, lifecycle_phase, llm, mcp, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
   glossary_sha256: d97e883ef6d84f02314edd476b91df971c2176fad6b6a558febc4e5234329223
-  translated_at: 2026-09-27T09:05:46Z
-  stamped_at: 2026-09-27T09:05:46Z
+  translated_at: 2026-09-28T09:12:29Z
+  stamped_at: 2026-09-28T09:12:29Z
   reviewed_by: null
 ---
 
@@ -187,7 +187,7 @@ The organisational review covers: *mandates* without an active *owner* (e.g. the
 
 Exceptions to this policy follow the formal process defined in Ch. 14 and in [`Policy 05 — Gestão de Excepções`](./policy-gestao-excecoes):
 
-- An exception has an explicit TTL (recommended ≤ 90 days).
+- An exception has an explicit TTL, within the deadlines of Policy 05 §7 (90 days is the absolute ceiling).
 - An exception at A3/A4 requires additional approval from the `CISO`.
 - Accumulated exceptions (>2 on the same agent in 12 months) require a review of the *mandate*.
 

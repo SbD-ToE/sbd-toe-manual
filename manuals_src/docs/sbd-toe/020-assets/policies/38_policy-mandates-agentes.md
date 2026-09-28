@@ -173,7 +173,7 @@ A revisão organizacional cobre: *mandates* sem *owner* activo (ex: pessoa saiu 
 
 Excepções a esta política seguem o processo formal definido no Cap. 14 e na [`Policy 05 — Gestão de Excepções`](./policy-gestao-excecoes):
 
-- Excepção tem TTL explícito (recomendado ≤ 90 dias).
+- Excepção tem TTL explícito, dentro dos prazos da Política 05 §7 (90 dias é o tecto absoluto).
 - Excepção em A3/A4 exige aprovação adicional do `CISO`.
 - Excepções acumuladas (>2 sobre o mesmo agente em 12 meses) obrigam a revisão do *mandate*.
 

@@ -257,9 +257,8 @@ def floor_contexts(ctx_doc: dict) -> Dict[str, dict]:
 T = {
     "pt": {
         "title": "Requisitos aplicáveis — {nome}",
-        "desc": "Vista gerada: requisitos do Manual que se aplicam sob o contexto {cid}, por nível e grau, com os pisos que o regime eleva e a base legal de cada um.",
+        "desc": "Requisitos do Manual que se aplicam sob o contexto {cid}, por nível e grau, com os pisos que o regime eleva e a base legal de cada um.",
         "h1": "Requisitos aplicáveis: {nome}",
-        "gen": "> **Página gerada** por `scripts/gen_reg_views.py` a partir dos catálogos de requisitos e de `002-cross-check-normativo/_contextos-regulatorios.yaml`. Não se edita à mão: o catálogo de cada requisito é a fonte canónica, e esta página é uma vista do overlay regulatório.",
         "intro": "Esta página junta, para o contexto **{cid}**, a selecção base do Manual por nível e os **pisos** que o regime eleva, cada um com a obrigação que o fundamenta. Um contexto nunca baixa um mínimo do Manual.",
         "h_decl": "Quando se aplica",
         "h_graus": "Graus",
@@ -283,10 +282,10 @@ T = {
         "declara": {"entidade": "Declara-se por entidade e é herdado por todas as aplicações.", "aplicacao": "Declara-se por aplicação."},
         "no_pisos": "Sem pisos neste grau por enquanto.",
         "h_mapa": "Mapa de evidência da documentação técnica",
-        "mapa_intro": "Obrigações documentais do regime ({anexo}) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/{acto}.yaml`.",
+        "mapa_intro": "Obrigações documentais do regime ({anexo}) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. A lista vem da matriz de cobertura do Manual.",
         "cols_mapa": "| Obrigação | Referência | Força | Como o Manual responde | Nota |",
         "h_cob": "O que este Manual cobre e o que fica de fora",
-        "cob_intro": "Todas as obrigações da matriz `_matriz/{acto}.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As {n_exc} obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.",
+        "cob_intro": "Todas as obrigações do regime, na matriz de cobertura do Manual, em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Nenhuma obrigação fica em silêncio. As {n_exc} obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.",
         "h_cobre": "Cobre",
         "cobre_intro": "Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.",
         "h_lacuna": "Lacuna declarada",
@@ -297,18 +296,17 @@ T = {
         "cols_lacuna": "| Obrigação | Referência | Força | Como o Manual responde | O que falta |",
         "cols_foracob": "| Obrigação | Referência | Razão |",
         "cov_title": "Cobertura — {nome}",
-        "cov_desc": "Vista gerada: o que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, a partir da matriz de cobertura do {nome}.",
+        "cov_desc": "O que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, a partir da matriz de cobertura do {nome}.",
         "cov_h1": "Cobertura: {nome}",
-        "cov_gen": "> **Página gerada** por `scripts/gen_reg_views.py` a partir da matriz `002-cross-check-normativo/_matriz/{acto}.yaml`. Não se edita à mão. Este regime não tem contexto no overlay regulatório (não eleva nem acrescenta requisitos); responde só nas três categorias.",
-        "matrix_note": "Contagem das obrigações da matriz `_matriz/{acto}.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.",
+        "cov_gen": "Este regime não tem contexto no overlay regulatório (não eleva nem acrescenta requisitos); responde só nas três categorias.",
+        "matrix_note": "Contagem das obrigações do regime na matriz de cobertura (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.",
         "graus_cum": "cumulativo com o contexto",
         "graus_ind": "declarável sozinho",
     },
     "en": {
         "title": "Applicable requirements — {nome}",
-        "desc": "Generated view: the Manual's requirements that apply under context {cid}, by level and grade, with each floor that the regime elevates and its legal basis.",
+        "desc": "The Manual's requirements that apply under context {cid}, by level and grade, with each floor that the regime elevates and its legal basis.",
         "h1": "Applicable requirements: {nome}",
-        "gen": "> **Generated page**, produced by `scripts/gen_reg_views.py` from the requirement catalogues and from `002-cross-check-normativo/_contextos-regulatorios.yaml`. It is not edited by hand: each requirement's catalogue is the canonical source, and this page is a view of the regulatory overlay.",
         "intro": "For context **{cid}**, this page brings together the Manual's base selection per level and each **floor** that the regime elevates, with the obligation that grounds it. A context never lowers a minimum of the Manual.",
         "h_decl": "When it applies",
         "h_graus": "Grades",
@@ -332,10 +330,10 @@ T = {
         "declara": {"entidade": "Declared per entity and inherited by all applications.", "aplicacao": "Declared per application."},
         "no_pisos": "No floor at this grade for now.",
         "h_mapa": "Evidence map for the technical documentation",
-        "mapa_intro": "Documentary obligations of the regime ({anexo}) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/{acto}.yaml`.",
+        "mapa_intro": "Documentary obligations of the regime ({anexo}) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. The list comes from the Manual's coverage matrix.",
         "cols_mapa": "| Obligation | Reference | Strength | How the Manual responds | Note |",
         "h_cob": "What this Manual covers and what stays out",
-        "cob_intro": "All the obligations of the matrix `_matriz/{acto}.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The {n_exc} obligations addressed to the authorities create no duty for the organisation and are not listed.",
+        "cob_intro": "All the obligations of the regime, in the Manual's coverage matrix, in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. No obligation is left in silence. The {n_exc} obligations addressed to the authorities create no duty for the organisation and are not listed.",
         "h_cobre": "Covers",
         "cobre_intro": "Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.",
         "h_lacuna": "Declared gap",
@@ -346,10 +344,10 @@ T = {
         "cols_lacuna": "| Obligation | Reference | Strength | How the Manual responds | What is missing |",
         "cols_foracob": "| Obligation | Reference | Reason |",
         "cov_title": "Coverage — {nome}",
-        "cov_desc": "Generated view: what the Manual covers, the declared gaps and what stays out of scope, from the coverage matrix of the {nome}.",
+        "cov_desc": "What the Manual covers, the declared gaps and what stays out of scope, from the coverage matrix of the {nome}.",
         "cov_h1": "Coverage: {nome}",
-        "cov_gen": "> **Generated page**, produced by `scripts/gen_reg_views.py` from the matrix `002-cross-check-normativo/_matriz/{acto}.yaml`. It is not edited by hand. This regime has no context in the regulatory overlay (it neither elevates nor adds requirements); it answers only in the three categories.",
-        "matrix_note": "Count of the obligations in the matrix `_matriz/{acto}.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.",
+        "cov_gen": "This regime has no context in the regulatory overlay (it neither elevates nor adds requirements); it answers only in the three categories.",
+        "matrix_note": "Count of the regime's obligations in the coverage matrix (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.",
         "graus_cum": "cumulative with the context",
         "graus_ind": "declarable on its own",
     },
@@ -390,7 +388,7 @@ def _link_page(ficheiro: str, ancora: Optional[str], rotulo: str) -> str:
 
 def _resp_text(r: dict, lang: str) -> str:
     tipo = r.get("tipo")
-    if tipo in ("requisito", "acrescento"):
+    if tipo in ("requisito", "acrescento", "contexto"):
         return f"`{r['alvo']}`"
     if tipo == "politica":
         return _link_policy(r["ficheiro"], r["ancora"], r["rotulo"][lang])
@@ -461,8 +459,9 @@ def render_coverage_page(acto: str, matrix: dict, ctx_doc: dict, lang: str) -> s
         f"title: {json.dumps(t['cov_title'].format(nome=nome), ensure_ascii=False)}",
         f"description: {json.dumps(t['cov_desc'].format(nome=nome), ensure_ascii=False)}",
         "sidebar_position: 90",
-        f"tags: [cross-check, {matrix['pasta']}, cobertura, gerado]",
+        f"tags: [cross-check, {matrix['pasta']}, cobertura]",
         f"{GENERATED_KEY}: {VIEW_NAME}",
+        "generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz",
         "derived_from:",
         f"  - {XC}/_matriz/{acto}.yaml",
         "---",
@@ -487,11 +486,12 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
         f"title: {json.dumps(t['title'].format(nome=nome), ensure_ascii=False)}",
         f"description: {json.dumps(t['desc'].format(cid=cid), ensure_ascii=False)}",
         "sidebar_position: 90",
-        f"tags: [cross-check, {matrix['pasta']}, requisitos, overlay, gerado]",
+        f"tags: [cross-check, {matrix['pasta']}, requisitos, overlay]",
         f"{GENERATED_KEY}: {VIEW_NAME}",
+        "generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz",
         "derived_from:",
     ] + [f"  - {d}" for d in derived] + ["---", ""]
-    body = [f"# {t['h1'].format(nome=nome)}", "", t["gen"], "", t["intro"].format(cid=cid), ""]
+    body = [f"# {t['h1'].format(nome=nome)}", "", t["intro"].format(cid=cid), ""]
     # when it applies
     body += [f"## {t['h_decl']} {{#quando-se-aplica}}", ""]
     cr = ctx["criterio"]

@@ -6,15 +6,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: tldr.md
-  source_sha256: 02263244aa5b94fe2c1e90e807ef92e83277522f3b6f86904e7f2f950731e245
-  source_commit: a5789565ae9e6634298bcc0c98b82e64c353348e
-  target_sha256: 83def130a9e13f2370bc4f4e5f82956007705a0db566323d6cb71ce9d690da67
+  source_sha256: 21e85cfa0cb4e03231caad9dbc94ecd3c88c01d73736b567e80a65d98024682e
+  source_commit: 45a73cea738c88707d07cd50686f305df9d7ee97
+  target_sha256: 8e9786a9c129230c50d69f8ca61d4b2f2077b1f867a62dac2baaef77c7106df5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: e3a0a2a16fafe56b28ed87256d3cff0f0aed977c8bbc04f3f5d6099a7d322097
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, prescriptive, provenance, requirement_runtime, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 06cc6aad3b73fec617a1b8498a884f87801039fbf6fe6d681c512bc6f565922e
-  translated_at: 2026-09-26T13:55:22Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, prescriptive, provenance, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 0fe84ff204f92cbc7852b8ec1d4047b338f68cc162437696df902d0fc27e238e
+  translated_at: 2026-09-28T09:12:31Z
+  stamped_at: 2026-09-28T09:12:31Z
   reviewed_by: null
 ---
 
@@ -93,8 +94,8 @@ SbD-ToE works as:
 - Determines all the proportionality of the manual.  
 - Evidence: E+D+I classification, record in the repository, formal acceptance.
 
-🔗 /cap01/intro  
-🔗 /cap01/canon/20-checklist-revisao  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)  
+🔗 [Review checklist](/sbd-toe/sbd-manual/classificacao-aplicacoes/canon/checklist-revisao)  
 
 ---
 
@@ -104,8 +105,8 @@ SbD-ToE works as:
 - Recommended practical validation per requirement.  
 - Evidence: requirements matrix, validations, records per sprint.
 
-🔗 /cap02/intro  
-🔗 /cap02/canon/20-checklist-revisao  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/requisitos-seguranca/intro)  
+🔗 [Review checklist](/sbd-toe/sbd-manual/requisitos-seguranca/canon/checklist-revisao)  
 
 ---
 
@@ -115,8 +116,8 @@ SbD-ToE works as:
 - Proportional application by level L1–L3.  
 - Evidence: diagrams, abuse scenarios, integrated mitigation.
 
-🔗 /cap03/intro  
-🔗 /cap03/canon/15-aplicacao-lifecycle  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/threat-modeling/intro)  
+🔗 [Application across the lifecycle](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle)  
 
 ---
 
@@ -126,8 +127,8 @@ SbD-ToE works as:
 - Mapping of threats and native controls.  
 - Evidence: diagrams, ADRs, control of secrets and flows.
 
-🔗 /cap04/intro  
-🔗 /cap04/canon/50-ameacas-mitigadas  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/arquitetura-segura/intro)  
+🔗 [Threats mitigated](/sbd-toe/sbd-manual/arquitetura-segura/canon/ameacas-mitigadas)  
 
 ---
 
@@ -137,8 +138,8 @@ SbD-ToE works as:
 - Governance of exceptions and continuous validations.  
 - Evidence: SBOM, SCA reports, validation pipeline.
 
-🔗 /cap05/intro  
-🔗 /cap05/canon/20-checklist-revisao  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)  
+🔗 [Review checklist](/sbd-toe/sbd-manual/dependencias-sbom-sca/canon/checklist-revisao)  
 
 ---
 
@@ -147,8 +148,8 @@ SbD-ToE works as:
 - Integration into the IDE and the continuous integration pipeline.  
 - Evidence: scan logs, protected branches, secure reviews.
 
-🔗 /cap06/intro  
-🔗 /cap06/canon/15-aplicacao-lifecycle  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)  
+🔗 [Application across the lifecycle](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle)  
 
 ---
 
@@ -157,8 +158,8 @@ SbD-ToE works as:
 - Isolated execution, trusted runners, signatures and policies.  
 - Evidence: logs, publication rules, reproducible chains.
 
-🔗 /cap07/intro  
-🔗 /cap07/canon/30-recomendacoes-avancadas  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/cicd-seguro/intro)  
+🔗 [Advanced recommendations](/sbd-toe/sbd-manual/cicd-seguro/recomendacoes-avancadas)  
 
 ---
 
@@ -167,8 +168,8 @@ SbD-ToE works as:
 - Validations, approved modules, reproducible environments.  
 - Evidence: lint/policy reports, signed modules, tags.
 
-🔗 /cap08/intro  
-🔗 /cap08/canon/20-checklist-revisao  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/iac-infraestrutura/intro)  
+🔗 [Review checklist](/sbd-toe/sbd-manual/iac-infraestrutura/canon/checklist-revisao)  
 
 ---
 
@@ -177,8 +178,8 @@ SbD-ToE works as:
 - Registries with strong RBAC and retention and publication policies.  
 - Evidence: signature, SBOM, publication logs, security scans.
 
-🔗 /cap09/intro  
-🔗 /cap09/canon/50-ameacas-mitigadas  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/containers-imagens/intro)  
+🔗 [Threats mitigated](/sbd-toe/sbd-manual/containers-imagens/canon/ameacas-mitigadas)  
 
 ---
 
@@ -187,33 +188,34 @@ SbD-ToE works as:
 - Proportionality by level L1–L3.  
 - Evidence: reports, reproducibility, formal acceptance of results.
 
-🔗 /cap10/intro  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/testes-seguranca/intro)  
 
 ---
 
-## 📘 Chapter 11 - Logging, Telemetry and Monitoring {#tldr-cap11}
-- Structured logs, telemetry, retention and abuse detection.  
-- Integration with a SOC or equivalent tool.  
-- Evidence: dashboards, query packs, tested alerts.
+## 📘 Chapter 11 - Secure Deployment {#tldr-cap11}
+- Promotion only from signed artefacts, with verifiable provenance and SBOM.  
+- *Release* *gates* by level L1–L3, validation in *staging* and tested *rollback*.  
+- Evidence: *release* approvals, a record of promotions, *rollback* drills.
 
-🔗 /cap11/intro  
-
----
-
-## 📘 Chapter 12 - Secrets Management {#tldr-cap12}
-- Secrets kept out of code and pipelines.  
-- Vaults, rotation, Zero Trust principles.  
-- Evidence: secrets policy, audits, usage validations.
-
-🔗 /cap12/intro  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/deploy-seguro/intro)  
 
 ---
 
-## 📘 Chapter 13 - Advanced Recommendations {#tldr-cap13}
-- Reinforced practices for L2+ and L3 organisations.  
-- Advanced automation, early detection, reinforced supply chain.
+## 📘 Chapter 12 - Monitoring and Operations {#tldr-cap12}
+- Structured and centralised *logging*, with critical events and metrics defined.  
+- Alerts with *thresholds* and a response SLA, linked to the incident response *playbooks*.  
+- Evidence: *dashboards*, tested alerts, measured MTTD and MTTR.
 
-🔗 /cap13/intro  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)  
+
+---
+
+## 📘 Chapter 13 - Training and Capability Building {#tldr-cap13}
+- A continuous training plan, with tracks per profile and security in *onboarding*.  
+- *Security champions* in each team and hands-on labs.  
+- Evidence: training records and effectiveness metrics.
+
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/formacao-onboarding/intro)  
 
 ---
 
@@ -222,7 +224,7 @@ SbD-ToE works as:
 - Organisational governance, metrics and indicators.  
 - Evidence: contracts, security SLA, compliance dashboards.
 
-🔗 /cap14/intro  
+🔗 [Chapter introduction](/sbd-toe/sbd-manual/governanca-contratacao/intro)  
 
 ---
 
@@ -249,15 +251,15 @@ flowchart LR
 - **SLSA** - focus on pipeline integrity and artefact provenance.  
 - **DSOMM** - continuous reinforcement of DevSecOps practices.
 
-When applied consistently, SbD-ToE places the organisation at an intermediate/solid tier of these models, with clear room for the advanced developments described in the governance and recommendations chapters.
+The practices of SbD-ToE correspond to practices of these models. This is a correspondence of content, not a measurement: the level an organisation reaches in each model is measured with the model itself, and the achievable maturity is described chapter by chapter.
 
 ---
 
 # 🔗 7. Useful links {#links}
 
-- /cap00/intro - Theory of Everything (when available)  
-- /cap15/ - Normative Cross-check (where applicable)  
-- /capXX/canon/20-checklist-revisao - Checklists by chapter  
+- [Theory of Everything](/sbd-toe/teory-of-everything/intro): the conceptual model that frames the manual  
+- [Normative cross-check](/sbd-toe/cross-check-normativo/intro): how SbD-ToE answers each published regulation  
+- Review checklists: one per chapter, in each chapter's canonical section (for example, the one for [Chapter 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/canon/checklist-revisao))  
 
 ---
 

@@ -145,10 +145,10 @@ Os Artigos 28–30 estabelecem requisitos para inventário formal, avaliação d
 
 **Categoria 1: Fornecedores de Componentes de Software ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) - SBOM)**
 - **Contexto DORA:** Componentes de software (bibliotecas, frameworks) de terceiros constituem fornecedores implícitos de tecnologia
-- **Solução técnica:** SBOM (Software Bill of Materials) identifica dependências e respetivos fornecedores
+- **Solução técnica:** a SBOM (Software Bill of Materials) identifica os componentes e a sua origem (projeto, autor ou editor)
 - **Característica:** Fornecedores implícitos - os autores de componentes frequentemente desconhecem que integram a cadeia de fornecimento
 - **Gestão operacional:** SCA contínuo (análise de vulnerabilidades), gestão de atualizações de segurança, rastreamento de licenças
-- **Pré-requisito DORA:** Sem SBOM, a organização não consegue identificar fornecedores de software
+- **Relação com o DORA:** a SBOM é evidência complementar. Os autores de componentes de código aberto não são, em regra, prestadores terceiros de serviços de TIC com quem a entidade tenha um acordo contratual; o registo de informações do art. 28.º, n.º 3, abrange os acordos contratuais (Reg. de Execução (UE) 2024/2956), e a SBOM não o substitui
 
 **Categoria 2: Fornecedores Contratuais ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) - Governance)**
 - Entidades contratadas formalmente: contractors, outsourcing, prestadores de serviços
@@ -162,9 +162,8 @@ Os Artigos 28–30 estabelecem requisitos para inventário formal, avaliação d
 - Checklist de offboarding seguro
 
 **Conformidade DORA (Art. 28–30):**
-- Ambas as categorias exigem inventário e supervisão - não existe opcionalidade
-- SBOM alimenta o inventário de risco técnico de componentes
-- Fornecedores contratuais alimentam o inventário de risco organizacional
+- São quatro coisas distintas: o inventário de componentes (SBOM), a proveniência desses componentes, os prestadores terceiros de serviços de TIC e os acordos contratuais com eles
+- A SBOM alimenta o inventário de risco técnico de componentes; os prestadores e os acordos contratuais alimentam o registo de informações e a gestão do risco de terceiros, que são da entidade
 - **Fora do âmbito:** O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA. O registo de informações (Reg. de Execução (UE) 2024/2956), a análise do risco de concentração (art. 29.º), o conteúdo contratual específico do DORA e a superintendência dos prestadores terceiros críticos são da entidade e da relação com o supervisor.
 - **Lacunas declaradas:** a devida diligência plena do Reg. Delegado (UE) 2024/1773 (capacidade e continuidade do prestador, localização, idoneidade), o programa de auditorias aos prestadores com frequência baseada no risco e os planos de transição e de migração integral dos dados (art. 28.º, n.os 4 a 6 e 8).
 - **Base do Manual:** SBOM atualizado ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)), inventário formal de contractors e cláusulas de segurança proporcionais ao risco ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro); GOV-006, GOV-007).
@@ -220,7 +219,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 **Cenário crítico (incoerência com DORA):**
 | Situação | Risco | Impacto | Posição DORA |
 |----------|-------|--------|-------------|
-| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** - Violação de supervisão e rastreamento num cenário DORA defensável |
+| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** - Desvio não gerido: sem registo, sem alçada e sem trilho, a entidade não demonstra a supervisão que o art. 5.º pede |
 | **CVE crítico ignorado sem justificação** | Exposição contínua, compliance gap | Falha de gestão de risco TIC | ❌ **GRAVE** - Pode contrariar deveres de gestão de risco, validação e remediação contínua em DORA |
 | **Exceção aprovada verbalmente (no Teams/email informal)** | Perda de trilho, falta de autoridade formal, re-negociação ad-hoc | Impossível auditar decisões | ❌ **CRÍTICO** - Sem evidência de governance; regulador questiona: "quem aprovou?" |
 | **Exceção expirada sem reavaliação** | Risco aceito torna-se risco não-aceito (drift), violação técnica silenciosa | Aplicação continua com risco acima de limite | ❌ **CRÍTICO** - Violação Art. 5 (falta de supervisão contínua) |
@@ -241,7 +240,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 > Exceções com impacto em incident management, classificação ou reporte devem ser contextualizadas e tratadas com trilho documental compatível com o regime regulatório aplicável.
 
 **Art. 24–27 (Testes):**
-> O programa contínuo de testes deve cobrir cenários realistas. Exceções (ex: componente legado não-testável) exigem compensação documentada e leitura bounded face ao regime TLPT.
+> O programa contínuo de testes deve cobrir cenários realistas. Exceções aos testes aplicacionais (ex: componente legado não-testável) exigem compensação documentada. A periodicidade do TLPT não é excecionável internamente: o art. 26.º, n.º 1, fixa-a em pelo menos de três em três anos, e só a autoridade competente pode obrigar a entidade a reduzi-la ou aumentá-la. Uma decisão interna planeia a preparação e o âmbito, mas nunca adia a obrigação.
 
 **Art. 28–30 (Fornecedores):**
 > Exceções a SLAs de fornecedores, dependências críticas ou CVEs não mitigados devem ser escaladas conforme o modelo de risco e governação aplicável.
@@ -285,7 +284,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | Exceção | SbD-ToE | DORA |
 |---------|---------|------|
 | "Não implementar MFA porque é complexo" | No contexto DORA, não é exceção admissível: a autenticação forte é piso em qualquer nível (AUT-001, CTX-DORA-P07, que só admite justificação de não aplicabilidade; acesso remoto e privilegiado: GOV-016, CTX-DORA-P13, sem justificação admitida) | ❌ **Pode contrariar medidas mínimas de autenticação forte e gestão de risco TIC em DORA** |
-| "SQLi em endpoint legado, mantém-se" | Admissível como exceção pelas alçadas e prazos da Política 05, com compensação (ex: WAF) | ⚠️ O DORA não enumera exceções inadmissíveis; tratar a SQLi explorável como inaceitável em qualquer nível é política interna recomendada (ver Gap 4) |
+| "SQLi em endpoint legado, mantém-se" | Segue a Política 05 como qualquer vulnerabilidade: pela severidade e pelo nível, com as alçadas e os prazos da Política 05 §6 e §7 e com compensação (ex: WAF). Uma SQLi explorável de severidade Critical não é aceitável em L3; em L2, só com aprovação do CISO, plano de remediação e TTL de 7 dias | ⚠️ O DORA não enumera vulnerabilidades nem exceções inadmissíveis; a decisão é a da Política 05, e nada se atribui ao regulamento |
 | "CVE crítico em runtime, sem plano de fix" | Não aceitável em nenhum nível sem plano de remediação ativo (Política 03 §5); TTL de 7 dias em L1 e L2 e não aceitável em L3 (Política 05 §7) | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
 
 **Como manifesta:** Organização registra exceção no SbD-ToE formalmente; regulador rejeita: "esta exceção não é admissível em DORA" → perda de tempo, revisão forçada.
@@ -312,7 +311,7 @@ O SbD-ToE descreve **como** gerir exceções e fixa alguns limites (o Critical n
 - **Nunca aceitável numa leitura DORA defensável:**
   - Exceções sem aprovação documentada
   - Exceções expiradas sem reavaliação
-  - Violações de conformidade regulatória (ex: SQLi, injeção de comando)
+  - Exceções a obrigações que decorrem diretamente do regulamento (ex: a periodicidade do TLPT, art. 26.º, n.º 1), que uma decisão interna não pode afastar
 
 - **Aceitável com restrições (compatível com DORA):**
   - Exceções com TTL, plano de fix e compensação
@@ -337,8 +336,8 @@ Categorias de exceção:
 A. Exceções INACEITÁVEIS (incompatíveis com uma leitura DORA defensável):
    - Exceções sem aprovação documentada
    - Exceções expiradas sem reavaliação
-   - Vulnerabilidades exploráveis sem compensação (ex: SQLi, injeção)
-   - Violações de requisitos obrigatórios de conformidade
+   - Vulnerabilidades fora das alçadas e dos prazos da Política 05 (ex: Critical em L3; Critical em L2 sem CISO, plano e TTL)
+   - Exceções a obrigações que decorrem diretamente do regulamento (ex: a periodicidade do TLPT)
    ➜ Ação: REJEITAR; forçar mitigação
 
 B. Exceções ACEITÁVEIS em L3 (alçada da Política 05 §6):
@@ -349,7 +348,6 @@ B. Exceções ACEITÁVEIS em L3 (alçada da Política 05 §6):
 
 C. Exceções ACEITÁVEIS em L2 (alçada da Política 05 §6):
    - Requisitos técnicos com compensação equivalente
-   - Testes legítimos de resiliência suspensos (ex: TLPT adiado)
    ➜ Ação: APROVAR pela alçada da Política 05 §6 (AppSec Engineer; High com Gestão de Produto; Critical com CISO); TTL da Política 05 §7 (L2: 60 dias; High 30 dias; Critical 7 dias); reavaliação obrigatória
 
 D. Exceções ACEITÁVEIS com aprovação AppSec-level (L1):

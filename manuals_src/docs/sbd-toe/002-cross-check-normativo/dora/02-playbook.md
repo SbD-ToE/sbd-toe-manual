@@ -20,7 +20,7 @@ O que o Manual cobre, as lacunas que declara e o que fica fora de âmbito, obrig
 - DORA requisito ou bloco normativo
 - SbD-ToE capítulo/addon aplicável
 - O que fazer
-- Que parte fica dentro do Manual (incluindo os pisos e os requisitos acrescentados pelo contexto DORA, em `_contextos-regulatorios.yaml`) e que parte fica fora do âmbito
+- Que parte fica dentro do Manual (incluindo os pisos e os requisitos acrescentados pelo contexto DORA, na página [Requisitos aplicáveis](./requisitos-aplicaveis)) e que parte fica fora do âmbito
 
 > 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para DORA e outros frameworks.
 

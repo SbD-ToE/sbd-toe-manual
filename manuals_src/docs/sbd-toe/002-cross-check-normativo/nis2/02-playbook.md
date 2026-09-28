@@ -317,7 +317,7 @@ Elevar a decisão ao órgão de direção, como a leitura do art. 20.º sugere, 
 
 Implicação regulatória:
 - Exceções sem aprovação formal podem comprometer a supervisão (Art. 20)
-- Algumas exceções devem ser consideradas inaceitáveis por política interna (ex.: SQLi explorável, ausência de MFA onde seja adequada); a NIS2 exige medidas corretivas sem demora injustificada quando há incumprimento (art. 21.º, n.º 4)
+- Os limites das exceções são os da Política 05 (alçadas e prazos por severidade e nível; Critical não aceitável em L3); a NIS2 não enumera exceções inadmissíveis, mas exige medidas corretivas sem demora injustificada quando há incumprimento (art. 21.º, n.º 4)
 - Trilho auditado é obrigatório para demonstrar controlo à autoridade nacional
 
 Sugere-se:

@@ -56,15 +56,15 @@ O SbD-ToE ajuda a:
 |--------|---------|-----------|
 | **Foco** | Segurança **aplicacional** e pipeline (desenvolvimento, aquisição, operação de software) | Gestão de segurança da informação (ISMS) **organizacional** |
 | **Nível** | Técnico-operacional detalhado | Alto nível, abstrato (controlos genéricos) |
-| **Estrutura** | 14 capítulos por domínio técnico (SBOM, CI/CD, IaC, threat modeling, testes) | 114 controlos distribuídos por 14 domínios (A.5–A.18) |
+| **Estrutura** | 14 capítulos por domínio técnico (SBOM, CI/CD, IaC, threat modeling, testes) | 93 controlos em 4 temas (anexo A da ISO/IEC 27001:2022) |
 | **Certificável?** | Não (é framework interno) | Sim (certificação por CAB acreditado) |
-| **Relação** | **Implementa** controlos ISO 27001 com detalhe técnico (A.8, A.12, A.14, A.16) | **Exige** controlos; deixa "como" em aberto |
+| **Relação** | **Contribui** para controlos do anexo A com detalhe técnico (p. ex. A.8.8, A.8.25–A.8.29); não há cross-check publicado nem mapeamento controlo a controlo | **Exige** controlos; deixa "como" em aberto |
 
 **Em termos práticos:**
-- ISO 27001 diz: "Deve gerir vulnerabilidades" (controlo A.12.6).
+- ISO 27001 diz: "Deve gerir vulnerabilidades técnicas" (controlo A.8.8 na edição de 2022).
 - SbD-ToE diz: "Cap. 05 - Como fazer SBOM, SCA, patching com SLAs, exceções formais, integração CI/CD".
 
-**Podem coexistir?** Sim, e devem. SbD-ToE fornece o "como técnico" que acelera implementação e auditoria ISO 27001.
+**Podem coexistir?** Sim, e devem. O SbD-ToE fornece o "como técnico" que pode apoiar a implementação e a auditoria ISO 27001.
 
 ---
 
@@ -87,15 +87,15 @@ O SbD-ToE ajuda a:
 
 ### Posso usar o SbD-ToE como evidência de compliance? {#posso-usar-o-sbd-toe-como-evidência-de-compliance}
 
-**Sim.** Cada capítulo gera artefactos reutilizáveis:
+**Como evidência de apoio, sim.** Cada capítulo gera artefactos reutilizáveis:
 
-- **Matriz de classificação L1–L3** → evidência para DORA Art. 5, NIS2 Art. 21, GDPR Art. 5/32.
-- **SBOM por release** → evidência para DORA Art. 5, NIS2 Art. 21, CRA (obrigatório).
-- **Relatórios SAST/DAST/pentest** → evidência para DORA Art. 19–20, NIS2 Art. 21, CRA, ISO 27001 A.14.2.
-- **Runbook incidentes 72h** → evidência para DORA Art. 18, NIS2 Art. 23, GDPR Art. 33/34.
-- **Contratos fornecedores** → evidência para DORA Art. 26–28, NIS2 Art. 21, GDPR Art. 28.
+- **Matriz de classificação L1–L3** → apoia DORA art. 8.º, NIS2 art. 21.º e RGPD arts. 25.º e 32.º.
+- **SBOM por release** → evidência para o CRA (anexo I, parte II, ponto 1; documentação técnica do anexo VII); apoia o DORA art. 28.º, sem substituir o registo de informações.
+- **Relatórios SAST/DAST/pentest** → apoiam DORA arts. 24.º e 25.º, NIS2 art. 21.º e CRA anexo VII, ponto 6.
+- **Runbook de incidentes** → apoia DORA arts. 17.º a 19.º, NIS2 art. 23.º e RGPD arts. 33.º e 34.º (prazos na Política 32 §6).
+- **Contratos com fornecedores** → apoiam DORA arts. 28.º a 30.º, NIS2 art. 21.º, n.º 2, al. d), e RGPD art. 28.º.
 
-**Um único conjunto de evidências serve para múltiplos reguladores e auditorias.**
+**Um mesmo conjunto de evidências pode apoiar vários regimes e auditorias;** a conformidade continua a ser juízo da organização. O que cada regime pede, obrigação a obrigação, está no [cross-check normativo](/sbd-toe/cross-check-normativo/intro).
 
 ---
 
@@ -104,8 +104,8 @@ O SbD-ToE ajuda a:
 **Não.** O SbD-ToE não é um esquema de certificação. É um **framework operacional interno**.
 
 **Mas:** as evidências SbD-ToE podem ser reutilizadas para **acelerar e simplificar** certificações externas:
-- **ISO 27001** (ISMS) - implementação de controlos técnicos A.8/A.12/A.14/A.16
-- **EUCC/EUCS/EU5G** (esquemas CSA da ENISA) - evidências de segurança de produto/serviço
+- **ISO 27001** (ISMS) - controlos técnicos do anexo A (sem mapeamento controlo a controlo)
+- **EUCC** (esquema europeu adotado; o EUCS e o EU5G ainda não estão adotados) - evidências de segurança de produto/serviço
 - **SOC 2 Type II** (para cloud/SaaS) - demonstração de Trust Service Criteria
 
 **Importante:** Reutilizar evidências reduz o esforço (80–90%), mas não substitui a auditoria/avaliação independente necessária para a certificação formal.

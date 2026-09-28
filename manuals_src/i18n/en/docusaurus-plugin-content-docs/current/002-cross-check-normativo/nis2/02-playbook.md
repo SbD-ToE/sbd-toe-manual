@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: f7fca21d57df0e930860abb385d0bfc3099dede7ede33de7dd6fd684fdc2d0b8
-  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
-  target_sha256: 0c398afbf8e4c4bc19cbda9b50582e57a24ca16035e36442aecf7837a6516382
+  source_sha256: 1778d9b11573fd90b52ec54566739d7bb6f7888c551c3214e4d7c02fdac3d667
+  source_commit: f2e7be9ecdd9179e9770d80bc6363f7da7f1d9aa
+  target_sha256: 149287e29ca19a086db229d62c21b6cafc7fe8bef4d8cece74490fd056357bde
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, eu_startups, gap_family, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, piso_limiar, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: 84b271c55169b7b23695b01c478ed09b72a49513ad43af99a95eaca4ac1d9dd6
-  translated_at: 2026-09-27T23:03:35Z
-  stamped_at: 2026-09-27T23:03:35Z
+  glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, eu_startups, gap_family, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, piso_limiar, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: 423e41a2c5ce34e44ebbfdc6855ce1cb1368a23fbd4f5c7cab8b3c5e45253913
+  translated_at: 2026-09-28T09:11:50Z
+  stamped_at: 2026-09-28T09:11:50Z
   reviewed_by: null
 ---
 
@@ -331,7 +331,7 @@ Escalating the decision to the management body, as a reading of Article 20 sugge
 
 Regulatory implication:
 - Exceptions without formal approval may compromise oversight (Art. 20)
-- Some exceptions must be considered unacceptable by internal policy (e.g. exploitable SQLi, absence of MFA where appropriate); NIS2 requires corrective measures without undue delay where there is non-compliance (Art. 21(4))
+- The limits on exceptions are those of Policy 05 (approval authorities and deadlines by severity and level; Critical not acceptable in L3); NIS2 does not list inadmissible exceptions, but it requires corrective measures without undue delay when there is non-compliance (Art. 21(4))
 - An audited trail is mandatory to demonstrate control to the national authority
 
 Suggested:

@@ -182,13 +182,13 @@ Para ambientes sem acesso a `npm` (*air-gapped*, *self-hosted*) ou para *pinning
 
 ## Determinar o *risk level* do projecto {#determinar-o-risk-level-do-projecto}
 
-Sem `risk level` correcto, o MCP devolve um conjunto de controlos desnecessariamente amplo ou perigosamente reduzido. Para decidir:
+Sem `risk level` correcto, o MCP devolve um conjunto de controlos desnecessariamente amplo ou perigosamente reduzido. O nível calcula-se pelo método do cap. 01 (eixos exposição, dados e impacto, E+D+I). Os indicadores abaixo são pistas ilustrativas, nem necessárias nem suficientes, e o contexto regulatório declara-se à parte: um regime não implica `L3`.
 
-| Indicador | Sugere |
+| Indicador (ilustrativo) | Tipicamente |
 |---|---|
-| Aplicação **interna**, sem dados sensíveis, sem expor APIs públicas | `L1` |
-| **APIs públicas** ou tratamento de **dados de utilizador** não-sensíveis | `L2` |
-| **PII** (RGPD), saúde, financeira, sistema **regulado** (DORA, NIS2, AI Act — risco elevado) | `L3` |
+| Aplicação **interna** de impacto baixo (mesmo com dados pessoais, se E+D+I ≤ 4) | `L1` |
+| **APIs públicas** ou tratamento de **dados de utilizador** | `L2` |
+| **Exposição pública** com dados sensíveis e **impacto elevado** | `L3` |
 
 A decisão do nível segue o método do cap. 01 — nenhuma tool a toma pelo projeto. A tool `map_sbd_toe_applicability` exige `riskLevel` e aceita `technologies`, `hasPersonalData`, `isPublicFacing` e `projectRole`: não decide o nível, mas mostra o efeito de cada nível no projeto, o que ajuda a comparar as alternativas quando há dúvida.
 

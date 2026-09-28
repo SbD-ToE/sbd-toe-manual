@@ -7,15 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: faq.md
-  source_sha256: 30b89e425dbecce49d952cc21cebf0add0591a10c192d8bbf9a65f4f6692a91a
-  source_commit: c1e63ce92a05f7dddd757d41293dfef53cf704e4
-  target_sha256: dc0ba0ca161964fc5802f179ad19b24f53e070d0fe263a4acb68c59dd7c1591c
+  source_sha256: a6a10b506190b19cf9cc3db2cd1039dcf09145f31a9d1725f47128bd5d86df23
+  source_commit: e36462f7473256b7e66033011a59ffd3d1223f83
+  target_sha256: a56a5d393fd0ce7b6cedf88423b804228c6d11f5fae52ceaea281bae1f15d22a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: e3a0a2a16fafe56b28ed87256d3cff0f0aed977c8bbc04f3f5d6099a7d322097
-  glossary_keys: [avaliacao, chapter_role, como_fazer, esquema_regime, framework_source_corpus, maturity, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema, validation_evaluation]
-  glossary_sha256: c0806c933ee806e62bd6d00be05fa8ff4cd66d47c97a77662860e580cd4c2b5f
-  translated_at: 2026-09-26T13:55:20Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, como_fazer, dora_register_of_information, esquema_regime, eu_ce_marking, eu_notified_body, framework_source_corpus, gdpr_security_of_processing, mapping, maturity, normative_empirical, practitioner_manual, requirement_runtime, role_juridico, sbdtoe_sbd, schema, validation_evaluation]
+  glossary_sha256: 7d985466cd668bce39b65b513434341f3f92a67fb2d239f7facb0449cecc27c3
+  translated_at: 2026-09-28T09:13:00Z
+  stamped_at: 2026-09-28T09:13:00Z
   reviewed_by: null
 ---
 
@@ -69,15 +70,15 @@ SbD-ToE helps to:
 |--------|---------|-----------|
 | **Focus** | **Application** and pipeline security (development, acquisition, operation of software) | **Organisational** information security management (ISMS) |
 | **Level** | Detailed technical-operational | High-level, abstract (generic controls) |
-| **Structure** | 14 chapters by technical domain (SBOM, CI/CD, IaC, threat modelling, testing) | 114 controls distributed across 14 domains (A.5–A.18) |
+| **Structure** | 14 chapters by technical domain (SBOM, CI/CD, IaC, threat modelling, testing) | 93 controls in 4 themes (Annex A of ISO/IEC 27001:2022) |
 | **Certifiable?** | No (it is an internal framework) | Yes (certification by an accredited CAB) |
-| **Relationship** | **Implements** ISO 27001 controls with technical detail (A.8, A.12, A.14, A.16) | **Requires** controls; leaves the "how" open |
+| **Relationship** | **Contributes** to Annex A controls with technical detail (e.g. A.8.8, A.8.25–A.8.29); there is no published cross-check and no control-by-control mapping | **Requires** controls; leaves the "how" open |
 
 **In practical terms:**
-- ISO 27001 says: "Vulnerabilities must be managed" (control A.12.6).
+- ISO 27001 says: "Technical vulnerabilities must be managed" (control A.8.8 in the 2022 edition).
 - SbD-ToE says: "Ch. 05 - How to do SBOM, SCA, patching with SLAs, formal exceptions, CI/CD integration".
 
-**Can they coexist?** Yes, and they should. SbD-ToE provides the "technical how" that accelerates ISO 27001 implementation and audit.
+**Can they coexist?** Yes, and they should. SbD-ToE provides the "technical how" that can support ISO 27001 implementation and audit.
 
 ---
 
@@ -100,15 +101,15 @@ SbD-ToE helps to:
 
 ### Can I use SbD-ToE as compliance evidence? {#posso-usar-o-sbd-toe-como-evidência-de-compliance}
 
-**Yes.** Each chapter produces reusable artefacts:
+**As supporting evidence, yes.** Each chapter produces reusable artefacts:
 
-- **L1–L3 classification matrix** → evidence for DORA Art. 5, NIS2 Art. 21, GDPR Art. 5/32.
-- **SBOM per release** → evidence for DORA Art. 5, NIS2 Art. 21, CRA (mandatory).
-- **SAST/DAST/pentest reports** → evidence for DORA Art. 19–20, NIS2 Art. 21, CRA, ISO 27001 A.14.2.
-- **72h incident runbook** → evidence for DORA Art. 18, NIS2 Art. 23, GDPR Art. 33/34.
-- **Supplier contracts** → evidence for DORA Art. 26–28, NIS2 Art. 21, GDPR Art. 28.
+- **L1–L3 classification matrix** → supports DORA Art. 8, NIS2 Art. 21 and GDPR Arts. 25 and 32.
+- **SBOM per release** → evidence for the CRA (Annex I, Part II, point 1; technical documentation in Annex VII); supports DORA Art. 28, without replacing the register of information.
+- **SAST/DAST/pentest reports** → support DORA Arts. 24 and 25, NIS2 Art. 21 and CRA Annex VII, point 6.
+- **Incident runbook** → supports DORA Arts. 17 to 19, NIS2 Art. 23 and GDPR Arts. 33 and 34 (deadlines in Policy 32 §6).
+- **Supplier contracts** → support DORA Arts. 28 to 30, NIS2 Art. 21(2)(d) and GDPR Art. 28.
 
-**A single set of evidence serves multiple regulators and audits.**
+**The same set of evidence can support several regimes and audits;** compliance remains the organisation's judgement. What each regime requires, obligation by obligation, is in the [normative cross-check](/sbd-toe/cross-check-normativo/intro).
 
 ---
 
@@ -117,8 +118,8 @@ SbD-ToE helps to:
 **No.** SbD-ToE is not a certification scheme. It is an **internal operational framework**.
 
 **But:** SbD-ToE evidence can be reused to **accelerate and simplify** external certifications:
-- **ISO 27001** (ISMS) - implementation of technical controls A.8/A.12/A.14/A.16
-- **EUCC/EUCS/EU5G** (ENISA CSA schemes) - product/service security evidence
+- **ISO 27001** (ISMS) - Annex A technical controls (no control-by-control mapping)
+- **EUCC** (adopted European scheme; EUCS and EU5G are not yet adopted) - product/service security evidence
 - **SOC 2 Type II** (for cloud/SaaS) - demonstration of Trust Service Criteria
 
 **Important:** Reusing evidence reduces the effort (80–90%), but does not replace the independent audit/assessment required for formal certification.

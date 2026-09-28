@@ -288,7 +288,7 @@ function SectionCards() {
     {
       title: translate({id: 'homepage.card.crossCheck.title', message: 'Cross-check normativo'}),
       description:
-        translate({id: 'homepage.card.crossCheck.description', message: 'Matriz que mostra como o SbD–ToE responde a NIS2, DORA, CRA, ISO 27001/27034 e outras referências.'}),
+        translate({id: 'homepage.card.crossCheck.description', message: 'Como o SbD–ToE responde, regulamento a regulamento, a NIS2, DORA, CRA, AI Act, RGPD e CSA: o que cobre, as lacunas declaradas e o que fica fora de âmbito.'}),
       to: crossCheckUrl,
       icon: '🏛️',
     },

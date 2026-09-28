@@ -1,10 +1,11 @@
 ---
 id: requisitos-aplicaveis
 title: "Requisitos aplicáveis — Entidade financeira (DORA)"
-description: "Vista gerada: requisitos do Manual que se aplicam sob o contexto CTX-DORA, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
+description: "Requisitos do Manual que se aplicam sob o contexto CTX-DORA, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
 sidebar_position: 90
-tags: [cross-check, dora, requisitos, overlay, gerado]
+tags: [cross-check, dora, requisitos, overlay]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
   - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
@@ -26,8 +27,6 @@ derived_from:
 ---
 
 # Requisitos aplicáveis: Entidade financeira (DORA)
-
-> **Página gerada** por `scripts/gen_reg_views.py` a partir dos catálogos de requisitos e de `002-cross-check-normativo/_contextos-regulatorios.yaml`. Não se edita à mão: o catálogo de cada requisito é a fonte canónica, e esta página é uma vista do overlay regulatório.
 
 Esta página junta, para o contexto **CTX-DORA**, a selecção base do Manual por nível e os **pisos** que o regime eleva, cada um com a obrigação que o fundamenta. Um contexto nunca baixa um mínimo do Manual.
 
@@ -666,7 +665,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
+Contagem das obrigações do regime na matriz de cobertura (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -678,7 +677,7 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
-Todas as obrigações da matriz `_matriz/dora.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 13 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+Todas as obrigações do regime, na matriz de cobertura do Manual, em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Nenhuma obrigação fica em silêncio. As 13 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
 ### Cobre (289) {#cobre}
 
@@ -1216,10 +1215,10 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS532-5-4 | art. 5.º, n.º 4 | Conteúdo contratual/jurídico específico do DORA sem correspondente prescritivo no Manual. Cláusulas sobre subcontratantes. |
 | DORA-RTS1774-2-2-e | art. 2.º, n.º 2, al. e) | Consequências disciplinares do incumprimento — regime de RH/compliance. |
 | DORA-RTS1774-2-2-g | art. 2.º, n.º 2, al. g) | Dever do órgão de administração / estrutura de governo interno; o Manual não fixa órgãos nem alçadas societárias. Segregação de funções entre linhas de defesa. |
-| DORA-RTS1774-4-1 | art. 4.º, n.º 1 | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
-| DORA-RTS1774-4-2-a | art. 4.º, n.º 2, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
-| DORA-RTS1774-4-2-b | art. 4.º, n.º 2, al. b) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
-| DORA-RTS1774-4-2-c | art. 4.º, n.º 2, al. c) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-1 | art. 4.º, n.º 1 | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-a | art. 4.º, n.º 2, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-b | art. 4.º, n.º 2, al. b) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-c | art. 4.º, n.º 2, al. c) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
 | DORA-RTS1774-8-2-b-ii | art. 8.º, n.º 2, al. b), subal. ii) | Calendarização de processamento (scheduling) com interdependências — operação de TI. |
 | DORA-RTS1774-9-2 | art. 9.º, n.º 2 | Sistemas com aquisição longa ou intensivos em recursos — planeamento de aquisição de TI. |
 | DORA-RTS1774-11-2-e | art. 11.º, n.º 2, al. e) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
@@ -1246,7 +1245,7 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS1774-28-3 | art. 28.º, n.º 3 | Responsabilidade jurídica mantida ao subcontratar verificação. |
 | DORA-RTS1774-28-4 | art. 28.º, n.º 4 | Dever do órgão de administração / estrutura de governo interno; o Manual não fixa órgãos nem alçadas societárias. Segregação entre controlo e auditoria interna. |
 | DORA-RTS1774-32 | art. 32.º, n.os 1 a 3 | Segurança física e ambiental de instalações — fora do âmbito de um manual de engenharia de software. |
-| DORA-RTS1774-34-a | art. 34.º, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-34-a | art. 34.º, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
 | DORA-RTS1774-35-f | art. 35.º, al. f) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
 | DORA-RTS1774-35-g | art. 35.º, al. g) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
 | DORA-RTS1774-39-2-a | art. 39.º, n.º 2, als. a) a c) | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. |

@@ -7,16 +7,16 @@ tags: [dora, nis2, convergencia, lex-specialis, governação]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/03-convergencia-dora.md
-  source_sha256: d4a00c6bf9c22f19e7a70a549fed5dd03a13cecde32e2761e9844ca0193e93dd
-  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
-  target_sha256: 86350f257ed9bdf57e0860db37ae663520fae07e16b8638a8920276eea8c9d82
+  source_sha256: ed656ef40157a3e1a79ef97999122ce478eacd7f564569264558dee4e44f71f4
+  source_commit: cd59ce0074d2e282eb290ceeaea128a60266b266
+  target_sha256: ea885d317690ec35db2418a3e002cd79b10856aac5ac77067b0dd6fb5141ff1c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, avaliacao, dora_financial_entity, dora_ict_risk, dora_ict_tpp, eu_management_body, gap_family, mcp_reading_programa, nis2_essential_entity, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd]
   glossary_sha256: e6e2e32b513d79d4060532412b2aad0690cde60fbc65ce2dadf7a18b0770b730
-  translated_at: 2026-09-27T23:08:56Z
-  stamped_at: 2026-09-27T23:08:56Z
+  translated_at: 2026-09-28T09:11:50Z
+  stamped_at: 2026-09-28T09:11:50Z
   reviewed_by: null
 ---
 
@@ -53,14 +53,14 @@ Even under DORA, NIS2 aspects may retain value:
 | Potential duplication | Why avoid it | Recommended single form |
 |----------------------|---------------|--------------------------|
 | Two reporting flows (incidents) | Risk of inconsistent deadlines/data | Adopt the DORA flow; map NIS2 fields as a subset |
-| Two control catalogues | Overhead, textual divergence | Use the SbD-ToE catalogue; the regulatory origin of each floor requirement and each added requirement is in the regulatory overlay (`_contextos-regulatorios.yaml`) and in the “Applicable requirements” pages |
+| Two control catalogues | Overhead, textual divergence | Use the SbD-ToE catalogue; the regulatory origin of each floor entry and each added requirement is in the regulatory overlay and on the «Applicable requirements» pages ([DORA](/sbd-toe/cross-check-normativo/dora/requisitos-aplicaveis), [NIS2](/sbd-toe/cross-check-normativo/nis2/requisitos-aplicaveis)) |
 | Two criticality classifications | Confusion in risk matrices | Keep L1–L3 per application (Ch. 01 axes). The regimes do not create parallel classes: they add floor requirements by context (CTX-DORA, CTX-NIS2) and by grade (FCI in DORA; PERTINENTE in NIS2). L1–L3 is not equivalent to a critical or important function, nor to an essential/important entity |
 | Logs with different retention periods | Costs and ambiguity | Define and document the retention period per log type based on the ICT risk assessment (DORA: Delegated Regulation (EU) 2024/1774, Article 12(2), point (a); NIS2: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.5, where applicable; national/sectoral legislation), applying a single period that satisfies both and respects the GDPR storage limitation where personal data are involved |
 
 ## Single Implementation Strategy (SbD-ToE) {#estratégia-de-implementação-única-sbd-toe}
 
 1. **Master Digital Resilience Policy** - Integrates governance, testing, reporting and suppliers (references DORA Art. 5–6, 17–20, 24–27, 28–30; notes that, under Article 4 of NIS2 and Article 1(2) of DORA, the NIS2 risk-management and notification obligations do not apply to the financial entities covered).
-2. **Regulatory origin** - The requirements catalogue ([Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)) has no regulatory origin column: the origin of each floor requirement and each added requirement is in the regulatory overlay (`_contextos-regulatorios.yaml`) and in each regime's “Applicable requirements” pages, generated from it.
+2. **Regulatory origin** - The requirements catalogue ([Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)) has no regulatory-origin column: the origin of each floor entry and each added requirement is in the regulatory overlay and on each regime's «Applicable requirements» pages.
 3. **Incident record** - Common impact data (Policy 32 §4.3); the criterion and content follow DORA (CTX-DORA-R02; Policy 32 §6.1, with the templates of Implementing Regulation (EU) 2025/302); the NIS2 fields remain as an annotation for clients who ask for them.
 4. **Exception process** - Approval authorities of Policy 05 §6 (in the Manual, the top is the CISO, and Critical is not acceptable at L3). Oversight of L3 exceptions by the management body is formalisation by the entity: it is out of scope of the Manual under DORA (Article 5) and a declared gap against NIS2.
 5. **Supplier inventory** - Unify: SBOM (components), contractors ([Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)), ICT third-party service providers that support critical or important functions (flag whether required by DORA or by NIS2 clients).

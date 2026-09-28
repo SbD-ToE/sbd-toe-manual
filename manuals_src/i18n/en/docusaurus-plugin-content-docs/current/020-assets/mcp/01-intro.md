@@ -12,24 +12,28 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/01-intro.md
-  source_sha256: 4df07a32dc09bdeb989342de06f884e99b0d924fe726d0c80e63b859c6a69d3d
-  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
-  target_sha256: 413a25e1d30f64ca2a6dccd98fad0c3b405534da19be39d1e7412faccd27aabc
+  source_sha256: 859275c6675e7e43dbe05511cc41601d8bdc25d44426b8c6c542af513c158ffc
+  source_commit: d394b0928bbec912dd0391bedb6cc4f403b46015
+  target_sha256: 5e3e8e735f8d8ae75ccd17c7f5a3ebe003f5bd4d304ba3317e0504f535b96e76
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, travessia_generica, travessia_relacao, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: b4b5636ca40cc4653ae2480bbc103d3a6a6f5b83bffe3a3decfa1a49e3494a87
-  translated_at: 2026-09-26T17:58:48Z
-  stamped_at: 2026-09-26T18:36:33Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, eu_startups, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, travessia_generica, travessia_relacao, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: fe25ece2cf0c305c63fe86e4af02a96a52aac86c2a5ec15f34941f453e0abc87
+  translated_at: 2026-09-28T09:12:59Z
+  stamped_at: 2026-09-28T09:12:59Z
   reviewed_by: null
 ---
 
 # MCP Server (SbD-ToE)
 
-When an agent is asked to write secure code, it has two options: either it falls back on what it retained from training — a plausible approximation, but without anchor or source —, or it consults the Manual through a source that returns requirements and controls with citable identifiers. The **`@shiftleftpt/sbd-toe-mcp`** exists to make the second option trivial.
+When an agent is asked to write secure code, it can rely only on what it retained from training — a plausible approximation, but with no anchor or source — or consult the manual through a source that returns requirements and controls with citable identifiers. The **`@shiftleftpt/sbd-toe-mcp`** makes that consultation simple. It does not replace the model, which still generates the code: it gives it the source.
 
-It is the official [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server of the SbD-ToE. It exposes the Manual (chapters 00–14), the *AppSec Core v1* ontology and the published normative cross-checks through **MCP tools, resources and prompts** — so that Claude, GitHub Copilot, Cursor, Windsurf, Zed (or any other MCP client) stop answering from what they were trained on and start asking the source, at the moment they write, with real IDs. In practice: every requirement, control, threat or artefact the agent refers to becomes verifiable.
+It is the official [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server of SbD-ToE. It exposes the manual (chapters 00–14), the *AppSec Core v1* ontology and the published normative cross-checks through MCP **tools, resources and prompts** — so that Claude, GitHub Copilot, Cursor, Windsurf, Zed (or any other MCP client) can ask the source at the moment they write, with real IDs, instead of relying only on what they were trained on. In practice: every requirement, control, threat or artefact the agent mentions can be verified.
+
+:::note What the server guarantees and what depends on the client
+The server guarantees **retrieval**: for the same question and the same *snapshot*, it returns the same requirements and controls, with real identifiers, and selects them deterministically from what the agent declares. The rest depends on the client and the model: the **context selection** the agent passes to the model; the **generation** of the code (retrieval is deterministic, generation is not); **citation verification** (that the agent cites what it received); and **implementation verification** (that the code meets the requirement, with the chapters' tests, review and validations). A valid citation does not make code secure.
+:::
 
 | Attribute | Value |
 |---|---|
@@ -142,13 +146,13 @@ The served list is the source: `tools/list` returns the tools of the installed v
 
 The server exposes **closed** values for parameters — using values outside these returns no results.
 
-**Risk levels:**
+**Risk levels:** `L1`, `L2` and `L3`, the levels of the [Ch. 01 classification model](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), which computes them from the exposure, data and impact axes (E+D+I). The level is not deduced from the type of data or the applicable regime alone: an internal application with personal data and low impact can be `L1`, and the regulatory context (e.g. GDPR, DORA) is declared separately, in the regulatory overlay. The examples are illustrative, neither necessary nor sufficient:
 
-| Level | Scope |
+| Level | Typical example (illustrative) |
 |---|---|
-| `L1` | Low risk — internal, no sensitive data |
-| `L2` | Medium risk — public APIs, user data |
-| `L3` | High risk — PII, regulated systems |
+| `L1` | Low risk — e.g. internal application with low impact |
+| `L2` | Medium risk — e.g. public APIs with user data |
+| `L3` | High risk — e.g. public exposure, sensitive data and high impact |
 
 No chapter is unlocked by level: all of them apply at every level, and what escalates from `L1` to `L3` is what is demanded (matrix of Ch. 01).
 

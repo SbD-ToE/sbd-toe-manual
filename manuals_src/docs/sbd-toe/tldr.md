@@ -80,8 +80,8 @@ O SbD-ToE funciona como:
 - Determina toda a proporcionalidade do manual.  
 - Evidências: classificação E+D+I, registo no repositório, aceitação formal.
 
-🔗 /cap01/intro  
-🔗 /cap01/canon/20-checklist-revisao  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)  
+🔗 [Checklist de revisão](/sbd-toe/sbd-manual/classificacao-aplicacoes/canon/checklist-revisao)  
 
 ---
 
@@ -91,8 +91,8 @@ O SbD-ToE funciona como:
 - Validação prática recomendada por requisito.  
 - Evidências: matriz de requisitos, validações, registos por sprint.
 
-🔗 /cap02/intro  
-🔗 /cap02/canon/20-checklist-revisao  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/requisitos-seguranca/intro)  
+🔗 [Checklist de revisão](/sbd-toe/sbd-manual/requisitos-seguranca/canon/checklist-revisao)  
 
 ---
 
@@ -102,8 +102,8 @@ O SbD-ToE funciona como:
 - Aplicação proporcional por nível L1–L3.  
 - Evidências: diagramas, cenários de abuso, mitigação integrada.
 
-🔗 /cap03/intro  
-🔗 /cap03/canon/15-aplicacao-lifecycle  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/threat-modeling/intro)  
+🔗 [Aplicação ao ciclo de vida](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle)  
 
 ---
 
@@ -113,8 +113,8 @@ O SbD-ToE funciona como:
 - Mapeamento de ameaças e controlos nativos.  
 - Evidências: diagramas, ADRs, controlo de segredos e fluxos.
 
-🔗 /cap04/intro  
-🔗 /cap04/canon/50-ameacas-mitigadas  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/arquitetura-segura/intro)  
+🔗 [Ameaças mitigadas](/sbd-toe/sbd-manual/arquitetura-segura/canon/ameacas-mitigadas)  
 
 ---
 
@@ -124,8 +124,8 @@ O SbD-ToE funciona como:
 - Governação de exceções e validações contínuas.  
 - Evidências: SBOM, relatórios SCA, pipeline de validação.
 
-🔗 /cap05/intro  
-🔗 /cap05/canon/20-checklist-revisao  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)  
+🔗 [Checklist de revisão](/sbd-toe/sbd-manual/dependencias-sbom-sca/canon/checklist-revisao)  
 
 ---
 
@@ -134,8 +134,8 @@ O SbD-ToE funciona como:
 - Integração no IDE e no pipeline de integração contínua.  
 - Evidências: logs de scans, branches protegidas, revisões seguras.
 
-🔗 /cap06/intro  
-🔗 /cap06/canon/15-aplicacao-lifecycle  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)  
+🔗 [Aplicação ao ciclo de vida](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle)  
 
 ---
 
@@ -144,8 +144,8 @@ O SbD-ToE funciona como:
 - Execução isolada, runners confiáveis, assinaturas e políticas.  
 - Evidências: logs, regras de publicação, cadeias reprodutíveis.
 
-🔗 /cap07/intro  
-🔗 /cap07/canon/30-recomendacoes-avancadas  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/cicd-seguro/intro)  
+🔗 [Recomendações avançadas](/sbd-toe/sbd-manual/cicd-seguro/recomendacoes-avancadas)  
 
 ---
 
@@ -154,8 +154,8 @@ O SbD-ToE funciona como:
 - Validações, módulos aprovados, ambientes reprodutíveis.  
 - Evidências: relatórios de lint/policies, módulos assinados, tags.
 
-🔗 /cap08/intro  
-🔗 /cap08/canon/20-checklist-revisao  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/iac-infraestrutura/intro)  
+🔗 [Checklist de revisão](/sbd-toe/sbd-manual/iac-infraestrutura/canon/checklist-revisao)  
 
 ---
 
@@ -164,8 +164,8 @@ O SbD-ToE funciona como:
 - Registos com RBAC forte e políticas de retenção e publicação.  
 - Evidências: assinatura, SBOM, logs de publicação, scans de segurança.
 
-🔗 /cap09/intro  
-🔗 /cap09/canon/50-ameacas-mitigadas  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/containers-imagens/intro)  
+🔗 [Ameaças mitigadas](/sbd-toe/sbd-manual/containers-imagens/canon/ameacas-mitigadas)  
 
 ---
 
@@ -174,33 +174,34 @@ O SbD-ToE funciona como:
 - Proporcionalidade por nível L1–L3.  
 - Evidências: relatórios, reprodutibilidade, aceitação formal de resultados.
 
-🔗 /cap10/intro  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/testes-seguranca/intro)  
 
 ---
 
-## 📘 Capítulo 11 - Logging, Telemetria e Monitorização {#tldr-cap11}
-- Logs estruturados, telemetria, retenção e deteção de abuso.  
-- Integração com SOC ou ferramenta equivalente.  
-- Evidências: dashboards, query packs, alertas testados.
+## 📘 Capítulo 11 - Deploy Seguro {#tldr-cap11}
+- Promoção só a partir de artefactos assinados, com proveniência verificável e SBOM.  
+- *Gates* de *release* por nível L1–L3, validação em *staging* e *rollback* testado.  
+- Evidências: aprovações de *release*, registo das promoções, ensaios de *rollback*.
 
-🔗 /cap11/intro  
-
----
-
-## 📘 Capítulo 12 - Gestão de Segredos {#tldr-cap12}
-- Segredos fora de código e de pipelines.  
-- Cofres, rotação, princípios Zero Trust.  
-- Evidências: política de segredos, auditorias, validações de uso.
-
-🔗 /cap12/intro  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/deploy-seguro/intro)  
 
 ---
 
-## 📘 Capítulo 13 - Recomendações Avançadas {#tldr-cap13}
-- Práticas reforçadas para organizações L2+ e L3.  
-- Automação avançada, deteção precoce, supply chain reforçada.
+## 📘 Capítulo 12 - Monitorização e Operações {#tldr-cap12}
+- *Logging* estruturado e centralizado, com eventos e métricas críticas definidos.  
+- Alertas com *thresholds* e SLA de resposta, ligados aos *playbooks* de resposta a incidentes.  
+- Evidências: *dashboards*, alertas testados, MTTD e MTTR medidos.
 
-🔗 /cap13/intro  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)  
+
+---
+
+## 📘 Capítulo 13 - Formação e Capacitação {#tldr-cap13}
+- Plano formativo contínuo, com trilhas por perfil e *onboarding* com segurança.  
+- *Security champions* por equipa e laboratórios práticos.  
+- Evidências: registos de formação e métricas de eficácia.
+
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/formacao-onboarding/intro)  
 
 ---
 
@@ -209,7 +210,7 @@ O SbD-ToE funciona como:
 - Governação organizacional, métricas e indicadores.  
 - Evidências: contratos, SLA de segurança, dashboards de conformidade.
 
-🔗 /cap14/intro  
+🔗 [Introdução do capítulo](/sbd-toe/sbd-manual/governanca-contratacao/intro)  
 
 ---
 
@@ -236,15 +237,15 @@ flowchart LR
 - **SLSA** - foco em integridade de pipeline e proveniência de artefactos.  
 - **DSOMM** - reforço contínuo de práticas DevSecOps.
 
-Quando aplicado de forma consistente, o SbD-ToE coloca a organização num patamar intermédio/sólido destes modelos, com margem clara para evoluções avançadas descritas nos capítulos de governação e recomendações.
+As práticas do SbD-ToE correspondem a práticas destes modelos. É uma correspondência de conteúdo, não uma medição: o nível que uma organização atinge em cada modelo mede-se com o próprio modelo, e a maturidade atingível está descrita capítulo a capítulo.
 
 ---
 
 # 7. Ligações úteis {#links}
 
-- /cap00/intro - Theory of Everything (quando disponível)  
-- /cap15/ - Cross-check Normativo (quando aplicável)  
-- /capXX/canon/20-checklist-revisao - Checklists por capítulo  
+- [Theory of Everything](/sbd-toe/teory-of-everything/intro): o modelo conceptual que enquadra o manual  
+- [Cross-check normativo](/sbd-toe/cross-check-normativo/intro): como o SbD-ToE responde a cada regulamento publicado  
+- Checklists de revisão: uma por capítulo, na secção canónica de cada um (por exemplo, a do [Capítulo 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/canon/checklist-revisao))  
 
 ---
 

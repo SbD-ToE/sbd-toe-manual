@@ -1,21 +1,22 @@
 ---
 id: cobertura
 title: "Cobertura — Regulamento Cibersegurança (CSA)"
-description: "Vista gerada: o que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, a partir da matriz de cobertura do Regulamento Cibersegurança (CSA)."
+description: "O que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, a partir da matriz de cobertura do Regulamento Cibersegurança (CSA)."
 sidebar_position: 90
-tags: [cross-check, enisa-csa, cobertura, gerado]
+tags: [cross-check, enisa-csa, cobertura]
 sbdtoe_generated: reg-requirements-view
+generated_by: scripts/gen_reg_views.py  # não se edita à mão: editar os catálogos, o overlay e a matriz
 derived_from:
   - 002-cross-check-normativo/_matriz/csa.yaml
 ---
 
 # Cobertura: Regulamento Cibersegurança (CSA)
 
-> **Página gerada** por `scripts/gen_reg_views.py` a partir da matriz `002-cross-check-normativo/_matriz/csa.yaml`. Não se edita à mão. Este regime não tem contexto no overlay regulatório (não eleva nem acrescenta requisitos); responde só nas três categorias.
+Este regime não tem contexto no overlay regulatório (não eleva nem acrescenta requisitos); responde só nas três categorias.
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
-Todas as obrigações da matriz `_matriz/csa.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 19 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+Todas as obrigações do regime, na matriz de cobertura do Manual, em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Nenhuma obrigação fica em silêncio. As 19 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
 ### Cobre (35) {#cobre}
 

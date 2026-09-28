@@ -14,16 +14,16 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/03-instalacao.md
-  source_sha256: b110ec9914a82bf656d17f4a36c980c33218ded1b3b578e167d74739cf6b8aaf
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: b02142fafb13977b4dc8634b744fade2dd6fc65f88c8728ceaffb1f2bc1da65a
+  source_sha256: 6e5b8ab1c1145a1de89db9d34210c6f19e6292bd5ba65ccaa51ef888205a65e6
+  source_commit: d394b0928bbec912dd0391bedb6cc4f403b46015
+  target_sha256: 5eba1b6e4359f1e7ee283b977fdb96e38cc85e95c8f7589fbdda5e4544b9d1aa
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [mcp, practitioner_manual, requirement_runtime, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: d97c66b968471198859e01f5c730c1ece105916803784396b352ad7392a492a4
-  translated_at: 2026-09-27T08:34:23Z
-  stamped_at: 2026-09-27T08:34:23Z
+  translated_at: 2026-09-28T09:12:27Z
+  stamped_at: 2026-09-28T09:12:27Z
   reviewed_by: null
 ---
 
@@ -196,13 +196,13 @@ For environments without access to `npm` (*air-gapped*, *self-hosted*) or for *p
 
 ## Determining the project's *risk level* {#determinar-o-risk-level-do-projecto}
 
-Without the correct `risk level`, the MCP returns a set of controls that is unnecessarily broad or dangerously narrow. To decide:
+Without the correct `risk level`, MCP returns a set of controls that is needlessly broad or dangerously narrow. The level is computed with the Ch. 01 method (exposure, data and impact axes, E+D+I). The indicators below are illustrative hints, neither necessary nor sufficient, and the regulatory context is declared separately: a regime does not imply `L3`.
 
-| Indicator | Suggests |
+| Indicator (illustrative) | Typically |
 |---|---|
-| **Internal** application, no sensitive data, no public APIs exposed | `L1` |
-| **Public APIs** or processing of non-sensitive **user data** | `L2` |
-| **PII** (GDPR), health, financial, **regulated** system (DORA, NIS2, AI Act — high-risk) | `L3` |
+| **Internal** application with low impact (even with personal data, if E+D+I ≤ 4) | `L1` |
+| **Public APIs** or processing of **user data** | `L2` |
+| **Public exposure** with sensitive data and **high impact** | `L3` |
 
 The level decision follows the method of Ch. 01 — no tool takes it on the project's behalf. The tool `map_sbd_toe_applicability` requires `riskLevel` and accepts `technologies`, `hasPersonalData`, `isPublicFacing` and `projectRole`: it does not decide the level, but it shows the effect of each level on the project, which helps compare the alternatives when in doubt.
 

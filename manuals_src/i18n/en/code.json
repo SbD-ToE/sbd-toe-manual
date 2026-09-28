@@ -507,7 +507,7 @@
     "description": "Homepage (src/pages/index.tsx)"
   },
   "homepage.card.crossCheck.description": {
-    "message": "Matrix showing how SbD–ToE responds to NIS2, DORA, CRA, ISO 27001/27034 and other references.",
+    "message": "How SbD–ToE responds, regulation by regulation, to NIS2, DORA, CRA, the AI Act, the GDPR and the CSA: what it covers, the declared gaps and what is out of scope.",
     "description": "Homepage (src/pages/index.tsx)"
   },
   "homepage.card.open": {

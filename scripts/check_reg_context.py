@@ -21,6 +21,8 @@ from __future__ import annotations
 import json
 import re
 import sys
+
+import yaml
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -31,8 +33,9 @@ import gen_reg_views  # noqa: E402
 FORCA = {"cobre", "parcial", "apoia_evidencia", "lacuna", "fora_de_ambito"}
 CLASSE = {"engenharia", "organizacional", "juridico-contratual"}
 CONFIANCA = {"alta", "media", "baixa"}
-TIPO = {"requisito", "us", "politica", "pagina", "acrescento"}
+TIPO = {"requisito", "us", "politica", "pagina", "acrescento", "contexto"}
 ADDITIONS: set = set()  # CTX-<regime>-Rnn ids declared in _contextos-regulatorios.yaml
+CONTEXTS: set = set()  # CTX-* context ids declared in _contextos-regulatorios.yaml
 CELEX_RE = re.compile(r"3\d{4}[RLD]\d{4}")
 
 problems: list = []
@@ -94,6 +97,12 @@ def check_target(t: dict, where: str, master: dict, quote: bool = True) -> None:
         if t.get("ficheiro") or t.get("ancora"):
             fail(where, "acrescento usa só alvo (sem ficheiro/ancora)")
         return
+    if tipo == "contexto":
+        if t.get("alvo") not in CONTEXTS:
+            fail(where, f"contexto {t.get('alvo')!r} não declarado em _contextos-regulatorios.yaml")
+        if t.get("ficheiro") or t.get("ancora"):
+            fail(where, "contexto usa só alvo (sem ficheiro/ancora)")
+        return
     if tipo == "requisito":
         rid = t.get("alvo")
         if rid not in master:
@@ -113,6 +122,8 @@ def check_target(t: dict, where: str, master: dict, quote: bool = True) -> None:
         if tipo == "politica" and not (t.get("ficheiro") or "").startswith("020-assets/policies/"):
             fail(where, f"política fora de 020-assets/policies: {t.get('ficheiro')}")
     rel, anc = t.get("ficheiro"), t.get("ancora")
+    if rel and L.is_generated(page(rel, False) or ""):
+        fail(where, f"resposta aponta para uma página gerada ({rel}); citar a fonte (catálogo, política, página escrita à mão) ou usar tipo contexto")
     if tipo in ("politica", "pagina") or rel or anc:
         if not rel or not anc:
             fail(where, "ficheiro e ancora obrigatórios")
@@ -212,7 +223,7 @@ def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
                 fail(iw, f"forca {it['forca']} sem resposta")
             for j, r in enumerate(resp):
                 check_target(r, f"{iw} resposta[{j}]", master)
-                if r.get("tipo") != "acrescento":
+                if r.get("tipo") not in ("acrescento", "contexto"):
                     bilingual(r.get("citacao"), f"{iw} resposta[{j}]/citacao")
             if it.get("forca") == "fora_de_ambito":
                 bilingual(it.get("razao_fora_de_ambito"), iw + "/razao_fora_de_ambito")
@@ -398,6 +409,27 @@ def check_lists(ctx_doc: dict) -> None:
                         fail(w, "entrada elevada sem pisos")
 
 
+def check_sources(master: dict) -> None:
+    """sbdtoe_sources (front matter): requisito do próprio catálogo → lista não vazia de UNIT-…, CWE-NNN ou marcador declarado em sbdtoe_sources_marcadores."""
+    for path in sorted(L.DOCS.rglob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        if "sbdtoe_sources:" not in text or not text.startswith("---"):
+            continue
+        rel = L.rel_docs(path)
+        fm = yaml.safe_load(text.split("---", 2)[1]) or {}
+        markers = fm.get("sbdtoe_sources_marcadores") or {}
+        for m, desc in markers.items():
+            if not re.fullmatch(r"[A-Z][A-Z0-9-]+", str(m)) or not isinstance(desc, str) or not desc.strip():
+                fail(f"{rel} sbdtoe_sources_marcadores {m}", "marcador sem nome válido ou sem descrição")
+        for rid, ids in (fm.get("sbdtoe_sources") or {}).items():
+            w = f"{rel} sbdtoe_sources {rid}"
+            if rid not in master or master[rid]["ficheiro"] != rel:
+                fail(w, "requisito não definido neste catálogo")
+            ok = lambda i: isinstance(i, str) and (re.fullmatch(r"UNIT-[A-Z0-9.-]+|CWE-\d+", i) or i in markers)
+            if not ids or not all(ok(i) for i in ids) or len(set(ids)) != len(ids):
+                fail(w, f"valores inválidos (UNIT-…, CWE-NNN ou marcador declarado, sem repetições): {ids!r}")
+
+
 def check_views() -> None:
     for path, text in gen_reg_views.planned_outputs().items():
         current = path.read_text(encoding="utf-8") if path.exists() else None
@@ -416,9 +448,11 @@ def main() -> int:
         print(f"check_reg_context: erro a carregar os dados: {exc}")
         return 1
     ADDITIONS.update(a.get("id") for a in ctx_doc.get("acrescentos") or [])
+    CONTEXTS.update(c.get("id") for c in ctx_doc.get("contextos") or [])
     check_matrices(master, ctx_doc, matrices)
     check_contexts(master, ctx_doc, matrices)
     check_lists(ctx_doc)
+    check_sources(master)
     if problems:
         problems.append("vistas geradas não verificadas: corrigir primeiro os problemas acima")
     else:

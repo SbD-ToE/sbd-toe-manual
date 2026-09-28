@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/01-intro.md
-  source_sha256: 2ae8e45aaf79de4abc690a67eff419c5facb25c27220ed1b75b9a350ee31a23f
-  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
-  target_sha256: b25b602b877992fd4fb4cdbc877dfb12ce74166f5c8a0634bb0db3b55ee11222
+  source_sha256: 8759ed8e0a8cc210e0ee1c618c96bd37a7c36a2b394642b70e4ddab62abcb848
+  source_commit: e36462f7473256b7e66033011a59ffd3d1223f83
+  target_sha256: 5e6fe0b3cc572929e342df0f1d26195f6427d647c99382381bb065af984cb507
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [appsec_core, avaliacao, chapter_role, cycle_iteration, discipline, dnt_fedramp_name, dnt_soc2_name, dora_financial_entity, dora_ict_risk, esquema_regime, eu_ce_marking, framework_source_corpus, gap_family, instrument, lifecycle_phase, maturity, normative_empirical, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, prescriptive, requirement_runtime, role_juridico, sbdtoe_sbd, schema]
   glossary_sha256: 4483d8494d0ff6a4b761938050eaa6f3c5162de0175decf4517b376c1624c8e0
-  translated_at: 2026-09-27T23:09:20Z
-  stamped_at: 2026-09-27T23:09:20Z
+  translated_at: 2026-09-28T09:12:56Z
+  stamped_at: 2026-09-28T09:12:56Z
   reviewed_by: null
 ---
 
@@ -93,8 +93,8 @@ The Manual is centred on the application: requirements, architecture, code, depe
 **SbD-ToE is not a standard**, but it was designed to **engage in dialogue with all standards**.  
 This is because:  
 
-- **Standards and regulations are, by definition, subset requirements**: they focus on specific dimensions (governance, risk, reporting, data protection, etc.).  
-- The SbD-ToE, by contrast, prescribes **comprehensive and integrated** practices that answer many of these requirements.  
+- **Standards and regulations focus on specific dimensions** (governance, risk, reporting, data protection, etc.), and SbD-ToE prescribes **comprehensive and integrated** practices on the application side.  
+- The relation between the two is not presumed from scope: it is shown obligation by obligation, and it can be overlap, contribution, partial coverage, conditional satisfaction, gap or out of scope. The coverage matrices record it in three categories (covers, declared gap, out of scope).  
 - Compliance remains the organisation's judgement. The Manual provides the technical evidence and states clearly what remains to be done and what does not fall to it, without a parallel or bureaucratic effort for each regulation.  
 
 This view **mitigates regulatory fragmentation** and offers organisations a **unified model of practical application**, where security, risk and compliance converge.

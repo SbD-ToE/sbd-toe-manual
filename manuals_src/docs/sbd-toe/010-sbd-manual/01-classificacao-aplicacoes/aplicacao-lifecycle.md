@@ -412,6 +412,15 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 **Contexto.**  
 Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) limitado**, o risco pode expirar. Sem revalidação automática, excepções "dormem" indefinidamente.
 
+São cinco conceitos distintos:
+- **Aceitação de risco:** decisão de conviver com um risco residual avaliado (US-04), com owner, TTL e revalidação.
+- **Exceção a controlo:** desvio a um requisito ou controlo que o nível exige, com a alçada e o TTL da [Política 05](/sbd-toe/assets/policies/policy-gestao-excecoes#7-prazos-máximos-de-validade-ttl).
+- **Não aplicabilidade:** o requisito não se aplica porque o componente ou o fluxo não existe; regista-se a justificação, sem TTL, e revê-se quando a aplicação muda.
+- **Expiração:** no fim do TTL, a aceitação ou a exceção deixa de valer sem re-aprovação explícita.
+- **Revisão:** reavaliação na expiração (alerta 15 dias antes) ou quando o contexto muda.
+
+O TTL é obrigatório em todos os níveis, com os prazos da Política 05 §7 (a master). Em L1, o registo é simplificado, mas existe sempre.
+
 :::userstory
 **História.**  
 Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e alerta de re-aprovação**, para garantir que excepções não se tornam permanentes por esquecimento.
@@ -442,7 +451,7 @@ Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e aler
 **Proporcionalidade (TTL por nível).**
 | Nível | TTL | Revalidação | Obrigatório? |
 |---|---|---|---|
-| L1 | Política 05 §7 (90 dias) | Na expiração | Recomendado |
+| L1 | Política 05 §7 (90 dias; Critical 7 dias com plano) | Na expiração | Obrigatório (registo simplificado) |
 | L2 | Política 05 §7 (60 dias; High 30 dias) | Na expiração | Obrigatório |
 | L3 | Política 05 §7 (30 dias; High 14 dias) | Na expiração | **Obrigatório + Gestão Executiva** |
 

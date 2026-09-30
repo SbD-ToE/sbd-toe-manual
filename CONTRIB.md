@@ -133,6 +133,16 @@ git push -u origin feat/cap14-kpis
 
 ---
 
+## 🌐 Conteúdo bilingue (PT/EN) {#conteudo-bilingue}
+
+O manual publica em Português (língua canónica, fonte de todo o conteúdo) e Inglês (tradução mantida, sincronizada automaticamente contra a fonte PT). Quem editar conteúdo em `manuals_src/docs/` deve saber:
+
+* A tradução para EN **não é automática no CI** — é produzida por um pipeline dedicado (`translation/scripts/translate.py`), documentado em [`translation/README.md`](translation/README.md).
+* O workflow `i18n-equivalence.yml` corre em cada PR que toque `manuals_src/**` ou `translation/**`: **verifica** que a tradução existente continua sincronizada, consistente e reproduzível — não traduz nada. Se editares uma página já traduzida sem atualizar o espelho EN, este *check* falha.
+* Alterações a conteúdo já traduzido geram trabalho de sincronização (fora deste PR, normalmente por lote/capítulo); reporta a alteração ao responsável editorial.
+
+---
+
 ## 🧾 Integração com Issues do projeto {#integracao-issues}
 
 As contribuições devem ser sempre rastreáveis através de *issues* no repositório principal do manual.

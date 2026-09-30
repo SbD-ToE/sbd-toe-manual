@@ -6,8 +6,8 @@ Este é um manual prático e prescritivo de Security by Design, orientado ao cic
 Promover a adoção de práticas seguras desde o design até à entrega, com exemplos hands-on, orientações por papel, e integração com frameworks reconhecidas (OWASP, NIST, SLSA, etc.).
 
 ## Idiomas
-- 🇵🇹 Português (default)
-- 🇬🇧 English (em preparação)
+- 🇵🇹 Português (língua canónica)
+- 🇬🇧 English (tradução mantida, sincronizada com a fonte PT — ver [translation/README.md](translation/README.md))
 
 ## Estrutura
 Organizado por 14 áreas principais de segurança aplicacional. Cada uma contém:

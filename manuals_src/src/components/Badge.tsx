@@ -1,33 +1,13 @@
 // src/components/Badge.tsx
+// Usa a base única .sl-badge de custom.css (M-31); as cores vêm dos tokens do tema.
 import React from 'react';
 
 type BadgeProps = {
   children: React.ReactNode;
-  color?: 'info' | 'success' | 'warning' | 'danger';
-};
-
-const colorMap: Record<string, string> = {
-  info: '#017BFF',
-  success: '#28a745',
-  warning: '#ffc107',
-  danger: '#dc3545',
+  color?: 'neutral' | 'info' | 'success' | 'warning' | 'danger';
 };
 
 export default function Badge({ children, color = 'info' }: BadgeProps) {
-  return (
-    <span
-      style={{
-        backgroundColor: colorMap[color],
-        color: 'white',
-        padding: '0.2rem 0.6rem',
-        borderRadius: '0.5rem',
-        fontSize: '0.8rem',
-        fontWeight: 600,
-        display: 'inline-block',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      {children}
-    </span>
-  );
+  const variant = color === 'neutral' ? '' : ` sl-badge--${color}`;
+  return <span className={`sl-badge${variant}`}>{children}</span>;
 }

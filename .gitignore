@@ -145,3 +145,6 @@ work-documents/
 
 # Local Codex session-resume pointer; not a programme artefact.
 resume
+
+# Configuração local do Claude Code; não entra no repositório.
+.claude/

@@ -4,59 +4,117 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
+import HomeEntries from '@site/src/components/HomeEntries';
+import ToeDiagram from '@site/src/components/ToeDiagram';
+import ChapterGrid from '@site/src/components/ChapterGrid';
 import styles from './index.module.css';
 
-// URL central para o Capítulo 00 / Theory of Everything
-// (se mudares o slug para 'theory-of-everything', atualizas aqui apenas)
-const toeIntroUrl = 'sbd-toe/teory-of-everything/intro';
+// Página inicial (SHI-31, M-35…M-47): herói, por onde começar, faixa de prova,
+// grelha de capítulos e faixa de fecho.
 
-/* ===================== HERO ===================== */
+const githubUrl = 'https://github.com/SbD-ToE/sbd-toe-manual';
 
-function HomepageHeader() {
+type ManualFacts = {
+  manualVersion: string;
+  counts: {chapters: number; regulations: number; policies: number};
+};
+
+/* ===================== HERÓI (M-36, M-43, M-47) ===================== */
+
+function HomeHero() {
   return (
-    <header className={clsx('hero', 'hero--primary', styles.slHero)}>
-      <div className="container">
-        <div className="text--center">
-          <h1 className={styles.heroTitle}>
-            Security by Design - Theory of Everything
-          </h1>
-          <p
-            className={styles.heroTagline}
-            role="doc-subtitle"
-          >
-            <Translate id="homepage.hero.tagline">
-              Um modelo unificado para pensar, desenhar e operar segurança em desenvolvimento de software.
-            </Translate>
+    <header className={styles.hero}>
+      <div className={clsx(styles.container, styles.heroGrid)}>
+        <div>
+          {/* M-47: o "·" é um separador à parte, que se esconde abaixo de 997 px */}
+          <p className={clsx('sl-eyebrow', styles.heroEyebrow)}>
+            <span>SbD-ToE</span>
+            <span className="sl-eyebrow__sep" aria-hidden="true">·</span>
+            <span>
+              <Translate id="homepage.hero.eyebrow">Manual aberto de segurança de software</Translate>
+            </span>
           </p>
-          <p
-            className="hero__subtitle"
-            style={{
-              marginBottom: '1.75rem',
-              fontSize: '1.05rem',
-              color: 'var(--ifm-color-emphasis-700)',
-            }}
-          >
+          <h1 className={styles.heroTitle}>Security by Design – Theory of Everything</h1>
+          <p className={styles.heroLead}>
             <Translate id="homepage.hero.subtitle">
               O SbD–ToE liga regulamentos europeus, normas técnicas, frameworks de maturidade, ameaças reais e engenharia de software num manual prescritivo, reutilizável e proporcional ao risco.
             </Translate>
           </p>
-
+          <div className={styles.actions}>
+            <Link className={clsx(styles.btn, styles.btnPrimary)} to="/sbd-toe/sbd-manual/">
+              <Translate id="homepage.hero.cta.manual">Ler o Manual</Translate> <span aria-hidden="true">→</span>
+            </Link>
+            <Link className={clsx(styles.btn, styles.btnSecondary)} to="/sbd-toe/sbd-manual/fundamentos/como-usar">
+              <Translate id="homepage.hero.cta.howTo">Como usar este manual</Translate>
+            </Link>
+          </div>
         </div>
+        <ToeDiagram />
       </div>
     </header>
   );
 }
 
-/* ===================== DIAGRAMA CENTRADO ===================== */
+/* ===================== FAIXA DE PROVA (M-40, S-08) ===================== */
 
-function ToeDiagramSection() {
+function FactsStrip({manualVersion, counts}: ManualFacts) {
   return (
-    <section className={styles.features}>
-      <div className={clsx('container', styles.diagramContainer)}>
-        <div className="text--center">
-          {/* Diagrama clicável para o Capítulo 00 / ToE */}
-          <Link to={toeIntroUrl} className={styles.diagramLink}>
-            <ToeDiagram />
+    <ul
+      className={styles.facts}
+      aria-label={translate({id: 'homepage.facts.ariaLabel', message: 'O manual em números'})}
+    >
+      <li>
+        <Translate id="homepage.facts.chapters" values={{count: <b>{counts.chapters}</b>}}>
+          {'{count} capítulos'}
+        </Translate>
+      </li>
+      <li>
+        <Translate id="homepage.facts.regulations" values={{count: <b>{counts.regulations}</b>}}>
+          {'{count} regulamentos no cross-check'}
+        </Translate>
+      </li>
+      <li>
+        <Translate id="homepage.facts.policies" values={{count: <b>{counts.policies}</b>}}>
+          {'{count} políticas recomendadas'}
+        </Translate>
+      </li>
+      <li>
+        <b>PT · EN</b>
+      </li>
+      <li>
+        <Translate id="homepage.facts.version" values={{version: <b>{manualVersion}</b>}}>
+          {'versão {version}'}
+        </Translate>
+      </li>
+    </ul>
+  );
+}
+
+/* ===================== FAIXA DE FECHO (M-45, S-13) ===================== */
+
+function ClosingBand() {
+  return (
+    <section className={styles.band} aria-labelledby="home-band-title">
+      <div className={styles.container}>
+        <p className="sl-eyebrow">
+          <span>
+            <Translate id="homepage.band.eyebrow">Projeto aberto</Translate>
+          </span>
+        </p>
+        <h2 className={styles.h2} id="home-band-title">
+          <Translate id="homepage.band.title">Aberto, versionado e público no GitHub.</Translate>
+        </h2>
+        <p>
+          <Translate id="homepage.band.text">
+            O conteúdo está sob licença CC BY-SA 4.0: pode lê-lo, reutilizá-lo e propor alterações.
+          </Translate>
+        </p>
+        <div className={styles.actions}>
+          <Link className={clsx(styles.btn, styles.btnOnBand)} href={githubUrl}>
+            <Translate id="homepage.band.github">Ver no GitHub</Translate> <span aria-hidden="true">↗</span>
+          </Link>
+          <Link className={clsx(styles.btn, styles.btnOnBandOutline)} to="/licenciamento">
+            <Translate id="homepage.band.licence">Licença</Translate>
           </Link>
         </div>
       </div>
@@ -64,280 +122,30 @@ function ToeDiagramSection() {
   );
 }
 
-function ToeDiagram() {
-  return (
-    <div className={styles.diagramWrapper}>
-      <svg
-        viewBox="0 -20 1407 744"
-        role="img"
-        aria-label={translate({id: 'toe.chart.ariaLabel', message: 'Diagrama conceptual da Theory of Everything'})}
-        className={styles.diagramSvg}
-        preserveAspectRatio="xMidYMid meet"
-      >
-        <defs>
-          <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
-            <stop
-              offset="0%"
-              stopColor="var(--ifm-color-primary)"
-              stopOpacity="0.18"
-            />
-            <stop
-              offset="60%"
-              stopColor="var(--ifm-color-primary)"
-              stopOpacity="0.05"
-            />
-            <stop offset="100%" stopColor="transparent" stopOpacity="0" />
-          </radialGradient>
-          <style>{`
-            .toe-home-title { font-weight: bold; font-size: 31px; fill: currentColor; }
-            .toe-home-text { font-size: 24px; fill: var(--ifm-color-emphasis-700); }
-          `}</style>
-        </defs>
-
-        {/* halo */}
-        <circle cx="704" cy="353" r="185" fill="url(#toeGlow)" />
-
-        {/* anel tracejado — 3 eixos */}
-        <circle
-          cx="704"
-          cy="353"
-          r="205"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
-          strokeDasharray="6 6"
-        />
-
-        {/* núcleo */}
-        <circle
-          cx="704"
-          cy="353"
-          r="85"
-          fill="var(--ifm-background-surface-color)"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth="3.6"
-        />
-        <text
-          x="704"
-          y="347"
-          textAnchor="middle"
-          fontSize="22"
-          fontWeight="bold"
-          fill="currentColor"
-        >
-          Security by Design
-        </text>
-        <text
-          x="704"
-          y="362"
-          textAnchor="middle"
-          fontSize="19"
-          fill="currentColor"
-        >
-          Theory of Everything
-        </text>
-
-        {/* Top-Down satélite */}
-        <circle
-          cx="704"
-          cy="148"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="704"
-          cy="148"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="704"
-          y="70"
-          textAnchor="middle"
-          className="toe-home-title"
-        >
-          Top-Down
-        </text>
-        <text
-          x="704"
-          y="92"
-          textAnchor="middle"
-          className="toe-home-text"
-        >
-          {translate({id: 'toe.chart.topDown', message: 'Normas & Regulação'})}
-        </text>
-        <line
-          x1="704"
-          y1="195"
-          x2="704"
-          y2="268"
-          stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
-        />
-
-        {/* Bottom-Up satélite */}
-        <circle
-          cx="704"
-          cy="558"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="704"
-          cy="558"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="704"
-          y="635"
-          textAnchor="middle"
-          className="toe-home-title"
-        >
-          Bottom-Up
-        </text>
-        <text
-          x="704"
-          y="657"
-          textAnchor="middle"
-          className="toe-home-text"
-        >
-          {translate({id: 'toe.chart.bottomUp', message: 'Ameaças & Incidentes'})}
-        </text>
-        <line
-          x1="704"
-          y1="511"
-          x2="704"
-          y2="438"
-          stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
-        />
-
-        {/* Engineering satélite */}
-        <circle
-          cx="499"
-          cy="353"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="499"
-          cy="353"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="420"
-          y="345"
-          textAnchor="end"
-          className="toe-home-title"
-        >
-          Engineering
-        </text>
-        <text
-          x="420"
-          y="365"
-          textAnchor="end"
-          className="toe-home-text"
-        >
-          {translate({id: 'toe.chart.engineering', message: 'Execução & Ciclo de vida'})}
-        </text>
-        <line
-          x1="546"
-          y1="353"
-          x2="619"
-          y2="353"
-          stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
-        />
-      </svg>
-
-      <p
-        style={{
-          fontSize: '0.9rem',
-          marginTop: '0.75rem',
-          maxWidth: 520,
-          marginInline: 'auto',
-        }}
-      >
-        <Translate id="homepage.diagram.caption">
-          O SbD–ToE é o núcleo onde convergem normas, ameaças e engenharia. A partir deste centro, cada capítulo do manual desdobra a visão em práticas e controlos concretos.
-        </Translate>
-      </p>
-    </div>
-  );
-}
-
-/* ===================== 2 CARDS PRINCIPAIS ===================== */
-
-function SectionCards() {
-  const manualUrl = 'sbd-toe/sbd-manual/';
-  const crossCheckUrl = 'sbd-toe/cross-check-normativo/intro';
-
-  const cards = [
-    {
-      title: translate({id: 'homepage.card.manual.title', message: 'Manual SbD–ToE'}),
-      description:
-        translate({id: 'homepage.card.manual.description', message: 'Capítulos 01–14. Corpo principal do manual, organizado por tema técnico ao longo do ciclo de vida.'}),
-      to: manualUrl,
-      icon: '📘',
-    },
-    {
-      title: translate({id: 'homepage.card.crossCheck.title', message: 'Cross-check normativo'}),
-      description:
-        translate({id: 'homepage.card.crossCheck.description', message: 'Como o SbD–ToE responde, regulamento a regulamento, a NIS2, DORA, CRA, AI Act, RGPD e CSA: o que cobre, as lacunas declaradas e o que fica fora de âmbito.'}),
-      to: crossCheckUrl,
-      icon: '🏛️',
-    },
-  ];
-
-  const colSizeClass = cards.length === 2 ? 'col col--6' : 'col col--4';
-
-  return (
-    <section className={styles.cardsSection}>
-      <div className="container">
-        <div className={clsx('row', styles.cardsGrid)}>
-          {cards.map((c, idx) => (
-            <div key={idx} className={clsx(colSizeClass, 'margin-bottom--md')}>
-              <div className={clsx('card', styles.card)}>
-                <div className="card__header">
-                  <h3>
-                    {c.icon} {c.title}
-                  </h3>
-                </div>
-                <div className="card__body">
-                  <p>{c.description}</p>
-                </div>
-                <div className="card__footer">
-                  <Link className="button button--primary button--sm" to={c.to}>
-                    <Translate id="homepage.card.open">Abrir →</Translate>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ===================== ROOT LAYOUT ===================== */
+/* ===================== PÁGINA (M-35, M-37) ===================== */
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  const facts = siteConfig.customFields as ManualFacts;
   return (
     <Layout
-      title={`${translate({id: 'homepage.title', message: 'Início'})} - ${siteConfig.title}`}
+      title={translate({id: 'homepage.title', message: 'Início'})}
       description={translate({id: 'homepage.description', message: 'Security by Design - Theory of Everything. Manual prático, aberto e prescritivo para aplicar segurança por desenho em organizações modernas.'})}
     >
-      <HomepageHeader />
-      <main>
-        <ToeDiagramSection />
-        <SectionCards />
+      <main className={styles.home}>
+        <HomeHero />
+        <section className={styles.start} aria-labelledby="home-start-title">
+          <div className={styles.container}>
+            <HomeEntries labelId="home-start-title" />
+            <FactsStrip manualVersion={facts.manualVersion} counts={facts.counts} />
+          </div>
+        </section>
+        <section className={clsx(styles.section, styles.sectionAlt)} aria-labelledby="home-chapters-title">
+          <div className={styles.container}>
+            <ChapterGrid count={facts.counts.chapters} labelId="home-chapters-title" />
+          </div>
+        </section>
+        <ClosingBand />
       </main>
     </Layout>
   );

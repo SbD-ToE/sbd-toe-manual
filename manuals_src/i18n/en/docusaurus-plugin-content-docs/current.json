@@ -3,121 +3,61 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.manualAtual.category.0-Fundamentos do Manual": {
-    "message": "0-Fundamentals",
-    "description": "The label for category '0-Fundamentos do Manual' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.Roles do SbD–ToE": {
     "message": "SbD–ToE Roles",
     "description": "The label for category 'Roles do SbD–ToE' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.1-Classificaçao das Aplicações": {
-    "message": "1-Application Classification",
-    "description": "The label for category '1-Classificaçao das Aplicações' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-01-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.2-Requisitos de Segurança": {
-    "message": "2-Security Requirements",
-    "description": "The label for category '2-Requisitos de Segurança' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-02-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.3-Threat Modeling": {
-    "message": "3-Threat Modelling",
-    "description": "The label for category '3-Threat Modeling' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-03-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.4-Arquitetura Segura": {
-    "message": "4-Secure Architecture",
-    "description": "The label for category '4-Arquitetura Segura' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-04-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.5-Controlo de Dependências (SBOM, SCA)": {
-    "message": "5-Dependencies (SBOM, SCA)",
-    "description": "The label for category '5-Controlo de Dependências (SBOM, SCA)' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-05-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.6-Desenvolvimento Seguro": {
-    "message": "6-Secure Development",
-    "description": "The label for category '6-Desenvolvimento Seguro' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-06-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.7-CI/CD Seguro": {
-    "message": "7-Secure CI/CD",
-    "description": "The label for category '7-CI/CD Seguro' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-07-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.8-Infrastructure as Code (IaC)": {
-    "message": "8-Infrastructure as Code (IaC)",
-    "description": "The label for category '8-Infrastructure as Code (IaC)' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-08-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.9-Containers e Imagens": {
-    "message": "9-Containers and Images",
-    "description": "The label for category '9-Containers e Imagens' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-09-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.10-Testes de Segurança": {
-    "message": "10-Security Testing",
-    "description": "The label for category '10-Testes de Segurança' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-10-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.11-Deploy Seguro": {
-    "message": "11-Secure Deployment",
-    "description": "The label for category '11-Deploy Seguro' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-11-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.12-Monitorização e Operações": {
-    "message": "12-Monitoring and Operations",
-    "description": "The label for category '12-Monitorização e Operações' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-12-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
-  "sidebar.manualAtual.category.13-Formação e Onboarding": {
-    "message": "13-Training and Onboarding",
-    "description": "The label for category '13-Formação e Onboarding' in sidebar 'manualAtual'"
-  },
   "sidebar.manualAtual.category.cap-13-complemento-tecnico": {
     "message": "Technical Supplement",
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
-  },
-  "sidebar.manualAtual.category.14-Governança e Contratação": {
-    "message": "14-Governance and Contracting",
-    "description": "The label for category '14-Governança e Contratação' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-14-complemento-tecnico": {
     "message": "Technical Supplement",
@@ -127,21 +67,9 @@
     "message": "Index",
     "description": "The label for the doc item 'Índice' in sidebar 'manualAtual', linking to the doc sbd-manual/index"
   },
-  "sidebar.toeAssets.category.🏛️ Assets & Policies Organizacionais": {
-    "message": "🏛️ Organisational Assets & Policies",
-    "description": "The label for category '🏛️ Assets & Policies Organizacionais' in sidebar 'toeAssets'"
-  },
-  "sidebar.toeAssets.category.🔌 MCP Server (SbD-ToE)": {
-    "message": "🔌 MCP Server (SbD-ToE)",
-    "description": "The label for category '🔌 MCP Server (SbD-ToE)' in sidebar 'toeAssets'"
-  },
   "sidebar.toeAssets.category.Casos de uso": {
     "message": "Use cases",
     "description": "The label for category 'Casos de uso' in sidebar 'toeAssets'"
-  },
-  "sidebar.toeAssets.category.Políticas Recomendadas": {
-    "message": "Recommended Policies",
-    "description": "The label for category 'Políticas Recomendadas' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Risco": {
     "message": "Risk",
@@ -206,5 +134,373 @@
   "sidebar.toeCrossCheck.category.ENISA & CSA (Certificação)": {
     "message": "ENISA & CSA (Certification)",
     "description": "The label for category 'ENISA & CSA (Certificação)' in sidebar 'toeCrossCheck'"
+  },
+  "sidebar.manualAtual.category.cap-00": {
+    "message": "00 · Fundamentals",
+    "description": "The label for category '00 · Fundamentos' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-00-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-01": {
+    "message": "01 · Application Classification",
+    "description": "The label for category '01 · Classificação das Aplicações' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-01-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-02": {
+    "message": "02 · Security Requirements",
+    "description": "The label for category '02 · Requisitos de Segurança' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-02-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-03": {
+    "message": "03 · Threat Modelling",
+    "description": "The label for category '03 · Threat Modeling' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-03-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-04": {
+    "message": "04 · Secure Architecture",
+    "description": "The label for category '04 · Arquitetura Segura' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-04-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-05": {
+    "message": "05 · Dependencies, SBOM and SCA",
+    "description": "The label for category '05 · Dependências, SBOM e SCA' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-05-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-06": {
+    "message": "06 · Secure Development",
+    "description": "The label for category '06 · Desenvolvimento Seguro' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-06-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-07": {
+    "message": "07 · Secure CI/CD",
+    "description": "The label for category '07 · CI/CD Seguro' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-07-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-08": {
+    "message": "08 · Infrastructure as Code (IaC)",
+    "description": "The label for category '08 · Infraestrutura como Código (IaC)' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-08-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-09": {
+    "message": "09 · Containers and Images",
+    "description": "The label for category '09 · Containers e Imagens' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-09-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-10": {
+    "message": "10 · Security Testing",
+    "description": "The label for category '10 · Testes de Segurança' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-10-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-11": {
+    "message": "11 · Secure Deployment",
+    "description": "The label for category '11 · Deploy Seguro' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-11-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-12": {
+    "message": "12 · Monitoring and Operations",
+    "description": "The label for category '12 · Monitorização e Operações' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-12-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-13": {
+    "message": "13 · Training and Onboarding",
+    "description": "The label for category '13 · Formação e Onboarding' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-13-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-14": {
+    "message": "14 · Governance and Contracting",
+    "description": "The label for category '14 · Governança e Contratação' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.category.cap-14-verificacao": {
+    "message": "Verification and traceability",
+    "description": "The label for category 'Verificação e rastreabilidade' in sidebar 'manualAtual'"
+  },
+  "sidebar.manualAtual.doc.cap-00-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/fundamentos/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-01-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/classificacao-aplicacoes/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-01-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/classificacao-aplicacoes/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-01-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/classificacao-aplicacoes/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-01-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/classificacao-aplicacoes/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-02-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/requisitos-seguranca/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-02-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/requisitos-seguranca/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-02-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/requisitos-seguranca/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-02-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/requisitos-seguranca/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-03-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/threat-modeling/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-03-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/threat-modeling/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-03-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/threat-modeling/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-03-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/threat-modeling/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-04-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/arquitetura-segura/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-04-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/arquitetura-segura/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-04-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/arquitetura-segura/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-04-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/arquitetura-segura/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-05-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/dependencias-sbom-sca/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-05-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/dependencias-sbom-sca/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-05-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/dependencias-sbom-sca/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-05-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/dependencias-sbom-sca/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-06-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/desenvolvimento-seguro/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-06-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/desenvolvimento-seguro/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-06-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/desenvolvimento-seguro/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-06-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/desenvolvimento-seguro/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-07-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/cicd-seguro/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-07-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/cicd-seguro/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-07-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/cicd-seguro/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-07-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/cicd-seguro/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-08-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/iac-infraestrutura/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-08-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/iac-infraestrutura/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-08-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/iac-infraestrutura/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-08-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/iac-infraestrutura/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-09-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/containers-imagens/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-09-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/containers-imagens/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-09-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/containers-imagens/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-09-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/containers-imagens/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-10-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/testes-seguranca/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-10-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/testes-seguranca/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-10-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/testes-seguranca/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-10-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/testes-seguranca/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-11-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/deploy-seguro/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-11-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/deploy-seguro/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-11-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/deploy-seguro/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-11-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/deploy-seguro/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-12-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/monitorizacao-operacoes/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-12-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/monitorizacao-operacoes/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-12-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/monitorizacao-operacoes/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-12-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/monitorizacao-operacoes/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-13-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/formacao-onboarding/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-13-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/formacao-onboarding/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-13-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/formacao-onboarding/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-13-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/formacao-onboarding/achievable-maturity"
+  },
+  "sidebar.manualAtual.doc.cap-14-politicas": {
+    "message": "Policies",
+    "description": "The label for the doc item 'Políticas' in sidebar 'manualAtual', linking to the doc sbd-manual/governanca-contratacao/policies-relevantes"
+  },
+  "sidebar.manualAtual.doc.cap-14-ameacas-mitigadas": {
+    "message": "Mitigated threats",
+    "description": "The label for the doc item 'Ameaças mitigadas' in sidebar 'manualAtual', linking to the doc sbd-manual/governanca-contratacao/canon/ameacas-mitigadas"
+  },
+  "sidebar.manualAtual.doc.cap-14-rastreabilidade": {
+    "message": "Traceability",
+    "description": "The label for the doc item 'Rastreabilidade' in sidebar 'manualAtual', linking to the doc sbd-manual/governanca-contratacao/canon/rastreabilidade"
+  },
+  "sidebar.manualAtual.doc.cap-14-achievable-maturity": {
+    "message": "Achievable Maturity",
+    "description": "The label for the doc item 'Achievable Maturity' in sidebar 'manualAtual', linking to the doc sbd-manual/governanca-contratacao/achievable-maturity"
+  },
+  "sidebar.toeOverview.doc.toe": {
+    "message": "Theory of Everything",
+    "description": "The label for the doc item 'Theory of Everything' in sidebar 'toeOverview', linking to the doc teory-of-everything/intro"
+  },
+  "sidebar.toeOverview.doc.tldr": {
+    "message": "Executive summary (TL;DR)",
+    "description": "The label for the doc item 'Resumo executivo (TL;DR)' in sidebar 'toeOverview', linking to the doc tldr"
+  },
+  "sidebar.toeAssets.category.assets-politicas": {
+    "message": "Recommended policies",
+    "description": "The label for category 'Políticas recomendadas' in sidebar 'toeAssets'"
+  },
+  "sidebar.toeAssets.category.assets-mcp": {
+    "message": "MCP Server (SbD-ToE)",
+    "description": "The label for category 'MCP Server (SbD-ToE)' in sidebar 'toeAssets'"
+  },
+  "sidebar.toeAssets.doc.assets-intro": {
+    "message": "Introduction",
+    "description": "The label for the doc item 'Introdução' in sidebar 'toeAssets', linking to the doc assets/intro"
   }
 }

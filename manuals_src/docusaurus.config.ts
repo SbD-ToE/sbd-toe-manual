@@ -53,7 +53,18 @@ const config: Config = {
     },
   ],
 
+  // Números e versão do manual para a faixa de prova da página inicial (M-41, H-04).
+  // Atualizam-se à mão a cada release.
+  customFields: {
+    manualVersion: 'v1.17.1',
+    counts: {chapters: 15, regulations: 6, policies: 39},
+  },
+
   themes: ['@docusaurus/theme-mermaid'],
+
+  // Mapa do ciclo de vida: índice das user stories e rota /ciclo-de-vida (SHI-152 §4).
+  // Um nome de fase que não esteja em src/data/mapa-fases.json faz falhar o build ('warn' põe-no em Transversal).
+  plugins: [['./src/plugins/ciclo-de-vida', {onUnknownPhase: 'throw'}]],
 
   presets: [
     [
@@ -82,14 +93,17 @@ const config: Config = {
           changefreq: 'weekly',
           priority: 0.5,
           filename: 'sitemap.xml',
-          ignorePatterns: ['/search', '/tags/**'],
+          // Etiquetas fora do sitemap (M-21, P-29). O padrão compara-se com o caminho
+          // completo da rota, que no locale EN começa por /en: daí as duas entradas.
+          ignorePatterns: ['/search', '/sbd-toe/tags/**', '/en/sbd-toe/tags/**'],
         },
       },
     ],
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    // Imagem de partilha (og:image, twitter:image), 1200×630, uma só para PT e EN (M-44, A-3).
+    image: 'img/brand/social-card.png',
 
     navbar: {
       title: 'SbD–ToE',
@@ -99,7 +113,15 @@ const config: Config = {
         src: 'img/brand/Shiftleft_LogoHorizontal_V5.png',
         srcDark: 'img/brand/Shiftleft_LogoHorizontal_V5.png',
       },
+      // PROPOSTA SHI-29: as quatro secções juntas à esquerda, pela ordem de leitura;
+      // utilidades à direita. Rótulos EN em i18n/en/docusaurus-theme-classic/navbar.json.
       items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'toeOverview',
+          position: 'left',
+          label: 'Visão geral',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'manualAtual',
@@ -110,33 +132,35 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'toeCrossCheck',
           position: 'left',
-          label: 'Cross-check',
+          label: 'Cross-check normativo',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'toeOverview',
+          sidebarId: 'toeAssets',
+          position: 'left',
+          label: 'Assets',
+        },
+        // Mapa do ciclo de vida (entrada-navbar = A, SHI-152 §3.2): página que atravessa os capítulos,
+        // sem sidebar. Cabe entre 997 e 1279 px com o espaçamento compacto de N-09 (custom.css).
+        {to: '/ciclo-de-vida', label: 'Ciclo de vida', position: 'left'},
+        // Pesquisa: só entra quando o Pedro decidir o motor (D-06). Com Algolia DocSearch
+        // basta acrescentar themeConfig.algolia; o item {type: 'search'} fixa a posição.
+        // {type: 'search', position: 'right'},
+        {
+          type: 'dropdown',
+          label: 'Projeto',
           position: 'right',
-          label: 'ToE',
+          items: [
+            {to: '/about', label: 'Sobre'},
+            {to: '/faq', label: 'FAQ'},
+            {to: '/licenciamento', label: 'Licença'},
+          ],
         },
         {
-          to: '/about',
-          label: 'Sobre',
+          href: 'https://github.com/SbD-ToE/sbd-toe-manual',
           position: 'right',
-        },
-        {
-          to: '/faq',
-          label: 'FAQ',
-          position: 'right',
-        },
-        {
-          to: '/licenciamento',
-          label: 'Licença',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual',
-          label: 'GitHub',
-          position: 'right',
+          className: 'sl-navbar-github',
+          'aria-label': 'GitHub',
         },
         {type: 'localeDropdown', position: 'right'},
       ],
@@ -144,27 +168,42 @@ const config: Config = {
 
     footer: {
       style: 'dark',
+      // PROPOSTA SHI-29: mapa do site em três colunas. Mesmo destino => mesmo rótulo
+      // que na navbar (coluna "Secções") e que na sidebar (coluna "Atalhos").
+      // Rótulos EN em i18n/en/docusaurus-theme-classic/footer.json.
       links: [
         {
-          title: 'Manuais',
-          items: [{label: 'SbD-ToE', to: '/sbd-toe/sbd-manual/'}],
+          title: 'Secções',
+          items: [
+            {label: 'Visão geral', to: '/sbd-toe/teory-of-everything/intro'},
+            {label: 'Manual', to: '/sbd-toe/sbd-manual/'},
+            {label: 'Cross-check normativo', to: '/sbd-toe/cross-check-normativo/intro'},
+            {label: 'Assets', to: '/sbd-toe/assets/intro'},
+          ],
         },
         {
-          title: 'Assets',
+          title: 'Atalhos',
           items: [
-            {label: 'Políticas Organizacionais', to: '/sbd-toe/assets/intro'},
+            {label: 'Resumo executivo (TL;DR)', to: '/sbd-toe/tldr'},
+            {label: 'Mapa do ciclo de vida', to: '/ciclo-de-vida'},
+            {label: 'Políticas recomendadas', to: '/sbd-toe/assets/policies'},
             {label: 'MCP Server (SbD-ToE)', to: '/sbd-toe/assets/mcp/intro'},
           ],
         },
         {
-          title: 'Mais',
+          title: 'Projeto',
           items: [
-            {label: 'GitHub', href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual'},
+            {label: 'Sobre', to: '/about'},
+            {label: 'FAQ', to: '/faq'},
+            {label: 'Licença', to: '/licenciamento'},
             {label: 'Estado da tradução', to: '/translation-status'},
+            {label: 'GitHub', href: 'https://github.com/SbD-ToE/sbd-toe-manual'},
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Shiftleft - Secure Software Engineering, Lda. Construído com Docusaurus.`,
+      // Mantém-se como valor de recurso: o texto mostrado vem de src/theme/Footer/Copyright
+      // (eject, "safe"), com a chave footer.copyright em code.json e o ano calculado.
+      copyright: `© ${new Date().getFullYear()} Pedro Farinha e contribuidores.`,
     },
 
     colorMode: {

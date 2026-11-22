@@ -482,36 +482,12 @@
     "message": "Execution & Lifecycle",
     "description": "ToE intro diagram label"
   },
-  "homepage.hero.tagline": {
-    "message": "A unified model for thinking about, designing and operating security in software development.",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
   "homepage.hero.subtitle": {
     "message": "SbD–ToE connects European regulations, technical standards, maturity frameworks, real threats and software engineering in a prescriptive, reusable and risk-proportional manual.",
     "description": "Homepage (src/pages/index.tsx)"
   },
-  "homepage.diagram.caption": {
-    "message": "SbD–ToE is the core where standards, threats and engineering converge. From this centre, each chapter of the manual unfolds the vision into concrete practices and controls.",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
-  "homepage.card.manual.title": {
-    "message": "SbD–ToE Manual",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
-  "homepage.card.manual.description": {
-    "message": "Chapters 01–14. The main body of the manual, organised by technical theme across the lifecycle.",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
   "homepage.card.crossCheck.title": {
     "message": "Normative cross-check",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
-  "homepage.card.crossCheck.description": {
-    "message": "How SbD–ToE responds, regulation by regulation, to NIS2, DORA, CRA, the AI Act, the GDPR and the CSA: what it covers, the declared gaps and what is out of scope.",
-    "description": "Homepage (src/pages/index.tsx)"
-  },
-  "homepage.card.open": {
-    "message": "Open →",
     "description": "Homepage (src/pages/index.tsx)"
   },
   "homepage.title": {
@@ -521,5 +497,299 @@
   "homepage.description": {
     "message": "Security by Design - Theory of Everything. A practical, open and prescriptive manual for applying security by design in modern organisations.",
     "description": "Homepage (src/pages/index.tsx)"
+  },
+  "doc.eyebrow.manual": {
+    "message": "Manual",
+    "description": "Doc section label above the H1: Manual"
+  },
+  "doc.eyebrow.crossCheck": {
+    "message": "Normative cross-check",
+    "description": "Doc section label above the H1: Normative cross-check"
+  },
+  "doc.eyebrow.assets": {
+    "message": "Assets",
+    "description": "Doc section label above the H1: Assets"
+  },
+  "doc.eyebrow.overview": {
+    "message": "Overview",
+    "description": "Doc section label above the H1: overview (Theory of Everything, TL;DR)"
+  },
+  "doc.eyebrow.chapter": {
+    "message": "Chapter {number}",
+    "description": "Doc section label above the H1, on a chapter intro"
+  },
+  "doc.eyebrow.chapter.00.title": {
+    "message": "Fundamentals",
+    "description": "Doc section label: title of Ch. 00"
+  },
+  "doc.eyebrow.supplement": {
+    "message": "Technical Supplement",
+    "description": "Doc section label: chapter addon pages"
+  },
+  "doc.eyebrow.verification": {
+    "message": "Verification and traceability",
+    "description": "Doc section label: chapter canon and achievable maturity pages"
+  },
+  "doc.eyebrow.mcp": {
+    "message": "MCP Server (SbD-ToE)",
+    "description": "Doc section label: MCP Server assets"
+  },
+  "doc.eyebrow.policies": {
+    "message": "Recommended policies",
+    "description": "Doc section label: policy assets"
+  },
+  "doc.eyebrow.ariaLabel": {
+    "message": "Section",
+    "description": "Doc section label: aria-label for screen readers"
+  },
+  "homepage.chapters.00.desc": {
+    "message": "How to use the Manual, roles, baseline and macro-processes"
+  },
+  "homepage.chapters.title": {
+    "message": "The Manual in {count} chapters"
+  },
+  "homepage.chapters.intro": {
+    "message": "From application risk to operations. Each chapter says what to do, which policies to adopt and how to verify it."
+  },
+  "homepage.chapters.startHere": {
+    "message": "Starting point"
+  },
+  "homepage.start.management.title": {
+    "message": "Management and CISO"
+  },
+  "homepage.start.management.summary": {
+    "message": "The model, what it asks of the organisation and where to begin, in a short read."
+  },
+  "homepage.start.management.cta": {
+    "message": "Executive summary (TL;DR)"
+  },
+  "homepage.start.engineering.title": {
+    "message": "Engineering"
+  },
+  "homepage.start.engineering.summary": {
+    "message": "Classify the application (L1⁠–⁠L3) and see the controls that apply at each level."
+  },
+  "homepage.start.grc.title": {
+    "message": "GRC and Legal"
+  },
+  "homepage.start.grc.summary": {
+    "message": "What SbD-ToE covers in NIS2, DORA, CRA, the AI Act, the GDPR and the CSA, and the declared gaps."
+  },
+  "homepage.start.ai.title": {
+    "message": "AI and Platform"
+  },
+  "homepage.start.ai.summary": {
+    "message": "Bring the Manual's controls into your coding assistant, with citations."
+  },
+  "homepage.start.eyebrow": {
+    "message": "Where to start"
+  },
+  "homepage.hero.eyebrow": {
+    "message": "Open manual for software security"
+  },
+  "homepage.hero.cta.manual": {
+    "message": "Read the Manual"
+  },
+  "homepage.hero.cta.howTo": {
+    "message": "How to use this Manual"
+  },
+  "homepage.facts.ariaLabel": {
+    "message": "The Manual in numbers"
+  },
+  "homepage.facts.chapters": {
+    "message": "{count} chapters"
+  },
+  "homepage.facts.regulations": {
+    "message": "{count} regulations in the cross-check"
+  },
+  "homepage.facts.policies": {
+    "message": "{count} recommended policies"
+  },
+  "homepage.facts.version": {
+    "message": "version {version}"
+  },
+  "homepage.band.eyebrow": {
+    "message": "Open project"
+  },
+  "homepage.band.title": {
+    "message": "Open, versioned and public on GitHub."
+  },
+  "homepage.band.text": {
+    "message": "The content is licensed under CC BY-SA 4.0: you can read it, reuse it and propose changes."
+  },
+  "homepage.band.github": {
+    "message": "View on GitHub"
+  },
+  "homepage.band.licence": {
+    "message": "Licence"
+  },
+  "footer.copyright": {
+    "message": "© {year} Pedro Farinha and contributors. Content licensed under CC BY-SA 4.0.",
+    "description": "Linha de copyright do rodapé"
+  },
+  "lifecycleMap.title": {
+    "message": "Lifecycle map"
+  },
+  "lifecycleMap.description": {
+    "message": "The manual's user stories across the lifecycle: what each role does, in which phase and at which level."
+  },
+  "lifecycleMap.lead": {
+    "message": "Each card is a user story from a chapter, in the phase where it happens and in the lane of the role that does it. Choose your role and the application level."
+  },
+  "lifecycleMap.filters.ariaLabel": {
+    "message": "Map filters"
+  },
+  "lifecycleMap.filter.role": {
+    "message": "I am…"
+  },
+  "lifecycleMap.filter.role.all": {
+    "message": "All roles"
+  },
+  "lifecycleMap.filter.level": {
+    "message": "Level"
+  },
+  "lifecycleMap.filter.level.all": {
+    "message": "All"
+  },
+  "lifecycleMap.filter.chapter": {
+    "message": "Chapter"
+  },
+  "lifecycleMap.filter.chapter.all": {
+    "message": "All chapters"
+  },
+  "lifecycleMap.filter.clear": {
+    "message": "Clear filters"
+  },
+  "lifecycleMap.count.stories": {
+    "message": "One story|{count} stories"
+  },
+  "lifecycleMap.count.cards": {
+    "message": "One card|{count} cards"
+  },
+  "lifecycleMap.count.stories.none": {
+    "message": "No stories"
+  },
+  "lifecycleMap.count.cards.none": {
+    "message": "No cards"
+  },
+  "lifecycleMap.trail.ariaLabel": {
+    "message": "Lifecycle phases"
+  },
+  "lifecycleMap.phase.planeamento": {
+    "message": "Planning"
+  },
+  "lifecycleMap.phase.design": {
+    "message": "Design"
+  },
+  "lifecycleMap.phase.desenvolvimento": {
+    "message": "Development"
+  },
+  "lifecycleMap.phase.build-ci": {
+    "message": "Build and CI"
+  },
+  "lifecycleMap.phase.release": {
+    "message": "Release"
+  },
+  "lifecycleMap.phase.operacao": {
+    "message": "Operations"
+  },
+  "lifecycleMap.phase.transversal": {
+    "message": "Cross-cutting"
+  },
+  "lifecycleMap.phase.planeamento.desc": {
+    "message": "Kick-off, application classification, requirements, backlog and prioritisation."
+  },
+  "lifecycleMap.phase.design.desc": {
+    "message": "Architecture and threat modelling, with their reviews and approvals."
+  },
+  "lifecycleMap.phase.desenvolvimento.desc": {
+    "message": "Code, dependencies, local checks, pull requests and code review."
+  },
+  "lifecycleMap.phase.build-ci.desc": {
+    "message": "Build, CI/CD pipeline, automated scanners, SBOM and runners."
+  },
+  "lifecycleMap.phase.release.desc": {
+    "message": "Staging, pre-release, promotion gates, deployment and go-live."
+  },
+  "lifecycleMap.phase.operacao.desc": {
+    "message": "Production, runtime, monitoring, incidents, patching and decommissioning."
+  },
+  "lifecycleMap.phase.transversal.desc": {
+    "message": "Not a point in the lifecycle: governance, audit and compliance, onboarding and training of people, and the continuous cycle (periodic or event-driven reviews, exceptions, KPIs)."
+  },
+  "lifecycleMap.phase.empty": {
+    "message": "No story in this phase with these filters."
+  },
+  "lifecycleMap.lane.empty": {
+    "message": "No stories for this role with these filters."
+  },
+  "lifecycleMap.lane.none": {
+    "message": "No story in the manual has this role."
+  },
+  "lifecycleMap.lane.expand": {
+    "message": "Show the stories"
+  },
+  "lifecycleMap.lane.collapse": {
+    "message": "Collapse"
+  },
+  "lifecycleMap.card.chapter": {
+    "message": "Ch. {number}"
+  },
+  "lifecycleMap.card.phase": {
+    "message": "Phase"
+  },
+  "lifecycleMap.card.sla": {
+    "message": "SLA"
+  },
+  "lifecycleMap.card.responsible": {
+    "message": "Resp."
+  },
+  "lifecycleMap.card.responsible.title": {
+    "message": "Responsible in this phase (Responsible column in the chapter)"
+  },
+  "lifecycleMap.card.level": {
+    "message": "Level {level}"
+  },
+  "lifecycleMap.card.level.none": {
+    "message": "The chapter does not distinguish levels."
+  },
+  "lifecycleMap.card.alsoIn": {
+    "message": "also in {phases}"
+  },
+  "lifecycleMap.card.open": {
+    "message": "Open the story"
+  },
+  "lifecycleMap.detail.close": {
+    "message": "Close"
+  },
+  "lifecycleMap.detail.readInChapter": {
+    "message": "Read in the chapter"
+  },
+  "lifecycleMap.detail.voice": {
+    "message": "Story voice"
+  },
+  "lifecycleMap.detail.specialisation": {
+    "message": "Specialisation"
+  },
+  "lifecycleMap.detail.phaseOnMap": {
+    "message": "Phase on the map"
+  },
+  "lifecycleMap.detail.trigger": {
+    "message": "Trigger"
+  },
+  "lifecycleMap.detail.responsible": {
+    "message": "Responsible"
+  },
+  "lifecycleMap.detail.thisCard": {
+    "message": "this card"
+  },
+  "lifecycleMap.detail.levelSelected": {
+    "message": "Level {level} selected"
+  },
+  "lifecycleMap.detail.noProportionality": {
+    "message": "This story has no proportionality table in the chapter."
+  },
+  "homepage.start.lifecycle": {
+    "message": "Lifecycle map"
   }
 }

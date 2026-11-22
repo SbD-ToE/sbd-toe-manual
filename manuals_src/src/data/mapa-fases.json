@@ -1,0 +1,932 @@
+{
+  "versao": 1,
+  "gerado_por": "iteracao-2/scripts/gerar-mapa-fases.mjs (SHI-150), com as decisões do Pedro de 2026-11-19 aplicadas (SHI-157)",
+  "normalizacao": "NFC; hífenes e travessões → «-»; espaços Unicode → um espaço; sem espaços à volta de «/», «+» e «-»; trim; minúsculas. Ver scripts/fases-normalizar.mjs.",
+  "historia": "Uma história ocupa a união das fases de todas as linhas da tabela «Integração no SDLC» (decisão us-varias-fases = a, 2026-11-19).",
+  "fases": [
+    {
+      "id": "planeamento",
+      "ordem": 1,
+      "faixa": "trilho",
+      "pt": "Planeamento",
+      "en": "Planning",
+      "descricao": {
+        "pt": "Kick-off, classificação da aplicação, requisitos, backlog e priorização.",
+        "en": "Kick-off, application classification, requirements, backlog and prioritisation."
+      }
+    },
+    {
+      "id": "design",
+      "ordem": 2,
+      "faixa": "trilho",
+      "pt": "Design",
+      "en": "Design",
+      "descricao": {
+        "pt": "Arquitetura e threat modeling, com as suas revisões e aprovações.",
+        "en": "Architecture and threat modelling, with their reviews and approvals."
+      }
+    },
+    {
+      "id": "desenvolvimento",
+      "ordem": 3,
+      "faixa": "trilho",
+      "pt": "Desenvolvimento",
+      "en": "Development",
+      "descricao": {
+        "pt": "Código, dependências, validações locais, pull requests e revisão de código.",
+        "en": "Code, dependencies, local checks, pull requests and code review."
+      }
+    },
+    {
+      "id": "build-ci",
+      "ordem": 4,
+      "faixa": "trilho",
+      "pt": "Build e CI",
+      "en": "Build and CI",
+      "descricao": {
+        "pt": "Build, pipeline de CI/CD, scanners automáticos, SBOM e runners.",
+        "en": "Build, CI/CD pipeline, automated scanners, SBOM and runners."
+      }
+    },
+    {
+      "id": "release",
+      "ordem": 5,
+      "faixa": "trilho",
+      "pt": "Release",
+      "en": "Release",
+      "descricao": {
+        "pt": "Staging, pré-release, gates de promoção, deploy e go-live.",
+        "en": "Staging, pre-release, promotion gates, deployment and go-live."
+      }
+    },
+    {
+      "id": "operacao",
+      "ordem": 6,
+      "faixa": "trilho",
+      "pt": "Operação",
+      "en": "Operations",
+      "descricao": {
+        "pt": "Produção, runtime, monitorização, incidentes, patching e retirada de serviço.",
+        "en": "Production, runtime, monitoring, incidents, patching and decommissioning."
+      }
+    },
+    {
+      "id": "transversal",
+      "ordem": 7,
+      "faixa": "transversal",
+      "pt": "Transversal",
+      "en": "Cross-cutting",
+      "descricao": {
+        "pt": "Não é um momento do ciclo: governação, auditoria e conformidade, onboarding e formação de pessoas, e o ciclo contínuo (revisões periódicas ou por evento, exceções, KPIs).",
+        "en": "Not a point in the lifecycle: governance, audit and compliance, onboarding and training of people, and the continuous cycle (periodic or event-driven reviews, exceptions, KPIs)."
+      }
+    }
+  ],
+  "nomes": {
+    "pt": {
+      "activação": [
+        "release"
+      ],
+      "alteração": [
+        "design"
+      ],
+      "alteração de tools": [
+        "design"
+      ],
+      "aprovação": [
+        "design"
+      ],
+      "aprovação de provider": [
+        "planeamento"
+      ],
+      "arquitetura": [
+        "design"
+      ],
+      "auditoria": [
+        "transversal"
+      ],
+      "auditoria/formação": [
+        "transversal"
+      ],
+      "auditoria/pré-produção": [
+        "transversal",
+        "release"
+      ],
+      "backlog": [
+        "planeamento"
+      ],
+      "build": [
+        "build-ci"
+      ],
+      "build/deploy": [
+        "build-ci",
+        "release"
+      ],
+      "build/promoção": [
+        "build-ci",
+        "release"
+      ],
+      "build/provisionamento": [
+        "build-ci"
+      ],
+      "build/release": [
+        "build-ci",
+        "release"
+      ],
+      "catalogação": [
+        "design"
+      ],
+      "ci": [
+        "build-ci"
+      ],
+      "ci/cd": [
+        "build-ci"
+      ],
+      "ci/cd (analysis)": [
+        "build-ci"
+      ],
+      "ci/cd/pré-release": [
+        "build-ci",
+        "release"
+      ],
+      "ci/cd/release": [
+        "build-ci",
+        "release"
+      ],
+      "ci/cd/staging": [
+        "build-ci",
+        "release"
+      ],
+      "ciclo contínuo": [
+        "transversal"
+      ],
+      "ciclo de formação": [
+        "transversal"
+      ],
+      "ciclo regular": [
+        "transversal"
+      ],
+      "classificação inicial": [
+        "planeamento"
+      ],
+      "classificação/design": [
+        "planeamento",
+        "design"
+      ],
+      "conformidade": [
+        "transversal"
+      ],
+      "construção+entrega": [
+        "build-ci",
+        "release"
+      ],
+      "contínua": [
+        "transversal"
+      ],
+      "contínuo": [
+        "transversal"
+      ],
+      "criação/refactor": [
+        "build-ci"
+      ],
+      "definição": [
+        "build-ci"
+      ],
+      "degradação em produção": [
+        "operacao"
+      ],
+      "deploy": [
+        "release"
+      ],
+      "deploy/operação": [
+        "release",
+        "operacao"
+      ],
+      "deploy/operações": [
+        "release",
+        "operacao"
+      ],
+      "deploy/produção": [
+        "release",
+        "operacao"
+      ],
+      "descontinuação": [
+        "operacao"
+      ],
+      "desenvolvimento": [
+        "desenvolvimento"
+      ],
+      "desenvolvimento/deploy": [
+        "desenvolvimento",
+        "release"
+      ],
+      "desenvolvimento/operações": [
+        "desenvolvimento",
+        "operacao"
+      ],
+      "desenvolvimento/revisão": [
+        "desenvolvimento"
+      ],
+      "design": [
+        "design"
+      ],
+      "design/alteração": [
+        "design"
+      ],
+      "design/dev": [
+        "design",
+        "desenvolvimento"
+      ],
+      "design/grooming": [
+        "design",
+        "planeamento"
+      ],
+      "design/planeamento": [
+        "design",
+        "planeamento"
+      ],
+      "design/plataforma": [
+        "design"
+      ],
+      "design/refactor": [
+        "design",
+        "desenvolvimento"
+      ],
+      "design/release": [
+        "design",
+        "release"
+      ],
+      "design/revisão": [
+        "design"
+      ],
+      "design/risco": [
+        "design"
+      ],
+      "dev": [
+        "desenvolvimento"
+      ],
+      "dev (local)": [
+        "desenvolvimento"
+      ],
+      "dev/ci": [
+        "desenvolvimento",
+        "build-ci"
+      ],
+      "exceção": [
+        "transversal"
+      ],
+      "execução": [
+        "build-ci",
+        "transversal"
+      ],
+      "governação": [
+        "transversal"
+      ],
+      "governação (trimestral+)": [
+        "transversal"
+      ],
+      "governação+conformidade": [
+        "transversal"
+      ],
+      "governação+reporting": [
+        "transversal"
+      ],
+      "governação+segurança": [
+        "transversal"
+      ],
+      "governança": [
+        "transversal"
+      ],
+      "governança/release": [
+        "transversal",
+        "release"
+      ],
+      "governance/auditoria": [
+        "transversal"
+      ],
+      "grc": [
+        "transversal"
+      ],
+      "grooming": [
+        "planeamento"
+      ],
+      "implementação": [
+        "build-ci"
+      ],
+      "incidente": [
+        "operacao"
+      ],
+      "início": [
+        "planeamento"
+      ],
+      "início de projeto": [
+        "planeamento"
+      ],
+      "início/revisão": [
+        "planeamento",
+        "transversal"
+      ],
+      "integração": [
+        "build-ci"
+      ],
+      "merge/release": [
+        "desenvolvimento",
+        "release"
+      ],
+      "mitigação": [
+        "operacao"
+      ],
+      "mudança de modelo": [
+        "design"
+      ],
+      "mudança de versão": [
+        "build-ci"
+      ],
+      "onboarding": [
+        "transversal"
+      ],
+      "onboarding do agente": [
+        "release"
+      ],
+      "onboarding/ciclo contínuo": [
+        "transversal"
+      ],
+      "onboarding/contínuo": [
+        "transversal"
+      ],
+      "onboarding/governance": [
+        "transversal"
+      ],
+      "onboarding/offboarding": [
+        "transversal"
+      ],
+      "operação": [
+        "operacao"
+      ],
+      "operação contínua": [
+        "operacao"
+      ],
+      "operações": [
+        "operacao"
+      ],
+      "operações/auditoria": [
+        "operacao",
+        "transversal"
+      ],
+      "operações+governação": [
+        "operacao",
+        "transversal"
+      ],
+      "ops": [
+        "operacao"
+      ],
+      "patching": [
+        "operacao"
+      ],
+      "planeamento": [
+        "planeamento"
+      ],
+      "planeamento/design": [
+        "planeamento",
+        "design"
+      ],
+      "planeamento/grooming": [
+        "planeamento"
+      ],
+      "planeamento/operações": [
+        "planeamento",
+        "operacao"
+      ],
+      "planeamento/release": [
+        "planeamento",
+        "release"
+      ],
+      "pós-release": [
+        "operacao"
+      ],
+      "pr/mr": [
+        "desenvolvimento"
+      ],
+      "pré go-live": [
+        "release"
+      ],
+      "pré-onboarding": [
+        "planeamento"
+      ],
+      "pré-prod/release": [
+        "release"
+      ],
+      "pré-produção": [
+        "release"
+      ],
+      "pré-promoção": [
+        "release"
+      ],
+      "pré-release": [
+        "release"
+      ],
+      "produção": [
+        "operacao"
+      ],
+      "promoção": [
+        "release"
+      ],
+      "provisionamento": [
+        "build-ci"
+      ],
+      "publicação cve": [
+        "operacao"
+      ],
+      "refactor/alteração": [
+        "design"
+      ],
+      "release": [
+        "release"
+      ],
+      "release/go-live": [
+        "release"
+      ],
+      "requisitos/threat modeling": [
+        "planeamento",
+        "design"
+      ],
+      "revisão": [
+        "transversal"
+      ],
+      "revisão de código": [
+        "desenvolvimento"
+      ],
+      "revisão periódica": [
+        "transversal"
+      ],
+      "revogação": [
+        "operacao"
+      ],
+      "runtime": [
+        "operacao"
+      ],
+      "sprint review": [
+        "desenvolvimento"
+      ],
+      "staging": [
+        "release"
+      ],
+      "staging/pré-release": [
+        "release"
+      ],
+      "subida de nível": [
+        "design"
+      ],
+      "sunsetting": [
+        "operacao"
+      ],
+      "testes/review": [
+        "desenvolvimento",
+        "build-ci"
+      ],
+      "threat modeling": [
+        "design"
+      ],
+      "triagem": [
+        "operacao"
+      ],
+      "validação": [
+        "transversal"
+      ],
+      "validação/aceitação de risco": [
+        "transversal"
+      ]
+    },
+    "en": {
+      "activation": [
+        "release"
+      ],
+      "agent onboarding": [
+        "release"
+      ],
+      "approval": [
+        "design"
+      ],
+      "architecture": [
+        "design"
+      ],
+      "audit": [
+        "transversal"
+      ],
+      "audit/pre-production": [
+        "transversal",
+        "release"
+      ],
+      "audit/training": [
+        "transversal"
+      ],
+      "backlog": [
+        "planeamento"
+      ],
+      "build": [
+        "build-ci"
+      ],
+      "build/deploy": [
+        "build-ci",
+        "release"
+      ],
+      "build/promotion": [
+        "build-ci",
+        "release"
+      ],
+      "build/provisioning": [
+        "build-ci"
+      ],
+      "build/release": [
+        "build-ci",
+        "release"
+      ],
+      "build+delivery": [
+        "build-ci",
+        "release"
+      ],
+      "cataloguing": [
+        "design"
+      ],
+      "change": [
+        "design"
+      ],
+      "change of tools": [
+        "design"
+      ],
+      "ci": [
+        "build-ci"
+      ],
+      "ci/cd": [
+        "build-ci"
+      ],
+      "ci/cd (analysis)": [
+        "build-ci"
+      ],
+      "ci/cd/pre-release": [
+        "build-ci",
+        "release"
+      ],
+      "ci/cd/release": [
+        "build-ci",
+        "release"
+      ],
+      "ci/cd/staging": [
+        "build-ci",
+        "release"
+      ],
+      "classification/design": [
+        "planeamento",
+        "design"
+      ],
+      "code review": [
+        "desenvolvimento"
+      ],
+      "compliance": [
+        "transversal"
+      ],
+      "continuous": [
+        "transversal"
+      ],
+      "continuous cycle": [
+        "transversal"
+      ],
+      "continuous operation": [
+        "operacao"
+      ],
+      "creation/refactoring": [
+        "build-ci"
+      ],
+      "cve publication": [
+        "operacao"
+      ],
+      "definition": [
+        "build-ci"
+      ],
+      "degradation in production": [
+        "operacao"
+      ],
+      "deploy": [
+        "release"
+      ],
+      "deploy/operation": [
+        "release",
+        "operacao"
+      ],
+      "deploy/operations": [
+        "release",
+        "operacao"
+      ],
+      "deploy/production": [
+        "release",
+        "operacao"
+      ],
+      "design": [
+        "design"
+      ],
+      "design/change": [
+        "design"
+      ],
+      "design/dev": [
+        "design",
+        "desenvolvimento"
+      ],
+      "design/grooming": [
+        "design",
+        "planeamento"
+      ],
+      "design/planning": [
+        "design",
+        "planeamento"
+      ],
+      "design/platform": [
+        "design"
+      ],
+      "design/refactor": [
+        "design",
+        "desenvolvimento"
+      ],
+      "design/release": [
+        "design",
+        "release"
+      ],
+      "design/review": [
+        "design"
+      ],
+      "design/risk": [
+        "design"
+      ],
+      "dev": [
+        "desenvolvimento"
+      ],
+      "dev (local)": [
+        "desenvolvimento"
+      ],
+      "dev/ci": [
+        "desenvolvimento",
+        "build-ci"
+      ],
+      "development": [
+        "desenvolvimento"
+      ],
+      "development/deploy": [
+        "desenvolvimento",
+        "release"
+      ],
+      "development/operations": [
+        "desenvolvimento",
+        "operacao"
+      ],
+      "development/review": [
+        "desenvolvimento"
+      ],
+      "discontinuation": [
+        "operacao"
+      ],
+      "exception": [
+        "transversal"
+      ],
+      "execution": [
+        "build-ci",
+        "transversal"
+      ],
+      "governance": [
+        "transversal"
+      ],
+      "governance (quarterly+)": [
+        "transversal"
+      ],
+      "governance/audit": [
+        "transversal"
+      ],
+      "governance/release": [
+        "transversal",
+        "release"
+      ],
+      "governance+compliance": [
+        "transversal"
+      ],
+      "governance+reporting": [
+        "transversal"
+      ],
+      "governance+security": [
+        "transversal"
+      ],
+      "grc": [
+        "transversal"
+      ],
+      "grooming": [
+        "planeamento"
+      ],
+      "implementation": [
+        "build-ci"
+      ],
+      "incident": [
+        "operacao"
+      ],
+      "initial classification": [
+        "planeamento"
+      ],
+      "integration": [
+        "build-ci"
+      ],
+      "level increase": [
+        "design"
+      ],
+      "level rise": [
+        "design"
+      ],
+      "merge/release": [
+        "desenvolvimento",
+        "release"
+      ],
+      "mitigation": [
+        "operacao"
+      ],
+      "model change": [
+        "design"
+      ],
+      "onboarding": [
+        "transversal"
+      ],
+      "onboarding/continuous": [
+        "transversal"
+      ],
+      "onboarding/continuous cycle": [
+        "transversal"
+      ],
+      "onboarding/governance": [
+        "transversal"
+      ],
+      "onboarding/offboarding": [
+        "transversal"
+      ],
+      "operation": [
+        "operacao"
+      ],
+      "operations": [
+        "operacao"
+      ],
+      "operations/audit": [
+        "operacao",
+        "transversal"
+      ],
+      "operations+governance": [
+        "operacao",
+        "transversal"
+      ],
+      "ops": [
+        "operacao"
+      ],
+      "patching": [
+        "operacao"
+      ],
+      "periodic review": [
+        "transversal"
+      ],
+      "planning": [
+        "planeamento"
+      ],
+      "planning/design": [
+        "planeamento",
+        "design"
+      ],
+      "planning/grooming": [
+        "planeamento"
+      ],
+      "planning/operations": [
+        "planeamento",
+        "operacao"
+      ],
+      "planning/release": [
+        "planeamento",
+        "release"
+      ],
+      "post-release": [
+        "operacao"
+      ],
+      "pr/mr": [
+        "desenvolvimento"
+      ],
+      "pre-go-live": [
+        "release"
+      ],
+      "pre-onboarding": [
+        "planeamento"
+      ],
+      "pre-prod/release": [
+        "release"
+      ],
+      "pre-production": [
+        "release"
+      ],
+      "pre-promotion": [
+        "release"
+      ],
+      "pre-release": [
+        "release"
+      ],
+      "production": [
+        "operacao"
+      ],
+      "project start": [
+        "planeamento"
+      ],
+      "promotion": [
+        "release"
+      ],
+      "provider approval": [
+        "planeamento"
+      ],
+      "provisioning": [
+        "build-ci"
+      ],
+      "refactor/change": [
+        "design"
+      ],
+      "regular cycle": [
+        "transversal"
+      ],
+      "release": [
+        "release"
+      ],
+      "release/go-live": [
+        "release"
+      ],
+      "requirements/threat modelling": [
+        "planeamento",
+        "design"
+      ],
+      "review": [
+        "transversal"
+      ],
+      "revocation": [
+        "operacao"
+      ],
+      "runtime": [
+        "operacao"
+      ],
+      "sprint review": [
+        "desenvolvimento"
+      ],
+      "staging": [
+        "release"
+      ],
+      "staging/pre-release": [
+        "release"
+      ],
+      "start": [
+        "planeamento"
+      ],
+      "start/review": [
+        "planeamento",
+        "transversal"
+      ],
+      "sunsetting": [
+        "operacao"
+      ],
+      "testing/review": [
+        "desenvolvimento",
+        "build-ci"
+      ],
+      "threat modelling": [
+        "design"
+      ],
+      "training cycle": [
+        "transversal"
+      ],
+      "triage": [
+        "operacao"
+      ],
+      "validation": [
+        "transversal"
+      ],
+      "validation/risk acceptance": [
+        "transversal"
+      ],
+      "version change": [
+        "build-ci"
+      ]
+    }
+  },
+  "decisoes": {
+    "data": "2026-11-19",
+    "origem": "«aceito as recomendações» (Pedro), perguntas da SHI-25; 03-fases.md §5.2–§5.11",
+    "escolhas": {
+      "fase-revisao": "Transversal (ciclo contínuo)",
+      "fase-validacao": "Transversal",
+      "fase-execucao": "Build e CI e Transversal",
+      "fase-staging": "Release (validação do candidato antes de produção)",
+      "fase-excecao": "Transversal (governação)",
+      "fase-incidente": "Operação",
+      "fase-aprovacao": "Design",
+      "fase-alteracao": "Design (o que se faz é rever o threat model ou a arquitetura)",
+      "fase-componentes": "Fase mais próxima: Pré-onboarding e Aprovação de provider em Planeamento, Catalogação em Design, Activação e Onboarding do agente em Release, Revogação, Sunsetting e Descontinuação em Operação",
+      "fase-compostos-revisao": "Só a fase da primeira parte (Design; Desenvolvimento): a revisão é a do próprio design ou do próprio PR/plan"
+    }
+  },
+  "provisorio": {
+    "pt": {},
+    "en": {}
+  }
+}

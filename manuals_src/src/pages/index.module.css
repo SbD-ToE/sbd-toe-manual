@@ -1,147 +1,137 @@
-/* HERO - respeita o tema claro/escuro */
-.slHero {
-  /* NÃO usar #fff; usar as vars do tema */
-  background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
-  padding: 4rem 0 2.5rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+/* Página inicial (SHI-31: M-35…M-47). Rascunho: anexos-04/home.proposta.css, com as classes .slh-*
+   passadas a classes locais do módulo. Os blocos globais do rascunho (--sl-fs-display, rodapé, ☰) estão
+   em custom.css (C-2); as classes globais reutilizadas escrevem-se aqui com :global(...). */
+
+.home {
+  --slh-container: 1200px;                          /* o contentor atual do Docusaurus */
+  --slh-btn-bg: var(--ifm-color-primary-dark);      /* #d8003a: branco sobre ele dá 5,28:1 (H-06) */
+  --slh-btn-bg-hover: var(--ifm-color-primary-darkest);
+  --slh-band-bg: #00283c;                           /* navy da marca, igual à navbar e ao rodapé */
+}
+:global(html[data-theme='dark']) .home {
+  --slh-btn-bg: #d8003a;                            /* o mesmo tom nos dois modos */
+  --slh-btn-bg-hover: #a8002d;
 }
 
-/* Título + tagline centrados e com contraste controlado pelo tema */
+/* ---------- Secções (S-05): ritmo e linha de 1 px, fundo alternado ---------- */
+.section {
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  border-top: 1px solid var(--sl-rule);
+  background: var(--sl-page-bg);
+}
+.sectionAlt { background: var(--sl-surface); }
+.container { max-width: var(--slh-container); margin-inline: auto; padding-inline: var(--ifm-spacing-horizontal); }
+.h2 {
+  font-size: var(--sl-fs-h2);
+  line-height: var(--sl-lh-tight);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--sl-space-3);
+}
+
+/* ---------- H-01 Herói (S-04): alinhado à esquerda, texto + diagrama ---------- */
+.hero {
+  background: var(--sl-page-bg);
+  padding-block: 2.25rem 1.75rem;
+}
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--sl-space-6);
+  align-items: center;
+}
 .heroTitle {
-  font-size: clamp(2.25rem, 2.5vw + 1.5rem, 3rem);
-  margin: 0 0 .25rem;
-  color: var(--ifm-color-emphasis-900);
-  line-height: 1.1;
+  font-size: var(--sl-fs-display);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0 0 var(--sl-space-4);
+  color: var(--ifm-heading-color);
 }
-/* Título: mantemos a hierarquia e contraste dinâmico do tema */
-.heroTitle {
-  font-size: clamp(2.25rem, 2.5vw + 1.5rem, 3rem);
-  margin: 0 0 .25rem;
-  color: var(--ifm-color-emphasis-900);
-  line-height: 1.1;
+.heroLead {
+  font-size: 1.1875rem;               /* 19 px */
+  line-height: 1.55;
+  color: var(--sl-text-muted);
+  max-width: 36rem;
+  margin: 0 0 var(--sl-space-5);
 }
+.actions { display: flex; flex-wrap: wrap; gap: var(--sl-space-3); align-items: center; }
 
-/* Tagline: maior, mais densa e com cor adaptativa */
-:root {
-  --sl-hero-tagline-color: var(--ifm-color-emphasis-800);
+/* ---------- H-06 Botões (S-06): primário cheio, secundário contorno, raio 4 px fixo ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  min-height: 44px;                   /* alvo de toque WCAG 2.5.8 / 2.5.5 */
+  padding: .6rem 1.15rem;
+  border-radius: var(--sl-radius-sm); /* fixo, não calc(var(--sl-radius) - 4px) */
+  border: 1px solid transparent;
+  font-size: 1rem; font-weight: 600; line-height: 1.2;
+  text-decoration: none !important;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
 }
-[data-theme='dark'] {
-  --sl-hero-tagline-color: var(--ifm-color-emphasis-200);
-}
+.btnPrimary { background: var(--slh-btn-bg); color: #fff; }
+.btnPrimary:hover { background: var(--slh-btn-bg-hover); color: #fff; }
+.btnSecondary { border-color: var(--sl-text-faint); color: var(--ifm-font-color-base); background: transparent; }
+.btnSecondary:hover { border-color: var(--ifm-font-color-base); color: var(--ifm-font-color-base); }
+.btn:focus-visible { outline: 2px solid var(--ifm-link-color); outline-offset: 2px; }
 
-.heroTagline {
-  margin: 0 0 1.25rem;
-  font-size: clamp(1.125rem, 0.9vw + 1rem, 1.625rem); /* ↑ tamanho */
-  line-height: 1.25;
-  font-weight: 600; /* realce */
-  color: var(--sl-hero-tagline-color);
-  max-width: 72ch; /* legibilidade em ecrãs largos */
-  margin-inline: auto; /* centra em layouts fluidos */
+/* ---------- H-03 Por onde começar (S-07): reutiliza .sl-usecase-grid/.sl-usecase-card ---------- */
+.start { padding-block: 0 1.5rem; background: var(--sl-page-bg); }
+.start :global(.sl-eyebrow) { margin-bottom: var(--sl-space-3); }
+.start :global(.sl-usecase-grid) {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
 }
-
-/* Realce opcional de palavras-chave dentro da tagline usando <strong> */
-.heroTagline strong {
-  /* fundo subtil que funciona nos dois temas */
-  background: color-mix(in oklab, var(--ifm-color-primary) 18%, transparent);
-  padding: .1rem .45rem;
-  border-radius: .5rem;
-}
-[data-theme='dark'] .heroTagline strong {
-  background: color-mix(in oklab, var(--ifm-color-primary) 30%, transparent);
-}
-
-/* .heroTagline {
-  margin: 0 0 1.25rem;
-  font-size: 1.1rem;
-  color: var(--ifm-color-emphasis-700);
-}
- */
-.ctaWrap {
-  display: flex;
-  justify-content: center;
-}
-
-/* Secção das 3 indicações (baixo do herói) */
-.features {
-  background: var(--ifm-background-color);
-  padding: 1.25rem 0;              /* menos espaço vertical */
-  /* ampliar largura efetiva do container nesta secção */
-  --ifm-container-width: 1690px;
-}
-
-/* Tornar o container desta secção mais largo para o diagrama */
-.features :global(.container) {
-  max-width: 1690px;
-}
-
-.featureItem {
-  color: var(--ifm-color-emphasis-900);    /* letras mais “escuras” */
-}
-.featureItem small,
-.featureItem .sub {
-  color: var(--ifm-color-emphasis-700);    /* subtítulos/descrições */
-}
-
-/* Cards dos capítulos: menos “white space” e contraste correto */
-.cardsSection {
-  padding: 1.5rem 0;                /* menos espaço */
-}
-.card {
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-/* Caso tenhas usado algo como .hero, .section com #fff, neutraliza já: */
-:where(.hero, .section, .strip, .band) {
-  background: var(--ifm-background-color);
-}
-
-/* Opcional: pequenos ajustes só em dark */
-html[data-theme='dark'] .card {
-  border-color: var(--ifm-color-emphasis-300);
-}
-
-.diagramLink {
-  /* CRITICAL: block + 100% para permitir SVG expandir */
-  display: block;
-  width: 100%;
+.start :global(.sl-usecase-card) {
+  grid-template-columns: auto 1fr;    /* sem a coluna da seta: o destino vai escrito por baixo */
+  gap: .75rem;
+  padding: 1rem 1.1rem;
+  color: inherit;
   text-decoration: none;
+  background: var(--sl-card-bg);
 }
+.start :global(.sl-usecase-card__icon) { color: var(--ifm-color-primary); padding-top: .1rem; }
+.start :global(.sl-usecase-card__icon svg) { width: 22px; height: 22px; display: block; }
+.start :global(.sl-usecase-card__title) { margin: 0 0 .25rem; }
+.start :global(.sl-usecase-card__summary) { margin: 0 0 .5rem; font-size: .9375rem; }
 
-.diagramLink:hover .diagramSvg {
-  transform: scale(1.01);
-  transition: transform 150ms ease-out;
+/* ---------- H-04 Faixa de prova (S-08) ---------- */
+.facts {
+  display: flex; flex-wrap: wrap; gap: 0; margin: 0; padding: 0; list-style: none;
+  border-top: 1px solid var(--sl-rule);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--sl-fs-eyebrow); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--sl-text-faint);
 }
+.facts li { padding: .7rem 1.1rem; border-right: 1px solid var(--sl-rule); }
+.facts li:first-child { padding-left: 0; }
+.facts li:last-child { border-right: 0; }
+.facts b { color: var(--ifm-font-color-base); font-weight: 700; }
 
-.diagramLink:focus-visible {
-  outline: 2px solid var(--ifm-color-primary);
-  outline-offset: 4px;
-  border-radius: 8px;
+/* ---------- H-07 Faixa de fecho (S-13) ---------- */
+.band { background: var(--slh-band-bg); color: #fff; border-bottom: 1px solid #1d4a60; padding-block: clamp(2.5rem, 5vw, 4rem); }
+.band .h2 { color: #fff; max-width: 36rem; }
+.band p { color: #d5e1e8; max-width: 40rem; margin-bottom: var(--sl-space-5); }
+.band :global(.sl-eyebrow) { color: #b9cbd6; }
+.btnOnBand { background: #fff; color: #00283c; }
+.btnOnBand:hover { background: #e6eef2; color: #00283c; }
+.btnOnBandOutline { border-color: #8fb0c2; color: #fff; }
+.btnOnBandOutline:hover { border-color: #fff; color: #fff; }
+.band .btn:focus-visible { outline-color: #fff; }
+
+/* ---------- Telemóvel e janelas estreitas (< 997 px, ponto de quebra da Infima) ---------- */
+@media (max-width: 996px) {
+  .hero { padding-block: 1.5rem 1.25rem; }
+  .heroGrid { grid-template-columns: 1fr; gap: var(--sl-space-4); }
+  .heroLead { font-size: 1.0625rem; }
+  /* M-47: sem o "·", o prefixo e o rótulo partem como blocos e o separador nunca fica sozinho */
+  .heroEyebrow :global(.sl-eyebrow__sep) { display: none; }
+  .actions .btn { flex: 1 1 auto; justify-content: center; }
+  .start :global(.sl-usecase-grid) { grid-template-columns: 1fr; }
+  .start :global(.sl-usecase-card) { box-shadow: inset 0 -1px 0 var(--sl-rule); }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; }
+  .facts li { padding: .55rem .8rem; border-right: 0; }
+  .facts li:first-child { padding-left: .8rem; }
 }
-
-/* container dedicado do diagrama com largura maior */
-.diagramContainer {
-  /* FORÇA expansão total ignorando restrições Docusaurus */
-  max-width: min(96vw, 800px) !important;
-  width: 100% !important;
-  padding-inline: 1rem;
-}
-
-/* Wrapper interno do diagrama: full width */
-.diagramWrapper {
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem 0;
-  color: var(--ifm-font-color-base);
-}
-
-/* SVG responsivo com largura controlada */
-.diagramSvg {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: min(96vw, 800px);
-  margin-inline: auto;
+@media (min-width: 997px) and (max-width: 1199px) {
+  .start :global(.sl-usecase-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

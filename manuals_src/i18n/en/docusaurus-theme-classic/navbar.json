@@ -11,14 +11,6 @@
     "message": "Manual",
     "description": "Navbar item with label Manual"
   },
-  "item.label.Cross-check": {
-    "message": "Cross-check",
-    "description": "Navbar item with label Cross-check"
-  },
-  "item.label.ToE": {
-    "message": "ToE",
-    "description": "Navbar item with label ToE"
-  },
   "item.label.Sobre": {
     "message": "About",
     "description": "Navbar item with label Sobre"
@@ -31,8 +23,24 @@
     "message": "Licence",
     "description": "Navbar item with label Licença"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
+  "item.label.Visão geral": {
+    "message": "Overview",
+    "description": "Navbar item with label Visão geral"
+  },
+  "item.label.Cross-check normativo": {
+    "message": "Normative cross-check",
+    "description": "Navbar item with label Cross-check normativo"
+  },
+  "item.label.Assets": {
+    "message": "Assets",
+    "description": "Navbar item with label Assets"
+  },
+  "item.label.Projeto": {
+    "message": "Project",
+    "description": "Navbar item with label Projeto"
+  },
+  "item.label.Ciclo de vida": {
+    "message": "Lifecycle",
+    "description": "Navbar item with label Ciclo de vida"
   }
 }

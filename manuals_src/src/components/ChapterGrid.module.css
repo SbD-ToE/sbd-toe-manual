@@ -1,0 +1,82 @@
+/* Grelha de capítulos da página inicial (M-42, H-05): moldura única, linhas de 1 px, sem sombra (S-03).
+   Rascunho: anexos-04/home.proposta.css (.slh-h2, .slh-intro, .slh-chapters, .slh-chapter*, .slh-legend). */
+.title {
+  font-size: var(--sl-fs-h2);
+  line-height: var(--sl-lh-tight);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--sl-space-3);
+}
+.intro {
+  color: var(--sl-text-muted);
+  max-width: 40rem;
+  margin: 0 0 var(--sl-space-6);
+  font-size: var(--sl-fs-body);
+  line-height: 1.55;
+}
+.chapters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--sl-radius-sm);
+  overflow: hidden;
+  background: var(--sl-card-bg);
+}
+.chapters li { box-shadow: inset -1px -1px 0 var(--sl-rule); }
+.chapter {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: .25rem .75rem;
+  height: 100%;
+  padding: 1rem 1.1rem;
+  color: inherit;
+  text-decoration: none !important;
+  transition: background-color .15s ease, box-shadow .15s ease;
+}
+.chapter:hover { background: var(--sl-surface); box-shadow: inset 0 0 0 1px var(--ifm-color-primary); }
+:global(html[data-theme='dark']) .chapter:hover { background: #1b1e28; }
+.chapter:focus-visible { outline: 2px solid var(--ifm-link-color); outline-offset: -2px; }
+.number {
+  grid-row: span 3;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--ifm-link-color);       /* #f00041 dava 4,13:1 sobre a superfície */
+}
+.chapterTitle { font-weight: 700; font-size: 1.0625rem; line-height: var(--sl-lh-snug); }
+.desc { font-size: .875rem; line-height: 1.45; color: var(--sl-text-muted); margin: .15rem 0 .4rem; }
+.chapter :global(.sl-badge) { justify-self: start; font-size: .75rem; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sl-space-2) var(--sl-space-5);
+  margin: var(--sl-space-4) 0 0;
+  font-size: .875rem;
+  color: var(--sl-text-muted);
+}
+.legend :global(.sl-badge) { margin-right: .4rem; font-size: .75rem; }
+
+/* O número é visual e aria-hidden; o texto repete-o só para leitores de ecrã */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 996px) {
+  .chapters { grid-template-columns: 1fr; }
+  .chapters li { box-shadow: inset 0 -1px 0 var(--sl-rule); }
+  .desc { display: none; }            /* em móvel a lista fica com número, título e tipo */
+  .chapter { padding: .7rem 1rem; }
+  .number { font-size: 1.25rem; grid-row: span 2; }
+}
+@media (min-width: 997px) and (max-width: 1199px) {
+  .chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

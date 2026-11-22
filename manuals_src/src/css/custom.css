@@ -4,7 +4,6 @@
 :root {
   /* Marca */
   --ifm-color-primary: #f00041;            /* Pink */
-  --ifm-link-color: var(--ifm-color-primary);
   --ifm-navbar-background-color: #00283c;  /* Navy */
   --ifm-navbar-link-color: #fff;
   --ifm-navbar-link-hover-color: var(--ifm-color-primary);
@@ -13,16 +12,9 @@
   --sl-maxw: 72ch;          /* largura ideal de leitura */
   --sl-leading: 1.6;        /* line-height base */
 
-  /* Cards (light fallback) */
-  --sl-card-bg: #ffffff;
-  --sl-card-br: #e9eaee;
-  --sl-card-shadow: 0 6px 24px rgba(0,0,0,.06);
-
   /* CTA */
   --sl-cta: #ff1f57;
   --sl-cta-hover: #e3184a;
-
-  --sl-radius: 16px;
 }
 
 /* =========================
@@ -42,100 +34,18 @@ html[data-theme='dark'] {
   --ifm-color-primary-darker: #d8295a;
   --ifm-color-primary-light: #ff4b7d;
 
-  /* Cards (dark) */
-  --sl-card-bg: var(--ifm-card-background-color);
-  --sl-card-br: #2a2b35;
-  --sl-card-shadow: 0 10px 28px rgba(0,0,0,.28);
-
   /* CTA em dark (mantém coerência com primário) */
   --sl-cta: var(--ifm-color-primary);
   --sl-cta-hover: var(--ifm-color-primary-dark);
 }
 
 /* =========================
-   Hero (imagens responsivas)
-   ========================= */
-.sl-hero {
-  background: url('/img/brand/hero-desktop.png') center/cover no-repeat;
-  color: #fff;
-  padding: 4rem 0 3rem;
-}
-@media (max-width: 996px) {
-  .sl-hero {
-    background-image: url('/img/brand/hero-mobile.png');
-    padding: 3rem 0 2rem;
-  }
-}
-
-/* Títulos/subtítulos do hero (legibilidade + largura de leitura) */
-.hero__title {
-  color: var(--ifm-font-color-base);
-  letter-spacing: -0.015em;
-  line-height: 1.2;
-  max-width: 22ch;
-  margin-inline: auto;
-}
-.hero__subtitle {
-  color: var(--ifm-color-emphasis-700);
-  line-height: 1.6;
-  max-width: 70ch;
-  margin-inline: auto;
-}
-
-/* Espaçamento vertical do hero (mantém responsivo) */
-.hero--primary,
-.heroBanner_src-theme-ClassicLayout-styles-module {
-  padding-block: clamp(3.5rem, 6vw, 6rem);
-}
-
-/* CTA principal do hero */
-.hero .button.button--primary {
-  background: var(--sl-cta);
-  border: none;
-  font-weight: 700;
-  padding: .9rem 1.25rem;
-  border-radius: calc(var(--sl-radius) - 4px);
-  transition: transform .15s ease, background .15s ease;
-}
-.hero .button.button--primary:hover,
-.hero .button.button--primary:focus-visible {
-  background: var(--sl-cta-hover);
-  transform: translateY(-1px);
-  outline: none;
-}
-
-/* =========================
-   Secção “Capítulos e temas”
-   ========================= */
-.cardsSection { padding: 2rem 0 0; }
-.cardsTitle { margin-bottom: 1rem; }
-.cardsGrid { align-items: stretch; }
-.card     { height: 100%; }
-.buttons  { margin-top: 1.25rem; }
-
-.sl-section-title {
-  text-align: center;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  letter-spacing: .005em;
-  color: var(--ifm-color-emphasis-700);
-  margin: clamp(1.5rem, 3vw, 2rem) 0;
-}
-
-/* =========================
    Cards (estilo único; usa tokens por tema)
    ========================= */
+.card     { height: 100%; }
 .card {
   background: var(--sl-card-bg);
   border: 1px solid var(--sl-card-br);
-  border-radius: var(--sl-radius);
-  box-shadow: var(--sl-card-shadow);
-  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.card:hover,
-.card:focus-within {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(0,0,0,.08);
-  border-color: color-mix(in oklab, var(--sl-card-br) 70%, var(--sl-cta) 30%);
 }
 .card .card__body { padding: 1.1rem 1.1rem 0.9rem; }
 .card h3 {
@@ -184,65 +94,6 @@ html[data-theme='dark'] {
 .button.button--primary:focus-visible {
   background: var(--ifm-color-primary-dark);
 }
-/* Badge de capítulo basilar (estrela discreta) */
-.sl-star {
-  margin-left: .5rem;
-  font-size: .95em;
-  vertical-align: middle;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,.25));
-}
-/* ===== Admonition personalizada: userstory ===== */
-:root {
-  --sl-us-bg: #fff6bf;   /* light post-it */
-  --sl-us-fg: #3a2a00;
-  --sl-us-br: color-mix(in oklab, #3a2a00 20%, transparent);
-}
-html[data-theme='dark'] {
-  --sl-us-bg: #3a2a00;   /* dark amber */
-  --sl-us-fg: #ffef9c;
-  --sl-us-br: color-mix(in oklab, #ffef9c 35%, transparent);
-}
-
-.admonition.admonition--userstory {
-  background: var(--sl-us-bg);
-  color: var(--sl-us-fg);
-  border: 1px solid var(--sl-us-br);
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,.06);
-}
-
-/* Cabeçalho com ícone e sem barra pesada */
-.admonition--userstory .admonition-heading {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  font-weight: 700;
-  background: transparent;
-  border-bottom: 0;
-  padding-top: .6rem;
-}
-
-/* Substitui o ícone padrão por um emoji "📝" */
-.admonition--userstory .admonition-icon {
-  display: none;
-}
-.admonition--userstory .admonition-heading::before {
-  content: "📝";
-  font-size: 1.1em;
-  line-height: 1;
-}
-
-/* Espaçamentos do conteúdo */
-.admonition--userstory .admonition-content {
-  padding-top: .25rem;
-}
-.admonition--userstory p,
-.admonition--userstory li { margin: .25rem 0; }
-
-/* Checkboxes visíveis sobre o fundo */
-.admonition--userstory input[type="checkbox"] {
-  accent-color: var(--sl-us-fg);
-}
 /* =========================
    Theory of Everything (ToE) — Diagrama SVG
    ========================= */
@@ -257,123 +108,6 @@ html[data-theme='dark'] {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-/* =========================
-   Callout colapsável de tipo de capítulo
-   ========================= */
-:root {
-  --sl-chapter-basilar-bg: #fff8e6;
-  --sl-chapter-basilar-br: #f3d07a;
-  --sl-chapter-basilar-fg: #6e5200;
-
-  --sl-chapter-operacional-bg: #e9f8ea;
-  --sl-chapter-operacional-br: #55bf67;
-  --sl-chapter-operacional-fg: #1d5f2b;
-
-  --sl-chapter-organizacional-bg: #eef4ff;
-  --sl-chapter-organizacional-br: #7ba7ff;
-  --sl-chapter-organizacional-fg: #234e9a;
-}
-
-html[data-theme='dark'] {
-  --sl-chapter-basilar-bg: rgba(201, 155, 43, .10);
-  --sl-chapter-basilar-br: rgba(201, 155, 43, .38);
-  --sl-chapter-basilar-fg: #f3d88e;
-
-  --sl-chapter-operacional-bg: rgba(51, 161, 74, .10);
-  --sl-chapter-operacional-br: rgba(51, 161, 74, .34);
-  --sl-chapter-operacional-fg: #9fe0a9;
-
-  --sl-chapter-organizacional-bg: rgba(79, 130, 221, .11);
-  --sl-chapter-organizacional-br: rgba(79, 130, 221, .36);
-  --sl-chapter-organizacional-fg: #b9d2ff;
-}
-
-.sl-chapter-callout {
-  margin: .75rem 0 1.25rem;
-  border: 1px solid var(--sl-chapter-operacional-br);
-  border-left-width: 4px;
-  border-radius: 12px;
-  background: var(--sl-chapter-operacional-bg);
-}
-
-.sl-chapter-callout summary {
-  display: flex;
-  align-items: center;
-  gap: .65rem;
-  cursor: pointer;
-  padding: .8rem 1rem;
-  font-weight: 700;
-  letter-spacing: .01em;
-  color: var(--sl-chapter-operacional-fg);
-  list-style: none;
-}
-
-.sl-chapter-callout summary:hover {
-  background: rgba(255, 255, 255, .025);
-}
-
-.sl-chapter-callout summary::-webkit-details-marker {
-  display: none;
-}
-
-.sl-chapter-callout summary::after {
-  content: "▾";
-  margin-left: auto;
-  font-size: .95rem;
-  opacity: .75;
-  transition: transform .18s ease;
-}
-
-.sl-chapter-callout:not([open]) summary::after {
-  transform: rotate(-90deg);
-}
-
-.sl-chapter-callout__icon {
-  font-size: 1rem;
-  line-height: 1;
-  opacity: .9;
-}
-
-.sl-chapter-callout__content {
-  padding: 0 1rem 1rem;
-  color: var(--ifm-color-emphasis-800);
-}
-
-.sl-chapter-callout__content > :first-child {
-  margin-top: 0;
-}
-
-.sl-chapter-callout__content > :last-child {
-  margin-bottom: 0;
-}
-
-.sl-chapter-callout--basilar {
-  border-color: var(--sl-chapter-basilar-br);
-  background: var(--sl-chapter-basilar-bg);
-}
-
-.sl-chapter-callout--basilar summary {
-  color: var(--sl-chapter-basilar-fg);
-}
-
-.sl-chapter-callout--operacional {
-  border-color: var(--sl-chapter-operacional-br);
-  background: var(--sl-chapter-operacional-bg);
-}
-
-.sl-chapter-callout--operacional summary {
-  color: var(--sl-chapter-operacional-fg);
-}
-
-.sl-chapter-callout--organizacional {
-  border-color: var(--sl-chapter-organizacional-br);
-  background: var(--sl-chapter-organizacional-bg);
-}
-
-.sl-chapter-callout--organizacional summary {
-  color: var(--sl-chapter-organizacional-fg);
 }
 
 .toe-diagram-svg {
@@ -402,7 +136,6 @@ html[data-theme='dark'] {
 .sl-usecase-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
   margin: 1.5rem 0;
 }
 
@@ -414,26 +147,15 @@ html[data-theme='dark'] {
   padding: 1.1rem 1.1rem 1rem;
   background: var(--sl-card-bg);
   border: 1px solid var(--sl-card-br);
-  border-radius: var(--sl-radius);
-  box-shadow: var(--sl-card-shadow);
   text-decoration: none !important;
   color: inherit;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .sl-usecase-card:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--sl-card-br) 60%, var(--sl-cta) 40%);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   text-decoration: none !important;
 }
 
-html[data-theme='dark'] .sl-usecase-card:hover {
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
-}
-
 .sl-usecase-card__icon {
-  font-size: 2rem;
   line-height: 1;
   padding-top: 0.15rem;
 }
@@ -444,17 +166,12 @@ html[data-theme='dark'] .sl-usecase-card:hover {
 
 .sl-usecase-card__title {
   margin: 0 0 0.35rem;
-  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ifm-font-color-base);
-  line-height: 1.3;
 }
 
 .sl-usecase-card__summary {
   margin: 0 0 0.6rem;
-  font-size: 0.92rem;
-  color: var(--ifm-color-emphasis-700);
-  line-height: 1.45;
 }
 
 .sl-usecase-card__tags {
@@ -464,18 +181,12 @@ html[data-theme='dark'] .sl-usecase-card:hover {
 }
 
 .sl-usecase-card__tag {
-  font-size: 0.72rem;
   font-weight: 600;
-  padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  background: color-mix(in oklab, var(--sl-card-br) 60%, transparent);
-  color: var(--ifm-color-emphasis-700);
   letter-spacing: 0.01em;
 }
 
 .sl-usecase-card__arrow {
-  font-size: 1.4rem;
-  color: var(--sl-cta);
   font-weight: 700;
   padding-top: 0.15rem;
   transition: transform 0.15s ease;
@@ -496,4 +207,515 @@ html[data-theme='dark'] .sl-usecase-card:hover {
   color: var(--ifm-font-color-base);
   font-size: .95rem;
   line-height: 1.5;
+}
+
+/* =====================================================================
+   Leitura das páginas de documento (SHI-30: M-23…M-34)
+   Os blocos marcados "SUBSTITUI" trocam regras que estavam acima neste
+   ficheiro; as regras antigas foram apagadas.
+   ===================================================================== */
+
+/* ---------- 1. Tokens partilhados (docs e página inicial) ---------- */
+:root {
+  /* Escala tipográfica. Base 16 px no site; 17 px no corpo dos documentos em desktop. */
+  --sl-fs-body: 1.0625rem;     /* 17 px */
+  --sl-fs-body-mobile: 1rem;   /* 16 px */
+  --sl-fs-small: .875rem;      /* 14 px: tabelas em móvel, etiquetas, metadados */
+  --sl-fs-table: .9375rem;     /* 15 px */
+  --sl-fs-eyebrow: .75rem;     /* 12 px, maiúsculas */
+  --sl-fs-h1: 2.5rem;          /* 40 px */
+  --sl-fs-h2: 1.75rem;         /* 28 px */
+  --sl-fs-h3: 1.3125rem;       /* 21 px */
+  --sl-fs-h4: 1.0625rem;       /* 17 px, peso 700 */
+  --sl-lh-body: 1.65;
+  --sl-lh-tight: 1.2;          /* H1–H2 */
+  --sl-lh-snug: 1.35;          /* H3–H4, títulos de cards */
+  --sl-measure: 60ch;          /* largura máxima do texto corrido (≈ 65–75 caracteres medidos) */
+
+  /* Espaçamento (múltiplos de 4 px) */
+  --sl-space-1: .25rem;
+  --sl-space-2: .5rem;
+  --sl-space-3: .75rem;
+  --sl-space-4: 1rem;
+  --sl-space-5: 1.5rem;
+  --sl-space-6: 2rem;
+  --sl-space-7: 3rem;
+
+  /* Superfícies e linhas */
+  --sl-radius-sm: 4px;         /* cards, callouts, tabelas (S-03) */
+  --sl-radius-pill: 999px;     /* badges */
+  --sl-page-bg: #ffffff;       /* a Infima deixa --ifm-background-color transparente em claro */
+  --sl-rule: #dfe2e7;          /* linha de 1 px */
+  --sl-surface: #f7f8fa;       /* cards e cabeçalho de tabela */
+  --sl-text-muted: #444950;    /* texto secundário com AA (9,1:1 em branco) */
+  --sl-text-faint: #525860;    /* metadados (7,2:1) */
+
+  /* Primário em claro: escala derivada de #f00041 (a Infima deixava -dark/-darker/-light em azul) */
+  --ifm-color-primary-dark: #d8003a;
+  --ifm-color-primary-darker: #cc0037;
+  --ifm-color-primary-darkest: #a8002d;
+  --ifm-color-primary-light: #ff094c;
+  --ifm-color-primary-lighter: #ff1554;
+  --ifm-color-primary-lightest: #ff396f;
+  /* Texto de ligação em claro: #f00041 dá 4,39:1 (falha AA); -dark dá 5,28:1. Botões e acentos mantêm #f00041. */
+  --ifm-link-color: var(--ifm-color-primary-dark);
+  --ifm-link-hover-color: var(--ifm-color-primary-darkest);
+
+  /* Callouts (admonitions): fundo / acento (barra e ícone) / título */
+  --sl-co-note-bg: #f4f5f7;      --sl-co-note-ac: #5c6b7a;      --sl-co-note-tt: #4a5563;
+  --sl-co-info-bg: #eef5fb;      --sl-co-info-ac: #1f6fb2;      --sl-co-info-tt: #185a91;
+  --sl-co-tip-bg: #eef8f0;       --sl-co-tip-ac: #2e8540;       --sl-co-tip-tt: #1d6b2f;
+  --sl-co-warning-bg: #fdf6e7;   --sl-co-warning-ac: #b07d00;   --sl-co-warning-tt: #7a5600;
+  --sl-co-danger-bg: #fdeef0;    --sl-co-danger-ac: #c8102e;    --sl-co-danger-tt: #a50e26;
+  --sl-co-story-bg: #fbf8ef;     --sl-co-story-ac: #b07d00;     --sl-co-story-tt: #7a5600;
+  --sl-co-border: #e4e6ea;
+
+  /* Tipos de capítulo (mesmos tons do Índice: azul, verde, roxo) */
+  --sl-kind-basilar-bg: #eef4fb;        --sl-kind-basilar-fg: #0b5cad;        --sl-kind-basilar-br: #9cc3ea;
+  --sl-kind-operacional-bg: #ecf7ef;    --sl-kind-operacional-fg: #1d7a35;    --sl-kind-operacional-br: #94cfa3;
+  --sl-kind-organizacional-bg: #f5eefa; --sl-kind-organizacional-fg: #7a29a8; --sl-kind-organizacional-br: #c9a5e3;
+}
+
+html[data-theme='dark'] {
+  --sl-page-bg: var(--ifm-background-color);
+  --sl-rule: #2a2d38;
+  --sl-surface: #161821;
+  --sl-text-muted: #c4c7cf;
+  --sl-text-faint: #a8adb7;
+  /* em escuro o link mantém #ff3a6e (≥ 4,8:1 em todas as superfícies propostas) */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-light);
+
+  --sl-co-note-bg: #171a21;      --sl-co-note-ac: #8a99a8;      --sl-co-note-tt: #b4c0cc;
+  --sl-co-info-bg: #0f1d2a;      --sl-co-info-ac: #4ea3e6;      --sl-co-info-tt: #8cc4f0;
+  --sl-co-tip-bg: #0f1f15;       --sl-co-tip-ac: #3fb95a;       --sl-co-tip-tt: #8ad89b;
+  --sl-co-warning-bg: #211b0c;   --sl-co-warning-ac: #d9a520;   --sl-co-warning-tt: #f0c862;
+  --sl-co-danger-bg: #26121a;    --sl-co-danger-ac: #ff5c6c;    --sl-co-danger-tt: #ff9aa4;
+  --sl-co-story-bg: #1c1910;     --sl-co-story-ac: #d9a520;     --sl-co-story-tt: #f0c862;
+  --sl-co-border: #2a2d38;
+
+  --sl-kind-basilar-bg: #0f1c2b;        --sl-kind-basilar-fg: #8cc4ff;        --sl-kind-basilar-br: #2d5784;
+  --sl-kind-operacional-bg: #0f2016;    --sl-kind-operacional-fg: #7bd88f;    --sl-kind-operacional-br: #2c6b3c;
+  --sl-kind-organizacional-bg: #1d1428; --sl-kind-organizacional-fg: #d3a6f5; --sl-kind-organizacional-br: #5e3a80;
+}
+
+/* ---------- 2. Corpo e largura de linha ---------- */
+.theme-doc-markdown {
+  font-size: var(--sl-fs-body);
+  line-height: var(--sl-lh-body);
+  /* ritmo Infima: --ifm-leading = margem entre blocos (1,25rem = 20 px) */
+}
+/* Texto corrido limitado a ~70–75 caracteres; tabelas, código, grelhas e imagens usam a coluna toda */
+.theme-doc-markdown > :is(p, ul, ol, dl, blockquote, header, h2, h3, h4, h5, h6,
+  details, .theme-admonition, .sl-userstory, .sl-eyebrow) {
+  max-width: var(--sl-measure);
+}
+.theme-doc-markdown li + li { margin-top: var(--sl-space-1); }
+
+/* ---------- 3. Títulos ---------- */
+.theme-doc-markdown {
+  --ifm-heading-line-height: var(--sl-lh-snug);
+  --ifm-h2-vertical-rhythm-top: 2.4;   /* × 1,25rem = 48 px */
+  --ifm-h3-vertical-rhythm-top: 1.6;   /* 32 px */
+  --ifm-heading-vertical-rhythm-top: 1.2; /* H4–H6: 24 px */
+  --ifm-heading-vertical-rhythm-bottom: .6; /* 12 px */
+}
+.theme-doc-markdown header h1,
+.theme-doc-markdown h1:first-child {
+  --ifm-h1-font-size: var(--sl-fs-h1);
+  line-height: var(--sl-lh-tight);
+  letter-spacing: -.02em;
+  margin-bottom: var(--sl-space-6);
+}
+.theme-doc-markdown > h2 {
+  --ifm-h2-font-size: var(--sl-fs-h2);
+  line-height: var(--sl-lh-tight);
+  letter-spacing: -.01em;
+  padding-top: var(--sl-space-5);
+  border-top: 1px solid var(--sl-rule);   /* separador de secção (S-05 adaptado) */
+}
+.theme-doc-markdown > header + h2 { border-top: 0; padding-top: 0; margin-top: 0; }
+/* Quando o cânone já separa a secção com um <hr> («---»), o H2 não leva a sua linha (hr-h2-dupla-linha):
+   o <hr> faz de separador, com o texto do H2 a 24 px por baixo, como a linha própria do H2. */
+.theme-doc-markdown > hr + h2 { border-top: 0; padding-top: 0; margin-top: var(--sl-space-5); }
+.theme-doc-markdown > h3 { --ifm-h3-font-size: var(--sl-fs-h3); }
+.theme-doc-markdown > h4 { --ifm-h4-font-size: var(--sl-fs-h4); }
+
+/* ---------- 4. Rótulo de secção acima do H1 (DocEyebrow) ---------- */
+.sl-eyebrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sl-space-2);
+  margin: 0 0 var(--sl-space-3);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--sl-fs-eyebrow);
+  line-height: 1.4;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sl-text-faint);
+}
+.sl-eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: var(--ifm-color-primary);   /* acento usado com parcimónia (S-12) */
+}
+.sl-eyebrow a { color: inherit; text-decoration: none; }
+.sl-eyebrow a:hover { color: var(--ifm-link-color); text-decoration: underline; }
+.sl-eyebrow__sep { opacity: .6; }
+
+/* ---------- 5. Badges (base única: tipo de capítulo, estado, etiquetas) ---------- */
+.sl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+  padding: .15rem .6rem;
+  border: 1px solid var(--sl-badge-br, var(--sl-rule));
+  border-radius: var(--sl-radius-pill);
+  background: var(--sl-badge-bg, var(--sl-surface));
+  color: var(--sl-badge-fg, var(--sl-text-muted));
+  font-size: .8125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.sl-badge--basilar        { --sl-badge-bg: var(--sl-kind-basilar-bg);        --sl-badge-fg: var(--sl-kind-basilar-fg);        --sl-badge-br: var(--sl-kind-basilar-br); }
+.sl-badge--operacional    { --sl-badge-bg: var(--sl-kind-operacional-bg);    --sl-badge-fg: var(--sl-kind-operacional-fg);    --sl-badge-br: var(--sl-kind-operacional-br); }
+.sl-badge--organizacional { --sl-badge-bg: var(--sl-kind-organizacional-bg); --sl-badge-fg: var(--sl-kind-organizacional-fg); --sl-badge-br: var(--sl-kind-organizacional-br); }
+.sl-badge--info    { --sl-badge-bg: var(--sl-co-info-bg);    --sl-badge-fg: var(--sl-co-info-tt);    --sl-badge-br: var(--sl-co-info-ac); }
+.sl-badge--success { --sl-badge-bg: var(--sl-co-tip-bg);     --sl-badge-fg: var(--sl-co-tip-tt);     --sl-badge-br: var(--sl-co-tip-ac); }
+.sl-badge--warning { --sl-badge-bg: var(--sl-co-warning-bg); --sl-badge-fg: var(--sl-co-warning-tt); --sl-badge-br: var(--sl-co-warning-ac); }
+.sl-badge--danger  { --sl-badge-bg: var(--sl-co-danger-bg);  --sl-badge-fg: var(--sl-co-danger-tt);  --sl-badge-br: var(--sl-co-danger-ac); }
+
+/* Etiquetas no fim do documento: badges neutros, não ligações cor-de-rosa */
+.theme-doc-footer-tags-row a[rel='tag'] {
+  border: 1px solid var(--sl-rule);
+  border-radius: var(--sl-radius-pill);
+  background: var(--sl-surface);
+  color: var(--sl-text-muted);
+  font-size: .8125rem;
+  padding: .1rem .6rem;
+}
+.theme-doc-footer-tags-row a[rel='tag']:hover { border-color: var(--ifm-link-color); color: var(--ifm-link-color); text-decoration: none; }
+.theme-doc-footer-tags-row b { font-size: .8125rem; color: var(--sl-text-faint); font-weight: 600; }
+
+/* ---------- 6. Tipo de capítulo: selo compacto em vez de caixa (SUBSTITUI .sl-chapter-callout*) ---------- */
+.sl-chapter-callout {
+  margin: 0 0 var(--sl-space-3);
+  border: 0;
+  background: none;
+  max-width: var(--sl-measure);
+}
+.sl-chapter-callout summary {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sl-space-2);
+  cursor: pointer;
+  list-style: none;
+  padding: 0;
+  font-weight: 400;
+  color: var(--sl-text-muted);
+  font-size: .875rem;
+}
+.sl-chapter-callout summary::-webkit-details-marker { display: none; }
+/* O «▸» vai no fim da descrição, preso à última palavra por um espaço não separável, para nunca ficar sozinho
+   numa linha (R3 da SHI-39, SHI-53). Fica inline: um inline-block deixava partir a linha antes dele, e por isso
+   o aberto troca o glifo (▾) em vez de rodar. */
+.sl-chapter-callout__desc::after { content: "\00a0▸"; font-size: .8em; opacity: .7; }
+.sl-chapter-callout[open] .sl-chapter-callout__desc::after { content: "\00a0▾"; }
+.sl-chapter-callout summary:hover { background: none; }
+.sl-chapter-callout summary:hover .sl-chapter-callout__desc { text-decoration: underline; }
+.sl-chapter-callout__content {
+  margin-top: var(--sl-space-3);
+  padding: var(--sl-space-3) var(--sl-space-4);
+  border-left: 3px solid var(--sl-badge-br);
+  background: var(--sl-badge-bg);
+  border-radius: 0 var(--sl-radius-sm) var(--sl-radius-sm) 0;
+  color: var(--ifm-font-color-base);
+  font-size: .9375rem;
+}
+.sl-chapter-callout__content > :last-child { margin-bottom: 0; }
+.sl-chapter-callout--basilar        { --sl-badge-bg: var(--sl-kind-basilar-bg);        --sl-badge-br: var(--sl-kind-basilar-br); }
+.sl-chapter-callout--operacional    { --sl-badge-bg: var(--sl-kind-operacional-bg);    --sl-badge-br: var(--sl-kind-operacional-br); }
+.sl-chapter-callout--organizacional { --sl-badge-bg: var(--sl-kind-organizacional-bg); --sl-badge-br: var(--sl-kind-organizacional-br); }
+
+/* ---------- 7. Callouts (admonitions) ---------- */
+.theme-admonition {
+  --sl-co-bg: var(--sl-co-note-bg); --sl-co-ac: var(--sl-co-note-ac); --sl-co-tt: var(--sl-co-note-tt);
+  background: var(--sl-co-bg);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--sl-co-border);
+  border-left: 4px solid var(--sl-co-ac);
+  border-radius: var(--sl-radius-sm);
+  box-shadow: none;
+  padding: var(--sl-space-4) var(--sl-space-5);
+  margin-bottom: var(--sl-space-5);
+  font-size: 1rem;
+  --ifm-alert-foreground-color: var(--ifm-font-color-base);
+  --ifm-link-color: inherit;
+}
+.theme-admonition-info    { --sl-co-bg: var(--sl-co-info-bg);    --sl-co-ac: var(--sl-co-info-ac);    --sl-co-tt: var(--sl-co-info-tt); }
+.theme-admonition-tip     { --sl-co-bg: var(--sl-co-tip-bg);     --sl-co-ac: var(--sl-co-tip-ac);     --sl-co-tt: var(--sl-co-tip-tt); }
+.theme-admonition-warning,
+.theme-admonition-caution { --sl-co-bg: var(--sl-co-warning-bg); --sl-co-ac: var(--sl-co-warning-ac); --sl-co-tt: var(--sl-co-warning-tt); }
+.theme-admonition-danger  { --sl-co-bg: var(--sl-co-danger-bg);  --sl-co-ac: var(--sl-co-danger-ac);  --sl-co-tt: var(--sl-co-danger-tt); }
+.theme-admonition [class*='admonitionHeading'] {
+  text-transform: none;        /* Infima: maiúsculas a 14 px */
+  font-size: .9375rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--sl-co-tt);
+  margin-bottom: var(--sl-space-2);
+}
+.theme-admonition [class*='admonitionIcon'] svg { fill: var(--sl-co-ac); stroke: var(--sl-co-ac); }
+.theme-admonition a { color: var(--sl-co-tt); text-decoration: underline; text-underline-offset: 2px; }
+.theme-admonition [class*='admonitionContent'] > :last-child { margin-bottom: 0; }
+
+/* User story (tipo :::userstory, 265 ocorrências). SUBSTITUI os estilos inline de
+   src/theme/Admonition/Types.js e as regras mortas .admonition--userstory. */
+.sl-userstory {
+  background: var(--sl-co-story-bg);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--sl-co-border);
+  border-left: 4px solid var(--sl-co-story-ac);
+  border-radius: var(--sl-radius-sm);
+  padding: var(--sl-space-4) var(--sl-space-5);
+  margin-bottom: var(--sl-space-5);
+  font-size: 1rem;
+}
+.sl-userstory__title {
+  display: flex;
+  align-items: center;
+  gap: var(--sl-space-2);
+  margin-bottom: var(--sl-space-2);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--sl-fs-eyebrow);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sl-co-story-tt);
+  font-weight: 700;
+}
+.sl-userstory p { margin-bottom: var(--sl-space-3); }
+.sl-userstory ul { margin-bottom: var(--sl-space-3); }
+.sl-userstory > div > :last-child, .sl-userstory__body > :last-child { margin-bottom: 0; }
+.sl-userstory input[type='checkbox'] { accent-color: var(--sl-co-story-ac); }
+
+/* ---------- 8. Tabelas ---------- */
+.theme-doc-markdown table {
+  width: max-content;          /* a caixa acompanha o conteúdo: a sombra só aparece se houver deslocamento */
+  max-width: 100%;
+  font-size: var(--sl-fs-table);
+  line-height: 1.5;
+  border-collapse: collapse;
+  /* sinal de deslocamento horizontal (P-27): sombras que só aparecem quando há mais conteúdo */
+  background:
+    linear-gradient(to right, var(--sl-page-bg) 30%, transparent) left center / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--sl-page-bg) 30%, transparent) right center / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.22), transparent) left center / .9rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.22), transparent) right center / .9rem 100% no-repeat scroll;
+}
+html[data-theme='dark'] .theme-doc-markdown table {
+  background:
+    linear-gradient(to right, var(--sl-page-bg) 30%, transparent) left center / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--sl-page-bg) 30%, transparent) right center / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(255,255,255,.18), transparent) left center / .9rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(255,255,255,.18), transparent) right center / .9rem 100% no-repeat scroll;
+}
+.theme-doc-markdown table tr { background-color: transparent; }
+.theme-doc-markdown table tr:nth-child(2n) { background-color: color-mix(in srgb, var(--sl-surface) 70%, transparent); }
+.theme-doc-markdown th {
+  text-align: left;
+  background: var(--sl-surface);
+  font-weight: 700;
+  border-bottom: 2px solid var(--sl-rule);
+}
+.theme-doc-markdown th, .theme-doc-markdown td {
+  padding: .55rem .8rem;
+  border: 0;
+  border-bottom: 1px solid var(--sl-rule);
+  vertical-align: top;
+}
+
+/* ---------- 9. Cards (SUBSTITUI raio 16 px, sombra e elevação de .card e .sl-usecase-card) ---------- */
+:root { --sl-radius: var(--sl-radius-sm); --sl-card-shadow: none; --sl-card-br: var(--sl-rule); --sl-card-bg: var(--ifm-background-color); }
+html[data-theme='dark'] { --sl-card-br: var(--sl-rule); --sl-card-bg: var(--sl-surface); }
+.card, .sl-usecase-card {
+  border-radius: var(--sl-radius-sm);
+  box-shadow: none;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+.card:hover, .card:focus-within,
+.sl-usecase-card:hover, .sl-usecase-card:focus-visible,
+html[data-theme='dark'] .sl-usecase-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--ifm-color-primary);
+  background: var(--sl-surface);
+}
+html[data-theme='dark'] .sl-usecase-card:hover { background: #1b1e28; }
+.sl-usecase-grid { gap: 0; border: 1px solid var(--sl-rule); border-radius: var(--sl-radius-sm); overflow: hidden; }
+.sl-usecase-grid .sl-usecase-card { border: 0; border-radius: 0; box-shadow: inset -1px -1px 0 var(--sl-rule); }
+.sl-usecase-grid .sl-usecase-card:hover { box-shadow: inset 0 0 0 1px var(--ifm-color-primary); }
+.sl-usecase-card__icon { font-size: 1.5rem; }
+.sl-usecase-card__title { font-size: 1.0625rem; line-height: var(--sl-lh-snug); }
+.sl-usecase-card__summary { font-size: .9375rem; line-height: 1.5; color: var(--sl-text-muted); }
+.sl-usecase-card__tag {
+  font-size: .75rem;
+  padding: .05rem .5rem;
+  border: 1px solid var(--sl-rule);
+  background: transparent;
+  color: var(--sl-text-muted);
+}
+.sl-usecase-card__arrow { color: var(--ifm-link-color); font-size: 1.25rem; }
+
+/* ---------- 10. Índice da página (TOC) ---------- */
+.table-of-contents { font-size: .8125rem; line-height: 1.45; }
+.table-of-contents__link { color: var(--sl-text-faint); }
+.table-of-contents__link:hover, .table-of-contents__link--active { color: var(--ifm-link-color); }
+.table-of-contents__link--active { font-weight: 600; }
+
+/* ---------- 11. Telemóvel e janelas estreitas (< 997 px) ---------- */
+@media (max-width: 996px) {
+  .theme-doc-markdown { font-size: var(--sl-fs-body-mobile); line-height: 1.6; }
+  .theme-doc-markdown header h1,
+  .theme-doc-markdown h1:first-child { --ifm-h1-font-size: 2rem; margin-bottom: var(--sl-space-5); }
+  .theme-doc-markdown > h2 { --ifm-h2-font-size: 1.5rem; padding-top: var(--sl-space-4); }
+  .theme-doc-markdown > h3 { --ifm-h3-font-size: 1.1875rem; }
+  .theme-doc-markdown { --ifm-h2-vertical-rhythm-top: 1.8; --ifm-h3-vertical-rhythm-top: 1.4; }
+  .theme-doc-markdown table { font-size: var(--sl-fs-small); }
+  .theme-admonition, .sl-userstory { padding: var(--sl-space-3) var(--sl-space-4); }
+  .sl-usecase-grid .sl-usecase-card { box-shadow: inset 0 -1px 0 var(--sl-rule); }
+}
+
+/* ---------- 12. Contraste: ligações com code e breadcrumb (SHI-38, F-1 a F-3) ---------- */
+/* Item ativo do breadcrumb: a Infima usa o primário; em claro #f00041 dá 3,93:1 sobre #f2f2f2, a cor da ligação dá 4,71:1 */
+:root { --ifm-breadcrumb-color-active: var(--ifm-link-color); }
+/* Ligação com code em escuro: #ff3a6e dá 4,27:1 sobre o fundo do code (#27282c) e 3,82:1 na user story (#333028).
+   Mesma tonalidade, mais clara: 5,14:1 e 4,60:1. Nos callouts a ligação herda a cor do texto e fica como está. */
+html[data-theme='dark'] .theme-doc-markdown a code { color: #ff618b; }
+html[data-theme='dark'] .theme-doc-markdown .theme-admonition a code { color: inherit; }
+
+/* ---------- 13. Contraste dos blocos de código (SHI-38, F-4 e F-5) ---------- */
+/* Ficam os temas Prism github e dracula; só se sobrepõem as cores que não chegam a 4,5:1 sobre o fundo do bloco.
+   Cada uma mantém a tonalidade, mais escura em claro e mais clara em escuro, até ao primeiro valor com ≥ 4,6:1.
+   O prism-react-renderer põe a cor de cada token em style inline: por isso o seletor é a própria cor, e leva !important. */
+/* claro, sobre #f6f8fa */
+html[data-theme='light'] .prism-code .token[style*='rgb(153, 153, 136)'] { color: #717161 !important; } /* comentário: #999988 2,71 → 4,66 */
+html[data-theme='light'] .prism-code .token[style*='rgb(227, 17, 108)'] { color: #db1068 !important; } /* string: #e3116c 4,32 → 4,60 */
+html[data-theme='light'] .prism-code .token[style*='rgb(54, 172, 170)'] { color: #277c7b !important; } /* propriedade, número…: #36acaa 2,58 → 4,64 */
+html[data-theme='light'] .prism-code .token[style*='rgb(0, 164, 219)'] { color: #0079a2 !important; }  /* chave YAML, atributo: #00a4db 2,69 → 4,63 */
+html[data-theme='light'] .prism-code .token[style*='rgb(215, 58, 73)'] { color: #d42d3d !important; }  /* função: #d73a49 4,30 → 4,65 */
+html[data-theme='light'] .prism-code .token[style*='opacity: 0.7'] { opacity: .71 !important; }         /* namespace: 4,49 → 4,61 */
+html[data-theme='light'] .prism-code .token[style*='rgb(0, 164, 219)'][style*='opacity: 0.7'] { color: #004359 !important; } /* atributo com namespace: 2,03 → 4,60 */
+/* escuro, sobre #282a36 */
+html[data-theme='dark'] .prism-code .token[style*='rgb(98, 114, 164)'] { color: #8592b8 !important; }  /* comentário: #6272a4 3,03 → 4,61 */
+
+/* =====================================================================
+   Navegação: navbar e rodapé (SHI-29: M-03, M-05, M-06, M-07, M-17, M-18)
+   ===================================================================== */
+
+/* N-07 · GitHub como ícone (item sem label; aria-label "GitHub" em docusaurus.config.ts) */
+.sl-navbar-github { display: flex; align-items: center; }
+.sl-navbar-github::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+/* No drawer móvel o item mostra também o nome (marca, igual em PT e EN) */
+.navbar-sidebar .sl-navbar-github::after { content: 'GitHub'; margin-left: .5rem; }
+
+/* N-08 · Botão de tema e botão de menu (☰) legíveis sobre a navbar navy nos dois temas
+   (P-05; o ☰ é a correção da SHI-31: em claro herdava a cor escura do texto) */
+.navbar [class*='colorModeToggle'] button { color: var(--ifm-navbar-link-color); }
+.navbar__toggle { color: var(--ifm-navbar-link-color); }
+/* O drawer móvel herda o navy da navbar (style: 'dark'); em claro, o botão de tema, o ✕,
+   os links e o ícone GitHub ficavam com as cores do tema claro (1,09:1 e 2,68:1).
+   Usa as do tema escuro, como na maquete arq-movel-pt-2. */
+html[data-theme='light'] .navbar-sidebar {
+  color: #f5f6f8;
+  --ifm-menu-color: #d8d9df;
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, .05);
+  --ifm-menu-color-background-active: rgba(255, 255, 255, .05);
+  --ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%) hue-rotate(223deg) brightness(104%) contrast(98%);
+}
+/* Item ativo do drawer (e categorias-ancestral), nos dois temas: o primário dá 3,04:1 (claro) e 3,86:1 (escuro)
+   sobre o navy com o fundo de ativo (#0d3346). Mesma tonalidade de #f00041, mais clara: 4,64:1 (SHI-53).
+   Só no drawer: a sidebar de desktop mantém o primário. */
+.navbar-sidebar { --ifm-menu-color-active: #ff608b; }
+
+/* N-09 · Compactação entre 997 e 1279 px: a navbar com as 4 secções não cabe numa linha
+   abaixo de ~1150 px. Esconde-se o título ao lado do logótipo e a pesquisa (se existir,
+   D-06) fica só com o ícone. Com o 5.º item «Ciclo de vida» (entrada-navbar = A), o
+   espaçamento dos itens passa a .4rem: a 997 px sobram 11 px em PT e 81 px em EN. */
+@media (min-width: 997px) and (max-width: 1279px) {
+  .navbar { --ifm-navbar-item-padding-horizontal: .4rem; }
+  .navbar__title { display: none; }
+  .navbar .DocSearch-Button-Placeholder,
+  .navbar .DocSearch-Button-Keys { display: none; }
+}
+
+/* R-01 · Rodapé com a cor da marca (P-14) e títulos de coluna discretos */
+:root { --ifm-footer-background-color: #00283c; }
+.footer--dark { --ifm-footer-background-color: #00283c; }
+.footer__title {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-family: var(--ifm-font-family-monospace);
+}
+/* R-02 · Em telemóvel, colunas numa grelha de 2 (a última ocupa a largura toda).
+   Com a correção da SHI-31: os itens de grelha .col têm min-width automático e, sem
+   minmax(0, 1fr) e min-width: 0, a página alargava para 474 px a 375 px. */
+@media (max-width: 996px) {
+  .footer__links {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem 1rem;
+    margin-inline: 0;
+  }
+  .footer__links > .footer__col { margin-bottom: 0; min-width: 0; padding-inline: 0; }
+  .footer__links > .footer__col:last-child { grid-column: 1 / -1; }
+  .footer__link-item { display: inline-block; max-width: 100%; white-space: normal; }
+}
+
+/* =====================================================================
+   Página inicial: peças globais (SHI-31, M-46; C-2 da consolidação)
+   ===================================================================== */
+:root {
+  --sl-fs-display: 3rem;              /* 48 px: H1 da página inicial */
+}
+@media (max-width: 996px) {
+  :root { --sl-fs-display: 2.125rem; } /* 34 px, como o shiftleft.pt a 375 (S-04) */
+}
+/* Destino escrito nas entradas por perfil (S-06, link de ação nos cartões) */
+.sl-usecase-card__cta {
+  display: inline;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--ifm-link-color);
+}
+.sl-usecase-card:hover .sl-usecase-card__cta { text-decoration: underline; }
+/* Linha «Por onde começar»: rótulo à esquerda e ligação ao Mapa do ciclo de vida à direita, na mesma
+   altura (SHI-152 §3.2, opção H1). A grelha das 4 entradas desce 9 px e fica acima da dobra a 1280×720. */
+.sl-home-start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 1rem;
+}
+.sl-home-start .sl-eyebrow { flex: 1 1 auto; }
+.sl-home-lifecycle {
+  margin-bottom: var(--sl-space-3);
+  font-size: .9375rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+/* Abaixo de 997 px a ligação passa a uma linha própria, por baixo do rótulo */
+@media (max-width: 996px) {
+  .sl-home-start .sl-eyebrow { flex-basis: 100%; }
 }

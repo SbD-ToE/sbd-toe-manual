@@ -1,6 +1,6 @@
 /* Mapa do ciclo de vida (00-especificacao.md §7–§9; maquete iteracao-2/maquetes/mapa.html e comum.css).
    Os tokens novos são só desta página e ficam aqui; os globais de custom.css não mudam.
-   Foco: o :focus-visible global do site (anel --sl-cta), sem regra nova (§7.4). */
+   Foco: o :focus-visible global do site (anel --sl-cta, §7.4); nos botões de nível o focado vem à frente (F-A da SHI-27). */
 
 .ciclo {
   --lab: 9.5rem;
@@ -60,6 +60,8 @@
 .cabecalho { padding: 1.5rem 0 .75rem; }
 .titulo { font-size: 2rem; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 .5rem; }
 .entrada { margin: 0; max-width: 72ch; color: var(--sl-text-muted); }
+/* seletor de vista (00-especificacao-agil.md §4.1): no cabeçalho, fora da barra fixa; os botões são os do Nível (.seg) */
+.vista { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: .75rem; }
 
 /* ---------- barra de filtros, presa por baixo da navbar ---------- */
 .barraFixa {
@@ -100,9 +102,12 @@
 }
 .sel.ativo { background-color: var(--c-active-bg); color: var(--c-active-fg); border-color: var(--c-active-bg); }
 .sel:hover:not(.ativo) { border-color: var(--ifm-color-primary); background-color: var(--sl-surface); }
-.seg { display: inline-flex; border: 1px solid var(--c-control-br); border-radius: var(--sl-radius-sm); }
+/* Botões de nível separados (F-A da SHI-27): o anel de foco (2 px a 2 px do botão) fica sobre o fundo da barra,
+   nunca sobre o botão ativo nem por baixo de um vizinho; o focado vem à frente */
+.seg { display: inline-flex; gap: .5rem; }
 .seg button {
-  border: 0;
+  border: 1px solid var(--c-control-br);
+  border-radius: var(--sl-radius-sm);
   background: var(--c-card-bg);
   color: var(--ifm-font-color-base);
   padding: .35rem .7rem;
@@ -111,11 +116,9 @@
   font-size: .85rem;
   letter-spacing: .04em;
 }
-.seg button:first-child { border-radius: 3px 0 0 3px; }
-.seg button:last-child { border-radius: 0 3px 3px 0; }
-.seg button + button { border-left: 1px solid var(--c-control-br); }
 .seg button:hover:not([aria-pressed='true']) { background: var(--sl-surface); box-shadow: inset 0 0 0 1px var(--ifm-color-primary); }
-.seg button[aria-pressed='true'] { background: var(--c-active-bg); color: var(--c-active-fg); font-weight: 700; }
+.seg button[aria-pressed='true'] { background: var(--c-active-bg); border-color: var(--c-active-bg); color: var(--c-active-fg); font-weight: 700; }
+.seg button:focus-visible { position: relative; z-index: 1; }
 .conta {
   margin-left: auto;
   display: flex;
@@ -129,12 +132,14 @@
 .limpar { text-decoration: underline; }
 .limpar:hover, .ler:hover { color: var(--sl-ciclo-link); }
 
-/* ---------- trilho (≥ 997 px) e faixas ---------- */
+/* ---------- trilho (≥ 997 px; ≥ 1120 px na vista ágil) e faixas ---------- */
 .cab, .faixa {
   display: grid;
   grid-template-columns: var(--lab) repeat(6, minmax(0, 1fr)) minmax(0, 1.05fr);
   gap: 0 .5rem;
 }
+/* vista ágil: 6 eventos do Scrum e 2 colunas fora do Scrum (00-especificacao-agil.md §4.2) */
+.agil .cab, .agil .faixa { grid-template-columns: var(--lab) repeat(6, minmax(0, 1fr)) repeat(2, minmax(0, 1.05fr)); }
 .cab {
   position: sticky;
   top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem));
@@ -171,6 +176,30 @@
   z-index: 1;
 }
 .transv .trilhoN { background: var(--sl-page-bg); color: var(--ifm-font-color-base); border: 2px dashed var(--c-rail); }
+/* ↻ depois do 6.º evento: o ciclo repete-se em cada sprint; a linha do trilho continua até lá */
+.agil .trilhoFase:nth-child(6)::after {
+  content: '';
+  position: absolute;
+  top: .8rem;
+  left: 1.9rem;
+  right: 1.4rem;
+  height: 2px;
+  background: var(--c-rail);
+}
+.volta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.3rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-rail);
+  cursor: default;
+}
+/* no trilho vertical, ↻ é uma linha com texto (faixa aberta) ou um sinal entre as contagens (faixa recolhida) */
+.voltaLinha, .voltaConta { display: none; }
 .trilhoNome, .celNome {
   font-family: var(--ifm-font-family-monospace);
   font-size: .78rem;
@@ -237,7 +266,7 @@
   background: var(--c-card-bg);
   border: 1px solid var(--c-control-br);
   border-radius: var(--sl-radius-sm);
-  padding: .55rem .6rem .6rem;
+  padding: .55rem .5rem .6rem;
   cursor: pointer;
   scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + var(--ciclo-cab-h, 6.5rem) + .5rem);
 }
@@ -305,6 +334,9 @@
 }
 .tagResp { color: var(--c-resp-fg); background: var(--c-resp-bg); }
 .tagLeve { color: var(--c-leve-fg); background: var(--c-leve-bg); }
+/* cerimónia inferida (00-especificacao-agil.md §10.2): «outra origem», sem competir com «Resp.», que é preenchida;
+   texto e contorno no texto secundário, sobre o fundo do cartão: claro 9,07:1 (8,54:1 no hover), escuro 9,83:1 (10,46:1) */
+.tagInferido { color: var(--sl-text-muted); background: transparent; border: 1px dashed var(--sl-text-muted); padding: 0 .3rem; }
 
 /* ---------- detalhe ---------- */
 .detalhe {
@@ -317,6 +349,10 @@
   font-size: .95rem;
   text-align: left;
   scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + var(--ciclo-cab-h, 6.5rem) + 1.25rem);
+}
+/* o que recebe foco no detalhe não fica por baixo da navbar, da barra e do trilho (F-B da SHI-27) */
+.detalhe a, .detalhe button {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + var(--ciclo-cab-h, 6.5rem) + .5rem);
 }
 .fechar {
   position: absolute;
@@ -344,6 +380,7 @@
 }
 .detalhe p { margin: 0 0 .5rem; max-width: 80ch; }
 .detalheNota { font-size: var(--sl-fs-small); color: var(--sl-text-muted); }
+.detalheInferida { font-size: var(--sl-fs-small); }
 .detalheContexto { color: var(--sl-text-muted); margin-top: .9rem !important; }
 .detalheColunas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 1.75rem; }
 .detalhe ul { margin: 0; padding-left: 1.2rem; }
@@ -381,8 +418,15 @@
 .esteCartao { display: block; font-weight: 400; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--sl-text-muted); }
 .ler { display: inline-block; margin-top: 1rem; font-weight: 600; }
 
-/* ≥ 997 px: o detalhe fica por cima dos cartões seguintes, preso ao cartão (posição em Faixa.tsx) */
+/* ≥ 997 px: a hifenização nos cartões e no trilho; o detalhe fica por cima dos cartões seguintes, preso ao cartão (posição em Faixa.tsx) */
 @media (min-width: 997px) {
+  /* Nas 7 colunas há palavras mais largas do que o cartão («Operacionalização», 148 px; o cartão tem 85 px úteis a
+     997 px). Partem por sílaba, com hífen (com o lang da página); depois de «/» e «→»
+     parte no <wbr> de Cartao.tsx; o overflow-wrap fica como recurso (Q-1 da SHI-207, decisão da SHI-24 às 19:48Z) */
+  .cartaoTitulo, .cartaoMeta, .cartaoTambem, .trilhoNome, .cartaoNivel { hyphens: auto; }
+  /* Linha Fase (ressalva da SHI-209): o Chromium não hifeniza a palavra colada à «/» («Desenvolvimento/Deploy»);
+     cada parte de um nome com «/» fica num inline-block (Cartao.tsx), onde a hifenização volta a valer */
+  .parte { display: inline-block; }
   .detalhe { position: absolute; z-index: 6; box-shadow: var(--c-sombra); }
   .detalhe::before {
     content: '';
@@ -437,6 +481,7 @@
     font-weight: 700;
   }
   .transv .contaN { background: none; color: var(--ifm-font-color-base); border: 2px dashed var(--c-rail); }
+  .voltaConta { display: inline; font-weight: 700; color: var(--c-rail); }
 
   /* faixa aberta: as fases de cima para baixo, numa linha com o número de cada uma */
   .faixa:not(.faixaRecolhida) .faixaCorpo { display: block; margin-top: .6rem; }
@@ -451,10 +496,59 @@
   .faixaRecolhida .cel { padding: 0; }
   .faixaRecolhida .cel.transv { padding-left: .6rem; border-left: 1px dashed var(--c-control-br); }
   .faixaRecolhida .cel::before { display: none; }
+  .voltaLinha { display: block; margin: 0 0 .9rem; font-size: var(--sl-fs-small); color: var(--sl-text-muted); }
+  .voltaLinha span { font-weight: 700; color: var(--c-rail); }
 
   .detalhe { padding: .9rem .8rem 1rem; margin-top: .1rem; }
-  .cartao, .detalhe { scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + .5rem); }
+  .cartao, .detalhe, .detalhe a, .detalhe button { scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + .5rem); }
   /* as tabelas com mais de 3 colunas rolam dentro do contentor, como as do manual */
   .tabelaLarga table { min-width: 34rem; }
   .detalheColunas { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- vista ágil, 997 a 1119 px: o mesmo trilho vertical de < 997 px (00-especificacao-agil.md §4.4) ----------
+   Com 8 colunas, o trilho horizontal só a partir de 1120 px: o cartão nunca fica mais estreito do que na vista do
+   ciclo de vida a 997 px. Só as regras do mapa (a barra de filtros e a navbar mantêm a quebra de 997 px); a
+   hifenização de ≥ 997 px vale; o detalhe abre por baixo do cartão (Faixa.tsx usa a mesma quebra). */
+@media (min-width: 997px) and (max-width: 1119px) {
+  .agil .cab { display: none; }
+  .agil .faixa { display: block; padding: .75rem 0; }
+  .agil .faixaRot { position: static; padding-top: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .75rem; }
+  .agil .faixaN { display: inline; }
+  .agil .alternar { margin-top: 0; }
+  .agil .faixaVazia { padding-top: .3rem; }
+  .agil .faixaRecolhida .faixaCorpo { display: flex; flex-wrap: wrap; gap: .35rem .8rem; margin-top: .45rem; }
+  .agil .celConta { flex-direction: row; align-items: center; gap: .3rem; padding: 0; min-height: 0; }
+  .agil .celConta.transv { padding-left: .6rem; }
+  .agil .contaN {
+    display: inline-grid;
+    place-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--c-rail);
+    color: var(--c-rail-fg);
+    font-size: .68rem;
+    font-weight: 700;
+  }
+  .agil .transv .contaN { background: none; color: var(--ifm-font-color-base); border: 2px dashed var(--c-rail); }
+  .agil .voltaConta { display: inline; font-weight: 700; color: var(--c-rail); }
+  .agil .faixa:not(.faixaRecolhida) .faixaCorpo { display: block; margin-top: .6rem; }
+  .agil .cel { position: relative; padding: 0 0 1.25rem 2.4rem; gap: .45rem; }
+  .agil .cel::before { content: ''; position: absolute; left: .75rem; top: .3rem; bottom: 0; width: 2px; background: var(--c-rail); }
+  .agil .cel.transv { padding-left: 2.4rem; border-left: 0; }
+  .agil .cel.transv::before { background: none; border-left: 2px dashed var(--c-rail); }
+  .agil .celCab { display: flex; align-items: center; gap: .6rem; margin-left: -2.4rem; padding-top: .5rem; }
+  .agil .celNome { margin: 0; font-size: .85rem; }
+  .agil .celDesc { display: block; margin: 0 0 .3rem; }
+  .agil .celVazia { display: block; margin: 0; font-size: var(--sl-fs-small); color: var(--sl-text-muted); }
+  .agil .faixaRecolhida .cel { padding: 0; }
+  .agil .faixaRecolhida .cel.transv { padding-left: .6rem; border-left: 1px dashed var(--c-control-br); }
+  .agil .faixaRecolhida .cel::before { display: none; }
+  .agil .voltaLinha { display: block; margin: 0 0 .9rem; font-size: var(--sl-fs-small); color: var(--sl-text-muted); }
+  .agil .voltaLinha span { font-weight: 700; color: var(--c-rail); }
+  .agil .detalhe { padding: .9rem .8rem 1rem; margin-top: .1rem; }
+  .agil .cartao, .agil .detalhe, .agil .detalhe a, .agil .detalhe button { scroll-margin-top: calc(var(--ifm-navbar-height) + var(--ciclo-barra-h, 3.4rem) + .5rem); }
+  .agil .detalhe { position: relative; z-index: auto; box-shadow: none; }
+  .agil .detalhe::before { display: none; }
 }

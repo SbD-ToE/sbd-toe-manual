@@ -1,0 +1,1152 @@
+{
+  "versao": 1,
+  "gerado_por": "iteracao-3/scripts/gerar-mapa-agil.mjs (SHI-215), a partir de src/data/mapa-fases.json",
+  "normalizacao": "NFC; hífenes e travessões → «-»; espaços Unicode → um espaço; sem espaços à volta de «/», «+» e «-»; trim; minúsculas. Ver scripts/fases-normalizar.mjs.",
+  "momento": "Cada linha «Integração no SDLC» tem os eventos do seu nome de fase (nomes). Um elemento «@conjunto» resolve-se pelo texto da linha: a primeira regra do conjunto que casar dá os eventos, e sem nenhuma vale a omissão do conjunto. Ver scripts/agil.mjs.",
+  "historia": "Uma história ocupa a união dos eventos de todas as suas linhas (a mesma regra do mapa de fases, us-varias-fases = a).",
+  "textoRegras": "As regras leem o trigger (e o SLA, se campos o disser) sem HTML, em NFC, com espaços simples e em minúsculas; o padrão é uma expressão regular JavaScript com a flag u, a mesma para PT e EN.",
+  "eventos": [
+    {
+      "id": "refinamento",
+      "ordem": 1,
+      "faixa": "ciclo",
+      "pt": "Refinamento do backlog",
+      "en": "Backlog refinement",
+      "scrumGuide": "Scrum Guide 2020, «Product Backlog» (Product Backlog refinement: atividade contínua, não é um evento)",
+      "descricao": {
+        "pt": "Preparar os itens antes de entrarem num sprint: arranque e classificação da aplicação, requisitos de segurança nos cartões, threat modeling e arquitetura, e a reavaliação quando algo muda.",
+        "en": "Getting items ready before they enter a sprint: kick-off and application classification, security requirements on the cards, threat modelling and architecture, and reassessment when something changes."
+      }
+    },
+    {
+      "id": "sprint-planning",
+      "ordem": 2,
+      "faixa": "ciclo",
+      "pt": "Sprint Planning",
+      "en": "Sprint Planning",
+      "scrumGuide": "Scrum Guide 2020, «Sprint Planning»",
+      "descricao": {
+        "pt": "Escolher o trabalho do sprint com os critérios de segurança e a capacidade para os cumprir: requisitos prontos, stack e ferramentas definidas.",
+        "en": "Choosing the sprint’s work with its security criteria and the capacity to meet them: requirements ready, stack and tools defined."
+      }
+    },
+    {
+      "id": "sprint",
+      "ordem": 3,
+      "faixa": "ciclo",
+      "pt": "Sprint",
+      "en": "Sprint",
+      "scrumGuide": "Scrum Guide 2020, «The Sprint» e «Daily Scrum»",
+      "descricao": {
+        "pt": "Desenvolvimento e CI, com o Daily Scrum: código, dependências, pull requests e revisão de código, pipeline, scanners, SBOM e findings.",
+        "en": "Development and CI, with the Daily Scrum: code, dependencies, pull requests and code review, pipeline, scanners, SBOM and findings."
+      }
+    },
+    {
+      "id": "dod",
+      "ordem": 4,
+      "faixa": "ciclo",
+      "pt": "Definition of Done",
+      "en": "Definition of Done",
+      "scrumGuide": "Scrum Guide 2020, «Increment» (compromisso: Definition of Done)",
+      "descricao": {
+        "pt": "O que o Increment tem de cumprir para estar feito e poder ir para produção: gates de segurança, staging e pré-release, aprovação da promoção e deploy.",
+        "en": "What the Increment must meet to be done and go to production: security gates, staging and pre-release, promotion approval and deployment."
+      }
+    },
+    {
+      "id": "sprint-review",
+      "ordem": 5,
+      "faixa": "ciclo",
+      "pt": "Sprint Review",
+      "en": "Sprint Review",
+      "scrumGuide": "Scrum Guide 2020, «Sprint Review» (não é um gate de release)",
+      "descricao": {
+        "pt": "Mostrar o resultado do sprint e verificar, com os stakeholders, os critérios de segurança e a evidência recolhida. Não é um gate de release.",
+        "en": "Showing the outcome of the sprint and checking, with the stakeholders, the security criteria and the evidence collected. It is not a release gate."
+      }
+    },
+    {
+      "id": "retrospetiva",
+      "ordem": 6,
+      "faixa": "ciclo",
+      "pt": "Retrospetiva",
+      "en": "Retrospective",
+      "scrumGuide": "Scrum Guide 2020, «Sprint Retrospective»",
+      "descricao": {
+        "pt": "Rever como correu o sprint, com os processos, as ferramentas e a Definition of Done: as revisões da equipa com período até mensal.",
+        "en": "Reviewing how the sprint went, including processes, tools and the Definition of Done: the team’s reviews with a period of up to a month."
+      }
+    },
+    {
+      "id": "operacao",
+      "ordem": 7,
+      "faixa": "fora",
+      "pt": "Operação",
+      "en": "Operations",
+      "scrumGuide": "fora do Scrum Guide",
+      "descricao": {
+        "pt": "Fora do Scrum: produção e runtime, monitorização, incidentes, drift, patching, revogação e retirada de serviço.",
+        "en": "Outside Scrum: production and runtime, monitoring, incidents, drift, patching, revocation and decommissioning."
+      }
+    },
+    {
+      "id": "cadencia",
+      "ordem": 8,
+      "faixa": "fora",
+      "pt": "Cadência organizacional",
+      "en": "Organisational cadence",
+      "scrumGuide": "fora do Scrum Guide",
+      "descricao": {
+        "pt": "Fora do Scrum: o que corre ao ritmo da organização e não do sprint, como governação e políticas, auditoria e conformidade, exceções, fornecedores e contratos, formação e onboarding, e revisões trimestrais a anuais.",
+        "en": "Outside Scrum: what runs at the organisation’s pace rather than the sprint’s, such as governance and policies, audit and compliance, exceptions, suppliers and contracts, training and onboarding, and quarterly to annual reviews."
+      }
+    }
+  ],
+  "porFase": {
+    "planeamento": "refinamento",
+    "design": "refinamento",
+    "desenvolvimento": "sprint",
+    "build-ci": "sprint",
+    "release": "dod",
+    "operacao": "operacao",
+    "transversal": "@transversal"
+  },
+  "nomes": {
+    "pt": {
+      "activação": [
+        "dod"
+      ],
+      "alteração": [
+        "refinamento"
+      ],
+      "alteração de tools": [
+        "refinamento"
+      ],
+      "aprovação": [
+        "refinamento"
+      ],
+      "aprovação de provider": [
+        "refinamento"
+      ],
+      "arquitetura": [
+        "refinamento"
+      ],
+      "auditoria": [
+        "@transversal"
+      ],
+      "auditoria/formação": [
+        "@transversal"
+      ],
+      "auditoria/pré-produção": [
+        "dod",
+        "@transversal"
+      ],
+      "backlog": [
+        "refinamento"
+      ],
+      "build": [
+        "sprint"
+      ],
+      "build/deploy": [
+        "sprint",
+        "dod"
+      ],
+      "build/promoção": [
+        "sprint",
+        "dod"
+      ],
+      "build/provisionamento": [
+        "sprint"
+      ],
+      "build/release": [
+        "sprint",
+        "dod"
+      ],
+      "catalogação": [
+        "refinamento"
+      ],
+      "ci": [
+        "sprint"
+      ],
+      "ci/cd": [
+        "sprint"
+      ],
+      "ci/cd (analysis)": [
+        "sprint"
+      ],
+      "ci/cd/pré-release": [
+        "sprint",
+        "dod"
+      ],
+      "ci/cd/release": [
+        "sprint",
+        "dod"
+      ],
+      "ci/cd/staging": [
+        "sprint",
+        "dod"
+      ],
+      "ciclo contínuo": [
+        "@transversal"
+      ],
+      "ciclo de formação": [
+        "@transversal"
+      ],
+      "ciclo regular": [
+        "@transversal"
+      ],
+      "classificação inicial": [
+        "refinamento"
+      ],
+      "classificação/design": [
+        "refinamento"
+      ],
+      "conformidade": [
+        "@transversal"
+      ],
+      "construção+entrega": [
+        "sprint",
+        "dod"
+      ],
+      "contínua": [
+        "@transversal"
+      ],
+      "contínuo": [
+        "@transversal"
+      ],
+      "criação/refactor": [
+        "sprint"
+      ],
+      "definição": [
+        "sprint"
+      ],
+      "degradação em produção": [
+        "operacao"
+      ],
+      "deploy": [
+        "dod"
+      ],
+      "deploy/operação": [
+        "dod",
+        "operacao"
+      ],
+      "deploy/operações": [
+        "dod",
+        "operacao"
+      ],
+      "deploy/produção": [
+        "dod",
+        "operacao"
+      ],
+      "descontinuação": [
+        "operacao"
+      ],
+      "desenvolvimento": [
+        "sprint"
+      ],
+      "desenvolvimento/deploy": [
+        "sprint",
+        "dod"
+      ],
+      "desenvolvimento/operações": [
+        "sprint",
+        "operacao"
+      ],
+      "desenvolvimento/revisão": [
+        "sprint"
+      ],
+      "design": [
+        "refinamento"
+      ],
+      "design/alteração": [
+        "refinamento"
+      ],
+      "design/dev": [
+        "refinamento",
+        "sprint"
+      ],
+      "design/grooming": [
+        "refinamento"
+      ],
+      "design/planeamento": [
+        "refinamento"
+      ],
+      "design/plataforma": [
+        "refinamento"
+      ],
+      "design/refactor": [
+        "refinamento",
+        "sprint"
+      ],
+      "design/release": [
+        "refinamento",
+        "dod"
+      ],
+      "design/revisão": [
+        "refinamento"
+      ],
+      "design/risco": [
+        "refinamento"
+      ],
+      "dev": [
+        "sprint"
+      ],
+      "dev (local)": [
+        "sprint"
+      ],
+      "dev/ci": [
+        "sprint"
+      ],
+      "exceção": [
+        "@transversal"
+      ],
+      "execução": [
+        "@transversal"
+      ],
+      "governação": [
+        "@transversal"
+      ],
+      "governação (trimestral+)": [
+        "@transversal"
+      ],
+      "governação+conformidade": [
+        "@transversal"
+      ],
+      "governação+reporting": [
+        "@transversal"
+      ],
+      "governação+segurança": [
+        "@transversal"
+      ],
+      "governança": [
+        "@transversal"
+      ],
+      "governança/release": [
+        "dod",
+        "@transversal"
+      ],
+      "governance/auditoria": [
+        "@transversal"
+      ],
+      "grc": [
+        "@transversal"
+      ],
+      "grooming": [
+        "refinamento"
+      ],
+      "implementação": [
+        "sprint"
+      ],
+      "incidente": [
+        "operacao"
+      ],
+      "início": [
+        "refinamento"
+      ],
+      "início de projeto": [
+        "refinamento"
+      ],
+      "início/revisão": [
+        "refinamento",
+        "@transversal"
+      ],
+      "integração": [
+        "sprint"
+      ],
+      "merge/release": [
+        "sprint",
+        "dod"
+      ],
+      "mitigação": [
+        "operacao"
+      ],
+      "mudança de modelo": [
+        "refinamento"
+      ],
+      "mudança de versão": [
+        "sprint"
+      ],
+      "onboarding": [
+        "@transversal"
+      ],
+      "onboarding do agente": [
+        "dod"
+      ],
+      "onboarding/ciclo contínuo": [
+        "@transversal"
+      ],
+      "onboarding/contínuo": [
+        "@transversal"
+      ],
+      "onboarding/governance": [
+        "@transversal"
+      ],
+      "onboarding/offboarding": [
+        "@transversal"
+      ],
+      "operação": [
+        "operacao"
+      ],
+      "operação contínua": [
+        "operacao"
+      ],
+      "operações": [
+        "operacao"
+      ],
+      "operações/auditoria": [
+        "operacao",
+        "@transversal"
+      ],
+      "operações+governação": [
+        "operacao",
+        "@transversal"
+      ],
+      "ops": [
+        "operacao"
+      ],
+      "patching": [
+        "operacao"
+      ],
+      "planeamento": [
+        "@planeamento"
+      ],
+      "planeamento/design": [
+        "refinamento"
+      ],
+      "planeamento/grooming": [
+        "refinamento"
+      ],
+      "planeamento/operações": [
+        "refinamento",
+        "operacao"
+      ],
+      "planeamento/release": [
+        "refinamento",
+        "dod"
+      ],
+      "pós-release": [
+        "operacao"
+      ],
+      "pr/mr": [
+        "sprint"
+      ],
+      "pré go-live": [
+        "dod"
+      ],
+      "pré-onboarding": [
+        "refinamento"
+      ],
+      "pré-prod/release": [
+        "dod"
+      ],
+      "pré-produção": [
+        "dod"
+      ],
+      "pré-promoção": [
+        "dod"
+      ],
+      "pré-release": [
+        "dod"
+      ],
+      "produção": [
+        "operacao"
+      ],
+      "promoção": [
+        "dod"
+      ],
+      "provisionamento": [
+        "sprint"
+      ],
+      "publicação cve": [
+        "operacao"
+      ],
+      "refactor/alteração": [
+        "refinamento"
+      ],
+      "release": [
+        "dod"
+      ],
+      "release/go-live": [
+        "dod"
+      ],
+      "requisitos/threat modeling": [
+        "refinamento"
+      ],
+      "revisão": [
+        "@transversal"
+      ],
+      "revisão de código": [
+        "sprint"
+      ],
+      "revisão periódica": [
+        "@transversal"
+      ],
+      "revogação": [
+        "operacao"
+      ],
+      "runtime": [
+        "operacao"
+      ],
+      "sprint review": [
+        "sprint-review"
+      ],
+      "staging": [
+        "dod"
+      ],
+      "staging/pré-release": [
+        "dod"
+      ],
+      "subida de nível": [
+        "refinamento"
+      ],
+      "sunsetting": [
+        "operacao"
+      ],
+      "testes/review": [
+        "sprint",
+        "sprint-review"
+      ],
+      "threat modeling": [
+        "refinamento"
+      ],
+      "triagem": [
+        "operacao"
+      ],
+      "validação": [
+        "@transversal"
+      ],
+      "validação/aceitação de risco": [
+        "@transversal"
+      ]
+    },
+    "en": {
+      "activation": [
+        "dod"
+      ],
+      "agent onboarding": [
+        "dod"
+      ],
+      "approval": [
+        "refinamento"
+      ],
+      "architecture": [
+        "refinamento"
+      ],
+      "audit": [
+        "@transversal"
+      ],
+      "audit/pre-production": [
+        "dod",
+        "@transversal"
+      ],
+      "audit/training": [
+        "@transversal"
+      ],
+      "backlog": [
+        "refinamento"
+      ],
+      "build": [
+        "sprint"
+      ],
+      "build/deploy": [
+        "sprint",
+        "dod"
+      ],
+      "build/promotion": [
+        "sprint",
+        "dod"
+      ],
+      "build/provisioning": [
+        "sprint"
+      ],
+      "build/release": [
+        "sprint",
+        "dod"
+      ],
+      "build+delivery": [
+        "sprint",
+        "dod"
+      ],
+      "cataloguing": [
+        "refinamento"
+      ],
+      "change": [
+        "refinamento"
+      ],
+      "change of tools": [
+        "refinamento"
+      ],
+      "ci": [
+        "sprint"
+      ],
+      "ci/cd": [
+        "sprint"
+      ],
+      "ci/cd (analysis)": [
+        "sprint"
+      ],
+      "ci/cd/pre-release": [
+        "sprint",
+        "dod"
+      ],
+      "ci/cd/release": [
+        "sprint",
+        "dod"
+      ],
+      "ci/cd/staging": [
+        "sprint",
+        "dod"
+      ],
+      "classification/design": [
+        "refinamento"
+      ],
+      "code review": [
+        "sprint"
+      ],
+      "compliance": [
+        "@transversal"
+      ],
+      "continuous": [
+        "@transversal"
+      ],
+      "continuous cycle": [
+        "@transversal"
+      ],
+      "continuous operation": [
+        "operacao"
+      ],
+      "creation/refactoring": [
+        "sprint"
+      ],
+      "cve publication": [
+        "operacao"
+      ],
+      "definition": [
+        "sprint"
+      ],
+      "degradation in production": [
+        "operacao"
+      ],
+      "deploy": [
+        "dod"
+      ],
+      "deploy/operation": [
+        "dod",
+        "operacao"
+      ],
+      "deploy/operations": [
+        "dod",
+        "operacao"
+      ],
+      "deploy/production": [
+        "dod",
+        "operacao"
+      ],
+      "design": [
+        "refinamento"
+      ],
+      "design/change": [
+        "refinamento"
+      ],
+      "design/dev": [
+        "refinamento",
+        "sprint"
+      ],
+      "design/grooming": [
+        "refinamento"
+      ],
+      "design/planning": [
+        "refinamento"
+      ],
+      "design/platform": [
+        "refinamento"
+      ],
+      "design/refactor": [
+        "refinamento",
+        "sprint"
+      ],
+      "design/release": [
+        "refinamento",
+        "dod"
+      ],
+      "design/review": [
+        "refinamento"
+      ],
+      "design/risk": [
+        "refinamento"
+      ],
+      "dev": [
+        "sprint"
+      ],
+      "dev (local)": [
+        "sprint"
+      ],
+      "dev/ci": [
+        "sprint"
+      ],
+      "development": [
+        "sprint"
+      ],
+      "development/deploy": [
+        "sprint",
+        "dod"
+      ],
+      "development/operations": [
+        "sprint",
+        "operacao"
+      ],
+      "development/review": [
+        "sprint"
+      ],
+      "discontinuation": [
+        "operacao"
+      ],
+      "exception": [
+        "@transversal"
+      ],
+      "execution": [
+        "@transversal"
+      ],
+      "governance": [
+        "@transversal"
+      ],
+      "governance (quarterly+)": [
+        "@transversal"
+      ],
+      "governance/audit": [
+        "@transversal"
+      ],
+      "governance/release": [
+        "dod",
+        "@transversal"
+      ],
+      "governance+compliance": [
+        "@transversal"
+      ],
+      "governance+reporting": [
+        "@transversal"
+      ],
+      "governance+security": [
+        "@transversal"
+      ],
+      "grc": [
+        "@transversal"
+      ],
+      "grooming": [
+        "refinamento"
+      ],
+      "implementation": [
+        "sprint"
+      ],
+      "incident": [
+        "operacao"
+      ],
+      "initial classification": [
+        "refinamento"
+      ],
+      "integration": [
+        "sprint"
+      ],
+      "level increase": [
+        "refinamento"
+      ],
+      "level rise": [
+        "refinamento"
+      ],
+      "merge/release": [
+        "sprint",
+        "dod"
+      ],
+      "mitigation": [
+        "operacao"
+      ],
+      "model change": [
+        "refinamento"
+      ],
+      "onboarding": [
+        "@transversal"
+      ],
+      "onboarding/continuous": [
+        "@transversal"
+      ],
+      "onboarding/continuous cycle": [
+        "@transversal"
+      ],
+      "onboarding/governance": [
+        "@transversal"
+      ],
+      "onboarding/offboarding": [
+        "@transversal"
+      ],
+      "operation": [
+        "operacao"
+      ],
+      "operations": [
+        "operacao"
+      ],
+      "operations/audit": [
+        "operacao",
+        "@transversal"
+      ],
+      "operations+governance": [
+        "operacao",
+        "@transversal"
+      ],
+      "ops": [
+        "operacao"
+      ],
+      "patching": [
+        "operacao"
+      ],
+      "periodic review": [
+        "@transversal"
+      ],
+      "planning": [
+        "@planeamento"
+      ],
+      "planning/design": [
+        "refinamento"
+      ],
+      "planning/grooming": [
+        "refinamento"
+      ],
+      "planning/operations": [
+        "refinamento",
+        "operacao"
+      ],
+      "planning/release": [
+        "refinamento",
+        "dod"
+      ],
+      "post-release": [
+        "operacao"
+      ],
+      "pr/mr": [
+        "sprint"
+      ],
+      "pre-go-live": [
+        "dod"
+      ],
+      "pre-onboarding": [
+        "refinamento"
+      ],
+      "pre-prod/release": [
+        "dod"
+      ],
+      "pre-production": [
+        "dod"
+      ],
+      "pre-promotion": [
+        "dod"
+      ],
+      "pre-release": [
+        "dod"
+      ],
+      "production": [
+        "operacao"
+      ],
+      "project start": [
+        "refinamento"
+      ],
+      "promotion": [
+        "dod"
+      ],
+      "provider approval": [
+        "refinamento"
+      ],
+      "provisioning": [
+        "sprint"
+      ],
+      "refactor/change": [
+        "refinamento"
+      ],
+      "regular cycle": [
+        "@transversal"
+      ],
+      "release": [
+        "dod"
+      ],
+      "release/go-live": [
+        "dod"
+      ],
+      "requirements/threat modelling": [
+        "refinamento"
+      ],
+      "review": [
+        "@transversal"
+      ],
+      "revocation": [
+        "operacao"
+      ],
+      "runtime": [
+        "operacao"
+      ],
+      "sprint review": [
+        "sprint-review"
+      ],
+      "staging": [
+        "dod"
+      ],
+      "staging/pre-release": [
+        "dod"
+      ],
+      "start": [
+        "refinamento"
+      ],
+      "start/review": [
+        "refinamento",
+        "@transversal"
+      ],
+      "sunsetting": [
+        "operacao"
+      ],
+      "testing/review": [
+        "sprint",
+        "sprint-review"
+      ],
+      "threat modelling": [
+        "refinamento"
+      ],
+      "training cycle": [
+        "@transversal"
+      ],
+      "triage": [
+        "operacao"
+      ],
+      "validation": [
+        "@transversal"
+      ],
+      "validation/risk acceptance": [
+        "@transversal"
+      ],
+      "version change": [
+        "sprint"
+      ]
+    }
+  },
+  "motivosPorNome": {
+    "@planeamento": "«Planeamento» sozinho é o Sprint Planning; o que é da organização (contratos, fornecedores, políticas, formação, ciclos) vai para a Cadência organizacional (caso agil-planeamento-org).",
+    "sprint review": "O nome já é o evento (02 US-06).",
+    "testes/review": "No cap. 02 a etapa é «Sprint review / Testes» (tabela do ciclo de vida, aplicacao-lifecycle.md l. 30), e o SLA é «Por sprint e antes de release» (02 US-09).",
+    "execução": "Decisão fase-execucao: Build e CI e Transversal. Aqui resolve-se linha a linha pelo trigger: execuções de pipeline e jobs vão para o Sprint, as do cap. 14 para a Cadência organizacional."
+  },
+  "regras": {
+    "fluxo-sprint": {
+      "descricao": "O trigger ou o SLA falam de PR, merge, commit, pipeline, job, «a cada execução», nova tag ou do sprint corrente: é trabalho do sprint.",
+      "campos": [
+        "trigger",
+        "sla"
+      ],
+      "padrao": "(?<![\\p{L}\\p{N}])pr(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])merge(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])commit|pipeline|(?<![\\p{L}\\p{N}])jobs?(?![\\p{L}\\p{N}])|a cada execu|every execution|each execution|nova tag|new tag|sprint corrente|current sprint",
+      "eventos": [
+        "sprint"
+      ]
+    },
+    "excecao": {
+      "descricao": "Exceções e aceitação de risco: o processo formal de exceções e o seu ciclo de vida (pedido, aprovação, expiração).",
+      "campos": [
+        "trigger"
+      ],
+      "padrao": "exce[çc][ãa]o|exce[çc][õo]es|exception|aceitar risco|aceita[çc][ãa]o de risco|accept risk|risk acceptance",
+      "eventos": [
+        "cadencia"
+      ],
+      "caso": "agil-excecao"
+    },
+    "periodico-longo": {
+      "descricao": "Período trimestral ou maior, calendário, ciclo, cadência, fecho de período, ou eventos à escala da organização (evento ou incidente crítico, release relevante).",
+      "campos": [
+        "trigger",
+        "sla"
+      ],
+      "padrao": "anual|semestral|trimestral|(?<![\\p{L}\\p{N}])anos?(?![\\p{L}\\p{N}])|calend[áa]rio|ciclo|c[íi]clic|peri[óo]dic|programad|agenda|review_cadence|cad[êe]ncia|per[íi]odo|evento cr[íi]tico|incidente cr[íi]tico|release relevante|annual|yearly|half-yearly|quarterly|(?<![\\p{L}\\p{N}])years?(?![\\p{L}\\p{N}])|calendar|schedul|cycl|periodic|cadence|(?<![\\p{L}\\p{N}])period(?![\\p{L}\\p{N}])|critical event|critical incident|relevant release",
+      "eventos": [
+        "cadencia"
+      ]
+    },
+    "periodico-curto": {
+      "descricao": "Período mensal ou menor no próprio trigger (o SLA não conta): revisões da equipa que cabem na Retrospetiva.",
+      "campos": [
+        "trigger"
+      ],
+      "padrao": "mensal|quinzenal|semanal|por sprint|cada sprint|monthly|fortnightly|weekly|per sprint|each sprint|every sprint",
+      "eventos": [
+        "retrospetiva"
+      ],
+      "caso": "agil-periodo-mensal"
+    },
+    "pre-release": {
+      "descricao": "Pré-release, release candidate, pré-produção ou go-live: entra nos critérios da Definition of Done.",
+      "campos": [
+        "trigger",
+        "sla"
+      ],
+      "padrao": "pr[ée]-release|release candidat|go-live|antes (da|de) release|pr[ée]-produ|pre-release|before (the )?release|pre-produc",
+      "eventos": [
+        "dod"
+      ]
+    },
+    "mudanca-arquitetura": {
+      "descricao": "Mudança de arquitetura, dados ou exposição: a reavaliação entra no backlog e prepara-se no Refinamento.",
+      "campos": [
+        "trigger"
+      ],
+      "padrao": "mudan[çc]a (de |da )?arquitetura|change in architecture|architecture change",
+      "eventos": [
+        "refinamento"
+      ]
+    },
+    "findings": {
+      "descricao": "Produção e triagem de findings das ferramentas: acontece no sprint, com o pipeline.",
+      "campos": [
+        "trigger"
+      ],
+      "padrao": "findings?",
+      "eventos": [
+        "sprint"
+      ]
+    },
+    "organizacao": {
+      "descricao": "Contratos, fornecedores, contractors, políticas, o modelo SbD-ToE, mudança organizacional, rotação de owner ou sessões de formação: é da organização, não do sprint.",
+      "campos": [
+        "trigger"
+      ],
+      "padrao": "contrat|fornecedor|contractor|pol[íi]tica|sbd-toe|organiza[cç]|rota[çc][ãa]o de owner|sess[ãa]o|contract|supplier|polic|organis|owner rotation|session",
+      "eventos": [
+        "cadencia"
+      ],
+      "caso": "agil-planeamento-org"
+    }
+  },
+  "conjuntos": {
+    "transversal": {
+      "descricao": "Linhas cujo nome de fase cai em Transversal (só ou num composto).",
+      "regras": [
+        "fluxo-sprint",
+        "excecao",
+        "periodico-longo",
+        "periodico-curto",
+        "pre-release",
+        "mudanca-arquitetura",
+        "findings"
+      ],
+      "omissao": [
+        "cadencia"
+      ],
+      "motivoOmissao": "Sem outro sinal, o que é transversal (governação, auditoria, onboarding e formação de pessoas, revisões por evento) corre ao ritmo da organização."
+    },
+    "planeamento": {
+      "descricao": "Linhas com o nome «Planeamento» / «Planning» sozinho.",
+      "regras": [
+        "organizacao",
+        "periodico-longo"
+      ],
+      "omissao": [
+        "sprint-planning"
+      ],
+      "motivoOmissao": "«Planeamento» sozinho, numa equipa Scrum, é o Sprint Planning.",
+      "caso": "agil-planeamento"
+    }
+  },
+  "decisoes": {
+    "pt": "nenhuma ainda: os casos de 01-agil.md §5 esperam pelo Pedro (documento questions da SHI-25)"
+  },
+  "provisorio": {
+    "pt": {
+      "alteração": "agil-design",
+      "alteração de tools": "agil-design",
+      "aprovação": "agil-design",
+      "arquitetura": "agil-design",
+      "catalogação": "agil-design",
+      "classificação/design": "agil-design",
+      "design": "agil-design",
+      "design/alteração": "agil-design",
+      "design/dev": "agil-design",
+      "design/grooming": "agil-design",
+      "design/planeamento": "agil-design",
+      "design/plataforma": "agil-design",
+      "design/refactor": "agil-design",
+      "design/release": "agil-design",
+      "design/revisão": "agil-design",
+      "design/risco": "agil-design",
+      "mudança de modelo": "agil-design",
+      "planeamento/design": "agil-design",
+      "refactor/alteração": "agil-design",
+      "requisitos/threat modeling": "agil-design",
+      "subida de nível": "agil-design",
+      "threat modeling": "agil-design"
+    },
+    "en": {
+      "approval": "agil-design",
+      "architecture": "agil-design",
+      "cataloguing": "agil-design",
+      "change": "agil-design",
+      "change of tools": "agil-design",
+      "classification/design": "agil-design",
+      "design": "agil-design",
+      "design/change": "agil-design",
+      "design/dev": "agil-design",
+      "design/grooming": "agil-design",
+      "design/planning": "agil-design",
+      "design/platform": "agil-design",
+      "design/refactor": "agil-design",
+      "design/release": "agil-design",
+      "design/review": "agil-design",
+      "design/risk": "agil-design",
+      "level increase": "agil-design",
+      "level rise": "agil-design",
+      "model change": "agil-design",
+      "planning/design": "agil-design",
+      "refactor/change": "agil-design",
+      "requirements/threat modelling": "agil-design",
+      "threat modelling": "agil-design"
+    },
+    "regras": {
+      "excecao": "agil-excecao",
+      "periodico-curto": "agil-periodo-mensal",
+      "organizacao": "agil-planeamento-org"
+    },
+    "conjuntos": {
+      "planeamento": "agil-planeamento"
+    }
+  },
+  "inferidas": {
+    "descricao": {
+      "pt": "Cerimónias inferidas pela atividade da história (SHI-222, 02-inferidas.md): id da história → eventos onde aparece também, além dos do trigger, com o motivo. Os ids são os mesmos em PT e EN. «provisorio» é o caso que espera pelo Pedro (documento questions da SHI-25); sem ele, a inferência está decidida.",
+      "en": "Ceremonies inferred from the story activity (SHI-222, 02-inferidas.md): story id → events where it also appears, besides those from the trigger, with the reason. The ids are the same in PT and EN. «provisorio» is the case awaiting Pedro (questions document of SHI-25); without it, the inference is settled."
+    },
+    "historias": {
+      "03-US-06": [
+        {
+          "evento": "sprint-planning",
+          "motivo": {
+            "pt": "Priorizar as ameaças pelo impacto no negócio, com SLA «antes de priorização de sprint», é a mesma atividade da US-08 do capítulo 04, que o trigger põe no Sprint Planning.",
+            "en": "Prioritising threats by business impact, with the SLA «before sprint prioritisation», is the same activity as US-08 in chapter 04, which the trigger places in Sprint Planning."
+          },
+          "provisorio": "agil-inferida-priorizacao"
+        }
+      ],
+      "10-US-17": [
+        {
+          "evento": "sprint-review",
+          "motivo": {
+            "pt": "Interpretar a cobertura real dos testes e registar as limitações é inspecionar o que o sprint produziu com quem decide; a aprovação da release fica na DoD.",
+            "en": "Interpreting the real coverage of the tests and recording the limitations is inspecting what the sprint produced with those who decide; release approval stays in the Definition of Done."
+          },
+          "provisorio": "agil-inferida-cobertura"
+        }
+      ],
+      "13-US-06": [
+        {
+          "evento": "retrospetiva",
+          "motivo": {
+            "pt": "As code clinics reveem PRs reais da equipa, semanal ou quinzenalmente, e documentam lições aprendidas para reutilizar: é a inspeção da prática da equipa que a Retrospetiva faz.",
+            "en": "Code clinics review the team's real PRs weekly or fortnightly and record lessons learned for reuse: this is the inspection of the team's practice that the Retrospective does."
+          },
+          "provisorio": "agil-inferida-code-clinics"
+        }
+      ]
+    }
+  }
+}

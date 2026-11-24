@@ -1,18 +1,22 @@
 // Detalhe de um cartão, aberto no sítio (00-especificacao.md §7.3). Os rótulos das secções 4 a 8 vêm do
 // próprio cânone (rotulos.*, nivel.rotulo), por isso no EN são os da tradução. O texto é HTML restrito do
 // índice (§5.1): só <strong>, <em>, <code>, <a href> e <br>, com o resto escapado pelo plugin.
+// Na vista ágil, por cima da tabela, uma linha por cerimónia inferida da história, com o motivo, em todos os cartões
+// da história; no cartão inferido, antes, a nota de que não vem de uma linha da tabela (00-especificacao-agil.md §10.2).
 import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
-import {NIVEIS, type Capitulo, type Cartao, type Item, type Nivel} from './estado';
+import {NIVEIS, type Capitulo, type Cartao, type Item, type Momento, type Nivel} from './estado';
 import styles from './CicloDeVida.module.css';
 
 type Props = {
   c: Cartao;
   cap: Capitulo | undefined;
   nivel: Nivel | '';
-  nomeFase: (id: string) => string;
+  agil: boolean;
+  colunasDe: (m: Momento) => string[];
+  nomeColuna: (id: string) => string;
   onFechar: () => void;
 };
 
@@ -112,9 +116,10 @@ function Proporcionalidade({c, nivel}: {c: Cartao; nivel: Nivel | ''}): ReactNod
   );
 }
 
-export default function Detalhe({c, cap, nivel, nomeFase, onFechar}: Props): ReactNode {
+export default function Detalhe({c, cap, nivel, agil, colunasDe, nomeColuna, onFechar}: Props): ReactNode {
   const {h} = c;
   const esp = h.especializacoes.filter((s) => s.id.startsWith(`${c.papel}:`)).map((s) => s.rotulo);
+  const inferidas = agil ? h.inferidas ?? [] : [];
   return (
     <div
       className={styles.detalhe}
@@ -154,12 +159,37 @@ export default function Detalhe({c, cap, nivel, nomeFase, onFechar}: Props): Rea
         )}
       </p>
 
+      {c.inferida && (
+        <p className={styles.detalheNota}>
+          {translate({
+            id: 'lifecycleMap.detail.inferred.note',
+            message: 'Este cartão não vem de uma linha da tabela: a cerimónia foi inferida pela atividade da história.',
+          })}
+        </p>
+      )}
+      {inferidas.map((x) => (
+        <p key={x.evento} className={styles.detalheInferida} data-inferida={x.evento}>
+          <b>
+            {translate(
+              {id: 'lifecycleMap.detail.inferred', message: 'Também em {event}, inferido pela atividade da história'},
+              {event: nomeColuna(x.evento)},
+            )}
+            :
+          </b>{' '}
+          <span data-conteudo="">{x.motivo}</span>
+        </p>
+      ))}
+
       <div className={clsx(styles.tabela, styles.tabelaLarga)}>
         <table>
           <thead>
             <tr>
               <th scope="col">{translate({id: 'lifecycleMap.card.phase', message: 'Fase'})}</th>
-              <th scope="col">{translate({id: 'lifecycleMap.detail.phaseOnMap', message: 'Fase no mapa'})}</th>
+              <th scope="col">
+                {agil
+                  ? translate({id: 'lifecycleMap.detail.eventOnMap', message: 'No mapa ágil'})
+                  : translate({id: 'lifecycleMap.detail.phaseOnMap', message: 'Fase no mapa'})}
+              </th>
               <th scope="col">{translate({id: 'lifecycleMap.detail.trigger', message: 'Trigger'})}</th>
               <th scope="col">{translate({id: 'lifecycleMap.detail.responsible', message: 'Responsável'})}</th>
               <th scope="col">{translate({id: 'lifecycleMap.card.sla', message: 'SLA'})}</th>
@@ -178,7 +208,7 @@ export default function Detalhe({c, cap, nivel, nomeFase, onFechar}: Props): Rea
                       </span>
                     )}
                   </th>
-                  <td>{m.fases.map(nomeFase).join(' + ')}</td>
+                  <td>{colunasDe(m).map(nomeColuna).join(' + ')}</td>
                   <td {...html(m.trigger)} />
                   <td>{m.responsavel}</td>
                   <td>{m.sla || '—'}</td>

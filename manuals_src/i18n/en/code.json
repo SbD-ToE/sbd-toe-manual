@@ -789,6 +789,93 @@
   "lifecycleMap.detail.noProportionality": {
     "message": "This story has no proportionality table in the chapter."
   },
+  "lifecycleMap.view": {
+    "message": "View"
+  },
+  "lifecycleMap.view.lifecycle": {
+    "message": "Lifecycle"
+  },
+  "lifecycleMap.view.agile": {
+    "message": "Agile"
+  },
+  "lifecycleMap.view.agile.title": {
+    "message": "Agile view, with the Scrum events"
+  },
+  "lifecycleMap.lead.agile": {
+    "message": "Each card is a user story from a chapter, in the Scrum event where it happens and in the lane of the role that does it. Operations and Organisational cadence sit outside the sprint. Choose your role and the application level."
+  },
+  "lifecycleMap.trail.agile.ariaLabel": {
+    "message": "Scrum events and columns outside the sprint"
+  },
+  "lifecycleMap.agile.loop": {
+    "message": "The cycle repeats every sprint."
+  },
+  "lifecycleMap.event.refinamento": {
+    "message": "Backlog refinement"
+  },
+  "lifecycleMap.event.sprint-planning": {
+    "message": "Sprint Planning"
+  },
+  "lifecycleMap.event.sprint": {
+    "message": "Sprint"
+  },
+  "lifecycleMap.event.dod": {
+    "message": "Definition of Done"
+  },
+  "lifecycleMap.event.sprint-review": {
+    "message": "Sprint Review"
+  },
+  "lifecycleMap.event.retrospetiva": {
+    "message": "Retrospective"
+  },
+  "lifecycleMap.event.operacao": {
+    "message": "Operations"
+  },
+  "lifecycleMap.event.cadencia": {
+    "message": "Organisational cadence"
+  },
+  "lifecycleMap.event.refinamento.desc": {
+    "message": "Getting items ready before they enter a sprint: kick-off and application classification, security requirements on the cards, threat modelling and architecture, and reassessment when something changes."
+  },
+  "lifecycleMap.event.sprint-planning.desc": {
+    "message": "Choosing the sprint’s work with its security criteria and the capacity to meet them: requirements ready, stack and tools defined."
+  },
+  "lifecycleMap.event.sprint.desc": {
+    "message": "Development and CI, with the Daily Scrum: code, dependencies, pull requests and code review, pipeline, scanners, SBOM and findings."
+  },
+  "lifecycleMap.event.dod.desc": {
+    "message": "What the Increment must meet to be done and go to production: security gates, staging and pre-release, promotion approval and deployment."
+  },
+  "lifecycleMap.event.sprint-review.desc": {
+    "message": "Showing the outcome of the sprint and checking, with the stakeholders, the security criteria and the evidence collected. It is not a release gate."
+  },
+  "lifecycleMap.event.retrospetiva.desc": {
+    "message": "Reviewing how the sprint went, including processes, tools and the Definition of Done: the team’s reviews with a period of up to a month."
+  },
+  "lifecycleMap.event.operacao.desc": {
+    "message": "Outside Scrum: production and runtime, monitoring, incidents, drift, patching, revocation and decommissioning."
+  },
+  "lifecycleMap.event.cadencia.desc": {
+    "message": "Outside Scrum: what runs at the organisation’s pace rather than the sprint’s, such as governance and policies, audit and compliance, exceptions, suppliers and contracts, training and onboarding, and quarterly to annual reviews."
+  },
+  "lifecycleMap.column.empty": {
+    "message": "No story in this column with these filters."
+  },
+  "lifecycleMap.detail.eventOnMap": {
+    "message": "On the agile map"
+  },
+  "lifecycleMap.card.inferred": {
+    "message": "inferred"
+  },
+  "lifecycleMap.card.inferred.title": {
+    "message": "Ceremony inferred from the story's activity, not from the trigger"
+  },
+  "lifecycleMap.detail.inferred": {
+    "message": "Also in {event}, inferred from the story's activity"
+  },
+  "lifecycleMap.detail.inferred.note": {
+    "message": "This card does not come from a row of the table: the ceremony was inferred from the story's activity."
+  },
   "homepage.start.lifecycle": {
     "message": "Lifecycle map"
   }

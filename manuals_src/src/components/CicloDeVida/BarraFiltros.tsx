@@ -1,4 +1,4 @@
-// Barra de filtros (00-especificacao.md §7.1 e §8): «Sou…», Nível, Capítulo, «Limpar filtros» e a contagem.
+// Barra de filtros (00-especificacao.md §7.1 e §8): «Sou…», Nível, Capítulo, «Limpar filtros» (que mantém a vista) e a contagem.
 // Cada escolha chama onMudar uma vez, e a página faz um só history.push com a query toda.
 import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
@@ -66,10 +66,11 @@ export default function BarraFiltros({estado, papeis, capitulos, contagem, conta
           {comFiltros && (
             <a
               className={styles.limpar}
-              href={escrever(VAZIO) || '?'}
+              href={escrever({...VAZIO, vista: estado.vista}) || '?'}
               onClick={(ev) => {
                 ev.preventDefault();
-                onMudar(VAZIO);
+                // a vista não é um filtro: fica (00-especificacao-agil.md §4.1)
+                onMudar({...VAZIO, vista: estado.vista});
               }}>
               {translate({id: 'lifecycleMap.filter.clear', message: 'Limpar filtros'})}
             </a>

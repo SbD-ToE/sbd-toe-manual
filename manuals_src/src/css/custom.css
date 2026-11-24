@@ -642,9 +642,23 @@ html[data-theme='light'] .navbar-sidebar {
   --ifm-menu-color-background-active: rgba(255, 255, 255, .05);
   --ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%) hue-rotate(223deg) brightness(104%) contrast(98%);
 }
+/* N-1 · Item ativo e hover da navbar de topo, nos dois temas: o texto rosa dava 3,49:1 (claro, #f00041) e 4,44:1
+   (escuro, #ff3a6e) sobre o navy (a .navbar--dark da Infima repõe o primário). Fica o texto branco (14,9:1),
+   com sublinhado no primário (forma fixada pela SHI-24 às 19:18Z). */
+.navbar { --ifm-navbar-link-hover-color: var(--ifm-navbar-link-color); }
+.navbar__items .navbar__link:hover,
+.navbar__items .navbar__link--active {
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .4em;
+}
+/* N-1 · Sidebar de desktop em claro: o item ativo (sobre #f2f2f2) e a categoria-ancestral (sobre o branco) davam
+   3,93:1 e 4,39:1 com #f00041. O #d8003a das ligações (344°, 100 %, 42 %). Em escuro fica o primário (4,93 e 5,51). */
+html[data-theme='light'] .theme-doc-sidebar-container { --ifm-menu-color-active: var(--ifm-color-primary-dark); }
 /* Item ativo do drawer (e categorias-ancestral), nos dois temas: o primário dá 3,04:1 (claro) e 3,86:1 (escuro)
    sobre o navy com o fundo de ativo (#0d3346). Mesma tonalidade de #f00041, mais clara: 4,64:1 (SHI-53).
-   Só no drawer: a sidebar de desktop mantém o primário. */
+   Só no drawer: a sidebar de desktop mantém o primário em escuro (N-1, acima, em claro). */
 .navbar-sidebar { --ifm-menu-color-active: #ff608b; }
 
 /* N-09 · Compactação entre 997 e 1279 px: a navbar com as 4 secções não cabe numa linha

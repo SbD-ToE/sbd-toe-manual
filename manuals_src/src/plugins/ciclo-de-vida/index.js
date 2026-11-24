@@ -1,5 +1,5 @@
 // Plugin local do Mapa do ciclo de vida (SHI-152, 00-especificacao.md §4–§6).
-// Lê no build o cânone PT, a tradução EN e _roles.yaml, gera o índice do idioma do build com createData
+// Lê no build o cânone PT, a tradução EN, _roles.yaml e os dois mapas de src/data (fases e ágil), gera o índice do idioma do build com createData
 // e cria a rota /ciclo-de-vida (/en/ciclo-de-vida no EN) com addRoute. O componente da rota é
 // src/pages/_ciclo-de-vida.tsx: o «_» impede o plugin de páginas de criar outra rota para o mesmo ficheiro.
 // O índice chega à página como props.indice e só se descarrega nessa rota (não vai para os dados globais).
@@ -8,6 +8,7 @@ import path from 'node:path';
 import logger from '@docusaurus/logger';
 import {normalizeUrl, getPluginI18nPath} from '@docusaurus/utils';
 import {fasesDoNome} from './fases-normalizar.mjs';
+import {eventosDoMomento} from './agil.mjs';
 import {capitulos, parseFile, carregarRoles, criarResolvedor} from './extrair.js';
 import {urlCap, inline, plano, bloco, seccoes, lista, bdd, proporcionalidade, limparCache} from './texto.js';
 
@@ -24,6 +25,7 @@ function caminhos(siteDir) {
     EN,
     ROLES: path.join(PT, '00-fundamentos/roles-responsabilidades/_roles.yaml'),
     MAPA: path.join(siteDir, 'src/data/mapa-fases.json'),
+    MAPA_AGIL: path.join(siteDir, 'src/data/mapa-agil.json'),
   };
 }
 
@@ -36,14 +38,37 @@ const tituloIntro = (dir) =>
 
 // Gera os índices PT e EN (o EN precisa do par PT para os papéis). Junta todos os erros e lança um só no fim.
 export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
-  const {PT, EN, ROLES, MAPA} = caminhos(siteDir);
+  const {PT, EN, ROLES, MAPA, MAPA_AGIL} = caminhos(siteDir);
   const mapa = JSON.parse(fs.readFileSync(MAPA, 'utf8'));
+  const mapaAgil = JSON.parse(fs.readFileSync(MAPA_AGIL, 'utf8'));
   const doc = carregarRoles(siteDir, ROLES);
   const resolver = criarResolvedor(doc);
   const canonIds = new Set(doc.roles.map((r) => r.id));
   const erros = [];
   const avisos = [];
   const onde = (s, linha) => `${s.idioma} · cap. ${s.capitulo.slice(0, 2)} · ${s.us} · ${path.relative(siteDir, s.ficheiro)}:${linha ?? s.linha}`;
+
+  // os dois mapas têm os mesmos nomes de fase, em cada idioma (00-especificacao-agil.md §3.2): um nome novo
+  // no cânone entra nos dois ficheiros
+  for (const idioma of ['pt', 'en']) {
+    const nf = Object.keys(mapa.nomes[idioma] ?? {});
+    const na = Object.keys(mapaAgil.nomes[idioma] ?? {});
+    for (const n of nf) if (!(n in (mapaAgil.nomes[idioma] ?? {}))) erros.push(`${idioma}: nome no mapa de fases e não no mapa ágil: «${n}»`);
+    for (const n of na) if (!(n in (mapa.nomes[idioma] ?? {}))) erros.push(`${idioma}: nome no mapa ágil e não no mapa de fases: «${n}»`);
+  }
+
+  // cerimónias inferidas pela atividade da história (00-especificacao-agil.md §10.1): só eventos do ciclo Scrum,
+  // com motivo em PT e EN
+  const inferidas = mapaAgil.inferidas?.historias ?? {};
+  const ciclo = new Set(mapaAgil.eventos.filter((e) => e.faixa === 'ciclo').map((e) => e.id));
+  const ordemEvento = new Map(mapaAgil.eventos.map((e, i) => [e.id, i]));
+  for (const [id, lista] of Object.entries(inferidas))
+    for (const x of lista) {
+      if (!ciclo.has(x.evento)) erros.push(`inferida com um evento fora do ciclo Scrum: ${id} → ${x.evento}`);
+      for (const idioma of ['pt', 'en'])
+        if (!String(x.motivo?.[idioma] ?? '').trim()) erros.push(`inferida sem motivo ${idioma.toUpperCase()}: ${id} → ${x.evento}`);
+    }
+  const avisadas = new Set();
 
   limparCache();
   const pastas = capitulos(PT);
@@ -111,17 +136,43 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
             fases = ['transversal'];
           } else erros.push(msg);
         }
+        const trigger = inline(l.trigger || '', s.capitulo, idioma);
+        const sla = plano(l.sla);
+        // eventos da vista ágil: as regras correm sobre o trigger e o SLA tal como vão para o índice (§3.2),
+        // para a Verificação os poder recalcular a partir do índice
+        let {eventos} = eventosDoMomento(mapaAgil, idioma, {fase: l.fase, trigger, sla});
+        if (!eventos.length) {
+          const msg = `${onde(s, l.linha)}: nome de fase fora do mapa ágil «${l.fase}»`;
+          if (onUnknownPhase === 'warn') {
+            avisos.push(`${msg} (fica em Cadência organizacional)`);
+            eventos = ['cadencia'];
+          } else erros.push(msg);
+        }
         return {
           fase: l.fase,
           fases,
-          trigger: inline(l.trigger || '', s.capitulo, idioma),
+          trigger,
           responsavel: plano(l.responsavel),
-          sla: plano(l.sla),
+          sla,
           responsaveis,
           papeis: [...new Set([...voz, ...responsaveis])],
+          eventos,
         };
       });
       if (!momentos.some((m) => m.papeis.length)) erros.push(`${onde(s)}: nenhum papel canónico na voz nem nos responsáveis`);
+
+      // inferidas da história, no idioma do índice e pela ordem dos eventos; se o trigger já der o evento,
+      // a inferência cai com aviso (o cânone mudou e a entrada sobra)
+      const id = `${cap}-${s.us}`;
+      const inf = (inferidas[id] ?? [])
+        .filter((x) => {
+          if (!momentos.some((m) => m.eventos.includes(x.evento))) return true;
+          if (!avisadas.has(`${id}|${x.evento}`)) avisos.push(`inferida já pelo trigger: ${id} → ${x.evento} (a inferência cai)`);
+          avisadas.add(`${id}|${x.evento}`);
+          return false;
+        })
+        .sort((a, b) => ordemEvento.get(a.evento) - ordemEvento.get(b.evento))
+        .map(({evento, motivo, provisorio}) => ({evento, motivo: motivo[idioma], provisorio: provisorio ?? null}));
 
       const S = seccoes(bloco(s.ficheiro, s.linha));
       const acha = (re) => S.find((x) => re.test(x.rotulo));
@@ -133,7 +184,7 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
       const sEvid = S.find((x) => /artef|evid/i.test(x.rotulo) && !/adiciona|additional/i.test(x.rotulo)) ?? acha(/artef|evid/i);
       const sProp = acha(/proporcional|proportional/i);
       historias.push({
-        id: `${cap}-${s.us}`,
+        id,
         cap,
         us: s.us,
         titulo: plano(s.tituloMd),
@@ -142,6 +193,7 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
         papeisVoz: voz,
         especializacoes,
         momentos,
+        ...(inf.length ? {inferidas: inf} : {}), // só nas histórias com inferências
         contexto: sCtx ? inline(sCtx.linhas.join(' '), s.capitulo, idioma) : null,
         historia: sHist ? inline(sHist.linhas.join(' '), s.capitulo, idioma) : null,
         bdd: sBdd ? bdd(sBdd.linhas, s.capitulo, idioma) : [],
@@ -158,8 +210,13 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
     indices[idioma] = {
       versao: 1,
       idioma,
-      fontes: {roles: {schema: doc.schema, version: doc.version, decided: doc.decided}, mapaFases: 'src/data/mapa-fases.json'},
+      fontes: {
+        roles: {schema: doc.schema, version: doc.version, decided: doc.decided},
+        mapaFases: 'src/data/mapa-fases.json',
+        mapaAgil: 'src/data/mapa-agil.json',
+      },
       fases: mapa.fases.map(({id, ordem, faixa, pt, en, descricao}) => ({id, ordem, faixa, rotulo: idioma === 'pt' ? pt : en, descricao: descricao[idioma]})),
+      eventos: mapaAgil.eventos.map(({id, ordem, faixa, pt, en, descricao}) => ({id, ordem, faixa, rotulo: idioma === 'pt' ? pt : en, descricao: descricao[idioma]})),
       papeis: doc.roles.map((r) => ({
         id: r.id,
         rotulo: r.name[idioma],
@@ -170,8 +227,15 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
     };
   }
 
+  // cada id de inferidas existe no índice PT e no EN: uma US renumerada no cânone não deixa a inferência a apontar para nada
+  for (const id of Object.keys(inferidas))
+    for (const idioma of ['pt', 'en'])
+      if (!indices[idioma].historias.some((h) => h.id === id)) erros.push(`${idioma}: inferida para uma história que não existe: ${id}`);
+
   if (erros.length) {
-    const fase = erros.some((e) => e.includes('fora do mapa')) ? '\nNome de fase novo: acrescentar o nome a src/data/mapa-fases.json.' : '';
+    const fase = erros.some((e) => e.includes('fora do mapa') || e.includes('mapa ágil'))
+      ? '\nNome de fase novo: acrescentar o nome a src/data/mapa-fases.json e a src/data/mapa-agil.json.'
+      : '';
     throw new Error(`Plugin ciclo-de-vida: ${erros.length} erro(s) no índice das user stories.\n${erros.map((e) => `- ${e}`).join('\n')}${fase}`);
   }
   return {indices, avisos};
@@ -179,11 +243,11 @@ export function gerarIndices({siteDir, onUnknownPhase = 'throw'}) {
 
 export default function cicloDeVida(context, options = {}) {
   const {siteDir, baseUrl, i18n} = context;
-  const {PT, EN, ROLES, MAPA} = caminhos(siteDir);
+  const {PT, EN, ROLES, MAPA, MAPA_AGIL} = caminhos(siteDir);
   return {
     name: 'sbd-ciclo-de-vida',
     getPathsToWatch() {
-      return [`${PT}/*/aplicacao-lifecycle.md`, `${EN}/*/aplicacao-lifecycle.md`, ROLES, MAPA];
+      return [`${PT}/*/aplicacao-lifecycle.md`, `${EN}/*/aplicacao-lifecycle.md`, ROLES, MAPA, MAPA_AGIL];
     },
     async loadContent() {
       const {indices, avisos} = gerarIndices({siteDir, onUnknownPhase: options.onUnknownPhase ?? 'throw'});

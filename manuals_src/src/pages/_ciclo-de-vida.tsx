@@ -2,6 +2,8 @@
 // com addRoute; o «_» no nome impede o plugin de páginas de criar outra rota para este ficheiro.
 // O índice chega por props.indice (createData). A página é a forma «mapa» de 00-especificacao.md §7–§9:
 // barra de filtros, trilho das fases e uma faixa por papel; os filtros vivem no URL (§8).
+// A vista ágil (00-especificacao-agil.md §4) usa a mesma página e o mesmo índice: muda as colunas (os eventos do
+// Scrum e as duas colunas fora do Scrum), a entrada e a quebra do trilho; a vista vai no URL (?vista=agil).
 import React, {useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
@@ -9,8 +11,20 @@ import {translate} from '@docusaurus/Translate';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import {usePluralForm} from '@docusaurus/theme-common';
-import {VAZIO, cartoes, escrever, filtrar, ler, type Estado, type Indice} from '@site/src/components/CicloDeVida/estado';
+import {
+  VAZIO,
+  cartoes,
+  colunasDe as colunasDaVista,
+  escrever,
+  filtrar,
+  ler,
+  type Estado,
+  type Indice,
+  type Vista,
+} from '@site/src/components/CicloDeVida/estado';
 import {fases as rotulosFases} from '@site/src/components/CicloDeVida/fases';
+import {eventos as rotulosEventos} from '@site/src/components/CicloDeVida/eventos';
+import SeletorVista from '@site/src/components/CicloDeVida/SeletorVista';
 import BarraFiltros from '@site/src/components/CicloDeVida/BarraFiltros';
 import Trilho from '@site/src/components/CicloDeVida/Trilho';
 import Faixa from '@site/src/components/CicloDeVida/Faixa';
@@ -22,18 +36,28 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
   const history = useHistory();
   const {selectMessage} = usePluralForm();
 
-  const todos = useMemo(() => cartoes(indice), [indice]);
-  const fases = rotulosFases();
-  const nomeFase = useCallback((id: string) => fases.find((f) => f.id === id)?.nome ?? id, [fases]);
+  // os cartões das duas vistas, calculados uma vez cada
+  const porVista = useMemo(() => {
+    const m = new Map<Vista, ReturnType<typeof cartoes>>();
+    return (v: Vista) => {
+      if (!m.has(v)) m.set(v, cartoes(indice, v));
+      return m.get(v)!;
+    };
+  }, [indice]);
   const capitulo = useCallback((id: string) => indice.capitulos.find((c) => c.id === id), [indice]);
 
-  // No SSR e no primeiro render do cliente o estado é o vazio; o do URL aplica-se quando isBrowser
-  // passa a true. Assim o HTML do servidor e a hidratação coincidem (§8).
+  // No SSR e no primeiro render do cliente o estado é o vazio (a vista do ciclo de vida); o do URL aplica-se
+  // quando isBrowser passa a true. Assim o HTML do servidor e a hidratação coincidem (§8).
   const lido = useMemo(
-    () => (isBrowser ? ler(location.search, indice, todos) : {estado: VAZIO, query: ''}),
-    [isBrowser, location.search, indice, todos],
+    () => (isBrowser ? ler(location.search, indice, porVista) : {estado: VAZIO, query: ''}),
+    [isBrowser, location.search, indice, porVista],
   );
   const estado = lido.estado;
+  const agil = estado.vista === 'agil';
+  const todos = porVista(estado.vista);
+  const colunas = agil ? rotulosEventos() : rotulosFases();
+  const nomeColuna = (id: string) => colunas.find((f) => f.id === id)?.nome ?? id;
+  const colunasDe = colunasDaVista(estado.vista);
 
   // valores inválidos e formas não canónicas: corrige o URL sem deixar passo no histórico
   useEffect(() => {
@@ -92,11 +116,33 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
     return () => ro.disconnect();
   }, [medirBarra]);
 
-  // fechar (botão, Esc ou voltar): o foco volta ao cartão; abrir: o foco vai para o detalhe
+  // mudar de vista é uma escolha do leitor: um push, mantém papel, nível e capítulo e tira o abrir,
+  // porque a coluna do cartão aberto não existe na outra vista (§4.1). O foco fica no botão carregado.
+  const mudarVista = useCallback((vista: Vista) => mudar({vista, abrir: ''}), [mudar]);
+
+  // Foco nos botões dos controlos segmentados (Vista e Nível, [role=group]): o SkipToContent do Docusaurus põe o
+  // foco no topo da página a cada push sem hash (ressalva R1 da SHI-219). Guarda-se o botão carregado (o clique
+  // também chega pelo Enter e pelo Espaço) e devolve-se-lhe o foco depois da mudança de URL. O efeito é desta página,
+  // que está acima do Layout, e por isso corre depois do do SkipToContent.
+  const focoDepois = useRef<HTMLElement | null>(null);
+  const guardarFoco = useCallback((ev: React.MouseEvent) => {
+    focoDepois.current = (ev.target as HTMLElement).closest<HTMLElement>('[role="group"] > button');
+  }, []);
+  useEffect(() => {
+    const el = focoDepois.current;
+    focoDepois.current = null;
+    if (el?.isConnected && document.activeElement !== el) el.focus({preventScroll: true});
+  }, [location]);
+
+  // fechar (botão, Esc ou voltar): o foco volta ao cartão; abrir: o foco vai para o detalhe.
+  // Ao mudar de vista o cartão fechado já não está no mapa, e o foco fica onde estava.
   const anterior = useRef('');
+  const vistaAnterior = useRef<Vista>(estado.vista);
   useEffect(() => {
     const antes = anterior.current;
+    const mudouVista = vistaAnterior.current !== estado.vista;
     anterior.current = estado.abrir;
+    vistaAnterior.current = estado.vista;
     if (antes === estado.abrir) return;
     if (estado.abrir) {
       const det = document.getElementById(`det-${estado.abrir}`);
@@ -105,10 +151,10 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
         det.focus({preventScroll: true});
         det.scrollIntoView({block: 'nearest'});
       }
-    } else if (antes) {
+    } else if (antes && !mudouVista) {
       document.querySelector<HTMLElement>(`[data-k="${CSS.escape(antes)}"]`)?.focus();
     }
-  }, [estado.abrir, medirBarra]);
+  }, [estado.abrir, estado.vista, medirBarra]);
 
   useEffect(() => {
     if (!estado.abrir) return undefined;
@@ -135,8 +181,8 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
   const doCap = filtrar(todos, {papel: '', cap: estado.cap});
   const visiveis = filtrar(doCap, {papel: estado.papel, cap: ''});
   const historiasDe = (lista: typeof todos) => new Set(lista.map((c) => c.h.id)).size;
-  const porFase: Record<string, number> = {};
-  for (const f of fases) porFase[f.id] = historiasDe(visiveis.filter((c) => c.fase === f.id));
+  const porColuna: Record<string, number> = {};
+  for (const f of colunas) porColuna[f.id] = historiasDe(visiveis.filter((c) => c.fase === f.id));
   const papeis = indice.papeis.map((p) => ({...p, n: historiasDe(doCap.filter((c) => c.papel === p.id))}));
   const noManual = (id: string) => todos.filter((c) => c.papel === id).length;
   const faixas = estado.papel ? indice.papeis.filter((p) => p.id === estado.papel) : indice.papeis;
@@ -151,22 +197,31 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
         message: 'As user stories do manual ao longo do ciclo de vida: o que cabe a cada papel, em que fase e a que nível.',
       })}>
       <main
-        className={clsx('sl-ciclo', styles.ciclo)}
+        className={clsx('sl-ciclo', styles.ciclo, agil && styles.agil)}
+        data-vista={agil ? 'agil' : 'ciclo'}
         data-historias={indice.historias.length}
         data-momentos={momentos}
-        data-cartoes={todos.length}>
+        data-cartoes={todos.length}
+        onClickCapture={guardarFoco}>
         <header className={styles.cabecalho}>
           <p className="sl-eyebrow">
             <span>{translate({id: 'doc.eyebrow.manual', message: 'Manual'})}</span>
           </p>
           <h1 className={styles.titulo}>{translate({id: 'lifecycleMap.title', message: 'Mapa do ciclo de vida'})}</h1>
           <p className={styles.entrada}>
-            {translate({
-              id: 'lifecycleMap.lead',
-              message:
-                'Cada cartão é uma user story de um capítulo, na fase em que acontece e na faixa do papel que a faz. Escolha o seu papel e o nível da aplicação.',
-            })}
+            {agil
+              ? translate({
+                  id: 'lifecycleMap.lead.agile',
+                  message:
+                    'Cada cartão é uma user story de um capítulo, no evento do Scrum em que acontece e na faixa do papel que a faz. Operação e Cadência organizacional ficam fora do sprint. Escolha o seu papel e o nível da aplicação.',
+                })
+              : translate({
+                  id: 'lifecycleMap.lead',
+                  message:
+                    'Cada cartão é uma user story de um capítulo, na fase em que acontece e na faixa do papel que a faz. Escolha o seu papel e o nível da aplicação.',
+                })}
           </p>
+          <SeletorVista vista={estado.vista} onMudar={mudarVista} />
         </header>
         <div ref={barra} className={styles.barraFixa}>
           <BarraFiltros
@@ -179,21 +234,23 @@ export default function CicloDeVida({indice}: {indice: Indice}): ReactNode {
           />
         </div>
         <div className={styles.mapa}>
-          <Trilho fases={fases} porFase={porFase} />
+          <Trilho colunas={colunas} porColuna={porColuna} agil={agil} />
           {faixas.map((p) => (
             <Faixa
               key={p.id}
               papel={p}
               cartoes={visiveis.filter((c) => c.papel === p.id)}
               noManual={noManual(p.id)}
-              fases={fases}
+              colunas={colunas}
+              agil={agil}
               aberta={Boolean(estado.papel) || abertasMao.has(p.id) || papelAberto === p.id}
               recolhivel={!estado.papel}
               nivel={estado.nivel}
               abrir={estado.abrir}
               largura={largura}
               capitulo={capitulo}
-              nomeFase={nomeFase}
+              colunasDe={colunasDe}
+              nomeColuna={nomeColuna}
               contaHistorias={contaHistorias}
               onAlternar={alternar}
               onAbrir={(k) => mudar({abrir: estado.abrir === k ? '' : k})}
